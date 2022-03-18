@@ -12,8 +12,5 @@
  *
  *= require_tree .
  *= require_self
+ *= home
  */
-
- h1{
-     color: red;
- }
