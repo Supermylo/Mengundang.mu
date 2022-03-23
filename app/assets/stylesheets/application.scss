@@ -55,3 +55,24 @@
   -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
  }
 
+ .fs-custom-1{font-size: 40px; line-height: 60px;}
+ .fs-custom-2{font-size: 36px; line-height: 36px;}
+ .fs-custom-3{font-size: 20px; line-height: 30px;}
+ .fs-custom-4{font-size: 14px; line-height: 18px;}
+ .fs-custom-5{font-size: 12px; line-height: 16px;}
+ .fs-custom-6{font-size: 8px; line-height: 12px;}
+
+ .wrapper{
+    height: 100vh;
+
+    .nav-icon{
+        height: 20px;
+        width: 20px;
+    }
+
+    .small-flower-set{
+        height: 50px;
+        width: 80%;
+    }
+ }
+ 
