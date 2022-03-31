@@ -1,31 +1,34 @@
 - content_for :additional_styles
   = stylesheet_link_tag "home"
 
-.container-full.h-100.position-relative
-  .row
-    section.ornament
-      #ornament-object-1
-        = image_tag 'ornament/image-from-rawpixel-id-3837158-png-1.png'
-      #ornament-object-2
-        = image_tag 'ornament/image-from-rawpixel-id-3837755-png-1.png'
-      #ornament-object-3
-        = image_tag 'ornament/image-from-rawpixel-id-3837158-png-1.svg'
-      #ornament-object-4
-        = image_tag 'ornament/image-from-rawpixel-id-3837755-png-1.svg'
+section.main-pages
+  .container-sm
+    .row
+      .ornament
+        #ornament-object-1
+          = image_tag 'ornament/image-from-rawpixel-id-3837158-png-1.png'
+        #ornament-object-2
+          = image_tag 'ornament/image-from-rawpixel-id-3837755-png-1.png'
+        #ornament-object-3
+          = image_tag 'ornament/image-from-rawpixel-id-3837158-png-1.svg'
+        #ornament-object-4
+          = image_tag 'ornament/image-from-rawpixel-id-3837755-png-1.svg'
       .splash-box
         h3.sub-title - Walimatul Ursy -
         h1.title Nama A & Nama B
         span.dates 01 Januari 2001
-    section.nav-float
+section.nav-float
+  .container-sm
+    .nav-menu
       .row
         .col.text-center
           a.active href="#"
             i.fa-solid.fa-house.fa-lg.w-100.text-center
-            span.w-100 Beranda
+            span.w-100 Awal
         .col.text-center
           a href="../pages/couples"
             i.fa-solid.fa-heart.fa-lg.w-100.text-center
-            span.w-100 Pasangan
+            span.w-100 Mempelai
         .col.text-center
           a href="#"
             i.fa-solid.fa-location-dot.fa-lg.w-100.text-center
@@ -38,36 +41,3 @@
           a href="#"
             i.fa-solid.fa-gift.fa-lg.w-100.text-center
             span.w-100 Hadiah
-  / .row.justify-content-center
-  /   .col.col-md-6.col-xl-4.px-3
-  /     .wrapper.d-flex.flex-column.py-3.overflow-hidden
-  /       .d-flex.flex-grow-1
-  /         .title
-  /           span.d-block - Walimatul Ursy -
-  /           span Wildan
-  /           span &
-  /           span Utari
-  /           span.d-block 6 September 2022
-  /       .d-flex
-  /         .nav-bar.w-100
-  /           .d-flex
-  /             .flex-grow-1
-  /               .nav-items
-  /                 .nav-icon.bg-primary
-  /                 span Beranda
-  /             .flex-grow-1
-  /               .nav-items
-  /                 .nav-icon.bg-primary
-  /                 span Pasangan
-  /             .flex-grow-1
-  /               .nav-items
-  /                 .nav-icon.bg-primary
-  /                 span Lokasi
-  /             .flex-grow-1
-  /               .nav-items
-  /                 .nav-icon.bg-primary
-  /                 span Kirim Doa
-  /             .flex-grow-1
-  /               .nav-items
-  /                 .nav-icon.bg-primary
-  /                 span Hadiah
