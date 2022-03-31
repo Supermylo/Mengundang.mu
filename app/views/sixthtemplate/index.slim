@@ -1,1 +1,33 @@
-span Home Page
+- content_for :additional_styles
+  = stylesheet_link_tag "sixthtemplate"
+
+.container-full.h-100.position-relative.overflow-hidden
+  .row
+    section.ornament
+    section.content
+      .row
+        h3.sub-title.text-center The Wedding of
+        h1.title.text-center Wildan & Utari
+        span.dates.text-center 01 Januari 2001    
+    section.nav-float
+      .row
+        .col.text-center
+          a.active href="#"
+            i.fa-solid.fa-house.fa-lg.w-100.text-center
+            span.ellipse-tag
+        .col.text-center
+          a href="../pages/couples"
+            i.fa-solid.fa-heart.fa-lg.w-100.text-center
+            
+        .col.text-center
+          a href="#"
+            i.fa-solid.fa-location-dot.fa-lg.w-100.text-center
+            
+        .col.text-center
+          a href="#"
+            i.fa-solid.fa-hands-praying.fa-lg.w-100.text-center
+            
+        .col.text-center
+          a href="#"
+            i.fa-solid.fa-gift.fa-lg.w-100.text-center
+            
