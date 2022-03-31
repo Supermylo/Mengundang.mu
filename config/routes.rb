@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'home/location'
   get 'home/wishes'
   get 'home/gift'
+  get 'pages/couples'
+  get 'pages/goblog'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

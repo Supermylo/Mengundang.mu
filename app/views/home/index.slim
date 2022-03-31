@@ -1,6 +1,14 @@
-.container
+.container-full.h-100.position-relative
   .row
-    section.splash
+    section.ornament
+      #ornament-object-1
+        = image_tag 'ornament/image-from-rawpixel-id-3837158-png-1.png'
+      #ornament-object-2
+        = image_tag 'ornament/image-from-rawpixel-id-3837755-png-1.png'
+      #ornament-object-3
+        = image_tag 'ornament/image-from-rawpixel-id-3837158-png-1.svg'
+      #ornament-object-4
+        = image_tag 'ornament/image-from-rawpixel-id-3837755-png-1.svg'
       .splash-box
         h3.sub-title - Walimatul Ursy -
         h1.title Nama A & Nama B
@@ -8,20 +16,25 @@
     section.nav-float
       .row
         .col.text-center
-          i.fa-solid.fa-house.fa-xl.w-100.text-center
-          span.w-100 Beranda
+          a.active href="#"
+            i.fa-solid.fa-house.fa-lg.w-100.text-center
+            span.w-100 Beranda
         .col.text-center
-          ii.fa-solid.fa-heart.fa-xl.w-100.text-center
-          span.w-100 Pasangan
+          a href="../pages/couples"
+            i.fa-solid.fa-heart.fa-lg.w-100.text-center
+            span.w-100 Pasangan
         .col.text-center
-          ii.fa-solid.fa-location-dot.fa-xl.w-100.text-center
-          span.w-100 Lokasi
+          a href="#"
+            i.fa-solid.fa-location-dot.fa-lg.w-100.text-center
+            span.w-100 Lokasi
         .col.text-center
-          i.fa-solid.fa-hands-praying.fa-xl.w-100.text-center
-          span.w-100 Doa
+          a href="#"
+            i.fa-solid.fa-hands-praying.fa-lg.w-100.text-center
+            span.w-100 Doa
         .col.text-center
-          i.fa-solid.fa-gift.fa-xl.w-100.text-center
-          span.w-100 Hadiah
+          a href="#"
+            i.fa-solid.fa-gift.fa-lg.w-100.text-center
+            span.w-100 Hadiah
   / .row.justify-content-center
   /   .col.col-md-6.col-xl-4.px-3
   /     .wrapper.d-flex.flex-column.py-3.overflow-hidden

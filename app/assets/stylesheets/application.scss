@@ -14,14 +14,23 @@
  *= home
  */
  @import "bootstrap";
+ @import "home";
+
+ $custom-navy : #213A6A;
+
+ @font-face {
+  font-family: 'marcharegular';
+  src: url('marcha-webfont.woff2') format('woff2'),
+       url('marcha-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
  html{height: 100%;background-color: #777;}
  body{
-  position: relative;
   background: url("Background.jpg");
   background-size: cover;
   height: 100%;
-  margin: 0 auto;
  }
 
  h1{
@@ -29,21 +38,27 @@
  }
 
  h3{
-
+  font-size: 20px;
  }
 
  .splash-box{
+  font-family: 'marcharegular';
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   background: url("ornament/Polygon1.svg");
+
+  h1{
+    font-size: 40px;
+    color: $custom-navy;
+  }
  }
 
  .nav-float{
    position: absolute;
-   bottom: 0;
+   bottom: 10px;
    left: 50%;
    transform: translateX(-50%);
    margin-bottom: 10px;
@@ -52,11 +67,45 @@
    padding: 10px;
    border-radius: 20px;
    width: calc(100% - 20px);
-   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+
+  a{
+    color: #999;
+    text-decoration: none;
+
+    &.active{
+      color: #213A6A;
+    }
+  }
 
   i{display: block;}
+ }
+
+ .ornament{
+
+  #ornament-object-1{
+    right: 0;
+  }
+
+  #ornament-object-2{
+    right: 0;
+  }
+
+  #ornament-object-3{
+    bottom: 5%;
+    left: 0;
+  }
+
+  #ornament-object-4{
+    bottom: 10%;
+    left: 0;
+  }
+
+  & > *{
+    position: absolute;
+  }
  }
 
  .fs-custom-1{font-size: 40px; line-height: 60px;}
