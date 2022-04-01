@@ -19,6 +19,52 @@ span{
   font-size: 12px;
   font-family: 'Work Sans', sans-serif;
 }
+
+.content{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .photo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    .custom-placeholder{
+      width: 200px;
+      height: 200px;
+      background: url("Border Image.png");
+
+      &:after{
+        content: "";
+        display: block;
+        width: 180px;
+        height: 180px;
+        background: url("Sample Couple Image.png");
+        border-radius: 1000px;
+        margin: 10px;
+      }
+    }
+  }
+  
+  .title,.sub-title{
+    font-family: 'DM Serif Display', serif;
+    color: $main-green;
+  }
+
+  .sub-title{margin-bottom: 4px;}
+  .title{margin-bottom: 8px;}
+
+  .dates{
+    display: block;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: $solid-gold;
+  }
+}
+
 .nav-float{
   position: absolute;
   bottom: 20px;
@@ -50,21 +96,5 @@ span{
     border-radius: 100%;
     background-color: #fff;
     }
-  }
-}
-
-.content{
-  height: 100%;
-  
-  .title,.sub-title{
-    font-family: 'DM Serif Display', serif;
-    color: $main-green;
-  }
-
-  .dates{
-    font-weight: 500;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    color: $solid-gold;
   }
 }
