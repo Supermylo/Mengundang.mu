@@ -1,1 +1,25 @@
-span Location Page
+- content_for :additional_styles
+  = stylesheet_link_tag "sixthtemplate"
+
+.container-full.h-100.position-relative.overflow-hidden
+  .row  
+    section
+      h1 Location Page
+    section.nav-float
+      .row
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a href="/sixthtemplate/index"
+            i.fa-solid.fa-house.fa-lg.w-100.text-center
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a href="/sixthtemplate/couple"
+            i.fa-solid.fa-heart.fa-lg.w-100.text-center
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a.active href="#"
+            i.fa-solid.fa-location-dot.fa-lg.w-100.text-center
+            span.under-dot
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a href="/sixthtemplate/wishes"
+            i.fa-solid.fa-hands-praying.fa-lg.w-100.text-center
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a href="gift"
+            i.fa-solid.fa-gift.fa-lg.w-100.text-center

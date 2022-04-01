@@ -3,6 +3,7 @@ $light-orange : #FFC290;
 $main-green : #545A29;
 $light-green : #81865F;
 $solid-gold : #C59B46;
+$gradient-gold : linear-gradient(45deg,#C59B46,#F4DCAB);
 
 html{height: 100%;}
 body{
@@ -33,25 +34,23 @@ span{
  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
 
- a{
-   color: $light-orange;
-   text-decoration: none;
+  a{
+    color: $light-orange;
 
-   &.active{
-     color: #fff;
-   }
+    &.active{color: #fff;}
 
-   .ellipse-tag{
+    i{display: inline-block;}
+
+    .under-dot{
     display: block;
+    margin: 0 auto;
     margin-top: 4px;
     width: 4px;
     height: 4px;
     border-radius: 100%;
-    background-color: $light-orange;
+    background-color: #fff;
+    }
   }
- }
-
- i{display: block;}
 }
 
 .content{
