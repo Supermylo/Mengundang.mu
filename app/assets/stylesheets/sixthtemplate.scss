@@ -7,7 +7,7 @@ $gradient-gold : linear-gradient(45deg,#C59B46,#F4DCAB);
 
 html{height: 100%;}
 body{
-  background: url("Background Sixth Template.png");
+  background: url("sixthtemplate/Background Sixth Template.png");
   background-size: cover;
   height: 100%;
 }
@@ -18,6 +18,77 @@ h3{font-size: 20px;}
 span{
   font-size: 12px;
   font-family: 'Work Sans', sans-serif;
+}
+
+.ornament{
+  
+  .top-left{
+
+    &::before{
+      position: absolute;
+      content: "";
+      height: 100%;;
+      width: 100%;
+      background: url("sixthtemplate/big-leaves-shadow");
+      background-repeat: no-repeat;
+      top: -6%;
+      left: -15%;
+    }
+
+    #big-leaves-tl, #small-leaves-tl, #one-leaf-tl{
+      position: absolute;
+    }
+
+    #big-leaves-tl{
+      top: -8%;
+      left: -22%;
+    }
+
+    #small-leaves-tl{
+      top: -5%;
+      left: 6%;
+    }
+    
+    #one-leaf-tl{
+      top: 6%;
+      left: 13%;
+    }
+  }
+
+  .top-right{
+    
+    &::before{
+      position: absolute;
+      content: "";
+      height: 100%;;
+      width: 100%;
+      background: url("sixthtemplate/big-leaves-shadow");
+      background-repeat: no-repeat;
+      transform: scaleX(-1);
+      top: -6%;
+      right: -15%;
+    }
+
+    #big-leaves-tr, #small-leaves-tr, #one-leaf-tr{
+      position: absolute;
+      transform: scaleX(-1);
+    }
+
+    #big-leaves-tr{
+      top: -8%;
+      right: -22%;
+    }
+
+    #small-leaves-tr{
+      top: -5%;
+      right: 6%;
+    }
+    
+    #one-leaf-tr{
+      top: 6%;
+      right: 13%;
+    }
+  }
 }
 
 .content{
@@ -34,14 +105,14 @@ span{
     .custom-placeholder{
       width: 200px;
       height: 200px;
-      background: url("Border Image.png");
+      background: url("sixthtemplate/Border Image.png");
 
       &:after{
         content: "";
         display: block;
         width: 180px;
         height: 180px;
-        background: url("Sample Couple Image.png");
+        background: url("sixthtemplate/Sample Couple Image.png");
         border-radius: 1000px;
         margin: 10px;
       }
