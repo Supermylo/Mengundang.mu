@@ -89,13 +89,63 @@ span{
       right: 13%;
     }
   }
+
+  .bottom{
+
+    &::before{
+      position: absolute;
+      content: "";
+      background: url("sixthtemplate/bottom-leaf-shadow.png");
+      background-repeat: no-repeat;
+      width: 110%;
+      height: 24%;
+      bottom: 0;
+      left: -8%;
+      transform: scale(1.2);
+    }
+
+    #leaf-1, #leaf-2, #leaf-3, #leaf-4, #leaf-5, #leaf-6{
+      position: absolute;
+      transform: scale(1.2);
+    }
+
+    #leaf-1{
+      bottom: -8%;
+      left: -2%;
+    }
+
+    #leaf-2{
+      bottom: -7%;
+      left: 6%;
+    }
+
+    #leaf-3{
+      bottom: -3%;
+      left: 24%;
+    }
+
+    #leaf-4{
+      bottom: -1%;
+      right: 37%;
+    }
+
+    #leaf-5{
+      bottom: -12%;
+      right: 16%;
+    }
+
+    #leaf-6{
+      bottom: -11%;
+      right: -9%;
+    }
+  }
 }
 
 .content{
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  margin-top: 50%;
 
   .photo{
     display: flex;
