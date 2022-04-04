@@ -21,73 +21,14 @@ span{
 }
 
 .ornament{
+  height: 100vh;
   
-  .top-left{
-
-    &::before{
-      position: absolute;
-      content: "";
-      height: 100%;;
-      width: 100%;
-      background: url("sixthtemplate/big-leaves-shadow");
-      background-repeat: no-repeat;
-      top: -6%;
-      left: -15%;
-    }
-
-    #big-leaves-tl, #small-leaves-tl, #one-leaf-tl{
-      position: absolute;
-    }
-
-    #big-leaves-tl{
-      top: -8%;
-      left: -22%;
-    }
-
-    #small-leaves-tl{
-      top: -5%;
-      left: 6%;
-    }
-    
-    #one-leaf-tl{
-      top: 6%;
-      left: 13%;
-    }
-  }
-
-  .top-right{
-    
-    &::before{
-      position: absolute;
-      content: "";
-      height: 100%;;
-      width: 100%;
-      background: url("sixthtemplate/big-leaves-shadow");
-      background-repeat: no-repeat;
-      transform: scaleX(-1);
-      top: -6%;
-      right: -15%;
-    }
-
-    #big-leaves-tr, #small-leaves-tr, #one-leaf-tr{
-      position: absolute;
-      transform: scaleX(-1);
-    }
-
-    #big-leaves-tr{
-      top: -8%;
-      right: -22%;
-    }
-
-    #small-leaves-tr{
-      top: -5%;
-      right: 6%;
-    }
-    
-    #one-leaf-tr{
-      top: 6%;
-      right: 13%;
-    }
+  .frame{
+    height: calc(100vh - 40px);
+    width: calc(100% - 40px);
+    border: 1px solid $light-green;
+    border-radius: 20px;
+    margin: 20px;
   }
 
   .bottom{
