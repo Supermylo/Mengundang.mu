@@ -4,7 +4,6 @@
 .container-full.h-100.position-relative.overflow-hidden
   .row
     section.ornament
-      .frame
       .bottom
         #leaf-1
           = image_tag ("sixthtemplate/bottom-leaf-1.png")
@@ -19,12 +18,33 @@
         #leaf-4
           = image_tag ("sixthtemplate/bottom-leaf-4.png")
     section.content
-      .photo
-        span.custom-placeholder
-      .text
-        h3.sub-title.text-center The Wedding of
-        h1.title.text-center Wildan & Utaran
-        span.dates.text-center 6 September 2022   
+      span.leaf-set
+      / span.custom-leaf-set
+      /   #big-walnut
+      /     = image_tag ("sixthtemplate/big-walnut.png")
+      /   #small-walnut
+      /     = image_tag ("sixthtemplate/small-walnut.png")
+      /   #maple-leaf
+      /     = image_tag ("sixthtemplate/maple-leaf.png")
+      /   #small-leaves-left
+      /     = image_tag ("sixthtemplate/small-leaves-ribbon.png")
+      /   #small-leaves-right
+      /     = image_tag ("sixthtemplate/small-leaves-ribbon.png")
+      span.prolog.text-center
+        | Assalamu’alaikum Wr. Wb.
+        br
+        | Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan kami.
+      span.couple-set
+        #groom-image
+        .group-name
+          h2.couples-name.text-center Wildan Ramadan
+          span.parents-name.text-center Putra Bapak Fulan & Ibu Fulanah
+      h3.separator &
+      span.couple-set
+        .group-name
+          h2.couples-name.text-center Utaran Rimidin
+          span.parents-name.text-center Putri Bapak Fulan & Ibu Fulanah
+        #bride-image
     section.nav-float
       .row
         .col.text-center.d-flex.align-items-center.justify-content-center

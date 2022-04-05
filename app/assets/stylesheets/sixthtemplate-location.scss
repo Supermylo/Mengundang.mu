@@ -15,6 +15,7 @@ body{
 h1{font-size: 36px;}
 h2{font-size: 24px;}
 h3{font-size: 20px;}
+h4{font-size: 14px;}
 span{
   font-size: 12px;
   font-family: 'Work Sans', sans-serif;
@@ -143,46 +144,88 @@ span{
 
 .content{
   position: absolute;
-  height: 100vh;
   margin-top: 50%;
 
-  .photo{
+  .image{
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 12px;
 
     .custom-placeholder{
-      width: 200px;
-      height: 200px;
+      width: 120px;
+      height: 120px;
       background: url("sixthtemplate/Border Image.png");
+      background-size: 100%;
 
       &:after{
         content: "";
         display: block;
-        width: 180px;
-        height: 180px;
+        width: 108px;
+        height: 108px;
         background: url("sixthtemplate/Sample Couple Image.png");
+        background-size: 100%;
         border-radius: 1000px;
-        margin: 10px;
+        margin: 6px;
       }
     }
   }
-  
-  .title,.sub-title{
+
+  .title{
     font-family: 'DM Serif Display', serif;
     color: $main-green;
   }
 
-  .sub-title{margin-bottom: 4px;}
-  
-  .title{margin-bottom: 8px;}
+  .time{
+    width: 100%;
+    margin-bottom: 16px;
 
-  .dates{
-    display: block;
-    font-weight: 500;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    color: $solid-gold;
+    .day, .month, .year, .clock{
+      color: $light-green;
+      text-transform: uppercase;
+    }
+
+    .day{
+      display: flex;
+      justify-content: end;
+    }
+
+    .clock{
+      display: flex;
+      justify-content: start;
+    }
+
+    .dates{
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+
+      .wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .date{
+          font-family: 'DM Serif Display', serif;
+          color: $main-green;
+          margin: 0;
+        }
+
+      }
+
+      .divider{
+        width: 2px;
+        height: 80px;
+        background: linear-gradient(to bottom, rgba(197,155,70,0), rgba(197,155,70,1), rgba(197,155,70,0));
+      }
+    }
+  }
+
+  .location{
+
+    .address{
+      display: inline-block;
+    }
   }
 }
 

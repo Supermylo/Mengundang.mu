@@ -21,15 +21,6 @@ span{
 }
 
 .ornament{
-  height: 100vh;
-  
-  .frame{
-    height: calc(100vh - 40px);
-    width: calc(100% - 40px);
-    border: 1px solid $light-green;
-    border-radius: 20px;
-    margin: 20px;
-  }
 
   .bottom{
 
@@ -48,6 +39,7 @@ span{
     #leaf-1, #leaf-2, #leaf-3, #leaf-4, #leaf-5, #leaf-6{
       position: absolute;
       transform: scale(1.2);
+      z-index: 2;
     }
 
     #leaf-1{
@@ -83,52 +75,134 @@ span{
 }
 
 .content{
-  height: 100vh;
+  width: 100%;
+  height: calc(100vh - 160px);
+  padding: 0 48px;
   display: flex;
   flex-direction: column;
-  margin-top: 50%;
+  justify-content: center;
 
-  .photo{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+  &::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 40px);
+    height: calc(100vh - 40px);
+    border: 1px solid $light-green;
+    border-radius: 20px;
+    margin: 20px;
+    z-index: 1;
+  }
 
-    .custom-placeholder{
-      width: 200px;
-      height: 200px;
-      background: url("sixthtemplate/Border Image.png");
+  .leaf-set{
+    height: 80px;
+    background: url("sixthtemplate/leaf-set.png");
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
 
-      &:after{
-        content: "";
-        display: block;
-        width: 180px;
-        height: 180px;
-        background: url("sixthtemplate/Sample Couple Image.png");
-        border-radius: 1000px;
-        margin: 10px;
-      }
+  .custom-leaf-set{
+    #big-walnut, #small-walnut, #maple-leaf, #small-leaves-right, #small-leaves-left{
+      position: absolute;
+    }
+
+    #small-leaves-right{
+      transform: scale(-1);
     }
   }
   
-  .title,.sub-title{
-    font-family: 'DM Serif Display', serif;
-    color: $main-green;
+  .prolog{
+    display: inline-block;
+    color: $light-green;
+    margin-top: 16px;
+    margin-bottom: 20px;
   }
 
-  .sub-title{margin-bottom: 4px;}
-  .title{margin-bottom: 8px;}
+  .couple-set{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 
-  .dates{
-    display: block;
-    font-weight: 500;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    color: $solid-gold;
+    #groom-image{
+      width: 64px;
+      height: 64px;
+      background: url("sixthtemplate/Circle Frame.png");
+      background-size: 64px;
+
+      &::after{
+        position: absolute;
+        content: "";
+        width: 56px;
+        height: 56px;
+        border-radius: 100%;
+        background: url("sixthtemplate/Groom Image.png");
+        background-size: 56px;
+        margin: 4px;
+      }
+    }
+
+    #bride-image{
+      width: 64px;
+      height: 64px;
+      background: url("sixthtemplate/Circle Frame.png");
+      background-size: 64px;
+
+      &::after{
+        position: absolute;
+        content: "";
+        width: 56px;
+        height: 56px;
+        border-radius: 100%;
+        background: url("sixthtemplate/Bride Image.png");
+        background-size: 56px;
+        margin: 4px;
+      }
+    }
+
+    .couples-name{
+      font-family: 'DM Serif Display', serif;
+      color: $main-green;
+      margin-bottom: 4px;
+    }
+
+    .parents-name{
+      display: block;
+      color: $solid-gold;
+    }
+  }
+
+  .separator{
+    font-family: 'DM Serif Display', serif;
+    color: $main-green;
+    margin: 12px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    &::before{
+      display: block;
+      content: "";
+      width: 120px;
+      height: 1px;
+      background-image: linear-gradient(to right, rgba(197,155,70,0), rgba(197,155,70,1));
+    }
+
+    &::after{
+      display: block;
+      content: "";
+      width: 120px;
+      height: 1px;
+      background-image: linear-gradient(to right, rgba(197,155,70,1), rgba(197,155,70,0));
+    }
   }
 }
 
 .nav-float{
   position: absolute;
+  z-index: 3;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);

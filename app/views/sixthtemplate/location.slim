@@ -1,10 +1,61 @@
 - content_for :additional_styles
-  = stylesheet_link_tag "sixthtemplate"
+  = stylesheet_link_tag "sixthtemplate-location"
 
 .container-full.h-100.position-relative.overflow-hidden
-  .row  
-    section
-      h1 Location Page
+  .row.m-0
+    section.ornament
+      .top-left
+        #big-leaves-tl
+          = image_tag ("sixthtemplate/big-leaves.png")
+        #small-leaves-tl
+          = image_tag ("sixthtemplate/small-leaves.png")
+        #one-leaf-tl
+          = image_tag ("sixthtemplate/one-leaf.png")
+      .top-right
+        #big-leaves-tr
+          = image_tag ("sixthtemplate/big-leaves.png")
+        #small-leaves-tr
+          = image_tag ("sixthtemplate/small-leaves.png")
+        #one-leaf-tr
+          = image_tag ("sixthtemplate/one-leaf.png")
+      .bottom
+        #leaf-1
+          = image_tag ("sixthtemplate/bottom-leaf-1.png")
+        #leaf-3
+          = image_tag ("sixthtemplate/bottom-leaf-3.png")
+        #leaf-2
+          = image_tag ("sixthtemplate/bottom-leaf-2.png")
+        #leaf-6
+          = image_tag ("sixthtemplate/bottom-leaf-6.png")
+        #leaf-5
+          = image_tag ("sixthtemplate/bottom-leaf-5.png")
+        #leaf-4
+          = image_tag ("sixthtemplate/bottom-leaf-4.png")
+    section.content
+      h2.title.text-center Akad
+      span.image
+        span.custom-placeholder
+      .time
+        .row.align-items-center
+          .col
+            span.day Selasa
+          .col
+            .dates
+              .divider
+              .wrapper
+                span.month Sept
+                h1.date 06
+                span.year 2022
+              .divider
+          .col
+            span.clock 09.00 WIB
+      .location.text-center
+        h4.name éL Hotel Royale Bandung
+        span.address
+          | Jl. Merdeka No. 2, Braga, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40111
+        button.custom-btn
+          span.icon
+          span.text Lihat Maps
     section.nav-float
       .row
         .col.text-center.d-flex.align-items-center.justify-content-center
@@ -23,3 +74,4 @@
         .col.text-center.d-flex.align-items-center.justify-content-center
           a href="gift"
             i.fa-solid.fa-gift.fa-lg.w-100.text-center
+            
