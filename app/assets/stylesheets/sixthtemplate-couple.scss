@@ -22,6 +22,15 @@ span{
 
 .ornament{
 
+  .frame{
+    position: absolute;
+    width: calc(100% - 40px);
+    height: calc(100vh - 40px);
+    border: 1px solid $light-green;
+    border-radius: 20px;
+    margin: 20px;
+  }
+
   .bottom{
 
     &::before{
@@ -76,24 +85,11 @@ span{
 
 .content{
   width: 100%;
-  height: calc(100vh - 160px);
+  height: calc(100vh - 120px);
   padding: 0 48px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  &::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: calc(100% - 40px);
-    height: calc(100vh - 40px);
-    border: 1px solid $light-green;
-    border-radius: 20px;
-    margin: 20px;
-    z-index: 1;
-  }
 
   .leaf-set{
     height: 80px;
