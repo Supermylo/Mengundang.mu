@@ -31,6 +31,14 @@ span{
     margin: 20px;
   }
 
+  .leaf-set{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+  }
+
   .bottom{
 
     &::before{
@@ -84,114 +92,121 @@ span{
 }
 
 .content{
-  width: 100%;
-  height: calc(100vh - 120px);
-  padding: 0 48px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  justify-content: start;
+  margin-top: 84px;
+  width: 100%;
+  height: calc(100vh - 260px);
+  padding: 0 40px;
+  position: absolute;
+  right: 0;
 
-  .leaf-set{
-    height: 80px;
-    background: image-url("sixthtemplate/leaf-set.png");
-    background-repeat: no-repeat;
-    background-position: 50%;
-  }
-
-  .custom-leaf-set{
-    #big-walnut, #small-walnut, #maple-leaf, #small-leaves-right, #small-leaves-left{
-      position: absolute;
-    }
-
-    #small-leaves-right{
-      transform: scale(-1);
-    }
-  }
-  
-  .prolog{
-    display: inline-block;
-    color: $light-green;
-    margin-top: 16px;
-    margin-bottom: 20px;
-  }
-
-  .couple-set{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-
-    #groom-image{
-      width: 64px;
-      height: 64px;
-      background: url("sixthtemplate/Circle Frame.png");
-      background-size: 64px;
-
-      &::after{
-        position: absolute;
-        content: "";
-        width: 56px;
-        height: 56px;
-        border-radius: 100%;
-        background: url("sixthtemplate/Groom Image.png");
-        background-size: 56px;
-        margin: 4px;
-      }
-    }
-
-    #bride-image{
-      width: 64px;
-      height: 64px;
-      background: url("sixthtemplate/Circle Frame.png");
-      background-size: 64px;
-
-      &::after{
-        position: absolute;
-        content: "";
-        width: 56px;
-        height: 56px;
-        border-radius: 100%;
-        background: url("sixthtemplate/Bride Image.png");
-        background-size: 56px;
-        margin: 4px;
-      }
-    }
-
-    .couples-name{
-      font-family: 'DM Serif Display', serif;
-      color: $main-green;
-      margin-bottom: 4px;
-    }
-
-    .parents-name{
-      display: block;
-      color: $solid-gold;
-    }
-  }
-
-  .separator{
+  .title{
     font-family: 'DM Serif Display', serif;
     color: $main-green;
-    margin: 12px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
+    margin-bottom: 12px;
+  }
 
-    &::before{
-      display: block;
-      content: "";
-      width: 120px;
-      height: 1px;
-      background-image: linear-gradient(to right, rgba(197,155,70,0), rgba(197,155,70,1));
+  .custom-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 12px;
+
+    .group-input{
+
+      label, input, textarea, select{
+        font-family: 'Work Sans', sans-serif;
+        font-size: 12px;
+      }
+
+      label{
+        display: block;
+        font-weight: 600;
+        color: $main-green;
+      }
+
+      input, textarea, select{
+        width: 100%;
+        font-weight: 400;
+        background: none;
+        padding-bottom: 4px;
+        border: none;
+        border-bottom: 1px solid #DCDFC5;
+        color: $light-green;
+
+        &:focus{
+          font-weight: 500;
+          outline: none;
+        }
+      }
+
+      textarea{height: 56px;}
+
+      select{
+        color: $main-green;
+        font-weight: 500;
+      }
     }
 
-    &::after{
-      display: block;
-      content: "";
-      width: 120px;
-      height: 1px;
-      background-image: linear-gradient(to right, rgba(197,155,70,1), rgba(197,155,70,0));
+    .custom-btn{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 16px;
+      background-color: $main-orange;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      border-radius: 24px;
+      border: none;
+
+      .text{
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .wishlist{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    .group-wish{
+
+      .sender-name{
+        font-weight: 600;
+        color: $main-green;
+        display: flex;
+        align-items: center;
+        margin-bottom: 4px;
+
+        &::after{
+          content: "Hadir";
+          height: 100%;
+          color: white;
+          font-size: 7px;
+          font-weight: 400;
+          background-color: $solid-gold;
+          padding: 2px 8px;
+          margin-left: 8px;
+          border-radius: 16px;
+        }
+      }
+
+      .message{
+        color: $light-green;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #DCDFC5;
+      }
+    }
+
+    .group-wish:not(:last-child){
+      margin-bottom: 12px;
     }
   }
 }
