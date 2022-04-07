@@ -1,10 +1,48 @@
 - content_for :additional_styles
-  = stylesheet_link_tag "sixthtemplate"
+  = stylesheet_link_tag "sixthtemplate-gift"
 
 .container-full.h-100.position-relative.overflow-hidden
-  .row  
-    section
-      h1 Gift Page
+  .row.m-0
+    section.ornament
+      .top-left
+        #big-leaves-tl
+          = image_tag ("sixthtemplate/big-leaves.png")
+        #small-leaves-tl
+          = image_tag ("sixthtemplate/small-leaves.png")
+        #one-leaf-tl
+          = image_tag ("sixthtemplate/one-leaf.png")
+      .top-right
+        #big-leaves-tr
+          = image_tag ("sixthtemplate/big-leaves.png")
+        #small-leaves-tr
+          = image_tag ("sixthtemplate/small-leaves.png")
+        #one-leaf-tr
+          = image_tag ("sixthtemplate/one-leaf.png")
+      .bottom
+        #leaf-1
+          = image_tag ("sixthtemplate/bottom-leaf-1.png")
+        #leaf-3
+          = image_tag ("sixthtemplate/bottom-leaf-3.png")
+        #leaf-2
+          = image_tag ("sixthtemplate/bottom-leaf-2.png")
+        #leaf-6
+          = image_tag ("sixthtemplate/bottom-leaf-6.png")
+        #leaf-5
+          = image_tag ("sixthtemplate/bottom-leaf-5.png")
+        #leaf-4
+          = image_tag ("sixthtemplate/bottom-leaf-4.png")
+    section.content
+      span.image
+        span.custom-placeholder
+      span.thanks.text-center
+        | Atas kehadiran dan do’a restu dari Bapak/Ibu/Saudara/i sekalian, kami mengucapkan terima kasih.
+        br
+        | Wassalamu’alaikum Wr. Wb.
+      span.text-center Salam hangat dari kami,
+      h2.title.text-center Wildan & Utaran
+      a.custom-btn href="https://google.com/maps"
+        i.fa-solid.fa-location-dot.fa-lg.text-center
+        span.text Lihat Maps
     section.nav-float
       .row
         .col.text-center.d-flex.align-items-center.justify-content-center
@@ -23,3 +61,4 @@
           a.active href="#"
             i.fa-solid.fa-gift.fa-lg.w-100.text-center
             span.under-dot
+            
