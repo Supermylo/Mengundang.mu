@@ -45,10 +45,34 @@
           | Wassalamu’alaikum Wr. Wb.
         span.sub-title.text-center Salam hangat dari kami,
         h2.title.text-center &
-        a.custom-btn href="#"
-          i.fa-solid.fa-location-dot.fa-lg.text-center
-          span.text Lihat Maps
-      .popup-message
+        a.custom-btn href="#popup-message"
+          i.fa-solid.fa-gift.fa-lg.text-center
+          span.text Kirim Hadiah
+    section#popup-message
+      .custom-box
+        a.close-btn href="#"
+          i.fa-solid.fa-xmark.custom-icon
+        .offline-gift.text-center
+          span.prolog
+            | Tanpa mengurangi rasa hormat, bagi keluarga, sahabat, dan rekan yang ingin memberikan tanda kasih untuk kami, dapat melalui :
+          span.title Kirim Hadiah Fisik
+          #giftbox-icon.text-center
+            = image_tag("sixthtemplate/giftbox-icon.png", class: "custom-img")
+          span.sub-title Rumah Pengantin Wanita
+          span.address
+            | Jl. Pasang No. 22, Kel. Cihapit, Kec. Bandung Wetan, Kota Bandung 40114
+          button.copy-btn
+            i.custom-icon.fa-solid.fa-copy
+            span.copy-text Salin
+        .online-gift.text-center
+          span.title Kirim Hadiah Online
+          #bank-icon.text-center
+            = image_tag("sixthtemplate/logo-bca.png", class: "custom-img")
+          span.sub-title Rekening BCA - 4493812222
+          span.address a.n. PT Kharisma Indotech Pratama
+          button.copy-btn
+            i.custom-icon.fa-solid.fa-copy
+            span.copy-text Salin
     section.nav-float
       .row
         .col.text-center.d-flex.align-items-center.justify-content-center
