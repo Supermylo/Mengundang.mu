@@ -33,12 +33,26 @@
           = image_tag ("sixthtemplate/bottom-leaf-4.png")
     section.content
       .wrapper-content.text-center
-        span.image
-          a.slider-btn role="button" href="#"
-            i.fa-solid.fa-arrow-left.fa-sm
-          span.custom-placeholder
-          a.slider-btn role="button" href="#"
-            i.fa-solid.fa-arrow-right.fa-sm
+        #carouselExampleControls.carousel.slide data-bs-ride="carousel" data-bs-interval="false"
+          .carousel-inner.custom-inner
+            .carousel-item.custom-item.active
+              span.custom-placeholder
+            .carousel-item.custom-item
+              span.custom-placeholder
+            button.carousel-control-prev.custom-prev data-bs-slide="prev" data-bs-target="#carouselExampleControls" type="button" 
+              span.carousel-control-prev-icon.custom-btn aria-hidden="true" 
+                i.fa-solid.fa-arrow-left.custom-icon
+              span.visually-hidden Previous
+            button.carousel-control-next.custom-next data-bs-slide="next" data-bs-target="#carouselExampleControls" type="button" 
+              span.carousel-control-next-icon.custom-btn aria-hidden="true" 
+                i.fa-solid.fa-arrow-right.custom-icon
+              span.visually-hidden Next
+        / span.image
+        /   a.slider-btn role="button" href="#"
+        /     i.fa-solid.fa-arrow-left.fa-sm
+        /   span.custom-placeholder
+        /   a.slider-btn role="button" href="#"
+        /     i.fa-solid.fa-arrow-right.fa-sm
         span.thanks.text-center
           | Atas kehadiran dan do’a restu dari Bapak/Ibu/Saudara/i sekalian, kami mengucapkan terima kasih.
           br

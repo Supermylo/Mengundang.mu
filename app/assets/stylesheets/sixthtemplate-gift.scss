@@ -152,6 +152,52 @@ span{
 
   .wrapper-content{
 
+    .custom-inner{
+      overflow: visible;
+  
+      .custom-prev, .custom-next{
+        opacity: 1;
+        width: auto;
+  
+        .custom-btn{
+          background-image: none;
+          width: 32px;
+          height: 32px;
+          padding: 8px;
+          background-color: $main-green;
+          border-radius: 100%;
+  
+          .custom-icon{
+            width: 16px;
+            height: 16px;
+            color: #fff;
+          }
+        }
+      }
+  
+      .custom-prev{left: 0;}
+  
+      .custom-next{right: 0;}
+    }
+
+    .custom-placeholder{
+      width: 160px;
+      height: 160px;
+      background: url("sixthtemplate/Border Image.png");
+      background-size: 100%;
+
+      &:after{
+        content: "";
+        display: block;
+        width: 144px;
+        height: 144px;
+        background: url("sixthtemplate/Sample Couple Image.png");
+        background-size: 100%;
+        border-radius: 1000px;
+        margin: 8px;
+      }
+    }
+
     .image{
       display: flex;
       justify-content: center;
