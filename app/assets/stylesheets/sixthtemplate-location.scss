@@ -164,6 +164,9 @@ span{
         padding: 8px;
         background-color: $main-green;
         border-radius: 100%;
+        opacity: 0.2;
+
+        &:hover, &:active{opacity: 1;}
 
         .custom-icon{
           width: 16px;
@@ -295,12 +298,12 @@ span{
 }
 
 .nav-float{
-  position: absolute;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   background-color: $main-orange;
   position: fixed;
+  z-index: 2;
   padding: 12px;
   border-radius: 50rem;
   width: calc(100% - 40px);
@@ -308,21 +311,23 @@ span{
  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
 
-  a{
+ .custom-row{
+   margin-left: 0;
+   margin-right: 0;
+   padding-left: 0;
+   padding-right: 0;
+ }
+
+  a.navitem-label{
     color: $light-orange;
+    text-decoration: none;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 
     &.active{color: #fff;}
 
     i{display: inline-block;}
-
-    .under-dot{
-    display: block;
-    margin: 0 auto;
-    margin-top: 4px;
-    width: 4px;
-    height: 4px;
-    border-radius: 100%;
-    background-color: #fff;
-    }
   }
 }
