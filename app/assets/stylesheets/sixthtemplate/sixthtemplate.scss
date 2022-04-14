@@ -27,12 +27,13 @@ span{
     &::before{
       position: absolute;
       content: "";
-      height: 100%;;
+      height: 25%;;
       width: 100%;
       background: url("sixthtemplate/big-leaves-shadow");
       background-repeat: no-repeat;
       top: -6%;
       left: -15%;
+      animation: ShadowLeavesTL 5s infinite;
     }
 
     #big-leaves-tl, #small-leaves-tl, #one-leaf-tl{
@@ -42,16 +43,43 @@ span{
     #big-leaves-tl{
       top: -8%;
       left: -22%;
+      animation: BigLeavesTL 5s infinite;
     }
 
     #small-leaves-tl{
       top: -5%;
-      left: 6%;
+      left: 3%;
+      animation: SmallLeavesTL 5s infinite;
     }
     
     #one-leaf-tl{
       top: 6%;
       left: 13%;
+      animation: OneLeafTL 5s infinite;
+    }
+
+    @keyframes BigLeavesTL {
+      0% {transform: rotate(-5deg) scale(0.95);}
+      50% {transform: rotate(5deg) scale(1);}
+      100% {transform: rotate(-5deg) scale(0.95);}
+    }
+
+    @keyframes SmallLeavesTL {
+      0% {transform: rotate(10deg) scale(0.9);}
+      50% {transform: rotate(-10deg) scale(1);}
+      100% {transform: rotate(10deg) scale(0.9);}
+    }
+
+    @keyframes OneLeafTL {
+      0% {transform: rotate(-10deg) scale(0.9);}
+      50% {transform: rotate(10deg) scale(1);}
+      100% {transform: rotate(-10deg) scale(0.9);}
+    }
+
+    @keyframes ShadowLeavesTL {
+      0% {transform: rotate(-5deg) scale(0.95);}
+      50% {transform: rotate(5deg) scale(1);}
+      100% {transform: rotate(-5deg) scale(0.95);}
     }
   }
 
@@ -60,33 +88,59 @@ span{
     &::before{
       position: absolute;
       content: "";
-      height: 100%;;
+      height: 25%;;
       width: 100%;
       background: url("sixthtemplate/big-leaves-shadow");
       background-repeat: no-repeat;
-      transform: scaleX(-1);
       top: -6%;
       right: -15%;
+      animation: ShadowLeavesTR 5s infinite;
     }
 
     #big-leaves-tr, #small-leaves-tr, #one-leaf-tr{
       position: absolute;
-      transform: scaleX(-1);
     }
 
     #big-leaves-tr{
       top: -8%;
       right: -22%;
+      animation: BigLeavesTR 5s infinite;
     }
 
     #small-leaves-tr{
       top: -5%;
-      right: 6%;
+      right: 3%;
+      animation: SmallLeavesTR 5s infinite;
     }
     
     #one-leaf-tr{
       top: 6%;
       right: 13%;
+      animation: OneLeafTR 5s infinite;
+    }
+
+    @keyframes BigLeavesTR {
+      0% {transform: scaleX(-1) rotate(-5deg) scale(0.95);}
+      50% {transform: scaleX(-1) rotate(5deg) scale(1);}
+      100% {transform: scaleX(-1) rotate(-5deg) scale(0.95);}
+    }
+
+    @keyframes SmallLeavesTR {
+      0% {transform: scaleX(-1) rotate(10deg) scale(0.9);}
+      50% {transform: scaleX(-1) rotate(-10deg) scale(1);}
+      100% {transform: scaleX(-1) rotate(10deg) scale(0.9);}
+    }
+
+    @keyframes OneLeafTR {
+      0% {transform: scaleX(-1) rotate(-10deg) scale(0.9);}
+      50% {transform: scaleX(-1) rotate(10deg) scale(1);}
+      100% {transform: scaleX(-1) rotate(-10deg) scale(0.9);}
+    }
+
+    @keyframes ShadowLeavesTR {
+      0% {transform: scaleX(-1) rotate(-5deg) scale(0.95);}
+      50% {transform: scaleX(-1) rotate(5deg) scale(1);}
+      100% {transform: scaleX(-1) rotate(-5deg) scale(0.95);}
     }
   }
 
@@ -101,42 +155,89 @@ span{
       height: 24%;
       bottom: 0;
       left: -8%;
-      transform: scale(1.2);
+      animation: ShadowLeavesBottom 5s infinite;
     }
 
     #leaf-1, #leaf-2, #leaf-3, #leaf-4, #leaf-5, #leaf-6{
       position: absolute;
-      transform: scale(1.2);
     }
 
     #leaf-1{
       bottom: -8%;
       left: -2%;
+      animation: LeafOne 5s infinite;
     }
 
     #leaf-2{
       bottom: -7%;
       left: 6%;
+      animation: LeafTwo 5s infinite;
     }
 
     #leaf-3{
       bottom: -3%;
       left: 24%;
+      animation: LeafThree 5s infinite;
     }
 
     #leaf-4{
-      bottom: -1%;
+      bottom: -3%;
       right: 37%;
+      animation: LeafFour 5s infinite;
     }
 
     #leaf-5{
       bottom: -12%;
       right: 16%;
+      animation: LeafFive 5s infinite;
     }
 
     #leaf-6{
       bottom: -11%;
       right: -9%;
+      animation: LeafSix 5s infinite;
+    }
+
+    @keyframes LeafOne {
+      0% {transform: rotate(-10deg) scale(1.2);}
+      50% {transform: rotate(10deg) scale(1.3);}
+      100% {transform: rotate(-10deg) scale(1.2);}
+    }
+
+    @keyframes LeafTwo {
+      0% {transform: rotate(10deg) scale(1.1);}
+      50% {transform: rotate(-10deg) scale(1.2);}
+      100% {transform: rotate(10deg) scale(1.1);}
+    }
+
+    @keyframes LeafThree {
+      0% {transform: rotate(-10deg) scale(1.2);}
+      50% {transform: rotate(10deg) scale(1.3);}
+      100% {transform: rotate(-10deg) scale(1.2);}
+    }
+
+    @keyframes LeafFour {
+      0% {transform: rotate(10deg) scale(1.1);}
+      50% {transform: rotate(-10deg) scale(1.2);}
+      100% {transform: rotate(10deg) scale(1.1);}
+    }
+
+    @keyframes LeafFive {
+      0% {transform: rotate(-10deg) scale(1.1);}
+      50% {transform: rotate(10deg) scale(1.2);}
+      100% {transform: rotate(-10deg) scale(1.1);}
+    }
+
+    @keyframes LeafSix {
+      0% {transform: rotate(10deg) scale(1.1);}
+      50% {transform: rotate(-10deg) scale(1.2);}
+      100% {transform: rotate(10deg) scale(1.1);}
+    }
+
+    @keyframes ShadowLeavesBottom {
+      0% {transform: rotate(-5deg) scale(1.0);}
+      50% {transform: rotate(5deg) scale(1.2);}
+      100% {transform: rotate(-5deg) scale(1.0);}
     }
   }
 }
