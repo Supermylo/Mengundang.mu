@@ -7,7 +7,7 @@ $gradient-gold : linear-gradient(45deg,#C59B46,#F4DCAB);
 
 html{height: 100%;}
 body{
-  background: url("sixthtemplate/Background Sixth Template.png");
+  background: url("../sixthtemplate/Background Sixth Template.png");
   background-size: cover;
   height: 100%;
 }
@@ -161,7 +161,7 @@ span{
           display: inline-block;
           width: 160px;
           height: 160px;
-          background: url("sixthtemplate/Border Image.png");
+          background: url("../sixthtemplate/Border Image.png");
           background-size: 100%;
     
           &:after{
@@ -169,7 +169,7 @@ span{
             display: block;
             width: 144px;
             height: 144px;
-            background: url("sixthtemplate/Sample Couple Image.png");
+            background: url("../sixthtemplate/Sample Couple Image.png");
             background-size: 100%;
             border-radius: 1000px;
             margin: 8px;

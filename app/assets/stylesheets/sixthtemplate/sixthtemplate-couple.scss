@@ -7,7 +7,7 @@ $gradient-gold : linear-gradient(45deg,#C59B46,#F4DCAB);
 
 html{height: 100%;}
 body{
-  background: url("sixthtemplate/Background Sixth Template.png");
+  background: url("../sixthtemplate/Background Sixth Template.png");
   background-size: cover;
   height: 100%;
 }
@@ -124,7 +124,7 @@ span{
     #groom-image{
       width: 64px;
       height: 64px;
-      background: url("sixthtemplate/Circle Frame.png");
+      background: url("../sixthtemplate/Circle Frame.png");
       background-size: 64px;
 
       &::after{
@@ -133,7 +133,7 @@ span{
         width: 56px;
         height: 56px;
         border-radius: 100%;
-        background: url("sixthtemplate/Groom Image.png");
+        background: url("../sixthtemplate/Groom Image.png");
         background-size: 56px;
         margin: 4px;
       }
@@ -142,7 +142,7 @@ span{
     #bride-image{
       width: 64px;
       height: 64px;
-      background: url("sixthtemplate/Circle Frame.png");
+      background: url("../sixthtemplate/Circle Frame.png");
       background-size: 64px;
 
       &::after{
@@ -151,7 +151,7 @@ span{
         width: 56px;
         height: 56px;
         border-radius: 100%;
-        background: url("sixthtemplate/Bride Image.png");
+        background: url("../sixthtemplate/Bride Image.png");
         background-size: 56px;
         margin: 4px;
       }

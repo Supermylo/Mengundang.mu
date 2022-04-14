@@ -7,7 +7,7 @@ $gradient-gold : linear-gradient(45deg,#C59B46,#F4DCAB);
 
 html{height: 100%;}
 body{
-  background: url("sixthtemplate/Background Sixth Template.png");
+  background: url("../sixthtemplate/Background Sixth Template.png");
   background-size: cover;
   height: 100%;
 }
@@ -15,6 +15,7 @@ body{
 h1{font-size: 36px;}
 h2{font-size: 24px;}
 h3{font-size: 20px;}
+h4{font-size: 14px;}
 span{
   font-size: 12px;
   font-family: 'Work Sans', sans-serif;
@@ -27,8 +28,8 @@ span{
     &::before{
       position: absolute;
       content: "";
-      height: 100%;;
-      width: 100%;
+      height: 229px;;
+      width: 185px;
       background: url("sixthtemplate/big-leaves-shadow");
       background-repeat: no-repeat;
       top: -6%;
@@ -60,8 +61,8 @@ span{
     &::before{
       position: absolute;
       content: "";
-      height: 100%;;
-      width: 100%;
+      height: 229px;
+      width: 185px;
       background: url("sixthtemplate/big-leaves-shadow");
       background-repeat: no-repeat;
       transform: scaleX(-1);
@@ -142,48 +143,157 @@ span{
 }
 
 .content{
+  width: 100%;
+  height: calc(100vh - 120px);
+  padding: 0 48px;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 120px);
   justify-content: center;
 
-  .photo{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+  .custom-inner{
+    overflow: visible;
 
-    .custom-placeholder{
-      width: 200px;
-      height: 200px;
-      background: url("sixthtemplate/Border Image.png");
+    .custom-prev, .custom-next{
+      opacity: 1;
+      width: auto;
 
-      &:after{
-        content: "";
-        display: block;
-        width: 180px;
-        height: 180px;
-        background: url("sixthtemplate/Sample Couple Image.png");
-        border-radius: 1000px;
-        margin: 10px;
+      .custom-btn{
+        background-image: none;
+        width: 32px;
+        height: 32px;
+        padding: 8px;
+        background-color: $main-green;
+        border-radius: 100%;
+        opacity: 0.2;
+
+        &:hover, &:active{opacity: 1;}
+
+        .custom-icon{
+          width: 16px;
+          height: 16px;
+          color: #fff;
+        }
       }
     }
-  }
-  
-  .title,.sub-title{
-    font-family: 'DM Serif Display', serif;
-    color: $main-green;
+
+    .custom-prev{left: -32px;}
+
+    .custom-next{right: -32px;}
   }
 
-  .sub-title{margin-bottom: 4px;}
-  
-  .title{margin-bottom: 8px;}
+  #akad, #resepsi{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-  .dates{
-    display: block;
-    font-weight: 500;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    color: $solid-gold;
+    .title{
+      font-family: 'DM Serif Display', serif;
+      color: $main-green;
+    }
+  
+    .image{
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      margin-bottom: 12px;
+  
+      .custom-placeholder{
+        width: 120px;
+        height: 120px;
+        background: url("../sixthtemplate/Border Image.png");
+        background-size: 100%;
+  
+        &:after{
+          content: "";
+          display: block;
+          width: 108px;
+          height: 108px;
+          background: url("../sixthtemplate/Sample Couple Image.png");
+          background-size: 100%;
+          border-radius: 1000px;
+          margin: 6px;
+        }
+      }
+    }
+  
+    .time{
+      width: 100%;
+      margin-bottom: 16px;
+  
+      .day, .month, .year, .clock{
+        color: $light-green;
+        text-transform: uppercase;
+      }
+  
+      .day{
+        display: flex;
+        justify-content: end;
+      }
+  
+      .clock{
+        display: flex;
+        justify-content: start;
+      }
+  
+      .dates{
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+  
+        .wrapper{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+  
+          .date{
+            font-family: 'DM Serif Display', serif;
+            color: $main-green;
+            margin: 0;
+          }
+  
+        }
+  
+        .divider{
+          width: 2px;
+          height: 80px;
+          background: linear-gradient(to bottom, rgba(197,155,70,0), rgba(197,155,70,1), rgba(197,155,70,0));
+        }
+      }
+    }
+  
+    .location{
+  
+      .name{
+        font-family: 'DM Serif Display', serif;
+        color: $main-green;
+        margin-bottom: 8px;
+      }
+  
+      .address{
+        display: block;
+        margin-bottom: 12px;
+        color: $light-green;
+      }
+  
+      .custom-btn{
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 16px;
+        background-color: $main-orange;
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        border-radius: 24px;
+  
+        .text{
+          margin-left: 8px;
+        }
+  
+        &:hover{background-color: #d36f1d;}
+      }
+    }
   }
 }
 
