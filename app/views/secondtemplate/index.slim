@@ -1,1 +1,39 @@
-span Home Page
+- content_for :additional_styles
+  = stylesheet_link_tag "secondtemplate/secondtemplate"
+
+.container-full.h-100
+  .row.custom-row
+    section.content
+      #top-ornament
+        = image_tag("secondtemplate/top-ornament.png", class: "top-ornament")
+      span.sub-title.text-center The Wedding of
+      h4.title.text-center &
+      span.dates.text-center 6 September 2022
+      #bottom-ornament
+        = image_tag("secondtemplate/bottom-ornament.png", class: "bottom-ornament")
+      #top-left-ornament
+        = image_tag("secondtemplate/corner-ornament.png")
+      #bottom-right-ornament
+        = image_tag("secondtemplate/corner-ornament.png", class: "custom-ornament")
+    section.nav-float
+      .row.custom-nav-row.gx-0
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a.navitem-label.active href="#"
+            i.fa-solid.fa-house.fa-lg.w-100.text-center
+            span.navitem-label Home
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a.navitem-label href="/secondtemplate/couple"
+            i.fa-solid.fa-heart.fa-lg.w-100.text-center
+            span.navitem-label Pasangan
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a.navitem-label href="/secondtemplate/location"
+            i.fa-solid.fa-location-dot.fa-lg.w-100.text-center
+            span.navitem-label Lokasi
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a.navitem-label href="/secondtemplate/wishes"
+            i.fa-solid.fa-hands-praying.fa-lg.w-100.text-center
+            span.navitem-label Doa
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a.navitem-label href="/secondtemplate/gift"
+            i.fa-solid.fa-gift.fa-lg.w-100.text-center
+            span.navitem-label Hadiah
