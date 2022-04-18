@@ -1,0 +1,127 @@
+@font-face {
+  font-family: Magnolia Script;
+  src: url(../../fonts/MagnoliaScript.otf);
+}
+
+$dark-brown : #514338;
+$light-brown : #6D5D50;
+$brown : #C7B5A6;
+$solid-gold : #D49B49;
+$custom-white : #F9FAFB;
+
+html{height: 100%;}
+body{
+  background-color: $dark-brown;
+  height: 100%;
+}
+
+h1{font-size: 56px;}
+h2{font-size: 36px;}
+h3{font-size: 28px;}
+h4{font-size: 24px;}
+h5{font-size: 20px;}
+h6{font-size: 14px;}
+span, p{
+  font-size: 12px;
+  font-family: 'Prompt', sans-serif;
+}
+
+.custom-row{
+  height: 100%;
+  flex-direction: column;
+  margin: 0;
+  padding: 16px;
+
+  .content{
+    flex-grow: 1;
+    border: 1px solid $solid-gold;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 0 24px;
+
+    .prolog{
+      font-weight: 400;
+      color: $custom-white;
+    }
+
+    .title{
+      font-family: 'Magnolia Script', serif;
+      color: $custom-white;
+      margin-bottom: 4px;
+    }
+
+    .sub-title{
+      font-weight: 300;
+      color: $solid-gold;
+    }
+
+    .separator{
+      margin: 16px 0;
+      color: $custom-white;
+      font-family: 'Magnolia Script', serif;
+
+      &::before{
+        content: "";
+        background: url("../../images/secondtemplate/separator-ornament.png");
+        width: 40px;
+        height: 24px;
+      }
+    }
+
+    #top-ornament, #bottom-ornament{
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    #top-ornament{margin-bottom: 16px;}
+
+    #bottom-ornament{margin-top: 28px;}
+
+    #top-left-ornament{
+      position: absolute;
+      top: 8px;
+      left: 8px;
+    }
+
+    #bottom-right-ornament{
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+
+      .custom-ornament{
+        transform: scale(-1);
+      }
+    }
+  }
+
+  .nav-float{
+    flex-grow: 0;
+    padding: 12px 8px;
+    border: 1px solid $solid-gold;
+    border-radius: 0 0 12px 12px;
+
+    .custom-nav-row{
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
+
+      a.navitem-label{
+        color: $light-brown;
+        text-decoration: none;
+        font-weight: 300;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+  
+        &.active{color: $custom-white;}
+  
+        i{display: inline-block;}
+      }
+    }
+  }
+}
