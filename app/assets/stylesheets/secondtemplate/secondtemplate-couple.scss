@@ -42,6 +42,21 @@ span, p{
     position: relative;
     padding: 0 24px;
 
+    &::before{
+      content: url("secondtemplate/corner-ornament.png");
+      position: absolute;
+      top: 8px;
+      left: 8px;
+    }
+
+    &::after{
+      content: url("secondtemplate/corner-ornament.png");
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      transform: scale(-1);
+    }
+
     .prolog{
       font-weight: 400;
       color: $custom-white;
@@ -64,10 +79,16 @@ span, p{
       font-family: 'Magnolia Script', serif;
 
       &::before{
-        content: "";
-        background: url("../../images/secondtemplate/separator-ornament.png");
-        width: 40px;
-        height: 24px;
+        content: url("secondtemplate/separator-ornament.png");
+        display: inline-block;
+        margin-right: 8px;
+      }
+
+      &::after{
+        content: url("secondtemplate/separator-ornament.png");
+        display: inline-block;
+        margin-left: 8px;
+        transform: scaleX(-1);
       }
     }
 
@@ -80,22 +101,6 @@ span, p{
     #top-ornament{margin-bottom: 16px;}
 
     #bottom-ornament{margin-top: 28px;}
-
-    #top-left-ornament{
-      position: absolute;
-      top: 8px;
-      left: 8px;
-    }
-
-    #bottom-right-ornament{
-      position: absolute;
-      bottom: 8px;
-      right: 8px;
-
-      .custom-ornament{
-        transform: scale(-1);
-      }
-    }
   }
 
   .nav-float{
