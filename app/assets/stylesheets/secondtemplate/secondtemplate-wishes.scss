@@ -1,0 +1,218 @@
+@font-face {
+  font-family: Magnolia Script;
+  src: url(../../fonts/MagnoliaScript.otf);
+}
+
+$dark-brown : #514338;
+$light-brown : #6D5D50;
+$brown : #C7B5A6;
+$solid-gold : #D49B49;
+$custom-white : #F9FAFB;
+
+html{height: 100%;}
+body{
+  background-color: $dark-brown;
+  height: 100%;
+}
+
+h1{font-size: 56px;}
+h2{font-size: 36px;}
+h3{font-size: 28px;}
+h4{font-size: 24px;}
+h5{font-size: 20px;}
+h6{font-size: 14px;}
+span{
+  font-size: 12px;
+  font-family: 'Prompt', sans-serif;
+}
+
+.custom-row{
+  height: 100%;
+  flex-direction: column;
+  margin: 0;
+  padding: 16px;
+
+  .content{
+    flex-grow: 1;
+    border: 1px solid $solid-gold;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    position: relative;
+    padding: 48px 20px 20px 20px;
+
+    &::before{
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      width: 80px;
+      height: 80px;
+      background: url("secondtemplate/corner-ornament.png");
+      background-size: 100%;
+    }
+
+    &::after{
+      content: "";
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 80px;
+      height: 80px;
+      background: url("secondtemplate/corner-ornament.png");
+      background-size: 100%;
+      transform: scaleX(-1);
+    }
+
+    .title{
+      font-family: 'Magnolia Script', serif;
+      color: $custom-white;
+      margin-bottom: 4px;
+    }
+
+    #bottom-ornament{
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .custom-form{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 20px;
+  
+      .group-input{
+  
+        label, input, textarea, select{
+          font-family: 'Prompt', sans-serif;
+          font-size: 12px;
+        }
+  
+        label{
+          display: block;
+          font-weight: 500;
+          color: $custom-white;
+        }
+  
+        input, textarea, select{
+          width: 100%;
+          font-weight: 400;
+          background: none;
+          padding-bottom: 4px;
+          border: none;
+          border-bottom: 1px solid $light-brown;
+          color: $custom-white;
+  
+          &:focus{
+            outline: none;
+            border-bottom: 1px solid $custom-white;
+          }
+
+          &::placeholder{
+            color: $light-brown;
+          }
+        }
+  
+        textarea{height: 56px;}
+  
+        select{
+          color: $custom-white;
+          font-weight: 500;
+
+          option{color: $dark-brown;}
+        }
+      }
+  
+      .custom-btn{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 16px;
+        background-color: $solid-gold;
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        border-radius: 8px;
+        border: none;
+  
+        .text{
+          margin-left: 8px;
+        }
+  
+        &:hover{background-color: #d36f1d;}
+      }
+    }
+
+    .wishlist{
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      flex: 1 0 0;
+  
+      .group-wish{
+  
+        .sender-name{
+          font-weight: 500;
+          color: $custom-white;
+          display: flex;
+          align-items: center;
+          margin-bottom: 4px;
+  
+          &::after{
+            content: "Hadir";
+            height: 100%;
+            color: white;
+            font-size: 7px;
+            font-weight: 400;
+            background-color: $solid-gold;
+            padding: 2px 8px;
+            margin-left: 8px;
+            border-radius: 16px;
+          }
+        }
+  
+        .message{
+          color: $brown;
+          padding-bottom: 8px;
+          border-bottom: 1px solid $light-brown;
+        }
+      }
+  
+      .group-wish:not(:last-child){
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  .nav-float{
+    flex-grow: 0;
+    padding: 12px 8px;
+    border: 1px solid $solid-gold;
+    border-radius: 0 0 12px 12px;
+
+    .custom-nav-row{
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
+
+      a.navitem-label{
+        color: $light-brown;
+        text-decoration: none;
+        font-weight: 300;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+  
+        &.active{color: $custom-white;}
+  
+        i{display: inline-block;}
+      }
+    }
+  }
+}

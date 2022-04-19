@@ -1,1 +1,63 @@
-span Wishes Page
+- content_for :additional_styles
+  = stylesheet_link_tag "secondtemplate/secondtemplate-wishes"
+
+.container-full.h-100
+  .row.custom-row
+    section.content
+      h3.title.text-center Kirim Doa
+      #bottom-ornament
+        = image_tag("secondtemplate/bottom-ornament.png", class: "bottom-ornament")
+      form.custom-form
+        .group-input
+          label for="visitorname" Nama Anda
+          input#visitorname name="visitorname" type="text" placeholder="Masukan nama anda disini"
+        .group-input  
+          label for="wishes" Nama Anda
+          textarea#wishes name="wishes" placeholder="Kirim doa terbaik anda disini"
+        .group-input
+          label for="attendance" Konfirmasi Kehadiran
+          select#attendance name="attendance"
+            option value="Hadir" Hadir
+            option value="Tidak Hadir" Tidak Hadir
+        button.custom-btn href="#"
+          i.fa-solid.fa-sparkles.fa-lg.text-center
+          span.text Kirim Doa
+      span.wishlist
+        .group-wish
+          .sender-name Aji
+          .message
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu in convallis ultricies :)
+        .group-wish
+          .sender-name Ahmad
+          .message
+            | Ornare ultrices amet, commodo consequat, nulla at. Convallis in maecenas quam vel id at. Id scelerisque mattis pellentesque netus lacus suscipit. Purus, gravida tincidunt justo morbi accumsan, praesent.
+        .group-wish
+          .sender-name Nasyar
+          .message
+            | Ornare ultrices amet, commodo consequat, nulla at. Convallis in maecenas quam vel id at. Id scelerisque mattis pellentesque netus lacus suscipit. Purus, gravida tincidunt justo morbi accumsan, praesent.
+        .group-wish
+          .sender-name Auliya
+          .message
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu in convallis ultricies :)
+    section.nav-float
+      .row.custom-nav-row.gx-0
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a.navitem-label href="/secondtemplate/index"
+            i.fa-solid.fa-house.fa-lg.w-100.text-center
+            span.navitem-label Home
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a.navitem-label href="/secondtemplate/couple"
+            i.fa-solid.fa-heart.fa-lg.w-100.text-center
+            span.navitem-label Pasangan
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a.navitem-label href="/secondtemplate/location"
+            i.fa-solid.fa-location-dot.fa-lg.w-100.text-center
+            span.navitem-label Lokasi
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a.navitem-label.active href="#"
+            i.fa-solid.fa-hands-praying.fa-lg.w-100.text-center
+            span.navitem-label Doa
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a.navitem-label href="/secondtemplate/gift"
+            i.fa-solid.fa-gift.fa-lg.w-100.text-center
+            span.navitem-label Hadiah
