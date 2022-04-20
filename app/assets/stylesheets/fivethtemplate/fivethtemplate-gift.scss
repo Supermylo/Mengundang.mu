@@ -44,14 +44,14 @@ span, p{
     color: $custom-white;
 
     &::before{
-      content: url("secondtemplate/corner-ornament.png");
+      content: url("fivethtemplate/corner-ornament.png");
       position: absolute;
       top: 8px;
       left: 8px;
     }
 
     &::after{
-      content: url("secondtemplate/corner-ornament.png");
+      content: url("fivethtemplate/corner-ornament.png");
       position: absolute;
       bottom: 8px;
       right: 8px;

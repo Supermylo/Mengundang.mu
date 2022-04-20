@@ -7,11 +7,11 @@ Rails.application.routes.draw do
   get 'pages/couples'
   get 'pages/goblog'
 
-  get 'secondtemplate/index'
-  get 'secondtemplate/couple'
-  get 'secondtemplate/location'
-  get 'secondtemplate/wishes'
-  get 'secondtemplate/gift'
+  get 'fivethtemplate/index'
+  get 'fivethtemplate/couple'
+  get 'fivethtemplate/location'
+  get 'fivethtemplate/wishes'
+  get 'fivethtemplate/gift'
 
   get 'thirdtemplate/index'
   get 'thirdtemplate/couple'
