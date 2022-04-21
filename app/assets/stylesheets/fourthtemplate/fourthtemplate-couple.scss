@@ -22,15 +22,20 @@ span,p {font-size: 12px;}
 
   #top-left-ornament{
     position: absolute;
+    transform: scaleX(-1);
     top: 0;
-    left: 0;
+    right: 0;
+
+    .bg-ornament-custom{
+      width: 167px;
+    }
   }
 
   #bottom-right-ornament{
     position: absolute;
-    transform: scale(-1);
+    transform: scaleY(-1);
     bottom: 0;
-    right: 0;
+    left: 0;
   }
 }
 
