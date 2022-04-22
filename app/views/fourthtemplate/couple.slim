@@ -8,16 +8,31 @@
         = image_tag("fourthtemplate/bg-ornament.png", class: "bg-ornament-custom")
       #bottom-right-ornament
         = image_tag("fourthtemplate/bg-ornament.png")
-    section.content
-      .wrapper-image
-        = image_tag("fourthtemplate/custom-couple-image.png", class: "couple-image")
-        = image_tag("fourthtemplate/custom-frame.png", class: "frame")
-      .wrapper-text.text-center
-        #title-ornament
-          = image_tag("fourthtemplate/bottom-ornament.png", class: "bottom-ornament-img")
-        h4.sub-title.text-center Walimatul Ursy
-        h1.title.text-center Wildan & Utaran
-        span.date.text-center 6 September 2022
+    section.content.text-center
+      #top-ornament
+        = image_tag("fourthtemplate/bottom-ornament.png")
+      p.prolog
+        | Assalamu’alaikum Wr. Wb.
+        br
+        | Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan kami.
+      #wrapper-groom
+        .wrapper-image
+          = image_tag("fourthtemplate/small-frame.png", class: "small-frame")
+          = image_tag("fourthtemplate/groom-image.png", class: "groom-image")
+        .wrapper-text
+          h4.title Sya'ban Ramadan
+          span.sub-title Putra Bapak Fulan & Ibu Fulanah
+      #separator-line
+        = image_tag("fourthtemplate/top-ornament.png")
+      #wrapper-bride
+        .wrapper-image
+          = image_tag("fourthtemplate/small-frame.png", class: "small-frame")
+          = image_tag("fourthtemplate/bride-image.png", class: "bride-image")
+        .wrapper-text
+          h4.title April Nur May
+          span.sub-title Putri Bapak Fulan & Ibu Fulanah
+      #bottom-ornament
+        = image_tag("fourthtemplate/bottom-ornament.png")
     section.nav-float
       .row.custom-row.gx-0
         .col.text-center.d-flex.align-items-center.justify-content-center
