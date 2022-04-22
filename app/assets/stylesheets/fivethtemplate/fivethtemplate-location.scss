@@ -184,20 +184,14 @@ span, p{
 
     .custom-inner{
       overflow: visible;
-    
-      .custom-prev{
-        width: auto;
-        left: calc(-24px + -14px);
-        opacity: 1;
-      }
-
-      .custom-next{
-        width: auto;
-        right: calc(-24px + -14px);
-        opacity: 1;
-      }
+      display: flex;
+      align-items: center;
 
       .custom-prev, .custom-next{
+        top: auto;
+        bottom: auto;
+        width: auto;
+        opacity: 1;
         
         .custom-carousel-btn{
           display: flex;
@@ -214,6 +208,10 @@ span, p{
           }
         }
       }
+
+      .custom-prev{left: calc(-24px + -14px);}
+
+      .custom-next{right: calc(-24px + -14px);}
     }
   }
 

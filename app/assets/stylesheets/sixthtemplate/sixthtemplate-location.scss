@@ -152,8 +152,12 @@ span{
 
   .custom-inner{
     overflow: visible;
+    display: flex;
+    align-items: center;
 
     .custom-prev, .custom-next{
+      top: auto;
+      bottom: auto;
       opacity: 1;
       width: auto;
 
