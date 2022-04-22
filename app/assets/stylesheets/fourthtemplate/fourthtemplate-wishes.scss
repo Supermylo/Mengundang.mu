@@ -1,0 +1,207 @@
+$main-blue : #215481;
+$solid-gold : #C59B46;
+$gradient-gold : linear-gradient(120deg, #C59B46 0%, #F4DCAB 50%);
+$custom-white : #F9FAFB;
+$light-gray : #D1D5DB;
+$gray : #9CA3AF;
+$dark-gray : #4B5563;
+
+html{height: 100%;}
+body{
+  background-color: $main-blue;
+  height: 100%;
+}
+
+h1{font-size: 36px;}
+h2{font-size: 28px;}
+h3{font-size: 24px;}
+h4{font-size: 20px;}
+h5{font-size: 14px;}
+span,p {font-size: 12px;}
+
+.ornament{
+  padding: 0;
+
+  #left-ornament{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #right-ornament{
+    position: absolute;
+    transform: scaleX(-1);
+    top: 0;
+    right: 0;
+  }
+
+  .bg-ornament-custom{
+    width: 167px;
+  }
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(100vh - 86px);
+  padding: 40px 20px 20px 20px;
+  color: $custom-white;
+
+  .title{
+    font-family: 'DM Serif Display', serif;
+    margin-bottom: 10px;
+  }
+
+  .ornament{margin-bottom: 20px;}
+
+  .custom-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: $custom-white;
+    padding: 16px 20px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    font-family: 'Cabin', sans-serif;
+
+    .group-input{
+
+      label, input, textarea, select{
+        font-size: 12px;
+      }
+
+      label{
+        display: block;
+        font-weight: 600;
+        color: $main-blue;
+      }
+
+      ::placeholder{
+        color: $light-gray;
+      }
+
+      input, textarea, select{
+        width: 100%;
+        font-weight: 400;
+        background: none;
+        padding-bottom: 4px;
+        border: none;
+        border-bottom: 1px solid $light-gray;
+        color: $dark-gray;
+
+        &:focus{outline: none;}
+      }
+
+      textarea{height: 56px;}
+
+      select{
+        color: $main-blue;
+        font-weight: 400;
+      }
+
+    }
+
+    .custom-btn{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 16px;
+      background-color: $solid-gold;
+      text-decoration: none;
+      color: $custom-white;
+      font-weight: 600;
+      border-radius: 24px;
+      border: none;
+
+      .text{
+        margin-left: 8px;
+      }
+
+      &:hover, &:active{background-color: #9e721b;}
+    }
+  }
+
+  .wishlist{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: $custom-white;
+    padding: 16px 20px;
+    border-radius: 16px;
+    font-family: 'Cabin', sans-serif;
+
+    .group-wish{
+
+      .sender-name{
+        font-weight: 600;
+        color: $main-blue;
+        display: flex;
+        align-items: center;
+        margin-bottom: 4px;
+
+        &::after{
+          content: "Hadir";
+          height: 100%;
+          color: white;
+          font-size: 7px;
+          font-weight: 400;
+          background-color: $solid-gold;
+          padding: 2px 8px;
+          margin-left: 8px;
+          border-radius: 16px;
+        }
+      }
+
+      .message{
+        color: $dark-gray;
+        padding-bottom: 8px;
+        border-bottom: 1px solid $light-gray;
+      }
+    }
+
+    .group-wish:not(:last-child){
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.nav-float{
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $custom-white;
+  position: fixed;
+  z-index: 2;
+  padding: 12px;
+  border-radius: 50rem;
+  width: calc(100% - 40px);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+ -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+ -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+
+ .custom-row{
+   margin-left: 0;
+   margin-right: 0;
+   padding-left: 0;
+   padding-right: 0;
+ }
+
+  a.navitem-label{
+    color: $light-gray;
+    text-decoration: none;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    &.active{
+      color: $main-blue;
+      font-weight: 600;
+    }
+
+    i{display: inline-block;}
+  }
+}

@@ -1,0 +1,242 @@
+$main-blue : #215481;
+$solid-gold : #C59B46;
+$gradient-gold : linear-gradient(120deg, #C59B46 0%, #F4DCAB 50%);
+$custom-white : #F9FAFB;
+$light-gray : #D1D5DB;
+$gray : #9CA3AF;
+$dark-gray : #4B5563;
+
+html{height: 100%;}
+body{
+  background-color: $main-blue;
+  height: 100%;
+}
+
+h1{font-size: 36px;}
+h2{font-size: 28px;}
+h3{font-size: 24px;}
+h4{font-size: 20px;}
+h5{font-size: 14px;}
+span,p {font-size: 12px;}
+
+.ornament{
+  padding: 0;
+
+  #left-ornament{
+    position: absolute;
+    width: 125%;
+    transform: scaleY(-1);
+    bottom: 0;
+    left: 0;
+  }
+
+  #right-ornament{
+    position: absolute;
+    width: 125%;
+    transform: scale(-1);
+    bottom: 0;
+    right: 0;
+  }
+
+  .bg-ornament-custom{
+    width: 50%;
+  }
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 86px);
+  padding: 0;
+
+  .group-image{
+    width: 100%;
+    height: 360px;
+    background-color: #F4DCAB;
+  }
+
+  .group-text{
+    flex: 1 0 0;
+    padding: 0 48px;
+    color: $custom-white;
+    font-family: 'Cabin', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .thankyou{
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    .regard{
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .name-set{
+      font-family: 'DM Serif Display';
+      margin-bottom: 20px;
+    }
+
+    .custom-btn{
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 8px 20px;
+      background-color: $solid-gold;
+      border-radius: 24px;
+      color: $custom-white;
+      text-decoration: none;
+      font-weight: 700;
+
+      &:hover, &:active{background-color: #9e721b;}
+    }
+  }
+}
+
+#popup-message{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(33, 84, 129,0.75);
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 500ms;
+  font-family: 'Cabin', sans-serif;
+
+  &:target{
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .custom-box{
+    position: relative;
+    background-color: $custom-white;
+    border-radius: 16px;
+    padding: 20px;
+
+    .prolog, .address{
+      display: block;
+      font-weight: 400;
+      color: $dark-gray;
+      text-align: center;
+    }
+
+    .prolog{margin-bottom: 12px;}
+
+    .address{margin-bottom: 8px;}
+
+    .title, .sub-title{
+      display: block;
+      font-weight: 700;
+      color: $main-blue;
+      text-align: center;
+    }
+
+    .sub-title{margin-bottom: 4px;}
+
+    #giftbox-icon{
+      .custom-img{
+        height: 40px;
+        object-fit: contain;
+        margin: 8px 0;
+      }
+    }
+
+    #bank-icon{
+      .custom-img{
+        height: 28px;
+        object-fit: contain;
+        margin: 8px 0;
+      }
+    }
+
+    .copy-btn{
+      background-color: $solid-gold;
+      border-radius: 24px;
+      border: none;
+      padding: 8px 16px;
+      color: $custom-white;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+
+      &:hover{background-color: #9e721b;}
+
+      .custom-icon{
+        width: 16px;
+        height: 16px;
+      }
+
+      .copy-text{font-weight: 500;}
+    }
+
+    .offline-gift{margin-bottom: 20px;}
+
+    .close-btn{
+      position: absolute;
+      z-index: 2;
+      top: -20px;
+      right: -10px;
+      width: 40px;
+      height: 40px;
+      background-color: $main-blue;
+      border-radius: 100%;
+      padding: 10px;
+  
+      .custom-icon{
+        width: 20px;
+        height: 20px;
+        color: $custom-white;
+      }
+
+      &:hover{background-color: #0c375c;}
+    }
+  }
+}
+
+.nav-float{
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $custom-white;
+  position: fixed;
+  z-index: 2;
+  padding: 12px;
+  border-radius: 50rem;
+  width: calc(100% - 40px);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+ -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+ -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+
+ .custom-row{
+   margin-left: 0;
+   margin-right: 0;
+   padding-left: 0;
+   padding-right: 0;
+ }
+
+  a.navitem-label{
+    color: $light-gray;
+    text-decoration: none;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    &.active{
+      color: $main-blue;
+      font-weight: 600;
+    }
+
+    i{display: inline-block;}
+  }
+}

@@ -20,7 +20,7 @@ span,p {font-size: 12px;}
 .ornament{
   padding: 0;
 
-  #top-left-ornament{
+  #top-right-ornament{
     position: absolute;
     transform: scaleX(-1);
     top: 0;
@@ -31,7 +31,7 @@ span,p {font-size: 12px;}
     }
   }
 
-  #bottom-right-ornament{
+  #bottom-left-ornament{
     position: absolute;
     transform: scaleY(-1);
     bottom: 0;
