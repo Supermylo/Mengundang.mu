@@ -51,8 +51,71 @@ span,p {font-size: 12px;}
 
   .group-image{
     width: 100%;
-    height: 360px;
-    background-color: #F4DCAB;
+    position: relative;
+    display: flex;
+
+    .custom-carousel{
+      width: 100%;
+
+      .custom-inner{
+        overflow: visible;
+        display: flex;
+        align-items: center;
+
+        .custom-carousel-image {width: 100%;}
+
+        .custom-prev, .custom-next{
+          opacity: 1;
+          width: auto;
+          top: auto;
+          bottom: auto;
+    
+          .custom-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: none;
+            padding: 8px;
+            background-color: $main-blue;
+            border: 2px solid $solid-gold;
+            border-radius: 8px;
+            opacity: 1;
+    
+            .custom-icon{
+              width: 16px;
+              height: 16px;
+              color: $custom-white;
+            }
+  
+            &:hover, &:active{opacity: 1;}
+          }
+        }
+
+        .custom-prev{left: 12px;}
+  
+        .custom-next{right: 12px;}
+      }
+
+      .custom-indicators{
+        position: static;
+        margin-top: 24px;
+        margin-bottom: 0;
+  
+        .indicator-btn{
+          width: 8px;
+          height: 8px;
+          border-radius: 100%;
+          border-top: none;
+          border-bottom: none;
+          background-color: $custom-white;
+        }
+      }
+    }
+    
+    .custom-carousel-border{
+      position: absolute;
+      width: 100%;
+    }
   }
 
   .group-text{
