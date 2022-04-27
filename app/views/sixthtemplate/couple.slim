@@ -19,53 +19,52 @@
         #leaf-4
           = image_tag ("sixthtemplate/bottom-leaf-4.png")
     section.content
-      span.leaf-set
-      / span.custom-leaf-set
-      /   #big-walnut
-      /     = image_tag ("sixthtemplate/big-walnut.png")
-      /   #small-walnut
-      /     = image_tag ("sixthtemplate/small-walnut.png")
-      /   #maple-leaf
-      /     = image_tag ("sixthtemplate/maple-leaf.png")
-      /   #small-leaves-left
-      /     = image_tag ("sixthtemplate/small-leaves-ribbon.png")
-      /   #small-leaves-right
-      /     = image_tag ("sixthtemplate/small-leaves-ribbon.png")
-      span.prolog.text-center
-        | Assalamu’alaikum Wr. Wb.
-        br
-        | Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan kami.
-      span.couple-set
-        #groom-image
-        .group-name
-          h2.couples-name.text-center Wildan Ramadan
-          span.parents-name.text-center Putra Bapak Fulan & Ibu Fulanah
-      h3.separator &
-      span.couple-set
-        .group-name
-          h2.couples-name.text-center Utaran Rimidin
-          span.parents-name.text-center Putri Bapak Fulan & Ibu Fulanah
-        #bride-image
+      .group-image
+        = image_tag("sixthtemplate/maple-leaf.png", class: "maple-leaf")
+        = image_tag("sixthtemplate/big-walnut.png", class: "big-walnut")
+        = image_tag("sixthtemplate/small-walnut.png", class: "small-walnut")
+        = image_tag("sixthtemplate/small-leaves-ribbon.png", class: "leaves-left")
+        = image_tag("sixthtemplate/small-leaves-ribbon.png", class: "leaves-right")
+      .group-text
+        p.prolog.text-center
+          | Assalamu’alaikum Wr. Wb.
+          br
+          | Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan kami.
+        .groom-set
+          .wrapper-image
+            = image_tag("sixthtemplate/groom-image.png", class: "custom-image")
+            = image_tag("sixthtemplate/border-image.png", class: "custom-border")
+          .wrapper-name
+            h2.couples-name.text-center Wildan Ramadan
+            span.parents-name.text-center Putra Bapak Fulan & Ibu Fulanah
+        h3.separator &
+        .bride-set
+          .wrapper-image
+            = image_tag("sixthtemplate/bride-image.png", class: "custom-image")
+            = image_tag("sixthtemplate/border-image.png", class: "custom-border")
+          .wrapper-name
+            h2.couples-name.text-center Utaran Rimidin
+            span.parents-name.text-center Putri Bapak Fulan & Ibu Fulanah
     section.nav-float
       .row.custom-row.gx-0
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label href="/sixthtemplate/index"
-            i.fa-solid.fa-house.fa-lg.w-100.text-center
-            span.navitem-label Home
+          a.nav-item href="/sixthtemplate/index"
+            i.fa-solid.fa-house.fa-lg.custom-icon
+            span.label Home
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label.active href="#"
-            i.fa-solid.fa-heart.fa-lg.w-100.text-center
-            span.navitem-label Pasangan
+          a.nav-item.active href="#"
+            i.fa-solid.fa-heart.fa-lg.custom-icon
+            span.label Pasangan
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label href="/sixthtemplate/location"
-            i.fa-solid.fa-location-dot.fa-lg.w-100.text-center
-            span.navitem-label Lokasi
+          a.nav-item href="/sixthtemplate/location"
+            i.fa-solid.fa-location-dot.fa-lg.custom-icon
+            span.label Lokasi
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label href="/sixthtemplate/wishes"
-            i.fa-solid.fa-hands-praying.fa-lg.w-100.text-center
-            span.navitem-label Doa
+          a.nav-item href="/sixthtemplate/wishes"
+            i.fa-solid.fa-hands-praying.fa-lg.custom-icon
+            span.label Doa
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label href="/sixthtemplate/gift"
-            i.fa-solid.fa-gift.fa-lg.w-100.text-center
-            span.navitem-label Hadiah
+          a.nav-item href="/sixthtemplate/gift"
+            i.fa-solid.fa-gift.fa-lg.custom-icon
+            span.label Hadiah
             

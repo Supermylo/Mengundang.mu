@@ -16,7 +16,7 @@ h1{font-size: 36px;}
 h2{font-size: 24px;}
 h3{font-size: 20px;}
 h4{font-size: 14px;}
-span{
+span, p{
   font-size: 12px;
   font-family: 'Work Sans', sans-serif;
 }
@@ -185,7 +185,7 @@ span{
     .custom-next{right: -32px;}
   }
 
-  #akad, #resepsi{
+  #wrapper-akad, #wrapper-resepsi{
     position: relative;
     width: 100%;
     display: flex;
@@ -195,34 +195,30 @@ span{
     .title{
       font-family: 'DM Serif Display', serif;
       color: $main-green;
+      margin-bottom: 20px;
     }
   
-    .image{
+    .group-image{
       display: flex;
       justify-content: center;
-      margin-top: 20px;
+      align-items: center;
+      position: relative;
       margin-bottom: 12px;
   
-      .custom-placeholder{
+      .custom-image{
+        width: 108px;
+        height: 108px;
+        border-radius: 100%;
+        position: absolute;
+      }
+
+      .border-image{
         width: 120px;
         height: 120px;
-        background: url("../sixthtemplate/Border Image.png");
-        background-size: 100%;
-  
-        &:after{
-          content: "";
-          display: block;
-          width: 108px;
-          height: 108px;
-          background: url("../sixthtemplate/Sample Couple Image.png");
-          background-size: 100%;
-          border-radius: 1000px;
-          margin: 6px;
-        }
       }
     }
   
-    .time{
+    .group-time{
       width: 100%;
       margin-bottom: 16px;
   
@@ -240,26 +236,27 @@ span{
         display: flex;
         justify-content: start;
       }
-  
-      .dates{
+
+      .custom-col{
         display: flex;
-        justify-content: center;
+        align-items: center;
         gap: 16px;
-  
-        .wrapper{
+
+        .custom-wrapper{
           display: flex;
           flex-direction: column;
           align-items: center;
-  
+          justify-content: center;
+    
           .date{
             font-family: 'DM Serif Display', serif;
             color: $main-green;
             margin: 0;
           }
-  
         }
-  
-        .divider{
+
+        &::before, &::after{
+          content: "";
           width: 2px;
           height: 80px;
           background: linear-gradient(to bottom, rgba(197,155,70,0), rgba(197,155,70,1), rgba(197,155,70,0));
@@ -267,7 +264,7 @@ span{
       }
     }
   
-    .location{
+    .group-location{
   
       .name{
         font-family: 'DM Serif Display', serif;
@@ -276,12 +273,11 @@ span{
       }
   
       .address{
-        display: block;
-        margin-bottom: 12px;
         color: $light-green;
+        margin-bottom: 12px;
       }
   
-      .custom-btn{
+      .maps-btn{
         display: inline-flex;
         align-items: center;
         padding: 8px 16px;
@@ -290,8 +286,12 @@ span{
         color: white;
         font-weight: 600;
         border-radius: 24px;
+
+        .custom-icon{
+          width: 16px;
+        }
   
-        .text{
+        .custom-text{
           margin-left: 8px;
         }
   
@@ -320,18 +320,22 @@ span{
    margin-right: 0;
    padding-left: 0;
    padding-right: 0;
- }
 
-  a.navitem-label{
-    color: $light-orange;
-    text-decoration: none;
-    font-weight: 400;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+    .nav-item{
+      color: $light-orange;
+      text-decoration: none;
+      font-weight: 400;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
 
-    &.active{color: #fff;}
+      &.active{color: #fff;}
 
-    i{display: inline-block;}
+      .custom-icon{
+        display: inline-block;
+        width: 24px;
+      }
+    }
   }
 }

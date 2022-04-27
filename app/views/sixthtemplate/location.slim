@@ -35,57 +35,53 @@
       #carouselExampleControls.carousel.slide data-bs-ride="carousel" data-bs-interval="false"
         .carousel-inner.custom-inner
           .carousel-item.custom-item.active
-            #akad.text-center
-              h2.title.text-center Akad
-              span.image
-                span.custom-placeholder
-              span.time
+            #wrapper-akad.text-center
+              h2.title Akad
+              .group-image
+                = image_tag("sixthtemplate/couple-image.png", class: "custom-image")
+                = image_tag("sixthtemplate/border-image.png", class: "border-image")
+              .group-time
                 .row.align-items-center
                   .col
                     span.day Selasa
-                  .col
-                    .dates
-                      .divider
-                      .wrapper
-                        span.month Sept
-                        h1.date 06
-                        span.year 2022
-                      .divider
+                  .col.custom-col
+                    .custom-wrapper
+                      span.month Sept
+                      h1.date 06
+                      span.year 2022
                   .col
                     span.clock 09.00 WIB
-              span.location.text-center
+              .group-location
                 h4.name éL Hotel Royale Bandung
-                span.address
+                p.address
                   | Jl. Merdeka No. 2, Braga, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40111
-                a.custom-btn href="#"
-                  i.fa-solid.fa-location-dot.fa-lg.text-center
-                  span.text Lihat Maps
+                a.maps-btn href="#"
+                  i.fa-solid.fa-location-dot.custom-icon
+                  span.custom-text Lihat Maps
           .carousel-item.custom-item
-            #resepsi.text-center
-              h2.title.text-center Resepsi
-              span.image
-                span.custom-placeholder
-              span.time
+            #wrapper-resepsi.text-center
+              h2.title Resepsi
+              .group-image
+                = image_tag("sixthtemplate/couple-image.png", class: "custom-image")
+                = image_tag("sixthtemplate/border-image.png", class: "border-image")
+              .group-time
                 .row.align-items-center
                   .col
                     span.day Selasa
-                  .col
-                    .dates
-                      .divider
-                      .wrapper
-                        span.month Sept
-                        h1.date 06
-                        span.year 2022
-                      .divider
+                  .col.custom-col
+                    .custom-wrapper
+                      span.month Sept
+                      h1.date 06
+                      span.year 2022
                   .col
                     span.clock 13.00 WIB
-              span.location.text-center
+              .group-location
                 h4.name éL Hotel Royale Bandung
-                span.address
+                p.address
                   | Jl. Merdeka No. 2, Braga, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40111
-                a.custom-btn href="#"
-                  i.fa-solid.fa-location-dot.fa-lg.text-center
-                  span.text Lihat Maps
+                a.maps-btn href="#"
+                  i.fa-solid.fa-location-dot.custom-icon
+                  span.custom-text Lihat Maps
           button.carousel-control-prev.custom-prev data-bs-slide="prev" data-bs-target="#carouselExampleControls" type="button" 
             span.carousel-control-prev-icon.custom-btn aria-hidden="true" 
               i.fa-solid.fa-arrow-left.custom-icon
@@ -97,23 +93,23 @@
     section.nav-float
       .row.custom-row.gx-0
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label href="/sixthtemplate/index"
-            i.fa-solid.fa-house.fa-lg.w-100.text-center
-            span.navitem-label Home
+          a.nav-item href="/sixthtemplate/index"
+            i.fa-solid.fa-house.fa-lg.custom-icon
+            span.label Home
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label href="/sixthtemplate/couple"
-            i.fa-solid.fa-heart.fa-lg.w-100.text-center
-            span.navitem-label Pasangan
+          a.nav-item href="/sixthtemplate/couple"
+            i.fa-solid.fa-heart.fa-lg.custom-icon
+            span.label Pasangan
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label.active href="#"
-            i.fa-solid.fa-location-dot.fa-lg.w-100.text-center
-            span.navitem-label Lokasi
+          a.nav-item.active href="#"
+            i.fa-solid.fa-location-dot.fa-lg.custom-icon
+            span.label Lokasi
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label href="/sixthtemplate/wishes"
-            i.fa-solid.fa-hands-praying.fa-lg.w-100.text-center
-            span.navitem-label Doa
+          a.nav-item href="/sixthtemplate/wishes"
+            i.fa-solid.fa-hands-praying.fa-lg.custom-icon
+            span.label Doa
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label href="/sixthtemplate/gift"
-            i.fa-solid.fa-gift.fa-lg.w-100.text-center
-            span.navitem-label Hadiah
+          a.nav-item href="/sixthtemplate/gift"
+            i.fa-solid.fa-gift.fa-lg.custom-icon
+            span.label Hadiah
             

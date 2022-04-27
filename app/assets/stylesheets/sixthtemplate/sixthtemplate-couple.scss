@@ -15,7 +15,7 @@ body{
 h1{font-size: 36px;}
 h2{font-size: 24px;}
 h3{font-size: 20px;}
-span{
+span, p{
   font-size: 12px;
   font-family: 'Work Sans', sans-serif;
 }
@@ -90,108 +90,120 @@ span{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 
-  .leaf-set{
+  .group-image{
+    display: flex;
+    justify-content: center;
     height: 80px;
-    background: image-url("sixthtemplate/leaf-set.png");
-    background-repeat: no-repeat;
-    background-position: 50%;
-  }
+    width: 184px;
+    position: relative;
 
-  .custom-leaf-set{
-    #big-walnut, #small-walnut, #maple-leaf, #small-leaves-right, #small-leaves-left{
+    .maple-leaf, .big-walnut, .small-walnut, .leaves-left, .leaves-right{
       position: absolute;
     }
 
-    #small-leaves-right{
-      transform: scale(-1);
+    .maple-leaf{z-index: 1;}
+
+    .big-walnut{
+      z-index: 2;
+      top: 38%;
+      left: 68px;
+    }
+
+    .small-walnut{
+      z-index: 3;
+      top: 40%;
+      right: 70px;
+    }
+
+    .leaves-left{
+      z-index: 0;
+      left: 0;
+    }
+
+    .leaves-right{
+      z-index: 0;
+      transform: scaleX(-1);
+      right: 0;
     }
   }
   
-  .prolog{
-    display: inline-block;
-    color: $light-green;
-    margin-top: 16px;
-    margin-bottom: 20px;
-  }
+  .group-text{
 
-  .couple-set{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
+    .prolog{
+      display: inline-block;
+      color: $light-green;
+      margin-top: 16px;
+      margin-bottom: 20px;
+    }
 
-    #groom-image{
-      width: 64px;
-      height: 64px;
-      background: url("../sixthtemplate/Circle Frame.png");
-      background-size: 64px;
+    .groom-set, .bride-set{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
 
-      &::after{
-        position: absolute;
-        content: "";
-        width: 56px;
-        height: 56px;
-        border-radius: 100%;
-        background: url("../sixthtemplate/Groom Image.png");
-        background-size: 56px;
-        margin: 4px;
+      .wrapper-image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .custom-image{
+          width: 56px;
+          height: 56px;
+          border-radius: 100%;
+          position: absolute;
+        }
+
+        .custom-border{
+          width: 64px;
+          height: 64px;
+        }
+      }
+
+      .wrapper-name{
+
+        .couples-name{
+          font-family: 'DM Serif Display', serif;
+          color: $main-green;
+          margin-bottom: 4px;
+        }
+
+        .parents-name{
+          display: block;
+          color: $solid-gold;
+        }
       }
     }
 
-    #bride-image{
-      width: 64px;
-      height: 64px;
-      background: url("../sixthtemplate/Circle Frame.png");
-      background-size: 64px;
+    .bride-set{flex-direction: row-reverse;}
 
-      &::after{
-        position: absolute;
-        content: "";
-        width: 56px;
-        height: 56px;
-        border-radius: 100%;
-        background: url("../sixthtemplate/Bride Image.png");
-        background-size: 56px;
-        margin: 4px;
-      }
-    }
-
-    .couples-name{
+    .separator{
       font-family: 'DM Serif Display', serif;
       color: $main-green;
-      margin-bottom: 4px;
-    }
+      margin: 12px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
 
-    .parents-name{
-      display: block;
-      color: $solid-gold;
-    }
-  }
+      &::before{
+        display: block;
+        content: "";
+        width: 120px;
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(197,155,70,0), rgba(197,155,70,1));
+      }
 
-  .separator{
-    font-family: 'DM Serif Display', serif;
-    color: $main-green;
-    margin: 12px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-
-    &::before{
-      display: block;
-      content: "";
-      width: 120px;
-      height: 1px;
-      background-image: linear-gradient(to right, rgba(197,155,70,0), rgba(197,155,70,1));
-    }
-
-    &::after{
-      display: block;
-      content: "";
-      width: 120px;
-      height: 1px;
-      background-image: linear-gradient(to right, rgba(197,155,70,1), rgba(197,155,70,0));
+      &::after{
+        display: block;
+        content: "";
+        width: 120px;
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(197,155,70,1), rgba(197,155,70,0));
+      }
     }
   }
 }
@@ -215,18 +227,22 @@ span{
    margin-right: 0;
    padding-left: 0;
    padding-right: 0;
- }
 
-  a.navitem-label{
-    color: $light-orange;
-    text-decoration: none;
-    font-weight: 400;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+    .nav-item{
+      color: $light-orange;
+      text-decoration: none;
+      font-weight: 400;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
 
-    &.active{color: #fff;}
+      &.active{color: #fff;}
 
-    i{display: inline-block;}
+      .custom-icon{
+        display: inline-block;
+        width: 24px;
+      }
+    }
   }
 }

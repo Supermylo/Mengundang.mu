@@ -15,7 +15,7 @@ body{
 h1{font-size: 36px;}
 h2{font-size: 24px;}
 h3{font-size: 20px;}
-span{
+span, p{
   font-size: 12px;
   font-family: 'Work Sans', sans-serif;
 }
@@ -248,43 +248,44 @@ span{
   height: calc(100vh - 120px);
   justify-content: center;
 
-  .photo{
+  .group-image{
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
+    position: relative;
 
-    .custom-placeholder{
+    .custom-image{
+      width: 180px;
+      height: 180px;
+      border-radius: 100%;
+      position: absolute;
+    }
+
+    .custom-border{
       width: 200px;
       height: 200px;
-      background: url("../sixthtemplate/Border Image.png");
-
-      &:after{
-        content: "";
-        display: block;
-        width: 180px;
-        height: 180px;
-        background: url("../sixthtemplate/Sample Couple Image.png");
-        border-radius: 1000px;
-        margin: 10px;
-      }
     }
   }
-  
-  .title,.sub-title{
-    font-family: 'DM Serif Display', serif;
-    color: $main-green;
-  }
 
-  .sub-title{margin-bottom: 4px;}
-  
-  .title{margin-bottom: 8px;}
+  .group-text{
 
-  .dates{
-    display: block;
-    font-weight: 500;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    color: $solid-gold;
+    .title,.sub-title{
+      font-family: 'DM Serif Display', serif;
+      color: $main-green;
+    }
+
+    .sub-title{margin-bottom: 4px;}
+    
+    .title{margin-bottom: 8px;}
+
+    .dates{
+      display: block;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: $solid-gold;
+    }
   }
 }
 
@@ -307,18 +308,22 @@ span{
    margin-right: 0;
    padding-left: 0;
    padding-right: 0;
- }
 
-  a.navitem-label{
-    color: $light-orange;
-    text-decoration: none;
-    font-weight: 400;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+    .nav-item{
+      color: $light-orange;
+      text-decoration: none;
+      font-weight: 400;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
 
-    &.active{color: #fff;}
+      &.active{color: #fff;}
 
-    i{display: inline-block;}
+      .custom-icon{
+        display: inline-block;
+        width: 24px;
+      }
+    }
   }
 }
