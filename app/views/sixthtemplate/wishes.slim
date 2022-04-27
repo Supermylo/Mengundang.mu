@@ -5,8 +5,12 @@
   .row.gx-0
     section.ornament
       .frame
-      .leaf-set
-        = image_tag ("sixthtemplate/leaf-set.png")
+      .top
+        = image_tag("sixthtemplate/maple-leaf.png", class: "maple-leaf")
+        = image_tag("sixthtemplate/big-walnut.png", class: "big-walnut")
+        = image_tag("sixthtemplate/small-walnut.png", class: "small-walnut")
+        = image_tag("sixthtemplate/small-leaves-ribbon.png", class: "leaves-left")
+        = image_tag("sixthtemplate/small-leaves-ribbon.png", class: "leaves-right")
       .bottom
         #leaf-1
           = image_tag ("sixthtemplate/bottom-leaf-1.png")
@@ -37,43 +41,43 @@
         button.custom-btn href="#"
           i.fa-solid.fa-sparkles.fa-lg.text-center
           span.text Kirim Doa
-      span.wishlist
+      .wishlist
         .group-wish
-          .sender-name Aji
-          .message
+          span.sender-name Aji
+          span.message
             | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu in convallis ultricies :)
         .group-wish
-          .sender-name Ahmad
-          .message
+          span.sender-name Ahmad
+          span.message
             | Ornare ultrices amet, commodo consequat, nulla at. Convallis in maecenas quam vel id at. Id scelerisque mattis pellentesque netus lacus suscipit. Purus, gravida tincidunt justo morbi accumsan, praesent.
         .group-wish
-          .sender-name Nasyar
-          .message
+          span.sender-name Nasyar
+          span.message
             | Ornare ultrices amet, commodo consequat, nulla at. Convallis in maecenas quam vel id at. Id scelerisque mattis pellentesque netus lacus suscipit. Purus, gravida tincidunt justo morbi accumsan, praesent.
         .group-wish
-          .sender-name Auliya
-          .message
+          span.sender-name Auliya
+          span.message
             | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu in convallis ultricies :)
     section.nav-float
       .row.custom-row.gx-0
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label href="/sixthtemplate/index"
-            i.fa-solid.fa-house.fa-lg.w-100.text-center
-            span.navitem-label Home
+          a.nav-item href="/sixthtemplate/index"
+            i.fa-solid.fa-house.fa-lg.custom-icon
+            span.label Home
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label href="/sixthtemplate/couple"
-            i.fa-solid.fa-heart.fa-lg.w-100.text-center
-            span.navitem-label Pasangan
+          a.nav-item href="/sixthtemplate/couple"
+            i.fa-solid.fa-heart.fa-lg.custom-icon
+            span.label Pasangan
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label href="/sixthtemplate/location"
-            i.fa-solid.fa-location-dot.fa-lg.w-100.text-center
-            span.navitem-label Lokasi
+          a.nav-item href="/sixthtemplate/location"
+            i.fa-solid.fa-location-dot.fa-lg.custom-icon
+            span.label Lokasi
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label.active href="#"
-            i.fa-solid.fa-hands-praying.fa-lg.w-100.text-center
-            span.navitem-label Doa
+          a.nav-item.active href="#"
+            i.fa-solid.fa-hands-praying.fa-lg.custom-icon
+            span.label Doa
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label href="/sixthtemplate/gift"
-            i.fa-solid.fa-gift.fa-lg.w-100.text-center
-            span.navitem-label Hadiah
+          a.nav-item href="/sixthtemplate/gift"
+            i.fa-solid.fa-gift.fa-lg.custom-icon
+            span.label Hadiah
             

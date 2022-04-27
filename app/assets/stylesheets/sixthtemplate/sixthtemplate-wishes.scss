@@ -15,12 +15,14 @@ body{
 h1{font-size: 36px;}
 h2{font-size: 24px;}
 h3{font-size: 20px;}
-span{
+span, p{
   font-size: 12px;
   font-family: 'Work Sans', sans-serif;
 }
 
 .ornament{
+  display: flex;
+  justify-content: center;
 
   .frame{
     position: absolute;
@@ -31,12 +33,41 @@ span{
     margin: 20px;
   }
 
-  .leaf-set{
-    position: relative;
+  .top{
     display: flex;
     justify-content: center;
-    width: calc(100% - 40px);
-    margin: 0 auto;
+    height: 80px;
+    width: 184px;
+    position: relative;
+
+    .maple-leaf, .big-walnut, .small-walnut, .leaves-left, .leaves-right{
+      position: absolute;
+    }
+
+    .maple-leaf{z-index: 1;}
+
+    .big-walnut{
+      z-index: 2;
+      top: 38%;
+      left: 68px;
+    }
+
+    .small-walnut{
+      z-index: 3;
+      top: 40%;
+      right: 70px;
+    }
+
+    .leaves-left{
+      z-index: 0;
+      left: 0;
+    }
+
+    .leaves-right{
+      z-index: 0;
+      transform: scaleX(-1);
+      right: 0;
+    }
   }
 
   .bottom{
@@ -114,7 +145,7 @@ span{
     display: flex;
     flex-direction: column;
     gap: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 
     .group-input{
 
@@ -201,13 +232,14 @@ span{
       }
 
       .message{
+        display: block;
         color: $light-green;
-        padding-bottom: 8px;
-        border-bottom: 1px solid #DCDFC5;
+        margin-bottom: 8px;
       }
     }
 
     .group-wish:not(:last-child){
+      border-bottom: 1px solid #DCDFC5;
       margin-bottom: 12px;
     }
   }
@@ -232,18 +264,22 @@ span{
    margin-right: 0;
    padding-left: 0;
    padding-right: 0;
- }
 
-  a.navitem-label{
-    color: $light-orange;
-    text-decoration: none;
-    font-weight: 400;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+    .nav-item{
+      color: $light-orange;
+      text-decoration: none;
+      font-weight: 400;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
 
-    &.active{color: #fff;}
+      &.active{color: #fff;}
 
-    i{display: inline-block;}
+      .custom-icon{
+        display: inline-block;
+        width: 24px;
+      }
+    }
   }
 }

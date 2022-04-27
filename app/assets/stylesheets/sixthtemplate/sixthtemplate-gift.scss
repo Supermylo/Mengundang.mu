@@ -16,7 +16,8 @@ h1{font-size: 36px;}
 h2{font-size: 24px;}
 h3{font-size: 20px;}
 h4{font-size: 14px;}
-span{
+h5{font-size: 12px;}
+span, p{
   font-size: 12px;
   font-family: 'Work Sans', sans-serif;
 }
@@ -150,29 +151,36 @@ span{
   flex-direction: column;
   justify-content: center;
 
-  .wrapper-content{
+  .group-image{
 
     .custom-inner{
       overflow: visible;
+      display: flex;
+      align-items: center;
 
       .custom-item{
+        margin-bottom: 12px;
 
-        .image-placeholder{
-          display: inline-block;
-          width: 160px;
-          height: 160px;
-          background: url("../sixthtemplate/Border Image.png");
-          background-size: 100%;
-    
-          &:after{
-            content: "";
-            display: block;
+        .custom-placeholder{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+
+          .custom-image{
             width: 144px;
             height: 144px;
-            background: url("../sixthtemplate/Sample Couple Image.png");
-            background-size: 100%;
-            border-radius: 1000px;
-            margin: 8px;
+            border-radius: 100%;
+            object-fit: cover;
+            position: absolute;
+          }
+
+          &::before{
+            content: "";
+            background: url("sixthtemplate/border-image.png");
+            background-size: 160px;
+            width: 160px;
+            height: 160px;
           }
         }
       }
@@ -180,6 +188,8 @@ span{
       .custom-prev, .custom-next{
         opacity: 1;
         width: auto;
+        top: auto;
+        bottom: auto;
   
         .custom-btn{
           background-image: none;
@@ -207,7 +217,6 @@ span{
 
     .custom-indicators{
       position: static;
-      margin-top: 12px;
       margin-bottom: 0;
 
       .indicator-btn{
@@ -219,6 +228,10 @@ span{
         background-color: $solid-gold;
       }
     }
+  }
+
+  .group-text{
+    text-align: center;
 
     .thanks{
       display: block;
@@ -250,7 +263,7 @@ span{
       }
     }
 
-    .custom-btn{
+    .gift-btn{
       display: inline-flex;
       align-items: center;
       padding: 8px 16px;
@@ -260,7 +273,11 @@ span{
       font-weight: 600;
       border-radius: 24px;
 
-      .text{
+      .custom-icon{
+        width: 16px;
+      }
+
+      .custom-text{
         margin-left: 8px;
       }
 
@@ -316,7 +333,7 @@ span{
 
     .sub-title{margin-bottom: 4px;}
 
-    #giftbox-icon{
+    .giftbox-icon{
       .custom-img{
         height: 40px;
         object-fit: contain;
@@ -324,7 +341,7 @@ span{
       }
     }
 
-    #bank-icon{
+    .bank-icon{
       .custom-img{
         height: 28px;
         object-fit: contain;
@@ -349,7 +366,7 @@ span{
         height: 16px;
       }
 
-      .copy-text{font-weight: 500;}
+      .custom-text{font-weight: 500;}
     }
 
     .offline-gift{margin-bottom: 20px;}
@@ -382,7 +399,7 @@ span{
   transform: translateX(-50%);
   background-color: $main-orange;
   position: fixed;
-  z-index: 0;
+  z-index: 2;
   padding: 12px;
   border-radius: 50rem;
   width: calc(100% - 40px);
@@ -395,18 +412,22 @@ span{
    margin-right: 0;
    padding-left: 0;
    padding-right: 0;
- }
 
-  a.navitem-label{
-    color: $light-orange;
-    text-decoration: none;
-    font-weight: 400;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+    .nav-item{
+      color: $light-orange;
+      text-decoration: none;
+      font-weight: 400;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
 
-    &.active{color: #fff;}
+      &.active{color: #fff;}
 
-    i{display: inline-block;}
+      .custom-icon{
+        display: inline-block;
+        width: 24px;
+      }
+    }
   }
 }

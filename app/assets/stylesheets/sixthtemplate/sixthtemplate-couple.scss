@@ -154,10 +154,14 @@ span, p{
           width: 56px;
           height: 56px;
           border-radius: 100%;
+          object-fit: cover;
           position: absolute;
         }
 
-        .custom-border{
+        &::before{
+          content: "";
+          background: url("sixthtemplate/border-image");
+          background-size: 64px;
           width: 64px;
           height: 64px;
         }

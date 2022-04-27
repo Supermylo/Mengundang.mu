@@ -209,10 +209,14 @@ span, p{
         width: 108px;
         height: 108px;
         border-radius: 100%;
+        object-fit: cover;
         position: absolute;
       }
 
-      .border-image{
+      &::before{
+        content: "";
+        background: url("sixthtemplate/border-image.png");
+        background-size: 120px;
         width: 120px;
         height: 120px;
       }
