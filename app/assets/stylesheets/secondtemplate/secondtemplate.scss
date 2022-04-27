@@ -1,0 +1,249 @@
+$beige : #F3EFE3;
+$main-green : #545A29;
+$light-green : #81865F;
+$dark-brown : #9A7915;
+
+html{height: 100%;}
+body{
+  background-color: $beige;
+  height: 100%;
+}
+
+h1{font-size: 40px;}
+h2{font-size: 36px;}
+h3{font-size: 24px;}
+h4{font-size: 20px;}
+h5{font-size: 12px;}
+span, p{
+  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.ornament{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  
+  .wide-left{
+    position: absolute;
+    width: 162px;
+    height: 117px;
+    left: -8px;
+    bottom: 310px;
+
+    .big-left, .small-left{
+      position: absolute;
+      z-index: 1;
+    }
+
+    .big-left{
+      width: 154px;
+      transform: rotate(60deg);
+      bottom: -72px;
+    }
+
+    .small-left{
+      width: 98px;
+      transform: rotate(30deg);
+      left: -40px;
+      bottom: -36px;
+    }
+  }
+
+  .wide-right{
+    position: absolute;
+    width: 162px;
+    height: 117px;
+    right: -8px;
+    bottom: 310px;
+
+    .big-right, .small-right{
+      position: absolute;
+      z-index: 1;
+    }
+
+    .big-right{
+      width: 154px;
+      transform: rotate(-60deg) scaleX(-1);
+      bottom: -72px;
+    }
+
+    .small-right{
+      width: 98px;
+      transform: rotate(-30deg) scaleX(-1);
+      right: -40px;
+      bottom: -36px;
+    }
+  }
+
+  .sharp-left{
+    position: absolute;
+    width: 181px;
+    height: 171px;
+    left: 0;
+    bottom: 0;
+
+    .sharp-shadow-left, .sharp-left-1, .sharp-left-2{
+      position: absolute;
+      z-index: 1;
+      height: 146px;
+    }
+
+    .sharp-shadow-left{
+      bottom: 64px;
+      left: -28px;
+    }
+
+    .sharp-left-1{
+      transform: rotate(45deg);
+      bottom: -30px;
+      left: 20px;
+    }
+
+    .sharp-left-2{
+      transform: rotate(15deg);
+      bottom: -8px;
+      left: -16px;
+    }
+  }
+
+  .sharp-right{
+    position: absolute;
+    width: 181px;
+    height: 171px;
+    right: 0;
+    bottom: 0;
+
+    .sharp-shadow-right, .sharp-right-1, .sharp-right-2{
+      position: absolute;
+      z-index: 1;
+      height: 146px;
+    }
+
+    .sharp-shadow-right{
+      bottom: 64px;
+      right: -28px;
+    }
+
+    .sharp-right-1{
+      transform: rotate(-45deg) scaleX(-1);
+      bottom: -30px;
+      right: 20px;
+    }
+
+    .sharp-right-2{
+      transform: rotate(-15deg) scaleX(-1);
+      bottom: -8px;
+      right: -16px;
+    }
+  }
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 86px);
+  padding: 0;
+
+  .group-image{
+    display: flex;
+    height: 70%;
+    position: relative;
+
+    .custom-image{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .custom-brush{
+      position: absolute;
+      z-index: 0;
+      width: 100%;
+      bottom: 0;
+      transform: translateY(65%);
+    }
+  }
+
+  .group-text{
+    position: relative;
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title,.sub-title{
+      font-family: 'Dancing Script', serif;
+      font-weight: 700;
+      color: $main-green;
+    }
+
+    .sub-title{margin-bottom: 4px;}
+    
+    .title{
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+    
+      &::before{
+        content: "Ifan";
+        font-size: 44px;
+        margin-right: 8px;
+      }
+
+      &::after{
+        content: "Saskia";
+        font-size: 44px;
+        margin-left: 8px;
+      }
+    }
+
+    .date{
+      font-family: 'Noto Serif', serif;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: $dark-brown;
+    }
+  }
+}
+
+.nav-float{
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $main-green;
+  position: fixed;
+  z-index: 2;
+  padding: 12px;
+  border-radius: 50rem;
+  width: calc(100% - 40px);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+ -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+ -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+
+ .custom-row{
+   margin-left: 0;
+   margin-right: 0;
+   padding-left: 0;
+   padding-right: 0;
+
+    .nav-item{
+      color: $light-green;
+      text-decoration: none;
+      font-weight: 400;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+
+      &.active{color: #fff;}
+
+      .custom-icon{
+        display: inline-block;
+        width: 24px;
+      }
+    }
+  }
+}

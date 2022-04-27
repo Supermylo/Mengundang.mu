@@ -1,1 +1,50 @@
-span Home Page
+- content_for :additional_styles
+  = stylesheet_link_tag "secondtemplate/secondtemplate"
+
+.container-full.h-100.position-relative.overflow-hidden
+  .row.m-0
+    section.ornament
+      .wide-left
+        = image_tag("secondtemplate/wide-leaves.png", class: "big-left")
+        = image_tag("secondtemplate/wide-leaves.png", class: "small-left")
+      .wide-right  
+        = image_tag("secondtemplate/wide-leaves.png", class: "big-right")
+        = image_tag("secondtemplate/wide-leaves.png", class: "small-right")
+      .sharp-left
+        = image_tag("secondtemplate/sharp-leaves-shadow.png", class: "sharp-shadow-left")
+        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-left-1")
+        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-left-2")
+      .sharp-right  
+        = image_tag("secondtemplate/sharp-leaves-shadow.png", class: "sharp-shadow-right")
+        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-right-1")
+        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-right-2")
+    section.content
+      .group-image
+        = image_tag("secondtemplate/big-image.png", class: "custom-image")
+        = image_tag("secondtemplate/big-brush.png", class: "custom-brush")
+      .group-text
+        h4.sub-title.text-center • Walimatul Ursy •
+        h3.title.text-center &
+        h5.date.text-center 13 Maret 2022   
+    section.nav-float
+      .row.custom-row.gx-0
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a.nav-item.active href="#"
+            i.fa-solid.fa-house.fa-lg.custom-icon
+            span.label Home
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a.nav-item href="/secondtemplate/couple"
+            i.fa-solid.fa-heart.fa-lg.custom-icon
+            span.label Pasangan
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a.nav-item href="/secondtemplate/location"
+            i.fa-solid.fa-location-dot.fa-lg.custom-icon
+            span.label Lokasi
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a.nav-item href="/secondtemplate/wishes"
+            i.fa-solid.fa-hands-praying.fa-lg.custom-icon
+            span.label Doa
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a.nav-item href="/secondtemplate/gift"
+            i.fa-solid.fa-gift.fa-lg.custom-icon
+            span.label Hadiah
