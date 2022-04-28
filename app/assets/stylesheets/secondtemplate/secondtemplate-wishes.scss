@@ -1,142 +1,188 @@
-$main-orange : #E6873A;
-$light-orange : #FFC290;
+$beige : #F3EFE3;
 $main-green : #545A29;
 $light-green : #81865F;
-$solid-gold : #C59B46;
-$gradient-gold : linear-gradient(45deg,#C59B46,#F4DCAB);
+$dark-brown : #9A7915;
+$custom-white : #F9FAFB;
 
 html{height: 100%;}
 body{
-  background: url("../sixthtemplate/Background Sixth Template.png");
-  background-size: cover;
+  background-color: $beige;
   height: 100%;
 }
 
-h1{font-size: 36px;}
-h2{font-size: 24px;}
-h3{font-size: 20px;}
+h1{font-size: 40px;}
+h2{font-size: 36px;}
+h3{font-size: 24px;}
+h4{font-size: 20px;}
+h5{font-size: 12px;}
 span, p{
   font-size: 12px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;
 }
 
 .ornament{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
 
   .frame{
     position: absolute;
     width: calc(100% - 40px);
-    height: calc(100vh - 40px);
-    border: 1px solid $light-green;
+    height: calc(100% - 126px);
+    border: 1px solid $main-green;
     border-radius: 20px;
-    margin: 20px;
+    top: 20px;
   }
 
-  .top{
+  .flower-set{
     display: flex;
     justify-content: center;
-    height: 80px;
-    width: 184px;
+    height: 76px;
+    width: 190px;
     position: relative;
+    top: -12px;
 
-    .maple-leaf, .big-walnut, .small-walnut, .leaves-left, .leaves-right{
+    .main-flower, .big-wide-left, .small-wide-left, .sharp-leaves-left, .big-wide-right, .small-wide-right, .sharp-leaves-right{
       position: absolute;
     }
 
-    .maple-leaf{z-index: 1;}
-
-    .big-walnut{
-      z-index: 2;
-      top: 38%;
-      left: 68px;
+    .main-flower{
+      width: 64px;
+      z-index: 4;
     }
 
-    .small-walnut{
+    .big-wide-left, .big-wide-right{
+      width: 32px;
       z-index: 3;
-      top: 40%;
-      right: 70px;
     }
 
-    .leaves-left{
-      z-index: 0;
-      left: 0;
+    .small-wide-left, .small-wide-right{
+      width: 20px;
+      z-index: 2;
     }
 
-    .leaves-right{
-      z-index: 0;
-      transform: scaleX(-1);
-      right: 0;
+    .sharp-leaves-left, .sharp-leaves-right{
+      width: 46px;
+      z-index: 1;
+    }
+
+    .big-wide-left{
+      transform: rotate(-70deg) scaleX(-1);
+      left: 24px;
+      bottom: 8px;
+    }
+
+    .small-wide-left{
+      transform: rotate(-105deg);
+      left: 48px;
+      bottom: 0;
+    }
+
+    .sharp-leaves-left{
+      transform: rotate(-105deg) scaleX(-1);
+      left: 4px;
+      bottom: -18px;
+    }
+
+    .big-wide-right{
+      transform: rotate(70deg);
+      right: 24px;
+      bottom: 8px;
+    }
+
+    .small-wide-right{
+      transform: rotate(105deg);
+      right: 48px;
+      bottom: 0;
+    }
+
+    .sharp-leaves-right{
+      transform: rotate(105deg);
+      right: 4px;
+      bottom: -18px;
     }
   }
 
-  .bottom{
+  .sharp-left{
+    position: absolute;
+    width: 181px;
+    height: 171px;
+    left: 0;
+    bottom: 0;
 
-    &::before{
+    .sharp-shadow-left, .sharp-left-1, .sharp-left-2{
       position: absolute;
-      content: "";
-      background: url("sixthtemplate/bottom-leaf-shadow.png");
-      background-repeat: no-repeat;
-      width: 110%;
-      height: 24%;
-      bottom: 0;
-      left: -8%;
-      transform: scale(1.2);
+      z-index: 1;
+      height: 146px;
     }
 
-    #leaf-1, #leaf-2, #leaf-3, #leaf-4, #leaf-5, #leaf-6{
+    .sharp-shadow-left{
+      bottom: 64px;
+      left: -28px;
+    }
+
+    .sharp-left-1{
+      transform: rotate(45deg);
+      bottom: -30px;
+      left: 20px;
+    }
+
+    .sharp-left-2{
+      transform: rotate(15deg);
+      bottom: -8px;
+      left: -16px;
+    }
+  }
+
+  .sharp-right{
+    position: absolute;
+    width: 181px;
+    height: 171px;
+    right: 0;
+    bottom: 0;
+
+    .sharp-shadow-right, .sharp-right-1, .sharp-right-2{
       position: absolute;
-      transform: scale(1.2);
-      z-index: 2;
+      z-index: 1;
+      height: 146px;
     }
 
-    #leaf-1{
-      bottom: -8%;
-      left: -2%;
+    .sharp-shadow-right{
+      bottom: 64px;
+      right: -28px;
     }
 
-    #leaf-2{
-      bottom: -7%;
-      left: 6%;
+    .sharp-right-1{
+      transform: rotate(-45deg) scaleX(-1);
+      bottom: -30px;
+      right: 20px;
     }
 
-    #leaf-3{
-      bottom: -3%;
-      left: 24%;
-    }
-
-    #leaf-4{
-      bottom: -1%;
-      right: 37%;
-    }
-
-    #leaf-5{
-      bottom: -12%;
-      right: 16%;
-    }
-
-    #leaf-6{
-      bottom: -11%;
-      right: -9%;
+    .sharp-right-2{
+      transform: rotate(-15deg) scaleX(-1);
+      bottom: -8px;
+      right: -16px;
     }
   }
 }
 
 .content{
+  width: 100%;
+  height: calc(100vh - 86px);
+  padding: 40px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: start;
-  margin-top: 84px;
-  width: 100%;
-  height: calc(100vh - 260px);
-  padding: 0 40px;
   position: absolute;
-  right: 0;
 
   .title{
-    font-family: 'DM Serif Display', serif;
+    font-family: 'Dancing Script', serif;
+    font-weight: 700;
     color: $main-green;
+    margin-top: 24px;
     margin-bottom: 12px;
   }
 
@@ -150,27 +196,27 @@ span, p{
     .group-input{
 
       label, input, textarea, select{
-        font-family: 'Work Sans', sans-serif;
+        font-family: 'DM Sans', sans-serif;
         font-size: 12px;
       }
 
       label{
         display: block;
-        font-weight: 600;
+        font-weight: 700;
         color: $main-green;
       }
 
       input, textarea, select{
         width: 100%;
-        font-weight: 400;
+        font-weight: 500;
         background: none;
         padding-bottom: 4px;
         border: none;
         border-bottom: 1px solid #DCDFC5;
-        color: $light-green;
+        color: $main-green;
 
         &:focus{
-          font-weight: 500;
+          font-weight: 400;
           outline: none;
         }
       }
@@ -181,6 +227,10 @@ span, p{
         color: $main-green;
         font-weight: 500;
       }
+
+      ::placeholder{
+        font-weight: 400;
+      }
     }
 
     .custom-btn{
@@ -188,9 +238,9 @@ span, p{
       justify-content: center;
       align-items: center;
       padding: 8px 16px;
-      background-color: $main-orange;
+      background-color: $dark-brown;
       text-decoration: none;
-      color: white;
+      color: $custom-white;
       font-weight: 600;
       border-radius: 24px;
       border: none;
@@ -199,7 +249,7 @@ span, p{
         margin-left: 8px;
       }
 
-      &:hover{background-color: #d36f1d;}
+      &:hover{background-color: #7e5f05;}
     }
   }
 
@@ -221,10 +271,10 @@ span, p{
         &::after{
           content: "Hadir";
           height: 100%;
-          color: white;
+          color: $custom-white;
           font-size: 7px;
           font-weight: 400;
-          background-color: $solid-gold;
+          background-color: $dark-brown;
           padding: 2px 8px;
           margin-left: 8px;
           border-radius: 16px;
@@ -249,7 +299,7 @@ span, p{
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: $main-orange;
+  background-color: $main-green;
   position: fixed;
   z-index: 2;
   padding: 12px;
@@ -266,7 +316,7 @@ span, p{
    padding-right: 0;
 
     .nav-item{
-      color: $light-orange;
+      color: $light-green;
       text-decoration: none;
       font-weight: 400;
       display: flex;
@@ -274,7 +324,7 @@ span, p{
       align-items: center;
       gap: 4px;
 
-      &.active{color: #fff;}
+      &.active{color: $custom-white;}
 
       .custom-icon{
         display: inline-block;

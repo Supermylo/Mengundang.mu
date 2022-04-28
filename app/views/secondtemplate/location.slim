@@ -4,6 +4,15 @@
 .container-full.h-100.position-relative.overflow-hidden
   .row.m-0
     section.ornament
+      .frame
+      .sharp-left
+        = image_tag("secondtemplate/sharp-leaves-shadow.png", class: "sharp-shadow-left")
+        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-left-1")
+        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-left-2")
+      .sharp-right  
+        = image_tag("secondtemplate/sharp-leaves-shadow.png", class: "sharp-shadow-right")
+        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-right-1")
+        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-right-2")
     section.content
       #carouselExampleControls.carousel.slide data-bs-ride="carousel" data-bs-interval="false"
         .carousel-inner.custom-inner
