@@ -2,29 +2,28 @@
   = stylesheet_link_tag "secondtemplate/secondtemplate-couple"
 
 .container-full.h-100.position-relative.overflow-hidden
-  .row
+  .row.m-0
     section.ornament
-      .frame
-      .bottom
-        #leaf-1
-          = image_tag ("sixthtemplate/bottom-leaf-1.png")
-        #leaf-3
-          = image_tag ("sixthtemplate/bottom-leaf-3.png")
-        #leaf-2
-          = image_tag ("sixthtemplate/bottom-leaf-2.png")
-        #leaf-6
-          = image_tag ("sixthtemplate/bottom-leaf-6.png")
-        #leaf-5
-          = image_tag ("sixthtemplate/bottom-leaf-5.png")
-        #leaf-4
-          = image_tag ("sixthtemplate/bottom-leaf-4.png")
+      .sharp-left
+        = image_tag("secondtemplate/sharp-leaves-shadow.png", class: "sharp-shadow-left")
+        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-left-1")
+        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-left-2")
+      .sharp-right  
+        = image_tag("secondtemplate/sharp-leaves-shadow.png", class: "sharp-shadow-right")
+        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-right-1")
+        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-right-2")
     section.content
       .group-image
-        = image_tag("sixthtemplate/maple-leaf.png", class: "maple-leaf")
-        = image_tag("sixthtemplate/big-walnut.png", class: "big-walnut")
-        = image_tag("sixthtemplate/small-walnut.png", class: "small-walnut")
-        = image_tag("sixthtemplate/small-leaves-ribbon.png", class: "leaves-left")
-        = image_tag("sixthtemplate/small-leaves-ribbon.png", class: "leaves-right")
+        /! Main Flower
+        = image_tag("secondtemplate/main-flower.png", class: "main-flower")
+        /! Left Leaves
+        = image_tag("secondtemplate/wide-leaves.png", class: "big-wide-left")
+        = image_tag("secondtemplate/wide-leaves.png", class: "small-wide-left")
+        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-leaves-left")
+        /! Right Leaves
+        = image_tag("secondtemplate/wide-leaves.png", class: "big-wide-right")
+        = image_tag("secondtemplate/wide-leaves.png", class: "small-wide-right")
+        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-leaves-right")
       .group-text
         p.prolog.text-center
           | Assalamu’alaikum Wr. Wb.
@@ -34,19 +33,31 @@
           .wrapper-image
             = image_tag("sixthtemplate/groom-image.png", class: "custom-image")
           .wrapper-name
-            h2.couples-name.text-center Wildan Ramadan
+            h3.couples-name.text-center Ifan Seventeen
             span.parents-name.text-center Putra Bapak Fulan & Ibu Fulanah
-        h3.separator &
+        .separator
+          = image_tag("secondtemplate/wedding-rings.png")
         .bride-set
           .wrapper-image
             = image_tag("sixthtemplate/bride-image.png", class: "custom-image")
           .wrapper-name
-            h2.couples-name.text-center Utaran Rimidin
+            h3.couples-name.text-center Saskia Sixteen
             span.parents-name.text-center Putri Bapak Fulan & Ibu Fulanah
+      .group-image
+        /! Main Flower
+        = image_tag("secondtemplate/main-flower.png", class: "main-flower")
+        /! Left Leaves
+        = image_tag("secondtemplate/wide-leaves.png", class: "big-wide-left")
+        = image_tag("secondtemplate/wide-leaves.png", class: "small-wide-left")
+        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-leaves-left")
+        /! Right Leaves
+        = image_tag("secondtemplate/wide-leaves.png", class: "big-wide-right")
+        = image_tag("secondtemplate/wide-leaves.png", class: "small-wide-right")
+        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-leaves-right")
     section.nav-float
       .row.custom-row.gx-0
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/sixthtemplate/index"
+          a.nav-item href="/secondtemplate/index"
             i.fa-solid.fa-house.fa-lg.custom-icon
             span.label Home
         .col.text-center.d-flex.align-items-center.justify-content-center
@@ -54,15 +65,15 @@
             i.fa-solid.fa-heart.fa-lg.custom-icon
             span.label Pasangan
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/sixthtemplate/location"
+          a.nav-item href="/secondtemplate/location"
             i.fa-solid.fa-location-dot.fa-lg.custom-icon
             span.label Lokasi
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/sixthtemplate/wishes"
+          a.nav-item href="/secondtemplate/wishes"
             i.fa-solid.fa-hands-praying.fa-lg.custom-icon
             span.label Doa
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/sixthtemplate/gift"
+          a.nav-item href="/secondtemplate/gift"
             i.fa-solid.fa-gift.fa-lg.custom-icon
             span.label Hadiah
             

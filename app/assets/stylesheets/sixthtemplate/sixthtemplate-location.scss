@@ -243,8 +243,10 @@ span, p{
 
       .custom-col{
         display: flex;
+        justify-content: center;
         align-items: center;
         gap: 16px;
+        padding: 0;
 
         .custom-wrapper{
           display: flex;

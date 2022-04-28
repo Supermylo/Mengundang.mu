@@ -29,7 +29,7 @@ span, p{
     width: 162px;
     height: 117px;
     left: -8px;
-    bottom: 310px;
+    bottom: 320px;
 
     .big-left, .small-left{
       position: absolute;
@@ -37,16 +37,16 @@ span, p{
     }
 
     .big-left{
-      width: 154px;
+      height: 154px;
       transform: rotate(60deg);
-      bottom: -72px;
+      left: 24px;
     }
 
     .small-left{
-      width: 98px;
+      height: 98px;
       transform: rotate(30deg);
-      left: -40px;
-      bottom: -36px;
+      bottom: 0;
+      left: -4px;
     }
   }
 
@@ -55,7 +55,7 @@ span, p{
     width: 162px;
     height: 117px;
     right: -8px;
-    bottom: 310px;
+    bottom: 320px;
 
     .big-right, .small-right{
       position: absolute;
@@ -63,16 +63,16 @@ span, p{
     }
 
     .big-right{
-      width: 154px;
+      height: 154px;
       transform: rotate(-60deg) scaleX(-1);
-      bottom: -72px;
+      right: 24px;
     }
 
     .small-right{
-      width: 98px;
+      height: 98px;
       transform: rotate(-30deg) scaleX(-1);
-      right: -40px;
-      bottom: -36px;
+      bottom: 0;
+      right: -4px;
     }
   }
 
