@@ -29,12 +29,72 @@ span, p{
 }
 
 .ornament{
+  padding: 0;
+
+  .top{
+    position: relative;
+
+    .top-pine-set-1, .top-pine-set-2, .top-pine-set-3{
+      position: absolute;
+    }
+
+    .top-pine-set-1{
+      width: 106px;
+      left: -8px;
+      top: -24px;
+      transform: scale(0.8) scaleX(-1);
+    }
+
+    .top-pine-set-2{
+      width: 106px;
+      left: 92px;
+      top: -50px;
+      transform: scale(0.8) scaleX(-1);
+    }
+
+    .top-pine-set-3{
+      width: 109px;
+      left: -58px;
+      top: 45px;
+      transform: scale(0.8) scaleX(-1) rotate(-12deg);
+    }
+  }
+
+  .bottom{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    .bottom-pine-set-1, .bottom-pine-set-2, .bottom-pine-set-3{
+      position: absolute;
+      transform: scaleX(-1) rotate(180deg);
+    }
+
+    .bottom-pine-set-1{
+      width: 106px;
+      bottom: -21px;
+      right: 3px;
+    }
+
+    .bottom-pine-set-2{
+      width: 106px;
+      bottom: 60px;
+      right: -58px;
+    }
+
+    .bottom-pine-set-3{
+      width: 109px;
+      bottom: -50px;
+      right: 115px;
+    }
+  }
 }
 
 .content{
   width: calc(100% - 40px);
   height: calc(100vh - 130px);
-  margin: 28px auto 12px auto;
+  position: absolute;
+  margin: 28px 20px 12px 20px;
   padding: 0 24px;
   display: flex;
   flex-direction: column;
@@ -49,38 +109,85 @@ span, p{
 
   .group-image{
     display: flex;
-    justify-content: center;
-    height: 80px;
-    width: 184px;
+    gap: 2px;
     position: relative;
 
-    .maple-leaf, .big-walnut, .small-walnut, .leaves-left, .leaves-right{
-      position: absolute;
-    }
-
-    .maple-leaf{z-index: 1;}
-
-    .big-walnut{
-      z-index: 2;
-      top: 38%;
-      left: 68px;
-    }
-
-    .small-walnut{
-      z-index: 3;
-      top: 40%;
-      right: 70px;
-    }
-
     .leaves-left{
-      z-index: 0;
-      left: 0;
+      width: 62px;
+      height: 40px;
+      position: relative;
+
+      .pine-leaves-left, .pine-left{
+        position: absolute;
+        transform: scaleX(-1);
+      }
+
+      .pine-leaves-left{
+        width: 40px;
+      }
+
+      .pine-left{
+        width: 24px;
+        right: 0;
+        bottom: 0;
+      }
     }
 
     .leaves-right{
-      z-index: 0;
-      transform: scaleX(-1);
-      right: 0;
+      width: 62px;
+      height: 40px;
+      position: relative;
+
+      .pine-leaves-right, .pine-right{
+        position: absolute;
+      }
+
+      .pine-leaves-right{
+        width: 40px;
+        right: 0;
+      }
+
+      .pine-right{
+        width: 24px;
+        left: 0;
+        bottom: 0;
+      }
+    }
+
+    .bubble{
+      width: 100%;
+      height: 14px;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+
+      .group-bubble{
+        width: 10px;
+        height: 14px;
+        position: relative;
+        margin-left: 6px;
+
+        .bubble-small{
+          width: 3px;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        .bubble-medium{
+          width: 4px;
+          position: absolute;
+          right: 0;
+          bottom: 50%;
+        }
+
+        .bubble-large{
+          width: 5px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
     }
   }
   
@@ -129,7 +236,10 @@ span, p{
       }
     }
 
-    .bride-set{flex-direction: row-reverse;}
+    .bride-set{
+      flex-direction: row-reverse;
+      margin-bottom: 24px;
+    }
 
     .separator{
       font-family: 'Danviska', serif;

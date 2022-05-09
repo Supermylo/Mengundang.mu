@@ -4,13 +4,27 @@
 .container-full.h-100.position-relative.overflow-hidden
   .row.m-0
     section.ornament
+      .top
+        = image_tag("thirdtemplate/big-pine-set.png", class: "top-pine-set-1")
+        = image_tag("thirdtemplate/small-pine-set.png", class: "top-pine-set-2")
+        = image_tag("thirdtemplate/small-pine-set.png", class: "top-pine-set-3")
+      .bottom
+        = image_tag("thirdtemplate/big-pine-set.png", class: "bottom-pine-set-1")
+        = image_tag("thirdtemplate/small-pine-set.png", class: "bottom-pine-set-2")
+        = image_tag("thirdtemplate/small-pine-set.png", class: "bottom-pine-set-3")
     section.content
       .group-image
-        = image_tag("sixthtemplate/maple-leaf.png", class: "maple-leaf")
-        = image_tag("sixthtemplate/big-walnut.png", class: "big-walnut")
-        = image_tag("sixthtemplate/small-walnut.png", class: "small-walnut")
-        = image_tag("sixthtemplate/small-leaves-ribbon.png", class: "leaves-left")
-        = image_tag("sixthtemplate/small-leaves-ribbon.png", class: "leaves-right")
+        .leaves-left
+          = image_tag("thirdtemplate/pine-leaves.png", class: "pine-leaves-left")
+          = image_tag("thirdtemplate/pine.png", class: "pine-left")
+        .leaves-right
+          = image_tag("thirdtemplate/pine-leaves.png", class: "pine-leaves-right")
+          = image_tag("thirdtemplate/pine.png", class: "pine-right")
+        .bubble
+          .group-bubble
+            =image_tag("thirdtemplate/bubble-small.png", class: "bubble-small")
+            =image_tag("thirdtemplate/bubble-medium.png", class: "bubble-medium")
+            =image_tag("thirdtemplate/bubble-large.png", class: "bubble-large")
       .group-text
         p.prolog.text-center
           | Assalamu’alaikum Wr. Wb.
@@ -29,6 +43,18 @@
           .wrapper-name
             h3.couples-name.text-center Saskia Sixteen
             span.parents-name.text-center Putri Bapak Fulan & Ibu Fulanah
+      .group-image
+        .leaves-left
+          = image_tag("thirdtemplate/pine-leaves.png", class: "pine-leaves-left")
+          = image_tag("thirdtemplate/pine.png", class: "pine-left")
+        .leaves-right
+          = image_tag("thirdtemplate/pine-leaves.png", class: "pine-leaves-right")
+          = image_tag("thirdtemplate/pine.png", class: "pine-right")
+        .bubble
+          .group-bubble
+            =image_tag("thirdtemplate/bubble-small.png", class: "bubble-small")
+            =image_tag("thirdtemplate/bubble-medium.png", class: "bubble-medium")
+            =image_tag("thirdtemplate/bubble-large.png", class: "bubble-large")
     section.nav-float
       .row.custom-row.gx-0
         .col.text-center.d-flex.align-items-center.justify-content-center
