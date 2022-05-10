@@ -96,7 +96,7 @@ span, p{
   height: calc(100vh - 130px);
   position: absolute;
   margin: 28px 24px 12px 24px;
-  padding: 0 24px;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -108,10 +108,167 @@ span, p{
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
 
-  .custom-inner{
-    overflow: visible;
+  #wrapper-akad, #wrapper-resepsi{
+    color: $main-red;
+
+    .title{
+      font-family: 'Danviska', serif;
+      margin-bottom: 16px;
+    }
+
+    .group-image{
+      height: 140px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      margin-bottom: 20px;
+  
+      .custom-image{
+        width: 120px;
+        height: 120px;
+        border-radius: 100%;
+        border: 2px solid $solid-gold;
+        object-fit: cover;
+        position: absolute;
+      }
+
+      .custom-ornament{
+        position: absolute;
+        width: 216px;
+        bottom: 0;
+      }
+    }
+    
+    .group-time{
+
+      .month{
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 1.25px;
+        font-family: 'PT Serif', serif;
+        font-size: 14px;
+      }
+
+      .wrapper{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: start;
+        padding: 0 24px;
+        margin-top: 12px;
+        margin-bottom: 0;
+
+        .day{
+          flex: 1 0 0;
+          font-family: 'PT Serif', serif;
+          letter-spacing: 1.25px;
+          text-transform: uppercase;
+          display: flex;
+          flex-direction: column;
+
+          &::before{
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: $solid-gold;
+            margin-bottom: 4px;
+          }
+
+          &::after{
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: $solid-gold;
+            margin-top: 4px;
+          }
+        }
+
+        .date{
+          font-family: 'Danviska', serif;
+          letter-spacing: 2.5px;
+          line-height: 40px;
+          margin: 0 12px;
+        }
+
+        .clock{
+          flex: 1 0 0;
+          font-family: 'PT Serif', serif;
+          letter-spacing: 1.25px;
+          text-transform: uppercase;
+          display: flex;
+          flex-direction: column;
+
+          &::before{
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: $solid-gold;
+            margin-bottom: 4px;
+          }
+
+          &::after{
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: $solid-gold;
+            margin-top: 4px;
+          }
+        }
+      }
+
+      .year{
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 1.25px;
+        font-family: 'PT Serif', serif;
+        font-size: 16px;
+      }
+    }
+
+    .group-location{
+      display: block;
+      margin-top: 20px;
+
+      .location-name{
+        font-family: 'Danviska', serif;
+        margin-bottom: 4px;
+      }
+
+      .location-address{
+        margin-bottom: 12px;
+      }
+
+      .custom-btn{
+        padding: 8px 20px;
+        background-color: $solid-gold;
+        border-radius: 8px;
+        text-decoration: none;
+        color: $custom-white;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+
+        .btn-text{
+          font-weight: 600;
+        }
+
+        &:hover{background-color: $dark-gold;}
+
+        .custom-icon{
+          display: inline-block;
+          width: 16px;
+        }
+      }
+    }
+  }
+
+  .custom-carousel{
     display: flex;
     align-items: center;
+
+    .custom-inner{
+      padding: 0 20px;
+    }
 
     .custom-prev, .custom-next{
       top: auto;
@@ -140,130 +297,9 @@ span, p{
       }
     }
 
-    .custom-prev{left: -40px;}
+    .custom-prev{left: -16px;}
 
-    .custom-next{right: -40px;}
-  }
-
-  #wrapper-akad, #wrapper-resepsi{
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    .title{
-      font-family: 'DM Serif Display', serif;
-      color: $main-red;
-      margin-bottom: 20px;
-    }
-  
-    .group-image{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      margin-bottom: 12px;
-  
-      .custom-image{
-        width: 108px;
-        height: 108px;
-        border-radius: 100%;
-        object-fit: cover;
-        position: absolute;
-      }
-
-      &::before{
-        content: "";
-        background: url("sixthtemplate/border-image.png");
-        background-size: 120px;
-        width: 120px;
-        height: 120px;
-      }
-    }
-  
-    .group-time{
-      width: 100%;
-      margin-bottom: 16px;
-  
-      .day, .month, .year, .clock{
-        color: $main-red;
-        text-transform: uppercase;
-      }
-  
-      .day{
-        display: flex;
-        justify-content: end;
-      }
-  
-      .clock{
-        display: flex;
-        justify-content: start;
-      }
-
-      .custom-col{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 16px;
-        padding: 0;
-
-        .custom-wrapper{
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-    
-          .date{
-            font-family: 'DM Serif Display', serif;
-            color: $main-red;
-            margin: 0;
-          }
-        }
-
-        &::before, &::after{
-          content: "";
-          width: 2px;
-          height: 80px;
-          background: linear-gradient(to bottom, rgba(197,155,70,0), rgba(197,155,70,1), rgba(197,155,70,0));
-        }
-      }
-    }
-  
-    .group-location{
-  
-      .name{
-        font-family: 'DM Serif Display', serif;
-        color: $main-red;
-        margin-bottom: 8px;
-      }
-  
-      .address{
-        color: $main-red;
-        margin-bottom: 12px;
-      }
-  
-      .maps-btn{
-        display: inline-flex;
-        align-items: center;
-        padding: 8px 16px;
-        background-color: $solid-gold;
-        text-decoration: none;
-        color: white;
-        font-weight: 600;
-        border-radius: 24px;
-
-        .custom-icon{
-          width: 16px;
-        }
-  
-        .custom-text{
-          margin-left: 8px;
-        }
-  
-        &:hover{background-color: $dark-gold;}
-      }
-    }
+    .custom-next{right: -16px;}
   }
 }
 
