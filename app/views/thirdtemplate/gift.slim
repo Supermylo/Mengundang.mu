@@ -4,61 +4,44 @@
 .container-full.h-100.position-relative.overflow-hidden
   .row.m-0
     section.ornament
-      .top-left
-        #big-leaves-tl
-          = image_tag ("sixthtemplate/big-leaves.png")
-        #small-leaves-tl
-          = image_tag ("sixthtemplate/small-leaves.png")
-        #one-leaf-tl
-          = image_tag ("sixthtemplate/one-leaf.png")
-      .top-right
-        #big-leaves-tr
-          = image_tag ("sixthtemplate/big-leaves.png")
-        #small-leaves-tr
-          = image_tag ("sixthtemplate/small-leaves.png")
-        #one-leaf-tr
-          = image_tag ("sixthtemplate/one-leaf.png")
+      .top
+        = image_tag("thirdtemplate/big-pine-set.png", class: "top-pine-set-1")
+        = image_tag("thirdtemplate/small-pine-set.png", class: "top-pine-set-2")
+        = image_tag("thirdtemplate/small-pine-set.png", class: "top-pine-set-3")
       .bottom
-        #leaf-1
-          = image_tag ("sixthtemplate/bottom-leaf-1.png")
-        #leaf-3
-          = image_tag ("sixthtemplate/bottom-leaf-3.png")
-        #leaf-2
-          = image_tag ("sixthtemplate/bottom-leaf-2.png")
-        #leaf-6
-          = image_tag ("sixthtemplate/bottom-leaf-6.png")
-        #leaf-5
-          = image_tag ("sixthtemplate/bottom-leaf-5.png")
-        #leaf-4
-          = image_tag ("sixthtemplate/bottom-leaf-4.png")
+        = image_tag("thirdtemplate/big-pine-set.png", class: "bottom-pine-set-1")
+        = image_tag("thirdtemplate/small-pine-set.png", class: "bottom-pine-set-2")
+        = image_tag("thirdtemplate/small-pine-set.png", class: "bottom-pine-set-3")
     section.content
       .group-image
         #carouselExampleControls.carousel.slide data-bs-ride="carousel" data-bs-interval="false" 
           .carousel-inner.custom-inner
             .carousel-item.custom-item.active
               .custom-placeholder
+                = image_tag("thirdtemplate/couple-image-boho.jpg", class: "custom-image")
                 = image_tag("sixthtemplate/couple-image.png", class: "custom-image")
+                = image_tag("thirdtemplate/couple-image-boho.jpg", class: "custom-image")
             .carousel-item.custom-item
               .custom-placeholder
                 = image_tag("sixthtemplate/couple-image.png", class: "custom-image")
-            button.carousel-control-prev.custom-prev data-bs-slide="prev" data-bs-target="#carouselExampleControls" type="button" 
-              span.carousel-control-prev-icon.custom-btn aria-hidden="true" 
-                i.fa-solid.fa-arrow-left.custom-icon
-              span.visually-hidden Previous
-            button.carousel-control-next.custom-next data-bs-slide="next" data-bs-target="#carouselExampleControls" type="button" 
-              span.carousel-control-next-icon.custom-btn aria-hidden="true" 
-                i.fa-solid.fa-arrow-right.custom-icon
-              span.visually-hidden Next
-          .carousel-indicators.custom-indicators
-            button.indicator-btn.active aria-current="true" aria-label=("Slide 1") data-bs-slide-to="0" data-bs-target="#carouselExampleControls" type="button" 
-            button.indicator-btn aria-label=("Slide 2") data-bs-slide-to="1" data-bs-target="#carouselExampleControls" type="button" 
+                = image_tag("thirdtemplate/couple-image-boho.jpg", class: "custom-image")
+                = image_tag("sixthtemplate/couple-image.png", class: "custom-image")
+            .group-carousel-btn
+              button.carousel-control-prev.custom-prev data-bs-slide="prev" data-bs-target="#carouselExampleControls" type="button" 
+                span.carousel-control-prev-icon.custom-btn aria-hidden="true" 
+                  i.fa-solid.fa-arrow-left.custom-icon
+                span.visually-hidden Previous
+              button.carousel-control-next.custom-next data-bs-slide="next" data-bs-target="#carouselExampleControls" type="button" 
+                span.carousel-control-next-icon.custom-btn aria-hidden="true" 
+                  i.fa-solid.fa-arrow-right.custom-icon
+                span.visually-hidden Next
       .group-text  
         p.thanks.text-center
           | Atas kehadiran dan do’a restu dari Bapak/Ibu/Saudara/i sekalian, kami mengucapkan terima kasih.
           br
           | Wassalamu’alaikum Wr. Wb.
         span.sub-title.text-center Salam hangat dari kami,
-        h2.title.text-center &
+        h4.title.text-center &
         a.gift-btn href="#popup-message"
           i.fa-solid.fa-gift.custom-icon
           span.custom-text Kirim Hadiah
@@ -90,19 +73,19 @@
     section.nav-float
       .row.custom-row.gx-0
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/sixthtemplate/index"
+          a.nav-item href="/thirdtemplate/index"
             i.fa-solid.fa-house.fa-lg.custom-icon
             span.label Home
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/sixthtemplate/couple"
+          a.nav-item href="/thirdtemplate/couple"
             i.fa-solid.fa-heart.fa-lg.custom-icon
             span.label Pasangan
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/sixthtemplate/location"
+          a.nav-item href="/thirdtemplate/location"
             i.fa-solid.fa-location-dot.fa-lg.custom-icon
             span.label Lokasi
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/sixthtemplate/wishes"
+          a.nav-item href="/thirdtemplate/wishes"
             i.fa-solid.fa-hands-praying.fa-lg.custom-icon
             span.label Doa
         .col.text-center.d-flex.align-items-center.justify-content-center
