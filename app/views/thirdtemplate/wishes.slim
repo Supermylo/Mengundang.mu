@@ -2,30 +2,30 @@
   = stylesheet_link_tag "thirdtemplate/thirdtemplate-wishes"
 
 .container-full.h-100.position-relative.overflow-hidden
-  .row.gx-0
+  .row.m-0
     section.ornament
-      .frame
-      .top
-        = image_tag("sixthtemplate/maple-leaf.png", class: "maple-leaf")
-        = image_tag("sixthtemplate/big-walnut.png", class: "big-walnut")
-        = image_tag("sixthtemplate/small-walnut.png", class: "small-walnut")
-        = image_tag("sixthtemplate/small-leaves-ribbon.png", class: "leaves-left")
-        = image_tag("sixthtemplate/small-leaves-ribbon.png", class: "leaves-right")
-      .bottom
-        #leaf-1
-          = image_tag ("sixthtemplate/bottom-leaf-1.png")
-        #leaf-3
-          = image_tag ("sixthtemplate/bottom-leaf-3.png")
-        #leaf-2
-          = image_tag ("sixthtemplate/bottom-leaf-2.png")
-        #leaf-6
-          = image_tag ("sixthtemplate/bottom-leaf-6.png")
-        #leaf-5
-          = image_tag ("sixthtemplate/bottom-leaf-5.png")
-        #leaf-4
-          = image_tag ("sixthtemplate/bottom-leaf-4.png")
+      .top-right
+        = image_tag("thirdtemplate/big-pine-set.png", class: "right-pine-set-1")
+        = image_tag("thirdtemplate/small-pine-set.png", class: "right-pine-set-2")
+        = image_tag("thirdtemplate/small-pine-set.png", class: "right-pine-set-3")
+      .top-left
+        = image_tag("thirdtemplate/big-pine-set.png", class: "left-pine-set-1")
+        = image_tag("thirdtemplate/small-pine-set.png", class: "left-pine-set-2")
+        = image_tag("thirdtemplate/small-pine-set.png", class: "left-pine-set-3")
     section.content
-      h2.title Kirim Doa
+      .group-ornament
+        .leaves-left
+          = image_tag("thirdtemplate/pine-leaves.png", class: "pine-leaves-left")
+          = image_tag("thirdtemplate/pine.png", class: "pine-left")
+        .leaves-right
+          = image_tag("thirdtemplate/pine-leaves.png", class: "pine-leaves-right")
+          = image_tag("thirdtemplate/pine.png", class: "pine-right")
+        .bubble
+          .group-bubble
+            =image_tag("thirdtemplate/bubble-small.png", class: "bubble-small")
+            =image_tag("thirdtemplate/bubble-medium.png", class: "bubble-medium")
+            =image_tag("thirdtemplate/bubble-large.png", class: "bubble-large")
+      h3.title Kirim Doa
       form.custom-form
         .group-input
           label for="visitorname" Nama Anda
@@ -58,18 +58,22 @@
           span.sender-name Auliya
           span.message
             | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu in convallis ultricies :)
+        .group-wish
+          span.sender-name Ahmad
+          span.message
+            | Ornare ultrices amet, commodo consequat, nulla at. Convallis in maecenas quam vel id at. Id scelerisque mattis pellentesque netus lacus suscipit. Purus, gravida tincidunt justo morbi accumsan, praesent.
     section.nav-float
       .row.custom-row.gx-0
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/sixthtemplate/index"
+          a.nav-item href="/thirdtemplate/index"
             i.fa-solid.fa-house.fa-lg.custom-icon
             span.label Home
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/sixthtemplate/couple"
+          a.nav-item href="/thirdtemplate/couple"
             i.fa-solid.fa-heart.fa-lg.custom-icon
             span.label Pasangan
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/sixthtemplate/location"
+          a.nav-item href="/thirdtemplate/location"
             i.fa-solid.fa-location-dot.fa-lg.custom-icon
             span.label Lokasi
         .col.text-center.d-flex.align-items-center.justify-content-center
@@ -77,7 +81,7 @@
             i.fa-solid.fa-hands-praying.fa-lg.custom-icon
             span.label Doa
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/sixthtemplate/gift"
+          a.nav-item href="/thirdtemplate/gift"
             i.fa-solid.fa-gift.fa-lg.custom-icon
             span.label Hadiah
             
