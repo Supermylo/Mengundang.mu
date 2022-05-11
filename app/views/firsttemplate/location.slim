@@ -4,33 +4,12 @@
 .container-full.h-100.position-relative.overflow-hidden
   .row.m-0
     section.ornament
-      .top-left
-        #big-leaves-tl
-          = image_tag ("sixthtemplate/big-leaves.png")
-        #small-leaves-tl
-          = image_tag ("sixthtemplate/small-leaves.png")
-        #one-leaf-tl
-          = image_tag ("sixthtemplate/one-leaf.png")
-      .top-right
-        #big-leaves-tr
-          = image_tag ("sixthtemplate/big-leaves.png")
-        #small-leaves-tr
-          = image_tag ("sixthtemplate/small-leaves.png")
-        #one-leaf-tr
-          = image_tag ("sixthtemplate/one-leaf.png")
+      .top
+        = image_tag("firsttemplate/flower-set.png", class: "flower-set")
+        = image_tag("firsttemplate/leaf-set.png", class: "leaf-set")
       .bottom
-        #leaf-1
-          = image_tag ("sixthtemplate/bottom-leaf-1.png")
-        #leaf-3
-          = image_tag ("sixthtemplate/bottom-leaf-3.png")
-        #leaf-2
-          = image_tag ("sixthtemplate/bottom-leaf-2.png")
-        #leaf-6
-          = image_tag ("sixthtemplate/bottom-leaf-6.png")
-        #leaf-5
-          = image_tag ("sixthtemplate/bottom-leaf-5.png")
-        #leaf-4
-          = image_tag ("sixthtemplate/bottom-leaf-4.png")
+        = image_tag("firsttemplate/flower-set.png", class: "flower-set")
+        = image_tag("firsttemplate/leaf-set.png", class: "leaf-set")
     section.content
       #carouselExampleControls.carousel.slide data-bs-ride="carousel" data-bs-interval="false"
         .carousel-inner.custom-inner
@@ -38,18 +17,14 @@
             #wrapper-akad.text-center
               h2.title Akad
               .group-image
-                = image_tag("sixthtemplate/couple-image.png", class: "custom-image")
+                = image_tag("firsttemplate/wedding-ring.png", class: "custom-image")
               .group-time
-                .row.align-items-center
-                  .col
-                    span.day Selasa
-                  .col.custom-col
-                    .custom-wrapper
-                      span.month Sept
-                      h1.date 06
-                      span.year 2022
-                  .col
-                    span.clock 09.00 WIB
+                .month September
+                .wrapper
+                  span.day Selasa
+                  h2.date 06
+                  span.clock 09.00 WIB
+                .year 2022
               .group-location
                 h4.name éL Hotel Royale Bandung
                 p.address
@@ -58,21 +33,17 @@
                   i.fa-solid.fa-location-dot.custom-icon
                   span.custom-text Lihat Maps
           .carousel-item.custom-item
-            #wrapper-resepsi.text-center
+            #wrapper-akad.text-center
               h2.title Resepsi
               .group-image
-                = image_tag("sixthtemplate/couple-image.png", class: "custom-image")
+                = image_tag("firsttemplate/wedding-bow.png", class: "custom-image")
               .group-time
-                .row.align-items-center
-                  .col
-                    span.day Selasa
-                  .col.custom-col
-                    .custom-wrapper
-                      span.month Sept
-                      h1.date 06
-                      span.year 2022
-                  .col
-                    span.clock 13.00 WIB
+                .month September
+                .wrapper
+                  span.day Selasa
+                  h2.date 06
+                  span.clock 11.00 WIB
+                .year 2022
               .group-location
                 h4.name éL Hotel Royale Bandung
                 p.address
@@ -82,20 +53,20 @@
                   span.custom-text Lihat Maps
           button.carousel-control-prev.custom-prev data-bs-slide="prev" data-bs-target="#carouselExampleControls" type="button" 
             span.carousel-control-prev-icon.custom-btn aria-hidden="true" 
-              i.fa-solid.fa-arrow-left.custom-icon
+              i.fa-solid.fa-chevron-left.custom-icon
             span.visually-hidden Previous
           button.carousel-control-next.custom-next data-bs-slide="next" data-bs-target="#carouselExampleControls" type="button" 
             span.carousel-control-next-icon.custom-btn aria-hidden="true" 
-              i.fa-solid.fa-arrow-right.custom-icon
+              i.fa-solid.fa-chevron-right.custom-icon
             span.visually-hidden Next
     section.nav-float
       .row.custom-row.gx-0
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/sixthtemplate/index"
+          a.nav-item href="/firsttemplate/index"
             i.fa-solid.fa-house.fa-lg.custom-icon
             span.label Home
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/sixthtemplate/couple"
+          a.nav-item href="/firsttemplate/couple"
             i.fa-solid.fa-heart.fa-lg.custom-icon
             span.label Pasangan
         .col.text-center.d-flex.align-items-center.justify-content-center
@@ -103,11 +74,11 @@
             i.fa-solid.fa-location-dot.fa-lg.custom-icon
             span.label Lokasi
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/sixthtemplate/wishes"
+          a.nav-item href="/firsttemplate/wishes"
             i.fa-solid.fa-hands-praying.fa-lg.custom-icon
             span.label Doa
         .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/sixthtemplate/gift"
+          a.nav-item href="/firsttemplate/gift"
             i.fa-solid.fa-gift.fa-lg.custom-icon
             span.label Hadiah
             

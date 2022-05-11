@@ -1,123 +1,86 @@
-$main-orange : #E6873A;
-$light-orange : #FFC290;
-$main-green : #545A29;
-$light-green : #81865F;
-$solid-gold : #C59B46;
-$gradient-gold : linear-gradient(45deg,#C59B46,#F4DCAB);
+@font-face {
+  font-family: Marcha;
+  src: url(../../fonts/Marcha.otf);
+}
+
+$main-blue : #213A6A;
+$dark-blue : #0d2247;
+$solid-bronze : #AE9874;
+$custom-gray : #9CA3AF;
+$custom-white : #F9FAFB;
+$gradient-bronze : linear-gradient(140deg,#9C8258 0%,#D7CBB8 50%, #B7A384 100%);
 
 html{height: 100%;}
 body{
-  background: url("../sixthtemplate/Background Sixth Template.png");
+  background: url("firsttemplate/bg-white-marble.jpg");
   background-size: cover;
   height: 100%;
 }
 
-h1{font-size: 36px;}
-h2{font-size: 24px;}
+h1{font-size: 40px;}
+h2{font-size: 36px;}
 h3{font-size: 20px;}
+h4{font-size: 14px;}
 span, p{
   font-size: 12px;
   font-family: 'Work Sans', sans-serif;
 }
 
 .ornament{
-  display: flex;
-  justify-content: center;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  height: 100vh;
 
-  .frame{
+  .top-left{
     position: absolute;
-    width: calc(100% - 40px);
-    height: calc(100vh - 40px);
-    border: 1px solid $light-green;
-    border-radius: 20px;
-    margin: 20px;
-  }
+    width: 178px;
+    height: 224px;
+    top: -80px;
+    left: -86px;
+    transform: scale(-0.6) scaleX(-1);
 
-  .top{
-    display: flex;
-    justify-content: center;
-    height: 80px;
-    width: 184px;
-    position: relative;
-
-    .maple-leaf, .big-walnut, .small-walnut, .leaves-left, .leaves-right{
+    .flower-set{
       position: absolute;
-    }
-
-    .maple-leaf{z-index: 1;}
-
-    .big-walnut{
-      z-index: 2;
-      top: 38%;
-      left: 68px;
-    }
-
-    .small-walnut{
-      z-index: 3;
-      top: 40%;
-      right: 70px;
-    }
-
-    .leaves-left{
-      z-index: 0;
-      left: 0;
-    }
-
-    .leaves-right{
-      z-index: 0;
-      transform: scaleX(-1);
-      right: 0;
-    }
-  }
-
-  .bottom{
-
-    &::before{
-      position: absolute;
-      content: "";
-      background: url("sixthtemplate/bottom-leaf-shadow.png");
-      background-repeat: no-repeat;
-      width: 110%;
-      height: 24%;
+      z-index: 1;
+      width: 178px;
       bottom: 0;
-      left: -8%;
-      transform: scale(1.2);
+      transform: rotate(30deg);
     }
 
-    #leaf-1, #leaf-2, #leaf-3, #leaf-4, #leaf-5, #leaf-6{
+    .leaf-set{
       position: absolute;
-      transform: scale(1.2);
-      z-index: 2;
+      z-index: 0;
+      width: 106px;
+      bottom: 48px;
+      left: 56px;
+      transform: rotate(45deg);
+    }
+  }
+  
+  .top-right{
+    position: absolute;
+    width: 178px;
+    height: 224px;
+    top: -80px;
+    right: -86px;
+    transform: scale(-0.6);
+
+    .flower-set{
+      position: absolute;
+      z-index: 1;
+      width: 178px;
+      bottom: 0;
+      transform: rotate(30deg);
     }
 
-    #leaf-1{
-      bottom: -8%;
-      left: -2%;
-    }
-
-    #leaf-2{
-      bottom: -7%;
-      left: 6%;
-    }
-
-    #leaf-3{
-      bottom: -3%;
-      left: 24%;
-    }
-
-    #leaf-4{
-      bottom: -1%;
-      right: 37%;
-    }
-
-    #leaf-5{
-      bottom: -12%;
-      right: 16%;
-    }
-
-    #leaf-6{
-      bottom: -11%;
-      right: -9%;
+    .leaf-set{
+      position: absolute;
+      z-index: 0;
+      width: 106px;
+      bottom: 48px;
+      left: 56px;
+      transform: rotate(45deg);
     }
   }
 }
@@ -127,17 +90,28 @@ span, p{
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  margin-top: 84px;
   width: 100%;
-  height: calc(100vh - 260px);
-  padding: 0 40px;
+  height: calc(100vh - 86px);
+  padding: 36px 20px 16px 20px;
   position: absolute;
   right: 0;
 
   .title{
-    font-family: 'DM Serif Display', serif;
-    color: $main-green;
-    margin-bottom: 12px;
+    font-family: 'Marcha', serif;
+    color: $main-blue;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &::after{
+      content: "";
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: $gradient-bronze;
+      margin-top: 8px;
+    }
   }
 
   .custom-form{
@@ -145,6 +119,12 @@ span, p{
     display: flex;
     flex-direction: column;
     gap: 12px;
+    background: $custom-white;
+    padding: 16px 20px;
+    border-radius: 16px;
+    box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.1);
     margin-bottom: 16px;
 
     .group-input{
@@ -157,7 +137,7 @@ span, p{
       label{
         display: block;
         font-weight: 600;
-        color: $main-green;
+        color: $main-blue;
       }
 
       input, textarea, select{
@@ -166,24 +146,26 @@ span, p{
         background: none;
         padding-bottom: 4px;
         border: none;
-        border-bottom: 1px solid #DCDFC5;
-        color: $light-green;
+        border-bottom: 1px solid #D1D5DB;
+        color: $main-blue;
 
         &:focus{
-          font-weight: 400;
+          font-weight: 500;
           outline: none;
         }
       }
 
-      textarea{height: 56px;}
+      textarea{
+        height: 56px;
+      }
 
       select{
-        color: $main-green;
-        font-weight: 500;
+        color: $main-blue;
       }
 
       ::placeholder{
         font-weight: 400;
+        color: $custom-gray;
       }
     }
 
@@ -192,18 +174,18 @@ span, p{
       justify-content: center;
       align-items: center;
       padding: 8px 16px;
-      background-color: $main-orange;
+      background-color: $main-blue;
       text-decoration: none;
       color: white;
       font-weight: 600;
-      border-radius: 24px;
+      border-radius: 8px;
       border: none;
 
       .text{
         margin-left: 8px;
       }
 
-      &:hover{background-color: #d36f1d;}
+      &:hover{background-color: $dark-blue;}
     }
   }
 
@@ -212,12 +194,18 @@ span, p{
     flex-direction: column;
     overflow-x: hidden;
     overflow-y: scroll;
+    background: $custom-white;
+    padding: 16px 20px;
+    border-radius: 16px;
+    box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.1);
 
     .group-wish{
 
       .sender-name{
         font-weight: 600;
-        color: $main-green;
+        color: $main-blue;
         display: flex;
         align-items: center;
         margin-bottom: 4px;
@@ -225,19 +213,19 @@ span, p{
         &::after{
           content: "Hadir";
           height: 100%;
-          color: white;
+          color: $custom-white;
           font-size: 7px;
           font-weight: 400;
-          background-color: $solid-gold;
+          background-color: $solid-bronze;
           padding: 2px 8px;
           margin-left: 8px;
-          border-radius: 16px;
+          border-radius: 4px;
         }
       }
 
       .message{
         display: block;
-        color: $light-green;
+        color: $main-blue;
         margin-bottom: 8px;
       }
     }
@@ -253,11 +241,11 @@ span, p{
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: $main-orange;
+  background-color: $custom-white;
   position: fixed;
   z-index: 2;
   padding: 12px;
-  border-radius: 50rem;
+  border-radius: 16px;
   width: calc(100% - 40px);
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
@@ -270,7 +258,7 @@ span, p{
    padding-right: 0;
 
     .nav-item{
-      color: $light-orange;
+      color: $custom-gray;
       text-decoration: none;
       font-weight: 400;
       display: flex;
@@ -278,7 +266,7 @@ span, p{
       align-items: center;
       gap: 4px;
 
-      &.active{color: #fff;}
+      &.active{color: $main-blue;}
 
       .custom-icon{
         display: inline-block;
