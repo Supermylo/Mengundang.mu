@@ -133,11 +133,15 @@ span, p{
         height: 260px;
         position: relative;
         margin: 0 auto;
+        display: flex;
+        align-items: center;
 
         .custom-prev, .custom-next{
           position: absolute;
           opacity: 1;
           width: auto;
+          top: auto;
+          bottom: auto;
     
           .custom-btn{
             background-image: none;
@@ -230,7 +234,7 @@ span, p{
       text-decoration: none;
       color: $custom-white;
       font-weight: 600;
-      border-radius: 24px;
+      border-radius: 8px;
 
       .custom-icon{
         width: 16px;
@@ -251,12 +255,12 @@ span, p{
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(197,155,70,0.75);
+  background-color: rgba(126, 14, 38, 0.75);
   padding: 0 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  z-index: 1;
+  z-index: 3;
   visibility: hidden;
   opacity: 0;
   transition: opacity 500ms;
@@ -268,9 +272,16 @@ span, p{
 
   .custom-box{
     position: relative;
-    background-color: #fff;
-    border-radius: 16px;
-    padding: 20px;
+    background: url("thirdtemplate/white-marble.jpg");
+    border-top-left-radius: 50rem;
+    border-top-right-radius: 50rem;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border: 2px solid $solid-gold;
+    padding: 72px 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .prolog, .address{
       display: block;
@@ -285,6 +296,7 @@ span, p{
 
     .title, .sub-title{
       display: block;
+      font-family: 'Source Sans Pro', sans-serif;
       font-weight: 600;
       color: $main-red;
       text-align: center;
@@ -310,7 +322,7 @@ span, p{
 
     .copy-btn{
       background-color: $solid-gold;
-      border-radius: 24px;
+      border-radius: 8px;
       border: none;
       padding: 8px 16px;
       color: $custom-white;
@@ -334,7 +346,6 @@ span, p{
       position: absolute;
       z-index: 2;
       top: -20px;
-      right: -10px;
       width: 40px;
       height: 40px;
       background-color: $solid-gold;
@@ -348,6 +359,92 @@ span, p{
       }
 
       &:hover{background-color: $dark-gold;}
+    }
+
+    .group-ornament{
+      display: flex;
+      gap: 2px;
+      position: absolute;
+      top: 10px;
+      transform: scale(1.2);
+  
+      .leaves-left{
+        width: 62px;
+        height: 40px;
+        position: relative;
+  
+        .pine-leaves-left, .pine-left{
+          position: absolute;
+          transform: scaleX(-1);
+        }
+  
+        .pine-leaves-left{
+          width: 40px;
+        }
+  
+        .pine-left{
+          width: 24px;
+          right: 0;
+          bottom: 0;
+        }
+      }
+  
+      .leaves-right{
+        width: 62px;
+        height: 40px;
+        position: relative;
+  
+        .pine-leaves-right, .pine-right{
+          position: absolute;
+        }
+  
+        .pine-leaves-right{
+          width: 40px;
+          right: 0;
+        }
+  
+        .pine-right{
+          width: 24px;
+          left: 0;
+          bottom: 0;
+        }
+      }
+  
+      .bubble{
+        width: 100%;
+        height: 14px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+  
+        .group-bubble{
+          width: 10px;
+          height: 14px;
+          position: relative;
+          margin-left: 6px;
+  
+          .bubble-small{
+            width: 3px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+  
+          .bubble-medium{
+            width: 4px;
+            position: absolute;
+            right: 0;
+            bottom: 50%;
+          }
+  
+          .bubble-large{
+            width: 5px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+          }
+        }
+      }
     }
   }
 }

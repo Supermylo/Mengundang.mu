@@ -113,7 +113,8 @@ span, p{
     display: flex;
     gap: 2px;
     position: absolute;
-    top: 4px;
+    top: 8px;
+    transform: scale(1.2);
 
     .leaves-left{
       width: 62px;

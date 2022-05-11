@@ -49,12 +49,24 @@
       .custom-box
         a.close-btn href="#"
           i.fa-solid.fa-xmark.custom-icon
+        .group-ornament
+          .leaves-left
+            = image_tag("thirdtemplate/pine-leaves.png", class: "pine-leaves-left")
+            = image_tag("thirdtemplate/pine.png", class: "pine-left")
+          .leaves-right
+            = image_tag("thirdtemplate/pine-leaves.png", class: "pine-leaves-right")
+            = image_tag("thirdtemplate/pine.png", class: "pine-right")
+          .bubble
+            .group-bubble
+              =image_tag("thirdtemplate/bubble-small.png", class: "bubble-small")
+              =image_tag("thirdtemplate/bubble-medium.png", class: "bubble-medium")
+              =image_tag("thirdtemplate/bubble-large.png", class: "bubble-large")
         .offline-gift.text-center
           p.prolog
             | Tanpa mengurangi rasa hormat, bagi keluarga, sahabat, dan rekan yang ingin memberikan tanda kasih untuk kami, dapat melalui :
           h5.title Kirim Hadiah Fisik
           .giftbox-icon.text-center
-            = image_tag("sixthtemplate/giftbox-icon.png", class: "custom-img")
+            = image_tag("thirdtemplate/thirdtemplate-giftbox-icon.png", class: "custom-img")
           span.sub-title Rumah Pengantin Wanita
           p.address
             | Jl. Pasang No. 22, Kel. Cihapit, Kec. Bandung Wetan, Kota Bandung 40114
@@ -64,7 +76,7 @@
         .online-gift.text-center
           h5.title Kirim Hadiah Online
           .bank-icon.text-center
-            = image_tag("sixthtemplate/logo-bca.png", class: "custom-img")
+            = image_tag("thirdtemplate/thirdtemplate-logo-bca.png", class: "custom-img")
           span.sub-title Rekening BCA - 4493812222
           p.address a.n. PT Kharisma Indotech Pratama
           button.copy-btn
