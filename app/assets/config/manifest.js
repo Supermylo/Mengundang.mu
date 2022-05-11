@@ -1,5 +1,6 @@
 //= link_tree ../images
 //= link_directory ../stylesheets .css
+//= link_directory ../stylesheets/firsttemplate .css
 //= link_directory ../stylesheets/secondtemplate .css
 //= link_directory ../stylesheets/thirdtemplate .css
 //= link_directory ../stylesheets/fourthtemplate .css

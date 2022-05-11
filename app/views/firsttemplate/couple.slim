@@ -1,0 +1,49 @@
+- content_for :additional_styles
+  = stylesheet_link_tag "firsttemplate/firsttemplate-couple"
+
+.container-full.h-100.position-relative.overflow-hidden
+  .row
+    section.content
+      .group-ornament
+        = image_tag("firsttemplate/main-flower.png", class: "main-flower")
+        = image_tag("firsttemplate/left-flower.png", class: "left-flower")
+        = image_tag("firsttemplate/right-flower.png", class: "right-flower")
+      .group-text
+        p.prolog.text-center
+          | Assalamu’alaikum Wr. Wb.
+          br
+          | Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan kami.
+        .wrapper-name
+          h2.couples-name.text-center Ifan Seventeen
+          span.parents-name.text-center Putra Bapak Fulan & Ibu Fulanah
+        h3.separator &
+        .wrapper-name
+          h2.couples-name.text-center Saskia Sixteen
+          span.parents-name.text-center Putri Bapak Fulan & Ibu Fulanah
+      .group-ornament
+        = image_tag("firsttemplate/main-flower.png", class: "main-flower")
+        = image_tag("firsttemplate/left-flower.png", class: "left-flower")
+        = image_tag("firsttemplate/right-flower.png", class: "right-flower")
+    section.nav-float
+      .row.custom-row.gx-0
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a.nav-item href="/firsttemplate/index"
+            i.fa-solid.fa-house.fa-lg.custom-icon
+            span.label Home
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a.nav-item.active href="#"
+            i.fa-solid.fa-heart.fa-lg.custom-icon
+            span.label Pasangan
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a.nav-item href="/firsttemplate/location"
+            i.fa-solid.fa-location-dot.fa-lg.custom-icon
+            span.label Lokasi
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a.nav-item href="/firsttemplate/wishes"
+            i.fa-solid.fa-hands-praying.fa-lg.custom-icon
+            span.label Doa
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a.nav-item href="/firsttemplate/gift"
+            i.fa-solid.fa-gift.fa-lg.custom-icon
+            span.label Hadiah
+            

@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
-  get 'home/index'
-  get 'home/couple'
-  get 'home/location'
-  get 'home/wishes'
-  get 'home/gift'
-  get 'pages/couples'
-  get 'pages/goblog'
+  get 'firsttemplate/index'
+  get 'firsttemplate/couple'
+  get 'firsttemplate/location'
+  get 'firsttemplate/wishes'
+  get 'firsttemplate/gift'
 
   get 'secondtemplate/index'
   get 'secondtemplate/couple'

@@ -1,0 +1,42 @@
+- content_for :additional_styles
+  = stylesheet_link_tag "firsttemplate/firsttemplate"
+
+.container-full.h-100.position-relative.overflow-hidden
+  .row.m-0
+    section.ornament
+      .top
+        = image_tag("firsttemplate/flower-set.png", class: "flower-set")
+        = image_tag("firsttemplate/leaf-set.png", class: "leaf-set")
+      .bottom
+        = image_tag("firsttemplate/flower-set.png", class: "flower-set")
+        = image_tag("firsttemplate/leaf-set.png", class: "leaf-set")
+    section.content
+      .group-frame
+        = image_tag("firsttemplate/frame-1.png", class: "frame-1")
+        = image_tag("firsttemplate/frame-2.png", class: "frame-2")
+      .group-text.text-center
+        h3.sub-title - Walimatul Ursy -
+        h3.title &
+        span.dates 6 September 2022   
+    section.nav-float
+      .row.custom-row.gx-0
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a.nav-item.active href="#"
+            i.fa-solid.fa-house.fa-lg.custom-icon
+            span.label Home
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a.nav-item href="/firsttemplate/couple"
+            i.fa-solid.fa-heart.fa-lg.custom-icon
+            span.label Pasangan
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a.nav-item href="/firsttemplate/location"
+            i.fa-solid.fa-location-dot.fa-lg.custom-icon
+            span.label Lokasi
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a.nav-item href="/firsttemplate/wishes"
+            i.fa-solid.fa-hands-praying.fa-lg.custom-icon
+            span.label Doa
+        .col.text-center.d-flex.align-items-center.justify-content-center
+          a.nav-item href="/firsttemplate/gift"
+            i.fa-solid.fa-gift.fa-lg.custom-icon
+            span.label Hadiah
