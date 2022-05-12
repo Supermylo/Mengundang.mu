@@ -55,26 +55,55 @@ span,p {font-size: 12px;}
     margin-bottom: 16px;
   }
 
-  .wrapper-image{
+  #wrapper-groom, #wrapper-bride{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 8px;
 
-    .groom-image, .bride-image{position: absolute;}
-  }
+    .wrapper-image{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 112px;
+      height: 112px;
+      margin-bottom: 8px;
 
-  .title{
-    font-family: 'DM Serif Display', serif;
-    margin-bottom: 0;
-  }
+      .groom-image, .bride-image{
+        position: absolute;
+        width: 100px;
+      }
 
-  .sub-title{
-    font-family: 'Noto Serif', serif;
-    font-weight: 400;
-    background: $gradient-gold;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+      &::before{
+        content: "";
+        background: url("fourthtemplate/mask-shape.png");
+        background-size: 102px;
+        width: 102px;
+        height: 102px;
+        position: absolute;
+        z-index: 1;
+      }
+
+      .frame{
+        width: 112px;
+        position: absolute;
+        z-index: 2;
+      }
+    }
+
+    .wrapper-text{
+      .title{
+        font-family: 'DM Serif Display', serif;
+        margin-bottom: 0;
+      }
+
+      .sub-title{
+        font-family: 'Noto Serif', serif;
+        font-weight: 400;
+        background: $gradient-gold;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
   }
 
   #separator-line{

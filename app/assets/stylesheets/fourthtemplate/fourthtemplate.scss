@@ -39,15 +39,36 @@ span,p {font-size: 12px;}
   justify-content: center;
   flex-direction: column;
   height: calc(100vh - 86px);
+  align-items: center;
 
   .wrapper-image{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    width: 256px;
+    height: 256px;
 
     .couple-image{
       position: absolute;
+      width: 238px;
+      height: 238px;
+      object-fit: cover;
+    }
+    
+    &::before{
+      content: "";
+      background: url("fourthtemplate/mask-shape.png");
+      background-size: 240px;
+      width: 240px;
+      height: 240px;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .frame{
+      width: 256px;
+      position: absolute;
+      z-index: 2;
     }
   }
 

@@ -97,11 +97,24 @@ span,p {font-size: 12px;}
       align-items: center;
       margin-bottom: 12px;
 
-      .image-frame{width: 160px;}
-
       .couple-image{
         position: absolute;
+        width: 148px;
+      }
+
+      &::before{
+        content: "";
+        background: url("fourthtemplate/mask-shape.png");
+        background-size: 150px;
         width: 150px;
+        height: 150px;
+        z-index: 1;
+      }
+
+      .frame{
+        position: absolute;
+        width: 160px;
+        z-index: 2;
       }
     }
 

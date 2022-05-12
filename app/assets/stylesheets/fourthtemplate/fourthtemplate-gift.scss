@@ -51,18 +51,30 @@ span,p {font-size: 12px;}
 
   .group-image{
     width: 100%;
+    height: 50%;
     position: relative;
     display: flex;
+    justify-content: center;
 
     .custom-carousel{
       width: 100%;
+      height: calc(100% - 1px);
 
       .custom-inner{
         overflow: visible;
         display: flex;
         align-items: center;
+        height: 100%;
 
-        .custom-carousel-image {width: 100%;}
+        .custom-item{
+          height: 100%;
+        
+          .custom-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
 
         .custom-prev, .custom-next{
           opacity: 1;
@@ -98,7 +110,7 @@ span,p {font-size: 12px;}
 
       .custom-indicators{
         position: static;
-        margin-top: 24px;
+        margin-top: 12px;
         margin-bottom: 0;
   
         .indicator-btn{
@@ -112,9 +124,17 @@ span,p {font-size: 12px;}
       }
     }
     
-    .custom-carousel-border{
+    .frame{
       position: absolute;
       width: 100%;
+      bottom: 0;
+      z-index: 2;
+    }
+
+    .custom-mask{
+      width: 100%;
+      position: absolute;
+      bottom: 0;
     }
   }
 
