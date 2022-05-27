@@ -1,36 +1,23 @@
 - content_for :additional_styles
   = stylesheet_link_tag "landingpage"
 
-.container.p-0
+.container-fluid.p-0
   nav
-    .navbar.navbar-expand-lg.navbar-light.bg-light
-      .container-fluid
-        a.navbar-brand href="#"  Navbar
+    .navbar.navbar-expand-lg.navbar-light.navbar-custom
+      .container.container-custom
+        a.navbar-brand.navbar-brand-custom href="#"  Mengundang.mu
         button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button" 
           span.navbar-toggler-icon
         #navbarSupportedContent.collapse.navbar-collapse
           ul.navbar-nav.me-auto.mb-2.mb-lg-0
             li.nav-item
-              a.nav-link.active aria-current="page" href="#"  Home
+              a.nav-link.nav-link-custom href="#benefit"  Benefit
             li.nav-item
-              a.nav-link href="#"  Link
-            li.nav-item.dropdown
-              a#navbarDropdown.nav-link.dropdown-toggle aria-expanded="false" data-bs-toggle="dropdown" href="#" role="button" 
-                | Dropdown
-              ul.dropdown-menu aria-labelledby="navbarDropdown" 
-                li
-                  a.dropdown-item href="#"  Action
-                li
-                  a.dropdown-item href="#"  Another action
-                li
-                  hr.dropdown-divider/
-                li
-                  a.dropdown-item href="#"  Something else here
+              a.nav-link.nav-link-custom href="#showcase"  Desain
             li.nav-item
-              a.nav-link.disabled aria-disabled="true" href="#" tabindex="-1"  Disabled
-          form.d-flex
-            input.form-control.me-2 aria-label="Search" placeholder="Search" type="search" /
-            button.btn.btn-outline-success type="submit"  Search
+              a.nav-link.nav-link-custom href="#pricing"  Harga
+          form
+            a.custom-btn href="#" target="_blank" Hubungi Kami
   header
     .row
       .col-12.col-md-6.bg-primary
