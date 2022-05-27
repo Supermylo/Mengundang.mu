@@ -1,0 +1,50 @@
+$main-navy : #253964;
+$light-blue : #E9F3FF;
+$gray-700 : #374151;
+$gray-500 : #6B7280;
+$gray-400 : #9CA3AF;
+$gray-300 : #D1D5DB;
+$gray-50 : #F9FAFB;
+
+h1{
+  font-family: 'Lilita One', sans-serif;
+  color: $main-navy;
+  font-size: 32px;
+
+  @media (min-width: 576px) {
+    font-size: 72px;
+  }
+}
+
+h2{
+  font-family: 'Lilita One', sans-serif;
+  color: $main-navy;
+  font-size: 24px;
+
+  @media (min-width: 576px) {
+    font-size: 48px;
+  }
+}
+
+h3{
+  font-family: 'Lilita One', sans-serif;
+  font-size: 32px;
+}
+
+h4{
+  font-family: 'Lilita One', sans-serif;
+  font-size: 20px;
+
+  @media (min-width: 576px) {
+    font-size: 24px;
+  }
+}
+
+p, span{
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+
+  @media (min-width: 576px) {
+    font-size: 16px;
+  }
+}
