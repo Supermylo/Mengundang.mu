@@ -266,4 +266,14 @@ header{
       display: none;
     }
   }
+
+  .green-blob{
+    position: absolute;
+    right: 0;
+    width: 5%;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
 }
