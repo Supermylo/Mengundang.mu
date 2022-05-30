@@ -2,28 +2,40 @@
   = stylesheet_link_tag "landingpage"
 
 .container-fluid.p-0
-  nav
-    .navbar.navbar-expand-lg.navbar-light.navbar-custom
+  nav.sticky-top
+    .navbar.navbar-expand-md.navbar-light.navbar-custom
       .container.container-custom
         a.navbar-brand.navbar-brand-custom href="#"  Mengundang.mu
         button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button" 
           span.navbar-toggler-icon
         #navbarSupportedContent.collapse.navbar-collapse
-          ul.navbar-nav.me-auto.mb-2.mb-lg-0
+          ul.navbar-nav.navbar-nav-custom.me-auto.mb-2.mb-lg-0
             li.nav-item
               a.nav-link.nav-link-custom href="#benefit"  Benefit
             li.nav-item
               a.nav-link.nav-link-custom href="#showcase"  Desain
             li.nav-item
               a.nav-link.nav-link-custom href="#pricing"  Harga
-          form
-            a.custom-btn href="#" target="_blank" Hubungi Kami
+          form.d-flex.flex-grow-1.justify-content-end
+            a.custom-btn-outline.text-center.flex-grow-1.flex-md-grow-0 href="#" target="_blank" Hubungi Kami
   header
-    .row
-      .col-12.col-md-6.bg-primary
-        p Header Text
-      .d-none.d-md-flex.col-6.bg-secondary
-        p Header Image
+    .container.container-custom
+      .row
+        .col-12.col-md-6.d-flex.align-items-center
+          .header-text.text-center.text-md-start
+            h1.title Buat Undanganmu Terasa Spesial Untuk Setiap Orang
+            p.subtitle Dengan fitur Custom Link, kamu bisa membuat undangan digital dengan link yang berbeda-beda sesuai nama tamu undangan.
+            span.mini-subtitle.d-block ifandansaskia-mengundang.mu/
+            a.custom-btn-fill href="#pricing"
+              span.custom-text Buat Undangan
+              i.fa-solid.fa-chevron-right.custom-icon
+        .col-6.d-none.d-md-flex
+          .header-image
+            = image_tag("landingpage/header-image.png", class: "custom-img")
+    = image_tag("landingpage/wave-mask.svg", class: "mask")
+    = image_tag("landingpage/blob.svg", class: "blue-blob")
+    = image_tag("landingpage/red-blob.svg", class: "red-blob")
+    = image_tag("landingpage/green-blob.svg", class: "green-blob")
   section#benefit
     .group-text
       h2 Undangan digital itu lebih ...
