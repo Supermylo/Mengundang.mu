@@ -37,168 +37,185 @@
     = image_tag("landingpage/red-blob.svg", class: "red-blob")
     = image_tag("landingpage/green-blob.svg", class: "green-blob")
   section#benefit
-    .group-text
-      h2 Undangan digital itu lebih ...
-    .custom-card
-      .row
-        .col-12.col-md-4.bg-danger
-          h3 Murah
-          p Lorem ipsum ...
-        .col-12.col-md-4.bg-primary
-          h3 Ramah Lingkungan
-          p Lorem ipsum ...
-        .col-12.col-md-4.bg-warning
-          h3 Praktis
-          p Lorem ipsum ...
+    .container.container-custom
+      .headline.text-center
+        h2 Undangan digital itu lebih ...
+      .group-card
+        .row
+          .col-12.col-md-4.mb-3.mb-md-0.text-center
+            .murah
+              = image_tag("landingpage/ilustrasi-murah.png", class: "custom-illustration")
+              h3.title Murah
+              p.description Kalo harga cetak undangan fisik seribu/pcs, 100rb cuma dapet 100pcs. Kalo digital kan +1.000 juga hayuk!
+          .col-12.col-md-4.mb-3.mb-md-0.text-center
+            .ramah-lingkungan
+              = image_tag("landingpage/ilustrasi-ramah-lingkungan.png", class: "custom-illustration")
+              h3.title Ramah Lingkungan
+              p.description Kertas itu dari pohon, pohon itu butuh bertahun-tahun untuk tumbuh. Ya kali, buat acara yang gak sampe sehari harus numbalin pohon :(
+          .col-12.col-md-4.mb-3.mb-md-0.text-center
+            .praktis
+              = image_tag("landingpage/ilustrasi-praktis.png", class: "custom-illustration")
+              h3.title Praktis
+              p.description Kirim aja link undangannya dari rumah, dicicil dikit-dikit. Daripada harus nganter panas-panas, capek, ngabisin bensin lagi.
   section#showcase
-    .group-text.w-100.w-md-50
-      h2 Berbagai pilihan desain untuk berbagai kisah kamu
-      span Klik desain untuk preview undangan
-    .template-option.w-100
-      .row
-        .col-12.col-md-4.bg-primary
-          .group-left
-            .custom-card
-              span Blie Gold Fliwir
-            .custom-card
-              span Flower Green Lantern
-            .custom-card
-              span Red Boho-Chic
-        .col-12.col-md-4.d-none.d-md-flex.bg-secondary
-          span Preview
-        .col-12.col-md-4.bg-primary
-          .group-right
-            .custom-card
-              span Blie Gild Outlini
-            .custom-card
-              span Classic Java Brown
-            .custom-card
-              span Fall Fell Fill Full
-    .cta
-      a.bg-warning href="#pricing" Buat Undangan
+    .container-fluid.p-0
+      .top-border
+        = image_tag("landingpage/wave-shape.svg", class: "custom-wave")
+      .wrapper-content
+        .container.container-custom
+          .group-text.text-center
+            h2 Berbagai pilihan desain untuk berbagai kisah kamu
+            span Klik desain untuk preview undangan
+          .template-option.w-100
+            .row.m-0
+              .col-12.col-md-4
+                .group-left
+                  .custom-card
+                    span Blie Gold Fliwir
+                  .custom-card
+                    span Flower Green Lantern
+                  .custom-card
+                    span Red Boho-Chic
+              .col-12.col-md-4.d-none.d-md-flex.bg-secondary
+                span Preview
+              .col-12.col-md-4
+                .group-right
+                  .custom-card
+                    span Blie Gild Outlini
+                  .custom-card
+                    span Classic Java Brown
+                  .custom-card
+                    span Fall Fell Fill Full
+          .cta
+            a.bg-warning href="#pricing" Buat Undangan
+      .bottom-border
+        = image_tag("landingpage/wave-shape.svg", class: "custom-wave")
   section#pricing
-    .group-text
-      h2 Harga boleh murah, tapi fitur harus berlimpah
-    .custom-table
-      .row
-        .col-md-4.d-none.d-md-flex
-          .fitur
-            h4 Fitur
-            ul
-              li Masa Aktif
-              li Jumlah Nama Tamu
-              li Revisi
-              li Bebas Pilih Desain
-              li Navigasi Peta/ Gooogle Maps
-              li RSVP
-              li Tampilkan Amplop Digital
-        .col-10.col-md-8
-          .group-card
-            .row
-              .col-12.col-md-4
-                .basic
-                  h4 Basic
-                  ul
-                    li
-                      span.d-md-none.bg-success V
-                      span.d-md-none Masa aktif 
-                      span 4 bulan
-                    li
-                      span.d-md-none.bg-success V
-                      span 100 
-                      span.d-md-none nama tamu
-                    li
-                      span.d-md-none.bg-success V
-                      span.d-md-none Revisi 
-                      span 1x
-                    li
-                      span.bg-success V
-                      span.d-md-none Bebas pilih desain
-                    li
-                      span.bg-success V
-                      span.d-md-none Navigasi peta/ Google Maps
-                    li
-                      span.bg-danger X
-                      span.d-md-none RSVP
-                    li
-                      span.bg-danger X
-                      span.d-md-none Tampilkan amplop digital
-                    li
-                      a.btn.btn-primary href="#" Buat Undangan 
-              .col-12.col-md-4
-                .premium
-                  h4 Premium
-                  ul
-                    li
-                      span.d-md-none.bg-success V
-                      span.d-md-none Masa aktif 
-                      span 4 bulan
-                    li
-                      span.d-md-none.bg-success V
-                      span 100 
-                      span.d-md-none nama tamu
-                    li
-                      span.d-md-none.bg-success V
-                      span.d-md-none Revisi 
-                      span 1x
-                    li
-                      span.bg-success V
-                      span.d-md-none Bebas pilih desain
-                    li
-                      span.bg-success V
-                      span.d-md-none Navigasi peta/ Google Maps
-                    li
-                      span.bg-success V
-                      span.d-md-none RSVP
-                    li
-                      span.bg-success V
-                      span.d-md-none Tampilkan amplop digital
-                    li
-                      a.btn.btn-primary href="#" Buat Undangan 
-              .col-12.col-md-4
-                .gold
-                  h4 Gold
-                  ul
-                    li
-                      span.d-md-none.bg-success V
-                      span.d-md-none Masa aktif 
-                      span 4 bulan
-                    li
-                      span.d-md-none.bg-success V
-                      span 100 
-                      span.d-md-none nama tamu
-                    li
-                      span.d-md-none.bg-success V
-                      span.d-md-none Revisi 
-                      span 1x
-                    li
-                      span.bg-success V
-                      span.d-md-none Bebas pilih desain
-                    li
-                      span.bg-success V
-                      span.d-md-none Navigasi peta/ Google Maps
-                    li
-                      span.bg-success V
-                      span.d-md-none RSVP
-                    li
-                      span.bg-success V
-                      span.d-md-none Tampilkan amplop digital
-                    li
-                      a.btn.btn-primary href="#" Buat Undangan
+    .container.container-custom
+      .group-text
+        h2 Harga boleh murah, tapi fitur harus berlimpah
+      .custom-table
+        .row.m-0
+          .col-md-4.d-none.d-md-flex
+            .fitur
+              h4 Fitur
+              ul
+                li Masa Aktif
+                li Jumlah Nama Tamu
+                li Revisi
+                li Bebas Pilih Desain
+                li Navigasi Peta/ Gooogle Maps
+                li RSVP
+                li Tampilkan Amplop Digital
+          .col-10.col-md-8
+            .group-card
+              .row
+                .col-12.col-md-4
+                  .basic
+                    h4 Basic
+                    ul
+                      li
+                        span.d-md-none.bg-success V
+                        span.d-md-none Masa aktif 
+                        span 4 bulan
+                      li
+                        span.d-md-none.bg-success V
+                        span 100 
+                        span.d-md-none nama tamu
+                      li
+                        span.d-md-none.bg-success V
+                        span.d-md-none Revisi 
+                        span 1x
+                      li
+                        span.bg-success V
+                        span.d-md-none Bebas pilih desain
+                      li
+                        span.bg-success V
+                        span.d-md-none Navigasi peta/ Google Maps
+                      li
+                        span.bg-danger X
+                        span.d-md-none RSVP
+                      li
+                        span.bg-danger X
+                        span.d-md-none Tampilkan amplop digital
+                      li
+                        a.btn.btn-primary href="#" Buat Undangan 
+                .col-12.col-md-4
+                  .premium
+                    h4 Premium
+                    ul
+                      li
+                        span.d-md-none.bg-success V
+                        span.d-md-none Masa aktif 
+                        span 4 bulan
+                      li
+                        span.d-md-none.bg-success V
+                        span 100 
+                        span.d-md-none nama tamu
+                      li
+                        span.d-md-none.bg-success V
+                        span.d-md-none Revisi 
+                        span 1x
+                      li
+                        span.bg-success V
+                        span.d-md-none Bebas pilih desain
+                      li
+                        span.bg-success V
+                        span.d-md-none Navigasi peta/ Google Maps
+                      li
+                        span.bg-success V
+                        span.d-md-none RSVP
+                      li
+                        span.bg-success V
+                        span.d-md-none Tampilkan amplop digital
+                      li
+                        a.btn.btn-primary href="#" Buat Undangan 
+                .col-12.col-md-4
+                  .gold
+                    h4 Gold
+                    ul
+                      li
+                        span.d-md-none.bg-success V
+                        span.d-md-none Masa aktif 
+                        span 4 bulan
+                      li
+                        span.d-md-none.bg-success V
+                        span 100 
+                        span.d-md-none nama tamu
+                      li
+                        span.d-md-none.bg-success V
+                        span.d-md-none Revisi 
+                        span 1x
+                      li
+                        span.bg-success V
+                        span.d-md-none Bebas pilih desain
+                      li
+                        span.bg-success V
+                        span.d-md-none Navigasi peta/ Google Maps
+                      li
+                        span.bg-success V
+                        span.d-md-none RSVP
+                      li
+                        span.bg-success V
+                        span.d-md-none Tampilkan amplop digital
+                      li
+                        a.btn.btn-primary href="#" Buat Undangan
   section#contactus
-    .row
-      .col-10.col-md-6
-        h2 Untuk pertanyaan dan informasi lainnya
-        a.btn.btn-primary Hubungi CS
-      .col-10.col-md-6
-        h1 Image
+    .container.container-custom
+      .row.m-0
+        .col-10.col-md-6
+          h2 Untuk pertanyaan dan informasi lainnya
+          a.btn.btn-primary Hubungi CS
+        .col-10.col-md-6
+          h1 Image
   footer
-    .row
-      .col-12.col-md-4
-        h2 Mengundangmu
-      .col-12.col-md-4
-        a href="#" Fitur
-        a href="#" Desain
-        a href="#" Harga
-      .col-12.col-md-4
-        span Copyright © 2022. Mengundang.mu.
+    .container.container-custom
+      .row.m-0
+        .col-12.col-md-4
+          h2 Mengundangmu
+        .col-12.col-md-4
+          a href="#" Fitur
+          a href="#" Desain
+          a href="#" Harga
+        .col-12.col-md-4
+          span Copyright © 2022. Mengundang.mu.

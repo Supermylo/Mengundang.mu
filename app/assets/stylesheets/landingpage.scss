@@ -28,7 +28,7 @@ h1{
   color: $main-navy;
   font-size: 32px;
 
-  @media (min-width: 1400px) {
+  @media (min-width: 768px) {
     font-size: 72px;
   }
 }
@@ -38,21 +38,25 @@ h2{
   color: $main-navy;
   font-size: 24px;
 
-  @media (min-width: 1400px) {
+  @media (min-width: 768px) {
     font-size: 48px;
   }
 }
 
 h3{
   font-family: 'Lilita One', sans-serif;
-  font-size: 32px;
+  font-size: 20px;
+
+  @media (min-width: 768px) {
+    font-size: 32px;
+  }
 }
 
 h4{
   font-family: 'Lilita One', sans-serif;
   font-size: 20px;
 
-  @media (min-width: 1400px) {
+  @media (min-width: 768px) {
     font-size: 24px;
   }
 }
@@ -238,7 +242,7 @@ header{
   }
 
   .mask{
-    width: 100vw;
+    width: 100%;
     position: absolute;
     bottom: 0;
     z-index: 2;
@@ -275,5 +279,69 @@ header{
     @media (min-width: 768px) {
       display: none;
     }
+  }
+}
+
+#benefit{
+  padding: 60px 0;
+
+  @media (min-width: 768px) {
+    padding: 120px 0;
+  }
+
+  .headline{
+    margin-bottom: 20px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .group-card{
+
+    .murah, .ramah-lingkungan, .praktis{
+      padding: 32px 24px;
+      border-radius: 12px;
+      height: 100%;
+
+      .custom-illustration{
+        width: 100%;
+      }
+
+      .title{
+        color: $gray-50;
+        margin-bottom: 4px;
+      }
+
+      .description{
+        color: $gray-50;
+      }
+    }
+
+    .murah{background-color: #F75B69;}
+
+    .ramah-lingkungan{background-color: #9C9CF4;}
+
+    .praktis{background-color: #FFBC57;}
+  }
+}
+
+#showcase{
+  
+  .custom-wave{
+    width: 100%;
+  }
+
+  .wrapper-content{
+    background-color: $light-blue;
+    padding: 60px 0;
+
+    @media (min-width: 768px) {
+      padding: 120px 0;
+    }
+  }
+
+  .bottom-border{
+    transform: scale(-1);
   }
 }
