@@ -64,28 +64,55 @@
       .wrapper-content
         .container.container-custom
           .group-text.text-center
-            h2 Berbagai pilihan desain untuk berbagai kisah kamu
-            span Klik desain untuk preview undangan
+            h2.headline
+              | Berbagai pilihan desain
+              br
+              | untuk berbagai kisah kamu
+            span.sub-headline Klik desain untuk preview undangan
           .template-option.w-100
-            .row.m-0
+            .row
               .col-12.col-md-4
                 .group-left
                   .custom-card
-                    span Blie Gold Fliwir
+                    h4.title Blie Gold Fliwir
+                    p.description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ornare varius.
+                    span.annotation
+                      = image_tag("landingpage/without-image-icon.png", class: "annotation-icon")
+                      span Tidak Memerlukan Foto
                   .custom-card
-                    span Flower Green Lantern
+                    h4.title Flower Green Lantern
+                    p.description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ornare varius.
+                    span.annotation
+                      = image_tag("landingpage/with-image-icon.png", class: "annotation-icon")
+                      span Memerlukan Foto
                   .custom-card
-                    span Red Boho-Chic
+                    h4.title Red Boho-Chic
+                    p.description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ornare varius.
+                    span.annotation
+                      = image_tag("landingpage/with-image-icon.png", class: "annotation-icon")
+                      span Memerlukan Foto
               .col-12.col-md-4.d-none.d-md-flex.bg-secondary
                 span Preview
               .col-12.col-md-4
                 .group-right
                   .custom-card
-                    span Blie Gild Outlini
+                    h4.title Blie Gild Outlini
+                    p.description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ornare varius.
+                    span.annotation
+                      = image_tag("landingpage/with-image-icon.png", class: "annotation-icon")
+                      span Memerlukan Foto
                   .custom-card
-                    span Classic Java Brown
+                    h4.title Classic Java Brown
+                    p.description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ornare varius.
+                    span.annotation
+                      = image_tag("landingpage/without-image-icon.png", class: "annotation-icon")
+                      span Tidak Memerlukan Foto
                   .custom-card
-                    span Fall Fell Fill Full
+                    h4.title Fall Fell Fill Full
+                    p.description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ornare varius.
+                    span.annotation
+                      = image_tag("landingpage/with-image-icon.png", class: "annotation-icon")
+                      span Memerlukan Foto
           .cta
             a.bg-warning href="#pricing" Buat Undangan
       .bottom-border

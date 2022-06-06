@@ -339,6 +339,22 @@ header{
     @media (min-width: 768px) {
       padding: 120px 0;
     }
+
+    .group-text{
+      margin-bottom: 20px;
+
+      @media (min-width: 768px) {
+        margin-bottom: 40px;
+      }
+
+      .headline{
+        margin-bottom: 8px;
+
+        @media (min-width: 768px) {
+          margin-bottom: 16px;
+        }
+      }
+    }
   }
 
   .bottom-border{
