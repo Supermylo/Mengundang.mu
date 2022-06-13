@@ -139,13 +139,20 @@
               i.fa-solid.fa-chevron-right.custom-icon
       .bottom-border
         = image_tag("landingpage/wave-shape.svg", class: "custom-wave")
+      .ornament
+        = image_tag("landingpage/custom-line.svg", class: "line-ornament")
+        = image_tag("landingpage/showcase-blob-1.svg", class: "top-blob")
+        = image_tag("landingpage/showcase-blob-2.svg", class: "bottom-blob")
   section#pricing
     .container.container-custom
       .group-text
-        h2 Harga boleh murah, tapi fitur harus berlimpah
+        h2.headline.text-center
+          | Harga boleh murah,
+          br
+          | tapi fitur harus berlimpah
       .custom-table
-        .row.m-0
-          .col-md-4.d-none.d-md-flex
+        .row.justify-content-center
+          .col-4.d-none.d-md-flex
             .fitur
               h4 Fitur
               ul
@@ -156,99 +163,109 @@
                 li Navigasi Peta/ Gooogle Maps
                 li RSVP
                 li Tampilkan Amplop Digital
-          .col-10.col-md-8
+          .col-11.col-md-8
             .group-card
               .row
                 .col-12.col-md-4
                   .basic
-                    h4 Basic
-                    ul
-                      li
-                        span.d-md-none.bg-success V
-                        span.d-md-none Masa aktif 
-                        span 4 bulan
-                      li
-                        span.d-md-none.bg-success V
-                        span 100 
-                        span.d-md-none nama tamu
-                      li
-                        span.d-md-none.bg-success V
-                        span.d-md-none Revisi 
-                        span 1x
-                      li
-                        span.bg-success V
-                        span.d-md-none Bebas pilih desain
-                      li
-                        span.bg-success V
-                        span.d-md-none Navigasi peta/ Google Maps
-                      li
-                        span.bg-danger X
-                        span.d-md-none RSVP
-                      li
-                        span.bg-danger X
-                        span.d-md-none Tampilkan amplop digital
-                      li
-                        a.btn.btn-primary href="#" Buat Undangan 
+                    .table-head.text-center
+                      h4.package-name Basic
+                      span.package-price Rp 99.000,-
+                    .table-body
+                      ul
+                        li
+                          i.fa-solid.fa-circle-check.d-md-none.custom-checkmark
+                          span.d-md-none Masa aktif&nbsp
+                          span 4 bulan
+                        li
+                          i.fa-solid.fa-circle-check.d-md-none.custom-checkmark
+                          span 100&nbsp
+                          span.d-md-none nama tamu
+                        li
+                          i.fa-solid.fa-circle-check.d-md-none.custom-checkmark
+                          span.d-md-none Revisi&nbsp 
+                          span 1x
+                        li
+                          i.fa-solid.fa-circle-check.d-md-none.custom-checkmark
+                          span.d-md-none Bebas pilih desain
+                        li
+                          i.fa-solid.fa-circle-check.d-md-none.custom-checkmark
+                          span.d-md-none Navigasi peta/ Google Maps
+                        li
+                          i.fa-solid.fa-circle-xmark.d-md-none.custom-xmark
+                          span.d-md-none.custom-xmark-text RSVP
+                        li
+                          i.fa-solid.fa-circle-xmark.d-md-none.custom-xmark
+                          span.d-md-none.custom-xmark-text Tampilkan amplop digital
+                        li
+                          a.custom-btn-outline.pricing-btn href="#" Buat Undangan 
                 .col-12.col-md-4
                   .premium
-                    h4 Premium
-                    ul
-                      li
-                        span.d-md-none.bg-success V
-                        span.d-md-none Masa aktif 
-                        span 4 bulan
-                      li
-                        span.d-md-none.bg-success V
-                        span 100 
-                        span.d-md-none nama tamu
-                      li
-                        span.d-md-none.bg-success V
-                        span.d-md-none Revisi 
-                        span 1x
-                      li
-                        span.bg-success V
-                        span.d-md-none Bebas pilih desain
-                      li
-                        span.bg-success V
-                        span.d-md-none Navigasi peta/ Google Maps
-                      li
-                        span.bg-success V
-                        span.d-md-none RSVP
-                      li
-                        span.bg-success V
-                        span.d-md-none Tampilkan amplop digital
-                      li
-                        a.btn.btn-primary href="#" Buat Undangan 
+                    .table-head.text-center
+                      h4.package-name Premium
+                      span.package-price Rp 129.000,-
+                      i.ribbon Best Seller
+                    .table-body
+                      ul
+                        li
+                          i.fa-solid.fa-circle-check.d-md-none.custom-checkmark
+                          span.d-md-none Masa aktif&nbsp
+                          span 8 bulan
+                        li
+                          i.fa-solid.fa-circle-check.d-md-none.custom-checkmark
+                          span 500&nbsp
+                          span.d-md-none nama tamu
+                        li
+                          i.fa-solid.fa-circle-check.d-md-none.custom-checkmark
+                          span.d-md-none Revisi&nbsp 
+                          span 3x
+                        li
+                          i.fa-solid.fa-circle-check.d-md-none.custom-checkmark
+                          span.d-md-none Bebas pilih desain
+                        li
+                          i.fa-solid.fa-circle-check.d-md-none.custom-checkmark
+                          span.d-md-none Navigasi peta/ Google Maps
+                        li
+                          i.fa-solid.fa-circle-check.d-md-none.custom-checkmark
+                          span.d-md-none RSVP
+                        li
+                          i.fa-solid.fa-circle-check.d-md-none.custom-checkmark
+                          span.d-md-none Tampilkan amplop digital
+                        li
+                          a.custom-btn-outline.pricing-btn href="#" Buat Undangan 
                 .col-12.col-md-4
                   .gold
-                    h4 Gold
-                    ul
-                      li
-                        span.d-md-none.bg-success V
-                        span.d-md-none Masa aktif 
-                        span 4 bulan
-                      li
-                        span.d-md-none.bg-success V
-                        span 100 
-                        span.d-md-none nama tamu
-                      li
-                        span.d-md-none.bg-success V
-                        span.d-md-none Revisi 
-                        span 1x
-                      li
-                        span.bg-success V
-                        span.d-md-none Bebas pilih desain
-                      li
-                        span.bg-success V
-                        span.d-md-none Navigasi peta/ Google Maps
-                      li
-                        span.bg-success V
-                        span.d-md-none RSVP
-                      li
-                        span.bg-success V
-                        span.d-md-none Tampilkan amplop digital
-                      li
-                        a.btn.btn-primary href="#" Buat Undangan
+                    .table-head.text-center
+                      h4.package-name Gold
+                      span.package-price Rp 149.000,-
+                    .table-body
+                      ul
+                        li
+                          i.fa-solid.fa-circle-check.d-md-none.custom-checkmark
+                          span.d-md-none Masa aktif&nbsp
+                          span 12 bulan
+                        li
+                          i.fa-solid.fa-circle-check.d-md-none.custom-checkmark
+                          span Unlimited&nbsp
+                          span.d-md-none nama tamu
+                        li
+                          i.fa-solid.fa-circle-check.d-md-none.custom-checkmark
+                          span.d-md-none Revisi&nbsp 
+                          span Unlimited
+                        li
+                          i.fa-solid.fa-circle-check.d-md-none.custom-checkmark
+                          span.d-md-none Bebas pilih desain
+                        li
+                          i.fa-solid.fa-circle-check.d-md-none.custom-checkmark
+                          span.d-md-none Navigasi peta/ Google Maps
+                        li
+                          i.fa-solid.fa-circle-check.d-md-none.custom-checkmark
+                          span.d-md-none RSVP
+                        li
+                          i.fa-solid.fa-circle-check.d-md-none.custom-checkmark
+                          span.d-md-none Tampilkan amplop digital
+                        li
+                          a.custom-btn-outline.pricing-btn href="#" Buat Undangan
   section#contactus
     .container.container-custom
       .row.m-0
