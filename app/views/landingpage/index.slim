@@ -20,18 +20,19 @@
             a.custom-btn-outline.text-center.flex-grow-1.flex-md-grow-0 href="#" target="_blank" Hubungi Kami
   header
     .container.container-custom
-      .row
-        .col-12.col-md-6.d-flex.align-items-center
-          .header-text.text-center.text-md-start
-            h1.title Buat Undanganmu Terasa Spesial Untuk Setiap Orang
-            p.subtitle Dengan fitur Custom Link, kamu bisa membuat undangan digital dengan link yang berbeda-beda sesuai nama tamu undangan.
-            span.mini-subtitle.d-block ifandansaskia-mengundang.mu/
-            a.custom-btn-fill href="#pricing"
-              span.custom-text Buat Undangan
-              i.fa-solid.fa-chevron-right.custom-icon
-        .col-6.d-none.d-md-flex
-          .header-image
-            = image_tag("landingpage/header-image.png", class: "custom-img")
+      .wrapper
+        .row
+          .col-12.col-md-6.d-flex.align-items-center
+            .header-text.text-center.text-md-start
+              h1.title Buat Undanganmu Terasa Spesial Untuk Setiap Orang
+              p.subtitle Dengan fitur Custom Link, kamu bisa membuat undangan digital dengan link yang berbeda-beda sesuai nama tamu undangan.
+              span.mini-subtitle.d-block ifandansaskia-mengundang.mu/
+              a.custom-btn-fill href="#pricing"
+                span.custom-text Buat Undangan
+                i.fa-solid.fa-chevron-right.custom-icon
+          .col-6.d-none.d-md-flex
+            .header-image
+              = image_tag("landingpage/header-image.png", class: "custom-img")
     = image_tag("landingpage/wave-mask.svg", class: "mask")
     = image_tag("landingpage/blob.svg", class: "blue-blob")
     = image_tag("landingpage/red-blob.svg", class: "red-blob")
@@ -61,7 +62,7 @@
     .container-fluid.p-0
       .top-border
         = image_tag("landingpage/wave-shape.svg", class: "custom-wave")
-      .wrapper-content
+      .wrapper
         .container.container-custom
           .group-text.text-center
             h2.headline
@@ -70,51 +71,71 @@
               | untuk berbagai kisah kamu
             span.sub-headline Klik desain untuk preview undangan
           .template-option.w-100
-            .row
-              .col-12.col-md-4
-                .group-left
-                  .custom-card
-                    h4.title Blie Gold Fliwir
-                    p.description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ornare varius.
-                    span.annotation
-                      = image_tag("landingpage/without-image-icon.png", class: "annotation-icon")
-                      span Tidak Memerlukan Foto
-                  .custom-card
-                    h4.title Flower Green Lantern
-                    p.description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ornare varius.
-                    span.annotation
-                      = image_tag("landingpage/with-image-icon.png", class: "annotation-icon")
-                      span Memerlukan Foto
-                  .custom-card
-                    h4.title Red Boho-Chic
-                    p.description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ornare varius.
-                    span.annotation
-                      = image_tag("landingpage/with-image-icon.png", class: "annotation-icon")
-                      span Memerlukan Foto
-              .col-12.col-md-4.d-none.d-md-flex.bg-secondary
+            .row.justify-content-center
+              .col-11.col-md-4
+                .card-left
+                  a.custom-card href="#showcase"
+                    .custom-image
+                      = image_tag("landingpage/template-1.png", class: "template-cover")
+                    .custom-body  
+                      h4.title Blie Gold Fliwir
+                      p.description.d-none.d-md-block Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ornare varius.
+                      span.annotation
+                        = image_tag("landingpage/without-image-icon.png", class: "custom-icon")
+                        span.custom-text Tidak Memerlukan Foto
+                  a.custom-card href="#showcase"
+                    .custom-image
+                      = image_tag("landingpage/template-2.png", class: "template-cover")
+                    .custom-body
+                      h4.title Flower Green Lantern
+                      p.description.d-none.d-md-block Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ornare varius.
+                      span.annotation
+                        = image_tag("landingpage/with-image-icon.png", class: "custom-icon")
+                        span.custom-text Memerlukan Foto
+                  a.custom-card href="#showcase"
+                    .custom-image
+                      = image_tag("landingpage/template-3.png", class: "template-cover")
+                    .custom-body
+                      h4.title Red Boho-Chic
+                      p.description.d-none.d-md-block Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ornare varius.
+                      span.annotation
+                        = image_tag("landingpage/with-image-icon.png", class: "custom-icon")
+                        span.custom-text Memerlukan Foto
+              .col-4.d-none.d-md-flex.bg-secondary
                 span Preview
-              .col-12.col-md-4
-                .group-right
-                  .custom-card
-                    h4.title Blie Gild Outlini
-                    p.description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ornare varius.
-                    span.annotation
-                      = image_tag("landingpage/with-image-icon.png", class: "annotation-icon")
-                      span Memerlukan Foto
-                  .custom-card
-                    h4.title Classic Java Brown
-                    p.description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ornare varius.
-                    span.annotation
-                      = image_tag("landingpage/without-image-icon.png", class: "annotation-icon")
-                      span Tidak Memerlukan Foto
-                  .custom-card
-                    h4.title Fall Fell Fill Full
-                    p.description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ornare varius.
-                    span.annotation
-                      = image_tag("landingpage/with-image-icon.png", class: "annotation-icon")
-                      span Memerlukan Foto
-          .cta
-            a.bg-warning href="#pricing" Buat Undangan
+              .col-11.col-md-4
+                .card-right
+                  a.custom-card href="#showcase"
+                    .custom-image
+                      = image_tag("landingpage/template-4.png", class: "template-cover")
+                    .custom-body
+                      h4.title Blie Gild Outlini
+                      p.description.d-none.d-md-block Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ornare varius.
+                      span.annotation
+                        = image_tag("landingpage/with-image-icon.png", class: "custom-icon")
+                        span.custom-text Memerlukan Foto
+                  a.custom-card href="#showcase"
+                    .custom-image
+                      = image_tag("landingpage/template-5.png", class: "template-cover")
+                    .custom-body
+                      h4.title Classic Java Brown
+                      p.description.d-none.d-md-block Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ornare varius.
+                      span.annotation
+                        = image_tag("landingpage/without-image-icon.png", class: "custom-icon")
+                        span.custom-text Tidak Memerlukan Foto
+                  a.custom-card href="#showcase"
+                    .custom-image
+                      = image_tag("landingpage/template-6.png", class: "template-cover")
+                    .custom-body
+                      h4.title Fall Fell Fill Full
+                      p.description.d-none.d-md-block Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ornare varius.
+                      span.annotation
+                        = image_tag("landingpage/with-image-icon.png", class: "custom-icon")
+                        span.custom-text Memerlukan Foto
+          .cta.text-center
+            a.custom-btn-fill href="#pricing"
+              span.custom-text Buat Undangan
+              i.fa-solid.fa-chevron-right.custom-icon
       .bottom-border
         = image_tag("landingpage/wave-shape.svg", class: "custom-wave")
   section#pricing

@@ -194,50 +194,56 @@ header{
     height: calc(100vh - 64px);
   }
 
-  .header-text{
-    padding-bottom: 0;
-
+  .wrapper{
     @media (min-width: 768px) {
-      padding-bottom: 80px;
+      margin: 100px 0;
     }
 
-    .title{
-      margin-bottom: 16px;
+    .header-text{
+      padding-bottom: 0;
 
       @media (min-width: 768px) {
-        margin-bottom: 12px;
+        padding-bottom: 80px;
       }
-    }
 
-    .subtitle{
-      color: $gray-500;
-      margin-bottom: 4px;
-    }
-
-    .mini-subtitle{
-      color: $gray-700;
-      font-weight: 600;
-      margin-bottom: 24px;
-
-      &::after{
-        content: "Om-Budi-Sekeluarga";
-        display: block;
+      .title{
+        margin-bottom: 16px;
 
         @media (min-width: 768px) {
-          display: inline;
+          margin-bottom: 12px;
+        }
+      }
+
+      .subtitle{
+        color: $gray-500;
+        margin-bottom: 4px;
+      }
+
+      .mini-subtitle{
+        color: $gray-700;
+        font-weight: 600;
+        margin-bottom: 24px;
+
+        &::after{
+          content: "Om-Budi-Sekeluarga";
+          display: block;
+
+          @media (min-width: 768px) {
+            display: inline;
+          }
         }
       }
     }
-  }
 
-  .header-image{
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: flex-end;
-
-    .custom-img{
+    .header-image{
       width: 100%;
+      height: auto;
+      display: flex;
+      align-items: flex-end;
+
+      .custom-img{
+        width: 100%;
+      }
     }
   }
 
@@ -332,7 +338,7 @@ header{
     width: 100%;
   }
 
-  .wrapper-content{
+  .wrapper{
     background-color: $light-blue;
     padding: 60px 0;
 
@@ -353,6 +359,70 @@ header{
         @media (min-width: 768px) {
           margin-bottom: 16px;
         }
+      }
+    }
+
+    .template-option{
+      margin-bottom: 20px;
+
+      .card-left, .card-right{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .custom-card{
+          background-color: #D9EBFF;
+          border: 1px solid #ABD3FF;
+          border-radius: 8px;
+          position: relative;
+          display: flex;
+          gap: 12px;
+          text-decoration: none;
+
+          .custom-image{
+            width: 20%;
+            padding-left: 12px;
+          
+            .template-cover{
+              position: absolute;
+              width: 20%;
+              height: auto;
+              bottom: 0;
+            }
+          }
+
+          .custom-body{
+            width: 80%;
+            padding: 12px;
+
+            .title{
+              color: $main-navy;
+              margin-bottom: 2px;
+            }
+
+            .annotation{
+              .custom-icon{
+                width: 22px;
+                height: auto;
+                margin-right: 6px;
+              }
+              
+              .custom-text{
+                font-size: 12px;
+                color: $gray-700;
+              }
+            }
+          }
+
+          &:hover{
+            transform: scale(1.1);
+            transition: all 0.3s ease-in-out;
+          }
+        }
+      }
+
+      .card-left{
+        margin-bottom: 20px;
       }
     }
   }
