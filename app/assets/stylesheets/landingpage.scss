@@ -65,7 +65,7 @@ p, span, i{
   font-family: 'Work Sans', sans-serif;
   font-size: 14px;
 
-  @media (min-width: 1400px) {
+  @media (min-width: 768px) {
     font-size: 16px;
   }
 }
@@ -136,6 +136,22 @@ p, span, i{
   }
 }
 
+.nav-brand-custom{
+  font-family: 'Lilita One', sans-serif;
+  color: $main-navy;
+  font-size: 20px;
+  flex-grow: 1;
+  text-decoration: none;
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
+
+  &:hover{
+    color: $main-navy;
+  }
+}
+
 nav{
   background-color: $light-blue;
 
@@ -146,17 +162,6 @@ nav{
     @media (min-width: 768px) {
       padding-top: 24px;
       padding-bottom: 24px;
-    }
-
-    .navbar-brand-custom{
-      font-family: 'Lilita One', sans-serif;
-      color: $main-navy;
-      font-size: 20px;
-      flex-grow: 1;
-
-      @media (min-width: 768px) {
-        font-size: 24px;
-      }
     }
 
     .navbar-nav-custom{
@@ -451,8 +456,20 @@ header{
           }
 
           &:hover{
-            transform: scale(1.1);
-            transition: all 0.3s ease-in-out;
+            transition: all 0.2s ease-in-out;
+            background-color: $main-navy;
+            box-shadow: 0 2px 15px rgba(6, 182, 212, 0.75);
+
+            .title, .description{
+              color: $gray-50;
+            }
+
+            .annotation{
+
+              .custom-text{
+                color: $gray-50;
+              }
+            }
           }
         }
       }
@@ -513,6 +530,7 @@ header{
 
 #pricing{
   padding: 80px 0;
+  position: relative;
 
   @media (min-width: 768px) {
     padding: 120px;
@@ -755,6 +773,134 @@ header{
       @media (min-width: 768px) {
         border-bottom-left-radius: 0;
       }
+    }
+  }
+
+  .ornament{
+
+    .red-bottom-blob{
+      position: absolute;
+      width: 55px;
+      left: -16px;
+      bottom: 32px;
+      transform: rotate(345deg);
+
+      @media (min-width: 768px) {
+        width: 120px;
+        left: 0;
+        bottom: 32px;
+        transform: none;
+      }
+    }
+  }
+}
+
+#contactus{
+  position: relative;
+  border-bottom: 1px solid #D3E7FF;
+
+  .top-border{
+
+    .custom-wave{
+      width: 100%;
+    }
+  }
+
+  .wrapper{
+    background-color: $light-blue;
+    padding: 150px 0 64px;
+
+    @media (min-width: 768px) {
+      padding: 0;
+    }
+
+    .group-text{
+      padding: 0;
+
+      @media (min-width: 768px) {
+        padding: 80px 0 120px 0;
+      }
+
+      .headline{
+        margin-bottom: 16px;
+      }
+    }
+
+    .group-image{
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: end;
+
+      @media (max-width: 768px) {
+        position: static;
+        justify-content: center;
+      }
+
+      .contactus-image{
+        max-width: 585px;
+        position: absolute;
+        top: -64px;
+
+        @media (max-width: 768px) {
+          width: 250px;
+          top: -22px;
+        }
+      }
+    }
+  }
+}
+
+footer{
+  background-color: $light-blue;
+
+  padding: 20px 0;
+
+  .brand{
+    margin-bottom: 24px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+
+  .nav-links{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    .custom-link{
+      text-decoration: none;
+      font-family: 'Work Sans', sans-serif;
+      color: $gray-500;
+      font-size: 14px;
+
+      &:hover, &:active{
+        font-weight: 500;
+        color: $gray-700;
+      }
+
+      @media (min-width: 768px) {
+        font-size: 16px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+      justify-content: center;
+      gap: 80px;
+    }
+  }
+
+  .copyright{
+    width: 100%;
+    color: $gray-700;
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: 768px) {
+      justify-content: end;
     }
   }
 }

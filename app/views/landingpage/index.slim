@@ -5,7 +5,7 @@
   nav.sticky-top
     .navbar.navbar-expand-md.navbar-light.navbar-custom
       .container.container-custom
-        a.navbar-brand.navbar-brand-custom href="#"  Mengundang.mu
+        a.nav-brand-custom href="#" Mengundang.mu
         button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button" 
           span.navbar-toggler-icon
         #navbarSupportedContent.collapse.navbar-collapse
@@ -275,22 +275,37 @@
                           span.d-md-none Tampilkan amplop digital
                         li
                           a.custom-btn-outline.pricing-btn href="#" Buat Undangan
+    .ornament
+      = image_tag("landingpage/pricing-blob.svg", class: "red-bottom-blob")
   section#contactus
-    .container.container-custom
-      .row.m-0
-        .col-10.col-md-6
-          h2 Untuk pertanyaan dan informasi lainnya
-          a.btn.btn-primary Hubungi CS
-        .col-10.col-md-6
-          h1 Image
+    .top-border
+      = image_tag("landingpage/wave-shape.svg", class: "custom-wave")
+    .wrapper
+      .container.container-custom
+        .row.justify-content-center
+          .col-10.col-md-6.text-center.text-md-start
+            .group-text
+              h2.headline
+                | Untuk pertanyaan dan
+                br
+                | informasi lainnya
+              a.custom-btn-fill href="#"
+                span.custom-text Hubungi CS
+                i.fa-solid.fa-chevron-right.custom-icon
+          .col-10.col-md-6
+            .group-image
+              = image_tag("landingpage/contactus-illustration.png", class: "contactus-image")
   footer
     .container.container-custom
-      .row.m-0
+      .row.align-items-center
         .col-12.col-md-4
-          h2 Mengundangmu
+          .brand.text-center.text-md-start
+            a.nav-brand-custom href="#" Mengundangmu
         .col-12.col-md-4
-          a href="#" Fitur
-          a href="#" Desain
-          a href="#" Harga
+          .nav-links
+            a.custom-link href="#" Fitur
+            a.custom-link href="#" Desain
+            a.custom-link href="#" Harga
         .col-12.col-md-4
-          span Copyright © 2022. Mengundang.mu.
+          .copyright
+            span Copyright © 2022. Mengundang.mu.
