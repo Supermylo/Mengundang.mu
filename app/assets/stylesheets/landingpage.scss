@@ -243,17 +243,6 @@ header{
           @media (min-width: 768px) {
             height: 24px;
           }
-          
-          .guest-name{
-            list-style: none;
-            position: relative;
-            top: 0;
-            animation: slideMobile 9s steps(3) infinite;
-
-            @media (min-width: 768px) {
-              animation: slideDesktop 9s steps(3) infinite;
-            }
-          }
         }
       }
     }
