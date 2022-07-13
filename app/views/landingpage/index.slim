@@ -74,12 +74,11 @@
               | Berbagai pilihan desain
               br
               | untuk berbagai kisah kamu
-            span.sub-headline Klik desain untuk preview undangan
           .template-option.w-100
             .row.justify-content-center.align-items-center
               .col-11.col-md-4
                 .card-left
-                  a.custom-card.align-self-end href="#showcase"
+                  a.custom-card.align-self-end oncLick="changeIframe('http://localhost:3000/firsttemplate/index', 'iframeCustom')"
                     .custom-image
                       = image_tag("landingpage/template-1.png", class: "template-cover")
                     .custom-body  
@@ -88,7 +87,7 @@
                       span.annotation
                         = image_tag("landingpage/without-image-icon.png", class: "custom-icon")
                         span.custom-text Tidak Memerlukan Foto
-                  a.custom-card.align-self-start href="#showcase"
+                  a.custom-card.align-self-start oncLick="changeIframe('http://localhost:3000/secondtemplate/index', 'iframeCustom')"
                     .custom-image
                       = image_tag("landingpage/template-2.png", class: "template-cover")
                     .custom-body
@@ -97,7 +96,7 @@
                       span.annotation
                         = image_tag("landingpage/with-image-icon.png", class: "custom-icon")
                         span.custom-text Memerlukan Foto
-                  a.custom-card.align-self-end href="#showcase"
+                  a.custom-card.align-self-end oncLick="changeIframe('http://localhost:3000/thirdtemplate/index', 'iframeCustom')"
                     .custom-image
                       = image_tag("landingpage/template-3.png", class: "template-cover")
                     .custom-body
@@ -108,10 +107,13 @@
                         span.custom-text Memerlukan Foto
               .col-4.d-none.d-md-flex
                 .custom-preview
-                  .placeholder-template
+                  span.direction-for-click
+                    i.fa-solid.fa-eye.custom-icon
+                    span Klik desain untuk lihat undangan
+                  iframe#iframeCustom.custom-placeholder
               .col-11.col-md-4
                 .card-right
-                  a.custom-card.align-self-start href="#showcase"
+                  a.custom-card.align-self-start oncLick="changeIframe('http://localhost:3000/fourthtemplate/index', 'iframeCustom')"
                     .custom-image
                       = image_tag("landingpage/template-4.png", class: "template-cover")
                     .custom-body
@@ -120,7 +122,7 @@
                       span.annotation
                         = image_tag("landingpage/with-image-icon.png", class: "custom-icon")
                         span.custom-text Memerlukan Foto
-                  a.custom-card.align-self-end href="#showcase"
+                  a.custom-card.align-self-end oncLick="changeIframe('http://localhost:3000/fivethtemplate/index', 'iframeCustom')"
                     .custom-image
                       = image_tag("landingpage/template-5.png", class: "template-cover")
                     .custom-body
@@ -129,7 +131,7 @@
                       span.annotation
                         = image_tag("landingpage/without-image-icon.png", class: "custom-icon")
                         span.custom-text Tidak Memerlukan Foto
-                  a.custom-card.align-self-start href="#showcase"
+                  a.custom-card.align-self-start oncLick="changeIframe('http://localhost:3000/sixthtemplate/index', 'iframeCustom')"
                     .custom-image
                       = image_tag("landingpage/template-6.png", class: "template-cover")
                     .custom-body
@@ -308,9 +310,14 @@
             a.nav-brand-custom href="#" Mengundangmu
         .col-12.col-md-4
           .nav-links
-            a.custom-link href="#" Fitur
-            a.custom-link href="#" Desain
-            a.custom-link href="#" Harga
+            a.custom-link href="#benefit" Fitur
+            a.custom-link href="#showcase" Desain
+            a.custom-link href="#pricing" Harga
         .col-12.col-md-4
           .copyright
             span Copyright © 2022. Mengundang.mu.
+
+javascript:
+  function changeIframe(value, object) {
+    document.getElementById(object).src = value;
+  };
