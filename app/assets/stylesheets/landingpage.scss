@@ -253,39 +253,6 @@ header{
             @media (min-width: 768px) {
               animation: slideDesktop 9s steps(3) infinite;
             }
-
-            &::after{
-              content: "";
-              position: absolute;
-              height: 100%;
-              width: 100%;
-              background-color: #EEF5FF;
-              left: 0;
-              border-left: 2px solid $gray-700;
-              animation: typing 3s steps(20) infinite;
-            }
-          }
-
-          @keyframes typing {
-            40%,
-            60% {
-              left: calc(100% + 4px);
-            }
-            100% {
-              left: 0;
-            }
-          }
-
-          @keyframes slideMobile {
-            100% {
-              top: -63px;
-            }
-          }
-
-          @keyframes slideDesktop {
-            100% {
-              top: -72px;
-            }
           }
         }
       }
@@ -426,9 +393,7 @@ header{
         margin-bottom: 24px;
       }
 
-      .card-left, .card-right{
-        display: flex;
-        flex-direction: column;
+      .desktop-left, .mobile-left, .desktop-right, .mobile-right{
         gap: 20px;
 
         @media (min-width: 768px) {
@@ -525,7 +490,7 @@ header{
         }
       }
 
-      .card-left{
+      .desktop-left, .mobile-left{
         margin-bottom: 20px;
       }
 

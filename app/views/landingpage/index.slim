@@ -28,10 +28,8 @@
               p.subtitle Dengan fitur Custom Link, kamu bisa membuat undangan digital dengan link yang berbeda-beda sesuai nama tamu undangan.
               span.animation-subtitle.d-flex.flex-column.flex-md-row.align-items-center
                 span.static-text ifandansaskia-mengundang.mu/
-                ul.dynamic-text
-                  li.guest-name Om-Budi-Sekeluarga
-                  li.guest-name Bude-Susi-Sekeluarga
-                  li.guest-name Bestie-Bella
+                span.dynamic-text
+                  span.guest-name
               a.custom-btn-fill href="#pricing"
                 span.custom-text Buat Undangan
                 i.fa-solid.fa-chevron-right.custom-icon
@@ -77,7 +75,7 @@
           .template-option.w-100
             .row.justify-content-center.align-items-center
               .col-11.col-md-4
-                .card-left
+                .desktop-left.d-none.d-md-flex.flex-column
                   a.custom-card.align-self-end oncLick="changeIframe('http://localhost:3000/firsttemplate/index', 'iframeCustom')"
                     .custom-image
                       = image_tag("landingpage/template-1.png", class: "template-cover")
@@ -105,6 +103,34 @@
                       span.annotation
                         = image_tag("landingpage/with-image-icon.png", class: "custom-icon")
                         span.custom-text Memerlukan Foto
+                .mobile-left.d-flex.d-md-none.flex-column
+                  a.custom-card.align-self-end href="/firsttemplate/index"
+                    .custom-image
+                      = image_tag("landingpage/template-1.png", class: "template-cover")
+                    .custom-body  
+                      h4.title Blie Gold Fliwir
+                      p.description.d-none.d-md-block Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ornare varius.
+                      span.annotation
+                        = image_tag("landingpage/without-image-icon.png", class: "custom-icon")
+                        span.custom-text Tidak Memerlukan Foto
+                  a.custom-card.align-self-start href="/secondtemplate/index"
+                    .custom-image
+                      = image_tag("landingpage/template-2.png", class: "template-cover")
+                    .custom-body
+                      h4.title Flower Green Lantern
+                      p.description.d-none.d-md-block Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ornare varius.
+                      span.annotation
+                        = image_tag("landingpage/with-image-icon.png", class: "custom-icon")
+                        span.custom-text Memerlukan Foto
+                  a.custom-card.align-self-end href="/thirdtemplate/index"
+                    .custom-image
+                      = image_tag("landingpage/template-3.png", class: "template-cover")
+                    .custom-body
+                      h4.title Red Boho-Chic
+                      p.description.d-none.d-md-block Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ornare varius.
+                      span.annotation
+                        = image_tag("landingpage/with-image-icon.png", class: "custom-icon")
+                        span.custom-text Memerlukan Foto
               .col-4.d-none.d-md-flex
                 .custom-preview
                   span.direction-for-click
@@ -112,7 +138,7 @@
                     span Klik desain untuk lihat undangan
                   iframe#iframeCustom.custom-placeholder
               .col-11.col-md-4
-                .card-right
+                .desktop-right.d-none.d-md-flex.flex-column
                   a.custom-card.align-self-start oncLick="changeIframe('http://localhost:3000/fourthtemplate/index', 'iframeCustom')"
                     .custom-image
                       = image_tag("landingpage/template-4.png", class: "template-cover")
@@ -136,6 +162,34 @@
                       = image_tag("landingpage/template-6.png", class: "template-cover")
                     .custom-body
                       h4.title Fall Fell Fill Full
+                      p.description.d-none.d-md-block Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ornare varius.
+                      span.annotation
+                        = image_tag("landingpage/with-image-icon.png", class: "custom-icon")
+                        span.custom-text Memerlukan Foto
+                .mobile-right.d-flex.d-md-none.flex-column
+                  a.custom-card.align-self-end href="/fourthtemplate/index"
+                    .custom-image
+                      = image_tag("landingpage/template-1.png", class: "template-cover")
+                    .custom-body  
+                      h4.title Blie Gold Fliwir
+                      p.description.d-none.d-md-block Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ornare varius.
+                      span.annotation
+                        = image_tag("landingpage/without-image-icon.png", class: "custom-icon")
+                        span.custom-text Tidak Memerlukan Foto
+                  a.custom-card.align-self-start href="/fivethtemplate/index"
+                    .custom-image
+                      = image_tag("landingpage/template-2.png", class: "template-cover")
+                    .custom-body
+                      h4.title Flower Green Lantern
+                      p.description.d-none.d-md-block Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ornare varius.
+                      span.annotation
+                        = image_tag("landingpage/with-image-icon.png", class: "custom-icon")
+                        span.custom-text Memerlukan Foto
+                  a.custom-card.align-self-end href="/sixthtemplate/index"
+                    .custom-image
+                      = image_tag("landingpage/template-3.png", class: "template-cover")
+                    .custom-body
+                      h4.title Red Boho-Chic
                       p.description.d-none.d-md-block Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ornare varius.
                       span.annotation
                         = image_tag("landingpage/with-image-icon.png", class: "custom-icon")
@@ -321,3 +375,13 @@ javascript:
   function changeIframe(value, object) {
     document.getElementById(object).src = value;
   };
+
+script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"
+
+javascript:
+  var typed = new Typed(".guest-name", {
+    strings: ["Om-Budi-Sekeluarga", "Bude-Susi-Sekeluarga", "Bestie-Bella"],
+    typeSpeed: 50,
+    backSpeed: 50,
+    loop: true
+  })
