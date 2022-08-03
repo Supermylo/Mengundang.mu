@@ -338,6 +338,39 @@
                           a.custom-btn-outline.pricing-btn href="#" Buat Undangan
     .ornament
       = image_tag("landingpage/pricing-blob.svg", class: "red-bottom-blob")
+  section#faq
+    .container.container-custom
+      .row
+        .col-12.text-center
+          .group-heading
+            h2 F.A.Q
+            span &#40;Frequentyl Asked Questions&#41;
+      .row.justify-content-center
+        .col-10.col-md-6
+          #accordionFAQ.accordion.accordion-custom
+            .accordion-item.item-custom
+              h2#headingOne.accordion-header.header-custom
+                button.accordion-button.btn-custom aria-controls="collapseOne" aria-expanded="true" data-bs-target="#collapseOne" data-bs-toggle="collapse" type="button" 
+                  | Bebas request lagu untuk backsound?
+              #collapseOne.accordion-collapse.collapse.show.collapse-custom aria-labelledby="headingOne" data-bs-parent="#accordionFAQ" 
+                .accordion-body.body-custom
+                  span Tentu boleh, Nantinya tinggal infokan saja link Youtube kedalam Form yang kami berikan
+            .accordion-item
+              h2#headingTwo.accordion-header
+                button.accordion-button.collapsed aria-controls="collapseTwo" aria-expanded="false" data-bs-target="#collapseTwo" data-bs-toggle="collapse" type="button" 
+                  | Accordion Item #2
+              #collapseTwo.accordion-collapse.collapse aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ" 
+                .accordion-body
+                  strong This is the second item's accordion body.
+            .accordion-item
+              h2#headingThree.accordion-header
+                button.accordion-button.collapsed aria-controls="collapseThree" aria-expanded="false" data-bs-target="#collapseThree" data-bs-toggle="collapse" type="button" 
+                  | Accordion Item #3
+              #collapseThree.accordion-collapse.collapse aria-labelledby="headingThree" data-bs-parent="#accordionFAQ" 
+                .accordion-body
+                  strong This is the third item's accordion body.
+        .col-10.col-md-6.bg-danger
+          h3 Accordion 2
   section#contactus
     .top-border
       = image_tag("landingpage/wave-shape.svg", class: "custom-wave")

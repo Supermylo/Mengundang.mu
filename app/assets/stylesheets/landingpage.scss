@@ -560,7 +560,7 @@ header{
   position: relative;
 
   @media (min-width: 768px) {
-    padding: 120px;
+    padding: 120px 0;
   }
 
   .group-text{
@@ -816,7 +816,66 @@ header{
         width: 120px;
         left: 0;
         bottom: 32px;
-        transform: none;
+        transform: translate(0, 50%);
+      }
+    }
+  }
+}
+
+#faq{
+
+  .accordion-custom{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: none;
+
+    .item-custom{
+      border: none;
+
+      .header-custom{
+        border: none;
+        
+        .btn-custom{
+          font-family: 'Work Sans', sans-serif;
+          font-size: 20px;
+          font-weight: 400;
+          color: $gray-700;
+          background-color: $gray-50;
+          border-radius: 12px;
+          border: 1px solid $gray-300;
+          padding: 20px;
+    
+          &:not(.collapsed){
+            font-weight: 600;
+            color: $main-navy;
+            border-radius: 12px 12px 0 0;
+            border: 2px solid #7171FC;
+            border-bottom: none;
+          }
+    
+          &:focus{
+            box-shadow: none;
+          }
+        }
+      }
+
+      .collapse-custom{
+        border: none;
+
+        .body-custom{
+          color: $gray-500;
+          background-color: $gray-50;
+          border-radius: 0 0 12px 12px;
+          border: 1px solid $gray-300;
+          border-top: none;
+          padding: 0 20px 20px 20px;
+  
+          &:not(.collapsed){
+            border: 2px solid #7171FC;
+            border-top: none;
+          }
+        }
       }
     }
   }
