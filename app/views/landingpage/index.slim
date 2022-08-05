@@ -343,34 +343,86 @@
       .row
         .col-12.text-center
           .group-heading
-            h2 F.A.Q
-            span &#40;Frequentyl Asked Questions&#41;
+            h2.big-title F.A.Q
+            span.small-title &#40;Frequentyl Asked Questions&#41;
       .row.justify-content-center
-        .col-10.col-md-6
-          #accordionFAQ.accordion.accordion-custom
-            .accordion-item.item-custom
-              h2#headingOne.accordion-header.header-custom
-                button.accordion-button.btn-custom aria-controls="collapseOne" aria-expanded="true" data-bs-target="#collapseOne" data-bs-toggle="collapse" type="button" 
+        .col-12.col-md-8
+          #accordionFAQ.accordion
+            .accordion-item.accordion-item-custom
+              h2#headingOne.accordion-header.accordion-header-custom
+                button.accordion-button.accordion-button-custom aria-controls="collapseOne" aria-expanded="true" data-bs-target="#collapseOne" data-bs-toggle="collapse" type="button" 
                   | Bebas request lagu untuk backsound?
-              #collapseOne.accordion-collapse.collapse.show.collapse-custom aria-labelledby="headingOne" data-bs-parent="#accordionFAQ" 
-                .accordion-body.body-custom
-                  span Tentu boleh, Nantinya tinggal infokan saja link Youtube kedalam Form yang kami berikan
-            .accordion-item
-              h2#headingTwo.accordion-header
-                button.accordion-button.collapsed aria-controls="collapseTwo" aria-expanded="false" data-bs-target="#collapseTwo" data-bs-toggle="collapse" type="button" 
-                  | Accordion Item #2
+              #collapseOne.accordion-collapse.collapse.show aria-labelledby="headingOne" data-bs-parent="#accordionFAQ" 
+                .accordion-body.accordion-body-custom
+                  | Tentu boleh, Nantinya tinggal infokan saja link Youtube kedalam Form yang kami berikan.
+            .accordion-item.accordion-item-custom
+              h2#headingTwo.accordion-header.accordion-header-custom
+                button.accordion-button.accordion-button-custom.collapsed aria-controls="collapseTwo" aria-expanded="false" data-bs-target="#collapseTwo" data-bs-toggle="collapse" type="button" 
+                  | Apa itu masa aktif?
               #collapseTwo.accordion-collapse.collapse aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ" 
-                .accordion-body
-                  strong This is the second item's accordion body.
-            .accordion-item
-              h2#headingThree.accordion-header
-                button.accordion-button.collapsed aria-controls="collapseThree" aria-expanded="false" data-bs-target="#collapseThree" data-bs-toggle="collapse" type="button" 
-                  | Accordion Item #3
+                .accordion-body.accordion-body-custom
+                  | Setiap paket undangan website memiliki masa aktif yang berbeda.
+                  br
+                  | Masa Aktif artinya seberapa lama link undangan website Anda dapat diakses oleh publik. Terhitung setelah hari H acara. Setelah melewati masa aktif undangan website Anda akan memasuki Masa Expired secara otomatis dan tidak lagi dapat diakses oleh siapapun.
+                  br
+                  | Jika Anda berniat untuk memperpanjang masa aktif atau ingin agar undangan website Anda tetap bisa diakses seterusnya (sebagai kenang-kenangan pernikahan mungkin), silahkan hubungi admin kami maksimal 3 (tiga) hari sebelum masa aktif berakhir untuk dilakukan perpanjangan.
+                  br
+                  | Adapun untuk fitur Masa Aktif Selamanya, artinya link undangan website Anda akan tetap bisa diakses selama layanan Ruang Invitation masih ada. Namun perlu dipahami tidak ada jaminan bahwa layanan undangan website ini akan terus ada selamanya.
+                  br
+                  | Note: Fitur Masa Aktif Selamanya hanya berlaku untuk link subdomain Ruanginvitation.id
+            .accordion-item.accordion-item-custom
+              h2#headingThree.accordion-header.accordion-header-custom
+                button.accordion-button.accordion-button-custom.collapsed aria-controls="collapseThree" aria-expanded="false" data-bs-target="#collapseThree" data-bs-toggle="collapse" type="button" 
+                  | Cara ordernya gimana?
               #collapseThree.accordion-collapse.collapse aria-labelledby="headingThree" data-bs-parent="#accordionFAQ" 
-                .accordion-body
-                  strong This is the third item's accordion body.
-        .col-10.col-md-6.bg-danger
-          h3 Accordion 2
+                .accordion-body.accordion-body-custom
+                  | 1. Pilih desain tema dari katalog undangan website
+                  br
+                  | 2. Tentukan fitur apa saja yang kamu butuhkan
+                  br
+                  | 3. Lalu pilih paket undangan website
+                  br
+                  | 4. Klik menu Order atau tombol Pesan Sekarang
+                  br
+                  | 5. Isi data-data sesuai format yang telah disediakan
+                  br
+                  | 6. Lakukan pembayaran sesuai total harga yang tertera di form pemesanan
+                  br
+                  | 7. Upload bukti transfer pembayaran &#40;atau boleh menyusul via WA&#41;
+                  br
+                  | 8. Klik tombol Kirim
+                  br
+                  | 9. Tunggu proses pengerjaan 2-3 hari sesuai antrian
+                  br
+                  | 10. Setelah selesai, link undangan website dan link google spreadsheet akan dikirim oleh Admin via WA / email pemesan
+                  br
+                  | 11. Silahkan lakukan review hasil undangan apakah ada yang perlu dikoreksi atau revisi
+                  br
+                  | 12. Selesai! Undangan website siap dibagikan.
+            .accordion-item.accordion-item-custom
+              h2#headingFour.accordion-header.accordion-header-custom
+                button.accordion-button.accordion-button-custom.collapsed aria-controls="collapseFour" aria-expanded="false" data-bs-target="#collapseFour" data-bs-toggle="collapse" type="button" 
+                  | Berapa lama proses pembuatannya?
+              #collapseFour.accordion-collapse.collapse aria-labelledby="headingFour" data-bs-parent="#accordionFAQ" 
+                .accordion-body.accordion-body-custom
+                  | Paket Basic dan Premium pengerjaan normalnya maksimal 2 hari kerja setelah data lengkap kami terima. Bergantung antrian terkadang bisa lebih cepat.
+                  br
+                  | Sedangkan Paket Spesial estimasi 3 hari kerja termasuk dengan Pengerjaan Instagram Filter. 
+                  br
+                  | Namun kami ada Paket Prioritas 24 Jam selesai, normal pengerjaan 2 Hari maksimal jika memilih paket 1 Day Service/Express pengerjaan di prioritaskan 24 jam sudah selesai &#40;Ada Tambahan Biaya ya kak&#41;
+            .accordion-item.accordion-item-custom
+              h2#headingFive.accordion-header.accordion-header-custom
+                button.accordion-button.accordion-button-custom.collapsed aria-controls="collapseFive" aria-expanded="false" data-bs-target="#collapseFive" data-bs-toggle="collapse" type="button" 
+                  | Bisa ganti fitur?
+              #collapseFive.accordion-collapse.collapse aria-labelledby="headingFive" data-bs-parent="#accordionFAQ" 
+                .accordion-body.accordion-body-custom
+                  | Maaf, tidak bisa.
+                  br
+                  | Misalkan pada paket Basic, Anda tidak butuh fitur Galeri Foto/Love Story. Maka kami akan menghapus fitur tersebut dari undangan website dan fitur tersebut tidak dapat diganti dengan fitur lainnya yang tidak tersedia pada paket Basic.
+                  br
+                  | Harga setiap paket tetap sama meskipun ada fitur yang dinonaktifkan / tidak digunakan
+                  br
+                  | Jadi, Mohon perhatikan setiap paket yang ingin anda pesan.
   section#contactus
     .top-border
       = image_tag("landingpage/wave-shape.svg", class: "custom-wave")
@@ -417,4 +469,6 @@ javascript:
     typeSpeed: 50,
     backSpeed: 50,
     loop: true
-  })
+  });
+
+
