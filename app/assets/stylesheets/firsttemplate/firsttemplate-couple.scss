@@ -1,7 +1,7 @@
-@font-face {
-  font-family: Marcha;
-  src: url(../../fonts/Marcha.otf);
-}
+// @font-face {
+//   font-family: Marcha;
+//   src: url(../../fonts/Marcha.otf);
+// }
 
 $main-blue : #213A6A;
 $solid-bronze : #AE9874;
@@ -9,11 +9,14 @@ $custom-gray : #9CA3AF;
 $custom-white : #F9FAFB;
 $gradient-bronze : linear-gradient(140deg,#9C8258 0%,#D7CBB8 50%, #B7A384 100%);
 
-html{height: 100%;}
-body{
+html, body{height: 100%;}
+
+.wrapper-custom{
   background: url("firsttemplate/bg-white-marble.jpg");
   background-size: cover;
   height: 100%;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 h1{font-size: 40px;}
@@ -27,7 +30,7 @@ span, p{
 
 .content{
   width: 100%;
-  height: calc(100vh - 86px);
+  height: calc(100% - 66px);
   padding: 0 40px;
   display: flex;
   flex-direction: column;
@@ -41,11 +44,13 @@ span, p{
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: ornamentSet 2s ease-in-out 1;
 
     .main-flower{
       position: absolute;
       width: 54px;
       z-index: 1;
+      animation: mainFlower 5s infinite;
     }
 
     .left-flower{
@@ -53,6 +58,7 @@ span, p{
       width: 96px;
       left: 0;
       z-index: 0;
+      animation: leftFlower 5s infinite;
     }
 
     .right-flower{
@@ -60,6 +66,30 @@ span, p{
       width: 88px;
       right: 0;
       z-index: 0;
+      animation: rightFlower 5s infinite;
+    }
+
+    @keyframes ornamentSet {
+      0% {opacity: 0;}
+      100% {opacity: 100%;}
+    }
+
+    @keyframes mainFlower {
+      0% {transform: rotate(10deg) scale(1);}
+      50% {transform: rotate(-5deg) scale(1.1);}
+      100% {transform: rotate(10deg) scale(1);}
+    }
+
+    @keyframes rightFlower {
+      0% {transform: rotate(0deg) scale(1);}
+      50% {transform: rotate(-15deg) scale(0.95);}
+      100% {transform: rotate(0deg) scale(1);}
+    }
+
+    @keyframes leftFlower {
+      0% {transform: rotate(0deg) scale(1);}
+      50% {transform: rotate(15deg) scale(0.95);}
+      100% {transform: rotate(0deg) scale(1);}
     }
   }
   
@@ -67,11 +97,14 @@ span, p{
     margin: 24px 0 32px 0;
 
     .prolog{
+      position: relative;
       color: $main-blue;
       margin-bottom: 24px;
+      animation: fadeInScale 2s ease-in-out 1;
     }
 
     .wrapper-name{
+      position: relative;
 
       .couples-name{
         font-family: 'Marcha', serif;
@@ -85,6 +118,10 @@ span, p{
       }
     }
 
+    .man-name{ animation: fadeUp 2s ease-in-out 1; }
+
+    .woman-name{ animation: fadeDown 2s ease-in-out 1; }
+
     .separator{
       font-family: 'Marcha', serif;
       color: $main-blue;
@@ -93,6 +130,7 @@ span, p{
       justify-content: center;
       align-items: center;
       gap: 8px;
+      animation: fadeIn 2s ease-in-out 1;
 
       &::before{
         display: block;
@@ -100,6 +138,7 @@ span, p{
         width: 80px;
         height: 1px;
         background: $gradient-bronze;
+        animation: slidePath 2s ease-in-out 1;
       }
 
       &::after{
@@ -108,7 +147,66 @@ span, p{
         width: 80px;
         height: 1px;
         background: $gradient-bronze;
+        animation: slidePath 2s ease-in-out 1;
         transform: scaleX(-1);
+      }
+    }
+
+    @keyframes fadeInScale {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {opacity: 0;}
+      50% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+
+    @keyframes slidePath {
+      0% {width: 0;}
+      100% {width: 80px;}
+    }
+
+    @keyframes fadeUp {
+      0% {
+        opacity: 0;
+        transform: translate(0, 90px);
+      }
+      25% {
+        opacity: 0;
+        transform: translate(0, 90px);
+      }
+      65% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+    }
+
+    @keyframes fadeDown {
+      0% {
+        opacity: 0;
+        transform: translate(0, -90px);
+      }
+      25% {
+        opacity: 0;
+        transform: translate(0, -90px);
+      }
+      65% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+        transform: translate(0, 0);
       }
     }
   }
@@ -119,7 +217,7 @@ span, p{
   left: 50%;
   transform: translateX(-50%);
   background-color: $custom-white;
-  position: fixed;
+  position: absolute;
   z-index: 2;
   padding: 12px;
   border-radius: 16px;

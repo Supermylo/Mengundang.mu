@@ -10,11 +10,14 @@ $custom-gray : #9CA3AF;
 $custom-white : #F9FAFB;
 $gradient-bronze : linear-gradient(140deg,#9C8258 0%,#D7CBB8 50%, #B7A384 100%);
 
-html{height: 100%;}
-body{
+html, body{height: 100%;}
+
+.wrapper-custom{
   background: url("firsttemplate/bg-white-marble.jpg");
   background-size: cover;
   height: 100%;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 h1{font-size: 40px;}
@@ -36,9 +39,11 @@ span, p{
     position: absolute;
     width: 178px;
     height: 224px;
-    top: -56px;
-    left: -44px;
-    transform: scale(-0.75) scaleX(-1);
+    top: -30px;
+    left: -40px;
+    transform: scale(-1.25) scaleX(-1) rotate(-20deg);
+    z-index: 1;
+    animation: topSet 1s ease-in-out 1;
 
     .flower-set{
       position: absolute;
@@ -46,6 +51,7 @@ span, p{
       width: 178px;
       bottom: 0;
       transform: rotate(30deg);
+      animation: flowerSetTop 5s infinite;
     }
 
     .leaf-set{
@@ -55,6 +61,24 @@ span, p{
       bottom: 48px;
       left: 56px;
       transform: rotate(45deg);
+      animation: leafSetTop 5s infinite;
+    }
+
+    @keyframes topSet {
+      0% {left: -210px; opacity: 0;}
+      100% {left: -40px; opacity: 1;}
+    }
+
+    @keyframes flowerSetTop {
+      0% {transform: rotate(30deg) scale(0.95);}
+      50% {transform: rotate(40deg) scale(1);}
+      100% {transform: rotate(30deg) scale(0.95);}
+    }
+
+    @keyframes leafSetTop {
+      0% {transform: rotate(45deg) scale(0.9);}
+      50% {transform: rotate(55deg) scale(1);}
+      100% {transform: rotate(45deg) scale(0.9);}
     }
   }
   
@@ -62,9 +86,11 @@ span, p{
     position: absolute;
     width: 178px;
     height: 224px;
-    bottom: 0;
-    right: -54px;
-    transform: scale(0.75) scaleX(-1);
+    bottom: 40px;
+    right: -40px;
+    transform: scale(1.25) scaleX(-1);
+    z-index: 1;
+    animation: bottomSet 1s ease-in-out 1;
 
     .flower-set{
       position: absolute;
@@ -72,6 +98,7 @@ span, p{
       width: 178px;
       bottom: 0;
       transform: rotate(30deg);
+      animation: flowerSetBottom 5s infinite;
     }
 
     .leaf-set{
@@ -81,6 +108,24 @@ span, p{
       bottom: 48px;
       left: 56px;
       transform: rotate(45deg);
+      animation: leafSetBottom 5s infinite;
+    }
+
+    @keyframes bottomSet {
+      0% {right: -200px; opacity: 0;}
+      100% {right: -40px; opacity: 1;}
+    }
+
+    @keyframes flowerSetBottom {
+      0% {transform: rotate(30deg) scale(0.95);}
+      50% {transform: rotate(20deg) scale(1);}
+      100% {transform: rotate(30deg) scale(0.95);}
+    }
+
+    @keyframes leafSetBottom {
+      0% {transform: rotate(45deg) scale(0.9);}
+      50% {transform: rotate(35deg) scale(1);}
+      100% {transform: rotate(45deg) scale(0.9);}
     }
   }
 }
@@ -88,11 +133,12 @@ span, p{
 .content{
   position: absolute;
   width: 100%;
-  height: calc(100vh - 86px);
+  height: calc(100% - 66px);
   padding: 0 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  animation: fadeInScale 2s 1;
 
   #wrapper-akad, #wrapper-resepsi{
     position: relative;
@@ -152,6 +198,8 @@ span, p{
             height: 1px;
             background-color: $solid-bronze;
             margin-bottom: 4px;
+            align-self: end;
+            animation: slidePath 1.5s ease-in-out 1;
           }
 
           &::after{
@@ -160,6 +208,8 @@ span, p{
             height: 1px;
             background-color: $solid-bronze;
             margin-top: 4px;
+            align-self: end;
+            animation: slidePath 1.5s ease-in-out 1;
           }
         }
 
@@ -182,6 +232,7 @@ span, p{
             height: 1px;
             background-color: $solid-bronze;
             margin-bottom: 4px;
+            animation: slidePath 1.5s ease-in-out 1;
           }
 
           &::after{
@@ -190,7 +241,13 @@ span, p{
             height: 1px;
             background-color: $solid-bronze;
             margin-top: 4px;
+            animation: slidePath 1.5s ease-in-out 1;
           }
+        }
+
+        @keyframes slidePath {
+          0% { width: 0; }
+          100% { width: 100%; }
         }
       }
 
@@ -274,6 +331,17 @@ span, p{
 
     .custom-next{right: -32px;}
   }
+
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 }
 
 .nav-float{
@@ -281,7 +349,7 @@ span, p{
   left: 50%;
   transform: translateX(-50%);
   background-color: $custom-white;
-  position: fixed;
+  position: absolute;
   z-index: 2;
   padding: 12px;
   border-radius: 16px;
