@@ -99,7 +99,7 @@ span, p{
       position: relative;
 
       .couples-name{
-        font-family: 'Rochester', cursive;
+        font-family: 'Rochester', serif;
         color: $main-blue;
         margin-bottom: 8px;
       }
@@ -115,7 +115,7 @@ span, p{
     .woman-name{ animation: fadeDown 2s ease-in-out 1; }
 
     .separator{
-      font-family: 'Rochester', cursive;
+      font-family: 'Rochester', serif;
       color: $main-blue;
       margin: 12px 0;
       display: flex;

@@ -13,4 +13,7 @@ class FirsttemplateController < ApplicationController
 
   def gift
   end
+
+  def wishesFull
+  end
 end

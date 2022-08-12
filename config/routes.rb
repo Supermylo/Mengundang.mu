@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'firsttemplate/location'
   get 'firsttemplate/wishes'
   get 'firsttemplate/gift'
+  get 'firsttemplate/wishesFull'
 
   get 'secondtemplate/index'
   get 'secondtemplate/couple'
