@@ -10,7 +10,7 @@ module Mengundangmu
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
-    config.hosts << "essays-nationally-broadcasting-strain.trycloudflare.com"
+    config.hosts << "road-meal-doing-burn.trycloudflare.com"
 
     # Configuration for the application, engines, and railties goes here.
     #

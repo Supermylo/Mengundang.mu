@@ -1,8 +1,3 @@
-@font-face {
-  font-family: Marcha;
-  src: url(../../fonts/Marcha.otf);
-}
-
 $main-blue : #213A6A;
 $dark-blue : #0d2247;
 $solid-bronze : #AE9874;
@@ -10,11 +5,14 @@ $custom-gray : #9CA3AF;
 $custom-white : #F9FAFB;
 $gradient-bronze : linear-gradient(140deg,#9C8258 0%,#D7CBB8 50%, #B7A384 100%);
 
-html{height: 100%;}
-body{
+html, body{height: 100%;}
+
+.wrapper-custom{
   background: url("firsttemplate/bg-white-marble.jpg");
   background-size: cover;
   height: 100%;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 h1{font-size: 40px;}
@@ -36,9 +34,11 @@ span, p{
     position: absolute;
     width: 178px;
     height: 224px;
-    top: -80px;
-    left: -86px;
-    transform: scale(-0.6) scaleX(-1);
+    top: -90px;
+    left: -75px;
+    transform: scale(-0.6) scaleX(-1) rotate(-20deg);
+    z-index: 1;
+    animation: topLeftSet 1s ease-in-out 1;
 
     .flower-set{
       position: absolute;
@@ -46,6 +46,7 @@ span, p{
       width: 178px;
       bottom: 0;
       transform: rotate(30deg);
+      animation: flowerSetTopLeft 5s infinite;
     }
 
     .leaf-set{
@@ -55,6 +56,24 @@ span, p{
       bottom: 48px;
       left: 56px;
       transform: rotate(45deg);
+      animation: leafSetTopLeft 5s infinite;
+    }
+
+    @keyframes topLeftSet {
+      0% {left: -150px; opacity: 0;}
+      100% {left: -75px; opacity: 1;}
+    }
+
+    @keyframes flowerSetTopLeft {
+      0% {transform: rotate(30deg) scale(0.95);}
+      50% {transform: rotate(40deg) scale(1);}
+      100% {transform: rotate(30deg) scale(0.95);}
+    }
+
+    @keyframes leafSetTopLeft {
+      0% {transform: rotate(45deg) scale(0.9);}
+      50% {transform: rotate(55deg) scale(1);}
+      100% {transform: rotate(45deg) scale(0.9);}
     }
   }
   
@@ -62,9 +81,11 @@ span, p{
     position: absolute;
     width: 178px;
     height: 224px;
-    top: -80px;
-    right: -86px;
-    transform: scale(-0.6);
+    top: -90px;
+    right: -75px;
+    transform: scale(-0.6) scaleX(1) rotate(-20deg);
+    z-index: 1;
+    animation: topRightSet 1s ease-in-out 1;
 
     .flower-set{
       position: absolute;
@@ -72,6 +93,7 @@ span, p{
       width: 178px;
       bottom: 0;
       transform: rotate(30deg);
+      animation: flowerSetTopRight 5s infinite;
     }
 
     .leaf-set{
@@ -81,6 +103,24 @@ span, p{
       bottom: 48px;
       left: 56px;
       transform: rotate(45deg);
+      animation: leafSetTopRight 5s infinite;
+    }
+
+    @keyframes topRightSet {
+      0% {right: -150px; opacity: 0;}
+      100% {right: -75px; opacity: 1;}
+    }
+
+    @keyframes flowerSetTopRight {
+      0% {transform: rotate(40deg) scale(0.95);}
+      50% {transform: rotate(30deg) scale(1);}
+      100% {transform: rotate(40deg) scale(0.95);}
+    }
+
+    @keyframes leafSetTopRight {
+      0% {transform: rotate(55deg) scale(0.9);}
+      50% {transform: rotate(45deg) scale(1);}
+      100% {transform: rotate(55deg) scale(0.9);}
     }
   }
 }
@@ -91,18 +131,20 @@ span, p{
   align-items: center;
   justify-content: start;
   width: 100%;
-  height: calc(100vh - 86px);
+  height: calc(100% - 86px);
   padding: 36px 20px 16px 20px;
   position: absolute;
   right: 0;
+  animation: fadeIn 1.25s ease-in-out 1;
 
   .title{
-    font-family: 'Marcha', serif;
+    font-family: 'Rochester', cursive;
     color: $main-blue;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 
     &::after{
       content: "";
@@ -111,6 +153,12 @@ span, p{
       height: 1px;
       background: $gradient-bronze;
       margin-top: 8px;
+      animation: slidePath 1s ease-in-out 1;
+    }
+
+    @keyframes slidePath {
+      0% { width: 0; }
+      100% { width: 40px; }
     }
   }
 
@@ -181,6 +229,8 @@ span, p{
       border-radius: 8px;
       border: none;
 
+      .icon-custom{ width: 16px; }
+
       .text{
         margin-left: 8px;
       }
@@ -235,6 +285,17 @@ span, p{
       margin-bottom: 12px;
     }
   }
+
+  @keyframes fadeIn {
+    0% {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
 }
 
 .nav-float{
@@ -242,7 +303,7 @@ span, p{
   left: 50%;
   transform: translateX(-50%);
   background-color: $custom-white;
-  position: fixed;
+  position: absolute;
   z-index: 2;
   padding: 12px;
   border-radius: 16px;

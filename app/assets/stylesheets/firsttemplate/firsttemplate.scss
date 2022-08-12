@@ -1,8 +1,3 @@
-// @font-face {
-//   font-family: Marcha;
-//   src: url(../../fonts/Marcha.otf);
-// }
-
 $main-blue : #213A6A;
 $solid-bronze : #AE9874;
 $custom-gray : #9CA3AF;
@@ -134,7 +129,7 @@ span, p{
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: calc(100% - 66px);
+  height: calc(100% - 86px);
   justify-content: center;
   align-items: center;
 
@@ -188,7 +183,7 @@ span, p{
     animation: title 1s ease-in 1;
 
     .title,.sub-title{
-      font-family: 'Marcha', serif;
+      font-family: 'Rochester', cursive;
       color: $main-blue;
     }
 
@@ -201,17 +196,9 @@ span, p{
       align-items: center;
       margin-bottom: 8px;
     
-      &::before{
-        content: "Ifan";
-        font-size: 40px;
-        margin-right: 4px;
-      }
+      .man-name{ margin-right: 4px; }
 
-      &::after{
-        content: "Saskia";
-        font-size: 40px;
-        margin-left: 4px;
-      }
+      .woman-name{ margin-left: 4px; }
     }
 
     .dates{

@@ -1,8 +1,3 @@
-// @font-face {
-//   font-family: Marcha;
-//   src: url(../../fonts/Marcha.otf);
-// }
-
 $main-blue : #213A6A;
 $solid-bronze : #AE9874;
 $custom-gray : #9CA3AF;
@@ -29,13 +24,15 @@ span, p{
 }
 
 .content{
+  position: absolute;
   width: 100%;
-  height: calc(100% - 66px);
+  height: calc(100% - 86px);
   padding: 0 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: fadeIn 2s ease-in-out 1;
 
   .group-ornament{
     position: relative;
@@ -67,11 +64,6 @@ span, p{
       right: 0;
       z-index: 0;
       animation: rightFlower 5s infinite;
-    }
-
-    @keyframes ornamentSet {
-      0% {opacity: 0;}
-      100% {opacity: 100%;}
     }
 
     @keyframes mainFlower {
@@ -107,7 +99,7 @@ span, p{
       position: relative;
 
       .couples-name{
-        font-family: 'Marcha', serif;
+        font-family: 'Rochester', cursive;
         color: $main-blue;
         margin-bottom: 8px;
       }
@@ -123,14 +115,13 @@ span, p{
     .woman-name{ animation: fadeDown 2s ease-in-out 1; }
 
     .separator{
-      font-family: 'Marcha', serif;
+      font-family: 'Rochester', cursive;
       color: $main-blue;
       margin: 12px 0;
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 8px;
-      animation: fadeIn 2s ease-in-out 1;
 
       &::before{
         display: block;
@@ -208,6 +199,17 @@ span, p{
         opacity: 1;
         transform: translate(0, 0);
       }
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
     }
   }
 }

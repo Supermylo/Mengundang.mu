@@ -1,74 +1,78 @@
 - content_for :additional_styles
   = stylesheet_link_tag "firsttemplate/firsttemplate-gift"
 
-.container-full.h-100.position-relative.overflow-hidden
-  .row.m-0
-    section.content
-      .group-ornament
-        = image_tag("firsttemplate/main-flower.png", class: "main-flower")
-        = image_tag("firsttemplate/left-flower.png", class: "left-flower")
-        = image_tag("firsttemplate/right-flower.png", class: "right-flower")
-      .group-image
-        = image_tag("firsttemplate/love-bird.png", class: "bird-illustration")
-      .group-text
-        p.thanks.text-center
-          | Atas kehadiran dan do’a restu dari Bapak/Ibu/Saudara/i sekalian, kami mengucapkan terima kasih.
-          br
-          | Wassalamu’alaikum Wr. Wb.
-        span.sub-title.text-center Salam hangat dari kami,
-        h2.title.text-center &
-        a.gift-btn href="#popup-message"
-          i.fa-solid.fa-gift.custom-icon
-          span.custom-text Kirim Hadiah
-      .group-ornament
-        = image_tag("firsttemplate/main-flower.png", class: "main-flower")
-        = image_tag("firsttemplate/left-flower.png", class: "left-flower")
-        = image_tag("firsttemplate/right-flower.png", class: "right-flower")
-    section#popup-message
-      .custom-box
-        a.close-btn href="#"
-          i.fa-solid.fa-xmark.custom-icon
-        .offline-gift.text-center
-          p.prolog
-            | Tanpa mengurangi rasa hormat, bagi keluarga, sahabat, dan rekan yang ingin memberikan tanda kasih untuk kami, dapat melalui :
-          h5.title Kirim Hadiah Fisik
-          .giftbox-icon.text-center
-            = image_tag("firsttemplate/firsttemplate-giftbox-icon.png", class: "custom-img")
-          span.sub-title Rumah Pengantin Wanita
-          p.address
-            | Jl. Pasang No. 22, Kel. Cihapit, Kec. Bandung Wetan, Kota Bandung 40114
-          button.copy-btn
-            i.fa-solid.fa-copy.custom-icon
-            span.custom-text Salin
-        .online-gift.text-center
-          h5.title Kirim Hadiah Online
-          .bank-icon.text-center
-            = image_tag("firsttemplate/firsttemplate-logo-bca.png", class: "custom-img")
-          span.sub-title Rekening BCA - 4493812222
-          p.address a.n. PT Kharisma Indotech Pratama
-          button.copy-btn
-            i.fa-solid.fa-copy.custom-icon
-            span.custom-text Salin
-    section.nav-float
-      .row.custom-row.gx-0
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/firsttemplate/index"
-            i.fa-solid.fa-house.fa-lg.custom-icon
-            span.label Home
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/firsttemplate/couple"
-            i.fa-solid.fa-heart.fa-lg.custom-icon
-            span.label Pasangan
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/firsttemplate/location"
-            i.fa-solid.fa-location-dot.fa-lg.custom-icon
-            span.label Lokasi
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/firsttemplate/wishes"
-            i.fa-solid.fa-hands-praying.fa-lg.custom-icon
-            span.label Doa
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item.active href="#"
-            i.fa-solid.fa-gift.fa-lg.custom-icon
-            span.label Hadiah
+.wrapper-custom
+  .container-full.h-100.position-relative.overflow-hidden
+    .row.m-0
+      section.content
+        .group-ornament
+          = image_tag("firsttemplate/main-flower.png", class: "main-flower")
+          = image_tag("firsttemplate/left-flower.png", class: "left-flower")
+          = image_tag("firsttemplate/right-flower.png", class: "right-flower")
+        .group-image
+          = image_tag("firsttemplate/love-bird.png", class: "bird-illustration")
+        .group-text
+          .thanks.text-center
+            p.mb-0 Atas kehadiran dan do’a restu dari Bapak/ Ibu/ Saudara/i sekalian, kami mengucapkan terima kasih.
+            p.mb-0 Wassalamu’alaikum Wr. Wb.
+          .sub-title.text-center
+            span Salam hangat dari kami,
+          .title.text-center
+            h2.man-name Ifan
+            h2 &
+            h2.woman-name Saskia
+          a.gift-btn href="#popup-message"
+            i.fa-solid.fa-gift.custom-icon
+            span.custom-text Kirim Hadiah
+        .group-ornament
+          = image_tag("firsttemplate/main-flower.png", class: "main-flower")
+          = image_tag("firsttemplate/left-flower.png", class: "left-flower")
+          = image_tag("firsttemplate/right-flower.png", class: "right-flower")
+      section#popup-message
+        .custom-box
+          a.close-btn href="#"
+            i.fa-solid.fa-xmark.custom-icon
+          .offline-gift.text-center
+            p.prolog
+              | Tanpa mengurangi rasa hormat, bagi keluarga, sahabat, dan rekan yang ingin memberikan tanda kasih untuk kami, dapat melalui :
+            h5.title Kirim Hadiah Fisik
+            .giftbox-icon.text-center
+              = image_tag("firsttemplate/firsttemplate-giftbox-icon.png", class: "custom-img")
+            span.sub-title Rumah Pengantin Wanita
+            p.address
+              | Jl. Pasang No. 22, Kel. Cihapit, Kec. Bandung Wetan, Kota Bandung 40114
+            button.copy-btn
+              i.fa-solid.fa-copy.custom-icon
+              span.custom-text Salin
+          .online-gift.text-center
+            h5.title Kirim Hadiah Online
+            .bank-icon.text-center
+              = image_tag("firsttemplate/firsttemplate-logo-bca.png", class: "custom-img")
+            span.sub-title Rekening BCA - 4493812222
+            p.address a.n. PT Kharisma Indotech Pratama
+            button.copy-btn
+              i.fa-solid.fa-copy.custom-icon
+              span.custom-text Salin
+      section.nav-float
+        .row.custom-row.gx-0
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/firsttemplate/index"
+              i.fa-solid.fa-house.fa-lg.custom-icon
+              span.label Home
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/firsttemplate/couple"
+              i.fa-solid.fa-heart.fa-lg.custom-icon
+              span.label Pasangan
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/firsttemplate/location"
+              i.fa-solid.fa-location-dot.fa-lg.custom-icon
+              span.label Lokasi
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/firsttemplate/wishes"
+              i.fa-solid.fa-hands-praying.fa-lg.custom-icon
+              span.label Doa
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item.active href="#"
+              i.fa-solid.fa-gift.fa-lg.custom-icon
+              span.label Hadiah
             
