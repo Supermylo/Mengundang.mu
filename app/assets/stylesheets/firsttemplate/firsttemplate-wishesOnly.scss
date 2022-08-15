@@ -36,7 +36,7 @@ span, p{
     height: 224px;
     top: -90px;
     left: -75px;
-    transform: scale(-0.6) scaleX(-1) rotate(-20deg);
+    transform: scale(-0.8) scaleX(-1) rotate(-20deg);
     z-index: 1;
     animation: topLeftSet 1s ease-in-out 1;
 
@@ -83,7 +83,7 @@ span, p{
     height: 224px;
     top: -90px;
     right: -75px;
-    transform: scale(-0.6) scaleX(1) rotate(-20deg);
+    transform: scale(-0.8) scaleX(1) rotate(-20deg);
     z-index: 1;
     animation: topRightSet 1s ease-in-out 1;
 
@@ -129,7 +129,7 @@ span, p{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   width: 100%;
   height: calc(100% - 86px);
   padding: 36px 20px 16px 20px;
@@ -205,7 +205,7 @@ span, p{
       }
 
       textarea{
-        height: 56px;
+        height: 80px;
       }
 
       select{

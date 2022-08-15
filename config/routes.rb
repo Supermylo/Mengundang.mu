@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get 'firsttemplate/wishes'
   get 'firsttemplate/gift'
   get 'firsttemplate/wishesFull'
+  get 'firsttemplate/wishesAttendanceOnly'
+  get 'firsttemplate/wishesOnly'
+  get 'firsttemplate/wishesCommentOnly'
 
   get 'secondtemplate/index'
   get 'secondtemplate/couple'

@@ -1,0 +1,95 @@
+- content_for :additional_styles
+  = stylesheet_link_tag "firsttemplate/firsttemplate-wishesCommentOnly"
+
+.wrapper-custom
+  .container-full.h-100.position-relative.overflow-hidden
+    .row.gx-0
+      section.ornament
+        .top-left
+          = image_tag("firsttemplate/flower-set.png", class: "flower-set")
+          = image_tag("firsttemplate/leaf-set.png", class: "leaf-set")
+        .top-right
+          = image_tag("firsttemplate/flower-set.png", class: "flower-set")
+          = image_tag("firsttemplate/leaf-set.png", class: "leaf-set")
+      section.content
+        h2.title Ruang Pesan
+        form.custom-form
+          .group-input
+            label for="visitorname" Nama Anda
+            input#visitorname name="visitorname" type="text" placeholder="Masukan nama anda disini"
+          .group-input  
+            label for="wishes" Isi Pesan
+            textarea#wishes name="wishes" placeholder="Kirim pesan anda disini"
+          .two-group-input.d-flex.gap-3.d-none
+            .group-input.group-input-custom
+              label for="attendance" Konfirmasi Kehadiran
+              select#attendance name="attendance"
+                option value="Hadir" Hadir
+                option value="Tidak Hadir" Tidak Hadir
+            .group-input.group-input-custom
+              label for="attendance" Jumlah Hadir
+              span.wrapper-attendance
+                i.fa-solid.fa-minus.minus-icon onclick="countMin()"
+                input#totalAttendance name="totalAttendance" type="text" value="1"
+                i.fa-solid.fa-plus.plus-icon onclick="countPlus()"
+          button.custom-btn href="#"
+            i.fa-solid.fa-paper-plane.text-center.icon-custom
+            span.text Kirim
+        .wishlist
+          .group-wish
+            span.sender-name Aji
+            span.message
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu in convallis ultricies :)
+          .group-wish
+            span.sender-name Ahmad
+            span.message
+              | Ornare ultrices amet, commodo consequat, nulla at. Convallis in maecenas quam vel id at. Id scelerisque mattis pellentesque netus lacus suscipit. Purus, gravida tincidunt justo morbi accumsan, praesent.
+          .group-wish
+            span.sender-name Nasyar
+            span.message
+              | Ornare ultrices amet, commodo consequat, nulla at. Convallis in maecenas quam vel id at. Id scelerisque mattis pellentesque netus lacus suscipit. Purus, gravida tincidunt justo morbi accumsan, praesent.
+          .group-wish
+            span.sender-name Auliya
+            span.message
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu in convallis ultricies :)
+      section.nav-float
+        .row.custom-row.gx-0
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/firsttemplate/index"
+              i.fa-solid.fa-house.fa-lg.custom-icon
+              span.label Home
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/firsttemplate/couple"
+              i.fa-solid.fa-heart.fa-lg.custom-icon
+              span.label Pasangan
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/firsttemplate/location"
+              i.fa-solid.fa-location-dot.fa-lg.custom-icon
+              span.label Lokasi
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item.active href="#"
+              i.fa-solid.fa-comments.fa-lg.custom-icon
+              span.label Kirim Pesan
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/firsttemplate/gift"
+              i.fa-solid.fa-gift.fa-lg.custom-icon
+              span.label Hadiah
+
+javascript:
+
+  function countPlus(){
+    var input = document.getElementById("totalAttendance");
+
+    if( parseInt(input.value) > 0 ){
+      input.value = parseInt(input.value) + 1;
+    };
+  };
+
+  function countMin(){
+    var input = document.getElementById("totalAttendance");
+
+    if( parseInt(input.value) > 1 ){
+      input.value = parseInt(input.value) - 1;
+    };
+  }
+            

@@ -16,4 +16,13 @@ class FirsttemplateController < ApplicationController
 
   def wishesFull
   end
+
+  def wishesAttendanceOnly
+  end
+
+  def wishesOnly
+  end
+
+  def wishesCommentOnly
+  end
 end
