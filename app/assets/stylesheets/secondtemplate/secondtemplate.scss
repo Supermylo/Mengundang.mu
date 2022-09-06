@@ -3,10 +3,13 @@ $main-green : #545A29;
 $light-green : #81865F;
 $dark-brown : #9A7915;
 
-html{height: 100%;}
-body{
+html, body{height: 100%;}
+
+.wrapper-custom{
   background-color: $beige;
   height: 100%;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 h1{font-size: 40px;}
@@ -20,68 +23,18 @@ span, p{
 }
 
 .ornament{
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: 100vh;
-  
-  .wide-left{
-    position: absolute;
-    width: 162px;
-    height: 117px;
-    left: -8px;
-    bottom: 320px;
-
-    .big-left, .small-left{
-      position: absolute;
-      z-index: 1;
-    }
-
-    .big-left{
-      height: 154px;
-      transform: rotate(60deg);
-      left: 24px;
-    }
-
-    .small-left{
-      height: 98px;
-      transform: rotate(30deg);
-      bottom: 0;
-      left: -4px;
-    }
-  }
-
-  .wide-right{
-    position: absolute;
-    width: 162px;
-    height: 117px;
-    right: -8px;
-    bottom: 320px;
-
-    .big-right, .small-right{
-      position: absolute;
-      z-index: 1;
-    }
-
-    .big-right{
-      height: 154px;
-      transform: rotate(-60deg) scaleX(-1);
-      right: 24px;
-    }
-
-    .small-right{
-      height: 98px;
-      transform: rotate(-30deg) scaleX(-1);
-      bottom: 0;
-      right: -4px;
-    }
-  }
+  height: 100%;
 
   .sharp-left{
     position: absolute;
     width: 181px;
     height: 171px;
     left: 0;
-    bottom: 0;
+    bottom: -20px;
+    z-index: 2;
+    animation: fadeIn 2s ease-in-out 1;
 
     .sharp-shadow-left, .sharp-left-1, .sharp-left-2{
       position: absolute;
@@ -90,20 +43,40 @@ span, p{
     }
 
     .sharp-shadow-left{
-      bottom: 64px;
-      left: -28px;
+      bottom: 40px;
+      left: -40px;
+      animation: sharpLeafLeftShadow 5s ease-in-out infinite;
     }
 
     .sharp-left-1{
       transform: rotate(45deg);
       bottom: -30px;
       left: 20px;
+      animation: sharpLeafLeftOne 5s ease-in-out infinite;
     }
 
     .sharp-left-2{
       transform: rotate(15deg);
       bottom: -8px;
       left: -16px;
+      animation: sharpLeafLeftTwo 5s ease-in-out infinite;
+    }
+
+    @keyframes sharpLeafLeftOne {
+      0% { transform: scale(0.9) rotate(40deg); }
+      50% { transform: scale(1) rotate(55deg); }
+      100% { transform: scale(0.9) rotate(40deg); }
+    }
+
+    @keyframes sharpLeafLeftTwo {
+      0% { transform: scale(0.9) rotate(10deg); }
+      50% { transform: scale(1) rotate(25deg); }
+      100% { transform: scale(0.9) rotate(10deg); }
+    }
+    @keyframes sharpLeafLeftShadow {
+      0% { transform: scale(0.9) rotate(-5deg); }
+      50% { transform: scale(1) rotate(20deg); }
+      100% { transform: scale(0.9) rotate(-5deg); }
     }
   }
 
@@ -112,7 +85,9 @@ span, p{
     width: 181px;
     height: 171px;
     right: 0;
-    bottom: 0;
+    bottom: -20px;
+    z-index: 2;
+    animation: fadeIn 2s ease-in-out 1;
 
     .sharp-shadow-right, .sharp-right-1, .sharp-right-2{
       position: absolute;
@@ -121,39 +96,62 @@ span, p{
     }
 
     .sharp-shadow-right{
-      bottom: 64px;
-      right: -28px;
+      bottom: 40px;
+      right: -40px;
+      animation: sharpLeafRightShadow 5s ease-in-out infinite;
     }
 
     .sharp-right-1{
       transform: rotate(-45deg) scaleX(-1);
       bottom: -30px;
       right: 20px;
+      animation: sharpLeafRightOne 5s ease-in-out infinite;
     }
 
     .sharp-right-2{
       transform: rotate(-15deg) scaleX(-1);
       bottom: -8px;
       right: -16px;
+      animation: sharpLeafRightTwo 5s ease-in-out infinite;
+    }
+
+    @keyframes sharpLeafRightOne {
+      0% { transform: scale(1) rotate(-40deg) scaleX(-1); }
+      50% { transform: scale(0.9) rotate(-15deg) scaleX(-1); }
+      100% { transform: scale(1) rotate(-40deg) scaleX(-1); }
+    }
+
+    @keyframes sharpLeafRightTwo {
+      0% { transform: scale(1) rotate(-10deg) scaleX(-1); }
+      50% { transform: scale(0.9) rotate(5deg) scaleX(-1); }
+      100% { transform: scale(1) rotate(-10deg) scaleX(-1); }
+    }
+
+    @keyframes sharpLeafRightShadow {
+      0% { transform: scale(1) rotate(-15deg) scaleX(-1); }
+      50% { transform: scale(0.9) rotate(10deg) scaleX(-1); }
+      100% { transform: scale(1) rotate(-15deg) scaleX(-1); }
     }
   }
 }
 
 .content{
+  position: absolute;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 86px);
+  height: calc(100% - 86px);
   padding: 0;
 
   .group-image{
     display: flex;
-    height: 70%;
+    flex: 1 0 0;
     position: relative;
 
     .custom-image{
       width: 100%;
-      height: 100%;
+      height: 110%;
       object-fit: cover;
+      animation: scaleDown 10s ease-in-out 1;
     }
 
     .custom-brush{
@@ -161,17 +159,111 @@ span, p{
       z-index: 0;
       width: 100%;
       bottom: 0;
-      transform: translateY(65%);
+      transform: scale(1.5) rotate(8deg) translateY(60%);
+    }
+
+    .ornament-left{
+      position: absolute;
+      width: 162px;
+      height: 117px;
+      left: -8px;
+      bottom: 0;
+      z-index: 2;
+      animation: fadeIn 2s ease-in-out 1;
+  
+      .big-left, .small-left{
+        position: absolute;
+        z-index: 1;
+      }
+  
+      .big-left{
+        height: 154px;
+        transform: rotate(60deg);
+        left: 24px;
+        animation: bigRoundedLeafLeft 5s ease-in-out infinite;
+      }
+  
+      .small-left{
+        height: 98px;
+        transform: rotate(30deg);
+        bottom: 0;
+        left: -4px;
+        animation: smallRoundedLeafLeft 5s ease-in-out infinite;
+      }
+
+      @keyframes bigRoundedLeafLeft {
+        0% { transform: scale(0.95) rotate(60deg); }
+        50% { transform: scale(1) rotate(70deg); }
+        100% { transform: scale(0.95) rotate(60deg); }
+      }
+
+      @keyframes smallRoundedLeafLeft {
+        0% { transform: scale(0.95) rotate(30deg); }
+        50% { transform: scale(1) rotate(45deg); }
+        100% { transform: scale(0.95) rotate(30deg); }
+      }
+    }
+  
+    .ornament-right{
+      position: absolute;
+      width: 162px;
+      height: 117px;
+      right: -15px;
+      bottom: 0;
+      z-index: 2;
+      animation: fadeIn 2s ease-in-out 1;
+  
+      .big-right, .small-right{
+        position: absolute;
+        z-index: 1;
+      }
+  
+      .big-right{
+        height: 154px;
+        transform: rotate(-60deg) scaleX(-1);
+        right: 24px;
+        animation: bigRoundedLeafRight 5s ease-in-out infinite;
+      }
+  
+      .small-right{
+        height: 98px;
+        transform: rotate(-30deg) scaleX(-1);
+        bottom: 0;
+        right: -4px;
+        animation: smallRoundedLeafRight 5s ease-in-out infinite;
+      }
+
+      @keyframes bigRoundedLeafRight {
+        0% { transform: scale(1) rotate(-60deg) scaleX(-1); }
+        50% { transform: scale(0.95) rotate(-45deg) scaleX(-1); }
+        100% { transform: scale(1) rotate(-60deg) scaleX(-1); }
+      }
+
+      @keyframes smallRoundedLeafRight {
+        0% { transform: scale(1) rotate(-40deg) scaleX(-1); }
+        50% { transform: scale(0.95) rotate(-25deg) scaleX(-1); }
+        100% { transform: scale(1) rotate(-40deg) scaleX(-1); }
+      }
+    }
+
+    @keyframes scaleDown {
+      0% {
+        opacity: 0;
+        height: 120%;
+      }
+      25% { opacity: 1; }
+      100% { height: 110%; }
     }
   }
 
   .group-text{
     position: relative;
-    flex: 1 0 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 25%;
+    animation: fadeInScale 2s ease-in-out 1;
 
     .title,.sub-title{
       font-family: 'Dancing Script', serif;
@@ -179,24 +271,16 @@ span, p{
       color: $main-green;
     }
 
-    .sub-title{margin-bottom: 4px;}
+    .sub-title{
+      margin-bottom: 0;
+      animation: slideUp 1.5s ease-in-out 1;
+    }
     
     .title{
       display: flex;
+      gap: 8px;
       align-items: center;
-      margin-bottom: 12px;
-    
-      &::before{
-        content: "Ifan";
-        font-size: 44px;
-        margin-right: 8px;
-      }
-
-      &::after{
-        content: "Saskia";
-        font-size: 44px;
-        margin-left: 8px;
-      }
+      margin-bottom: 8px;
     }
 
     .date{
@@ -205,6 +289,41 @@ span, p{
       letter-spacing: 2.5px;
       text-transform: uppercase;
       color: $dark-brown;
+      margin-bottom: 24px;
+      animation: slideDown 1.5s ease-in-out 1
+    }
+
+    @keyframes slideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(28px);
+      }
+      100% {
+        opacity: 1; 
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-28px);
+      }
+      100% {
+        opacity: 1; 
+        transform: translateY(0);
+      }
+    }
+  }
+
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
     }
   }
 }
@@ -214,7 +333,7 @@ span, p{
   left: 50%;
   transform: translateX(-50%);
   background-color: $main-green;
-  position: fixed;
+  position: absolute;
   z-index: 2;
   padding: 12px;
   border-radius: 50rem;
@@ -245,5 +364,14 @@ span, p{
         width: 24px;
       }
     }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

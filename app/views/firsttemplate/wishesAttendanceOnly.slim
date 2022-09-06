@@ -30,7 +30,7 @@
               label for="attendance" Jumlah Hadir
               span.wrapper-attendance
                 i.fa-solid.fa-minus.minus-icon onclick="countMin()"
-                input#totalAttendance name="totalAttendance" type="number" value="1"
+                input#totalAttendance name="totalAttendance" type="text" value="1"
                 i.fa-solid.fa-plus.plus-icon onclick="countPlus()"
           button.custom-btn href="#"
             i.fa-solid.fa-paper-plane.text-center.icon-custom
@@ -80,7 +80,7 @@ javascript:
   function countPlus(){
     var input = document.getElementById("totalAttendance");
 
-    if( parseInt(input.value) > 0 ){
+    if( parseInt(input.value) > 0 && parseInt(input.value) < 3 ){
       input.value = parseInt(input.value) + 1;
     };
   };
@@ -91,5 +91,5 @@ javascript:
     if( parseInt(input.value) > 1 ){
       input.value = parseInt(input.value) - 1;
     };
-  }
+  } 
             

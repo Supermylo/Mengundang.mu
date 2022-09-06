@@ -1,80 +1,81 @@
 - content_for :additional_styles
   = stylesheet_link_tag "secondtemplate/secondtemplate-couple"
 
-.container-full.h-100.position-relative.overflow-hidden
-  .row.m-0
-    section.ornament
-      .frame
-      .sharp-left
-        = image_tag("secondtemplate/sharp-leaves-shadow.png", class: "sharp-shadow-left")
-        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-left-1")
-        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-left-2")
-      .sharp-right  
-        = image_tag("secondtemplate/sharp-leaves-shadow.png", class: "sharp-shadow-right")
-        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-right-1")
-        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-right-2")
-    section.content
-      .group-image
-        /! Main Flower
-        = image_tag("secondtemplate/main-flower.png", class: "main-flower")
-        /! Left Leaves
-        = image_tag("secondtemplate/wide-leaves.png", class: "big-wide-left")
-        = image_tag("secondtemplate/wide-leaves.png", class: "small-wide-left")
-        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-leaves-left")
-        /! Right Leaves
-        = image_tag("secondtemplate/wide-leaves.png", class: "big-wide-right")
-        = image_tag("secondtemplate/wide-leaves.png", class: "small-wide-right")
-        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-leaves-right")
-      .group-text
-        p.prolog.text-center
-          | Assalamu’alaikum Wr. Wb.
-          br
-          | Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan kami.
-        .groom-set
-          .wrapper-image
-            = image_tag("sixthtemplate/groom-image.png", class: "custom-image")
-          .wrapper-name
-            h3.couples-name.text-center Ifan Seventeen
-            span.parents-name.text-center Putra Bapak Fulan & Ibu Fulanah
-        .separator
-          = image_tag("secondtemplate/wedding-rings.png")
-        .bride-set
-          .wrapper-image
-            = image_tag("sixthtemplate/bride-image.png", class: "custom-image")
-          .wrapper-name
-            h3.couples-name.text-center Saskia Sixteen
-            span.parents-name.text-center Putri Bapak Fulan & Ibu Fulanah
-      .group-image
-        /! Main Flower
-        = image_tag("secondtemplate/main-flower.png", class: "main-flower")
-        /! Left Leaves
-        = image_tag("secondtemplate/wide-leaves.png", class: "big-wide-left")
-        = image_tag("secondtemplate/wide-leaves.png", class: "small-wide-left")
-        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-leaves-left")
-        /! Right Leaves
-        = image_tag("secondtemplate/wide-leaves.png", class: "big-wide-right")
-        = image_tag("secondtemplate/wide-leaves.png", class: "small-wide-right")
-        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-leaves-right")
-    section.nav-float
-      .row.custom-row.gx-0
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/secondtemplate/index"
-            i.fa-solid.fa-house.fa-lg.custom-icon
-            span.label Home
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item.active href="#"
-            i.fa-solid.fa-heart.fa-lg.custom-icon
-            span.label Pasangan
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/secondtemplate/location"
-            i.fa-solid.fa-location-dot.fa-lg.custom-icon
-            span.label Lokasi
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/secondtemplate/wishes"
-            i.fa-solid.fa-hands-praying.fa-lg.custom-icon
-            span.label Doa
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/secondtemplate/gift"
-            i.fa-solid.fa-gift.fa-lg.custom-icon
-            span.label Hadiah
+.wrapper-custom
+  .container-full.h-100.position-relative.overflow-hidden
+    .row.m-0.h-100
+      section.ornament
+        .frame
+        .sharp-left
+          = image_tag("secondtemplate/sharp-leaves-shadow.png", class: "sharp-shadow-left")
+          = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-left-1")
+          = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-left-2")
+        .sharp-right  
+          = image_tag("secondtemplate/sharp-leaves-shadow.png", class: "sharp-shadow-right")
+          = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-right-1")
+          = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-right-2")
+      section.content
+        .group-image
+          .main-flower
+            = image_tag("secondtemplate/main-flower.png", class: "flower")
+          .left-leaves
+            = image_tag("secondtemplate/wide-leaves.png", class: "big-rounded-leaf")
+            = image_tag("secondtemplate/wide-leaves.png", class: "small-rounded-leaf")
+            = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-leaves-leaf")
+          .right-leaves
+            = image_tag("secondtemplate/wide-leaves.png", class: "big-rounded-leaf")
+            = image_tag("secondtemplate/wide-leaves.png", class: "small-rounded-leaf")
+            = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-leaves-leaf")
+        .group-text
+          p.prolog.text-center
+            | Assalamu’alaikum Wr. Wb.
+            br
+            | Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan kami.
+          .groom-set
+            .wrapper-image
+              = image_tag("sixthtemplate/groom-image.png", class: "custom-image")
+            .wrapper-name
+              h3.couples-name.text-center Ifan Seventeen
+              span.parents-name.text-center Putra Bapak Fulan & Ibu Fulanah
+          .separator
+            = image_tag("secondtemplate/wedding-rings.png")
+          .bride-set
+            .wrapper-image
+              = image_tag("sixthtemplate/bride-image.png", class: "custom-image")
+            .wrapper-name
+              h3.couples-name.text-center Saskia Sixteen
+              span.parents-name.text-center Putri Bapak Fulan & Ibu Fulanah
+        .group-image
+          .main-flower
+            = image_tag("secondtemplate/main-flower.png", class: "flower")
+          .left-leaves
+            = image_tag("secondtemplate/wide-leaves.png", class: "big-rounded-leaf")
+            = image_tag("secondtemplate/wide-leaves.png", class: "small-rounded-leaf")
+            = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-leaves-leaf")
+          .right-leaves
+            = image_tag("secondtemplate/wide-leaves.png", class: "big-rounded-leaf")
+            = image_tag("secondtemplate/wide-leaves.png", class: "small-rounded-leaf")
+            = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-leaves-leaf")
+      section.nav-float
+        .row.custom-row.gx-0
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/secondtemplate/index"
+              i.fa-solid.fa-house.fa-lg.custom-icon
+              span.label Home
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item.active href="#"
+              i.fa-solid.fa-heart.fa-lg.custom-icon
+              span.label Pasangan
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/secondtemplate/location"
+              i.fa-solid.fa-location-dot.fa-lg.custom-icon
+              span.label Lokasi
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/secondtemplate/wishes"
+              i.fa-solid.fa-hands-praying.fa-lg.custom-icon
+              span.label Doa
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/secondtemplate/gift"
+              i.fa-solid.fa-gift.fa-lg.custom-icon
+              span.label Hadiah
             

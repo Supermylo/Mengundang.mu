@@ -66,6 +66,10 @@ span, p{
       animation: rightFlower 5s infinite;
     }
 
+    @media (max-height: 675px) {
+      transform: scale(0.8);
+    }
+
     @keyframes mainFlower {
       0% {transform: rotate(10deg) scale(1);}
       50% {transform: rotate(-5deg) scale(1.1);}
@@ -141,6 +145,10 @@ span, p{
         animation: slidePath 2s ease-in-out 1;
         transform: scaleX(-1);
       }
+    }
+
+    @media (max-height: 675px) {
+      margin: 16px 0;
     }
 
     @keyframes fadeInScale {

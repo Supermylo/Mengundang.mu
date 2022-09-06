@@ -2,6 +2,7 @@ $beige : #F3EFE3;
 $main-green : #545A29;
 $light-green : #81865F;
 $dark-brown : #9A7915;
+$custom-white : #F9FAFB;
 
 html, body{height: 100%;}
 
@@ -28,6 +29,7 @@ span, p{
   height: 100%;
   display: flex;
   justify-content: center;
+  animation: fadeIn 3s ease-in-out 1;
 
   .frame{
     position: absolute;
@@ -36,131 +38,16 @@ span, p{
     border: 1px solid $main-green;
     border-radius: 20px;
     top: 20px;
-    animation: fadeIn 2s ease-in-out 1;
   }
 
-  .sharp-left{
-    position: absolute;
-    width: 181px;
-    height: 171px;
-    left: 0;
-    bottom: -15px;
-
-    .sharp-shadow-left, .sharp-left-1, .sharp-left-2{
-      position: absolute;
-      z-index: 1;
-      height: 146px;
-    }
-
-    .sharp-shadow-left{
-      bottom: 40px;
-      left: -28px;
-      animation: bottomLeafLeftShadow 5s ease-in-out infinite;
-    }
-
-    .sharp-left-1{
-      transform: rotate(45deg);
-      bottom: -30px;
-      left: 20px;
-      animation: bottomLeafLeftOne 5s ease-in-out infinite;
-    }
-
-    .sharp-left-2{
-      transform: rotate(15deg);
-      bottom: -8px;
-      left: -16px;
-      animation: bottomLeafLeftTwo 5s ease-in-out infinite;
-    }
-
-    @keyframes bottomLeafLeftOne {
-      0% { transform: rotate(45deg) scale(0.9); }
-      50% { transform: rotate(30deg) scale(1);}
-      100% { transform: rotate(45deg) scale(0.9); }
-    }
-
-    @keyframes bottomLeafLeftTwo {
-      0% { transform: rotate(15deg) scale(0.9); }
-      50% { transform: rotate(0deg) scale(1);}
-      100% { transform: rotate(15deg) scale(0.9); }
-    }
-
-    @keyframes bottomLeafLeftShadow {
-      0% { transform: rotate(0deg) scale(0.9); }
-      50% { transform: rotate(-15deg) scale(1);}
-      100% { transform: rotate(0deg) scale(0.9); }
-    }
-  }
-
-  .sharp-right{
-    position: absolute;
-    width: 181px;
-    height: 171px;
-    right: 0;
-    bottom: -15px;
-
-    .sharp-shadow-right, .sharp-right-1, .sharp-right-2{
-      position: absolute;
-      z-index: 1;
-      height: 146px;
-    }
-
-    .sharp-shadow-right{
-      bottom: 40px;
-      right: -28px;
-      animation: bottomLeafRightShadow 5s ease-in-out infinite;
-    }
-
-    .sharp-right-1{
-      transform: rotate(-45deg) scaleX(-1);
-      bottom: -30px;
-      right: 20px;
-      animation: bottomLeafRightOne 5s ease-in-out infinite;
-    }
-
-    .sharp-right-2{
-      transform: rotate(-15deg) scaleX(-1);
-      bottom: -8px;
-      right: -16px;
-      animation: bottomLeafRightTwo 5s ease-in-out infinite;
-    }
-
-    @keyframes bottomLeafRightOne {
-      0% { transform: rotate(-45deg) scale(0.9) scaleX(-1);}
-      50% { transform: rotate(-30deg) scale(1) scaleX(-1);}
-      100% { transform: rotate(-45deg) scale(0.9) scaleX(-1);}
-    }
-
-    @keyframes bottomLeafRightTwo {
-      0% { transform: rotate(-15deg) scale(0.9) scaleX(-1);}
-      50% { transform: rotate(0deg) scale(1) scaleX(-1);}
-      100% { transform: rotate(-15deg) scale(0.9) scaleX(-1);}
-    }
-
-    @keyframes bottomLeafRightShadow {
-      0% { transform: rotate(0) scale(0.9) scaleX(-1);}
-      50% { transform: rotate(15deg) scale(1) scaleX(-1);}
-      100% { transform: rotate(0deg) scale(0.9) scaleX(-1);}
-    }
-  }
-}
-
-.content{
-  width: 100%;
-  height: calc(100% - 86px);
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  animation: fadeIn 3s ease-in-out 1;
-
-  .group-image{
+  .flower-set{
     display: flex;
     align-items: center;
     height: 76px;
     width: 190px;
     position: relative;
+    transform: translateY(-16px);
+    z-index: 1;
 
     .main-flower, .left-leaves, .right-leaves{
       position: absolute;
@@ -243,110 +130,257 @@ span, p{
       transform: scaleX(-1);
     }
   }
-  
-  .group-text{
-    padding: 0 24px;
 
-    .prolog{
-      color: $light-green;
-      margin: 20px 0;
+  .bottom-left{
+    position: absolute;
+    width: 181px;
+    height: 171px;
+    left: 0;
+    bottom: -15px;
+
+    .sharp-shadow-left, .sharp-left-1, .sharp-left-2{
+      position: absolute;
+      z-index: 1;
+      height: 146px;
     }
 
-    .groom-set, .bride-set{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
+    .sharp-shadow-left{
+      bottom: 40px;
+      left: -28px;
+      animation: bottomLeafLeftShadow 5s ease-in-out infinite;
+    }
 
-      .wrapper-image{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        width: 72px;
-        height: 72px;
+    .sharp-left-1{
+      transform: rotate(45deg);
+      bottom: -30px;
+      left: 20px;
+      animation: bottomLeafLeftOne 5s ease-in-out infinite;
+    }
 
-        .custom-image{
-          width: 70px;
-          height: 70px;
-          object-fit: cover;
-          position: absolute;
-        }
+    .sharp-left-2{
+      transform: rotate(15deg);
+      bottom: -8px;
+      left: -16px;
+      animation: bottomLeafLeftTwo 5s ease-in-out infinite;
+    }
 
-        &::before{
-          content: "";
-          background: url("secondtemplate/couple-brush.png");
-          background-size: 72px;
-          width: 72px;
-          height: 72px;
-          position: absolute;
-          z-index: 1;
-        }
+    @keyframes bottomLeafLeftOne {
+      0% { transform: rotate(45deg) scale(0.9); }
+      50% { transform: rotate(30deg) scale(1);}
+      100% { transform: rotate(45deg) scale(0.9); }
+    }
+
+    @keyframes bottomLeafLeftTwo {
+      0% { transform: rotate(15deg) scale(0.9); }
+      50% { transform: rotate(0deg) scale(1);}
+      100% { transform: rotate(15deg) scale(0.9); }
+    }
+
+    @keyframes bottomLeafLeftShadow {
+      0% { transform: rotate(0deg) scale(0.9); }
+      50% { transform: rotate(-15deg) scale(1);}
+      100% { transform: rotate(0deg) scale(0.9); }
+    }
+  }
+
+  .bottom-right{
+    position: absolute;
+    width: 181px;
+    height: 171px;
+    right: 0;
+    bottom: -15px;
+
+    .sharp-shadow-right, .sharp-right-1, .sharp-right-2{
+      position: absolute;
+      z-index: 1;
+      height: 146px;
+    }
+
+    .sharp-shadow-right{
+      bottom: 40px;
+      right: -28px;
+      animation: bottomLeafRightShadow 5s ease-in-out infinite;
+    }
+
+    .sharp-right-1{
+      transform: rotate(-45deg) scaleX(-1);
+      bottom: -30px;
+      right: 20px;
+      animation: bottomLeafRightOne 5s ease-in-out infinite;
+    }
+
+    .sharp-right-2{
+      transform: rotate(-15deg) scaleX(-1);
+      bottom: -8px;
+      right: -16px;
+      animation: bottomLeafRightTwo 5s ease-in-out infinite;
+    }
+
+    @keyframes bottomLeafRightOne {
+      0% { transform: rotate(-45deg) scale(0.9) scaleX(-1);}
+      50% { transform: rotate(-30deg) scale(1) scaleX(-1);}
+      100% { transform: rotate(-45deg) scale(0.9) scaleX(-1);}
+    }
+
+    @keyframes bottomLeafRightTwo {
+      0% { transform: rotate(-15deg) scale(0.9) scaleX(-1);}
+      50% { transform: rotate(0deg) scale(1) scaleX(-1);}
+      100% { transform: rotate(-15deg) scale(0.9) scaleX(-1);}
+    }
+
+    @keyframes bottomLeafRightShadow {
+      0% { transform: rotate(0) scale(0.9) scaleX(-1);}
+      50% { transform: rotate(15deg) scale(1) scaleX(-1);}
+      100% { transform: rotate(0deg) scale(0.9) scaleX(-1);}
+    }
+  }
+}
+
+.content{
+  width: 100%;
+  height: calc(100% - 86px);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  animation: fadeIn 3s ease-in-out 1;
+
+  .title{
+    font-family: 'Dancing Script', serif;
+    font-weight: 700;
+    color: $main-green;
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+
+  .custom-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+
+    .group-input{
+
+      label, input, textarea, select{
+        font-family: 'DM Sans', sans-serif;
+        font-size: 12px;
       }
 
-      .wrapper-name{
+      label{
+        display: block;
+        font-weight: 700;
+        color: $main-green;
+      }
 
-        .couples-name{
-          font-family: 'Dancing Script', serif;
-          font-weight: 700;
-          color: $main-green;
-          margin-bottom: 4px;
-        }
+      input, textarea, select{
+        width: 100%;
+        font-weight: 500;
+        background: none;
+        padding-bottom: 4px;
+        border: none;
+        border-bottom: 1px solid #DCDFC5;
+        color: $main-green;
 
-        .parents-name{
-          display: block;
-          font-family: 'Noto Serif', serif;
+        &:focus{
           font-weight: 400;
-          color: $dark-brown;
+          outline: none;
+        }
+      }
+
+      textarea{height: 56px;}
+
+      select{
+        color: $main-green;
+        font-weight: 500;
+      }
+
+      ::placeholder{
+        font-weight: 400;
+      }
+    }
+
+    .group-input-custom{
+      flex: 1 0 0;
+
+      .wrapper-attendance{
+        display: flex;
+        align-items: center;
+
+        .minus-icon, .plus-icon{
+          width: 16px;
+          color: $main-green;
+        }
+
+        #totalAttendance{
+          text-align: center;
+          margin: 0 8px;
         }
       }
     }
 
-    .groom-set{
-      position: relative;
-      animation: slideUp 2s ease-in-out 1;
-    }
-
-    .bride-set{
-      position: relative;
-      flex-direction: row-reverse;
-      margin-bottom: 24px;
-      animation: slideDown 2s ease-in-out 1;
-    }
-
-    .separator{
-      margin: 12px 0;
-      display: flex;
+    .custom-btn{
+      display: inline-flex;
       justify-content: center;
       align-items: center;
-      gap: 12px;
+      padding: 8px 16px;
+      background-color: $dark-brown;
+      text-decoration: none;
+      color: $custom-white;
+      font-weight: 600;
+      border-radius: 24px;
+      border: none;
 
-      &::before{
-        display: block;
-        content: "";
-        width: 80px;
-        height: 1px;
-        background-image: linear-gradient(to right, rgba(129, 134, 95, 0), rgba(129, 134, 95, 1));
-        animation: slidePath 2s ease-in-out 1;
+      .icon-custom{ width: 16px; }
+
+      .text{
+        margin-left: 8px;
       }
 
-      &::after{
+      &:hover{background-color: #7e5f05;}
+    }
+  }
+
+  .wishlist{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    .group-wish{
+
+      .sender-name{
+        font-weight: 600;
+        color: $main-green;
+        display: flex;
+        align-items: center;
+        margin-bottom: 4px;
+
+        &::after{
+          content: "Hadir";
+          height: 100%;
+          color: $custom-white;
+          font-size: 7px;
+          font-weight: 400;
+          background-color: $dark-brown;
+          padding: 2px 8px;
+          margin-left: 8px;
+          border-radius: 16px;
+        }
+      }
+
+      .message{
         display: block;
-        content: "";
-        width: 80px;
-        height: 1px;
-        background-image: linear-gradient(to left, rgba(129, 134, 95, 0), rgba(129, 134, 95, 1));
+        color: $light-green;
+        margin-bottom: 8px;
       }
     }
 
-    @keyframes slideUp {
-      0% { bottom: -60px; }
-      100% { bottom: 0; }
-    }
-
-    @keyframes slideDown {
-      0% { top: -60px; }
-      100% { top: 0; }
+    .group-wish:not(:last-child){
+      border-bottom: 1px solid #DCDFC5;
+      margin-bottom: 12px;
     }
   }
 }
@@ -380,7 +414,7 @@ span, p{
       align-items: center;
       gap: 4px;
 
-      &.active{color: #fff;}
+      &.active{color: $custom-white;}
 
       .custom-icon{
         display: inline-block;

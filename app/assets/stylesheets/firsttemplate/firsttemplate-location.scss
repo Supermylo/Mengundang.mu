@@ -59,9 +59,23 @@ span, p{
       animation: leafSetTop 5s infinite;
     }
 
+    @media (max-height: 675px) {
+      top: -50px;
+      left: -70px;
+      transform: scale(-0.9) scaleX(-1) rotate(-20deg);
+    }
+
     @keyframes topSet {
       0% {left: -210px; opacity: 0;}
       100% {left: -40px; opacity: 1;}
+    }
+
+    @media (max-height: 675px) {
+
+      @keyframes topSet {
+        0% {left: -175px; opacity: 0;}
+        100% {left: -70px; opacity: 1;}
+      }
     }
 
     @keyframes flowerSetTop {
@@ -106,9 +120,23 @@ span, p{
       animation: leafSetBottom 5s infinite;
     }
 
+    @media (max-height: 675px) {
+      bottom: -40px;
+      right: -70px;
+      transform: scale(0.9) scaleX(-1);
+    }
+
     @keyframes bottomSet {
       0% {right: -200px; opacity: 0;}
       100% {right: -40px; opacity: 1;}
+    }
+
+    @media (max-height: 675px) {
+
+      @keyframes bottomSet {
+        0% {right: -200px; opacity: 0;}
+        100% {right: -70px; opacity: 1;}
+      }
     }
 
     @keyframes flowerSetBottom {

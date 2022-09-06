@@ -1,5 +1,5 @@
 - content_for :additional_styles
-  = stylesheet_link_tag "secondtemplate/secondtemplate-wishes"
+  = stylesheet_link_tag "secondtemplate/secondtemplate-wishesFull"
 
 .wrapper-custom
   .container-full.h-100.position-relative.overflow-hidden
@@ -28,17 +28,24 @@
       section.content
         h2.title Kirim Doa
         form.custom-form
-          .group-input
+          .group-input.group-input-custom
             label for="visitorname" Nama Anda
             input#visitorname name="visitorname" type="text" placeholder="Masukan nama anda disini"
-          .group-input  
+          .group-input.group-input-custom  
             label for="wishes" Nama Anda
             textarea#wishes name="wishes" placeholder="Kirim doa terbaik anda disini"
-          .group-input
-            label for="attendance" Konfirmasi Kehadiran
-            select#attendance name="attendance"
-              option value="Hadir" Hadir
-              option value="Tidak Hadir" Tidak Hadir
+          .two-group-input.d-flex.gap-3
+            .group-input.group-input-custom
+              label for="attendance" Konfirmasi Kehadiran
+              select#attendance name="attendance"
+                option value="Hadir" Hadir
+                option value="Tidak Hadir" Tidak Hadir
+            .group-input.group-input-custom
+              label for="attendance" Jumlah Hadir
+              span.wrapper-attendance
+                i.fa-solid.fa-minus.minus-icon onclick="countMin()"
+                input#totalAttendance name="totalAttendance" type="text" value="1"
+                i.fa-solid.fa-plus.plus-icon onclick="countPlus()"
           button.custom-btn href="#"
             i.fa-solid.fa-paper-plane.text-center.icon-custom
             span.text Kirim Doa
@@ -81,4 +88,21 @@
             a.nav-item href="/secondtemplate/gift"
               i.fa-solid.fa-gift.fa-lg.custom-icon
               span.label Hadiah
-            
+
+javascript:
+
+  function countPlus(){
+    var input = document.getElementById("totalAttendance");
+
+    if( parseInt(input.value) > 0 && parseInt(input.value) < 3 ){
+      input.value = parseInt(input.value) + 1;
+    };
+  };
+
+  function countMin(){
+    var input = document.getElementById("totalAttendance");
+
+    if( parseInt(input.value) > 1 ){
+      input.value = parseInt(input.value) - 1;
+    };
+  }            

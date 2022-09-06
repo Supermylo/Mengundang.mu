@@ -1,98 +1,102 @@
 - content_for :additional_styles
   = stylesheet_link_tag "secondtemplate/secondtemplate-gift"
 
-.container-full.h-100.position-relative.overflow-hidden
-  .row.m-0
-    section.ornament
-      .wide-left
-        = image_tag("secondtemplate/wide-leaves.png", class: "big-left")
-        = image_tag("secondtemplate/wide-leaves.png", class: "small-left")
-      .wide-right  
-        = image_tag("secondtemplate/wide-leaves.png", class: "big-right")
-        = image_tag("secondtemplate/wide-leaves.png", class: "small-right")
-      .sharp-left
-        = image_tag("secondtemplate/sharp-leaves-shadow.png", class: "sharp-shadow-left")
-        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-left-1")
-        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-left-2")
-      .sharp-right  
-        = image_tag("secondtemplate/sharp-leaves-shadow.png", class: "sharp-shadow-right")
-        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-right-1")
-        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-right-2")
-    section.content
-      .group-image
-        #carouselExampleControls.carousel.slide.w-100 data-bs-ride="carousel" data-bs-interval="false" 
-          .carousel-inner.custom-inner
-            .carousel-item.custom-item.active
-              = image_tag("secondtemplate/big-image.png", class: "custom-image")
-            .carousel-item.custom-item
-              = image_tag("secondtemplate/big-image.png", class: "custom-image")
-            button.carousel-control-prev.custom-prev data-bs-slide="prev" data-bs-target="#carouselExampleControls" type="button" 
-              span.carousel-control-prev-icon.custom-btn aria-hidden="true" 
-                i.fa-solid.fa-chevron-left.custom-icon
-              span.visually-hidden Previous
-            button.carousel-control-next.custom-next data-bs-slide="next" data-bs-target="#carouselExampleControls" type="button" 
-              span.carousel-control-next-icon.custom-btn aria-hidden="true" 
-                i.fa-solid.fa-chevron-right.custom-icon
-              span.visually-hidden Next
-          .carousel-indicators.custom-indicators
-            button.indicator-btn.active aria-current="true" aria-label=("Slide 1") data-bs-slide-to="0" data-bs-target="#carouselExampleControls" type="button" 
-            button.indicator-btn aria-label=("Slide 2") data-bs-slide-to="1" data-bs-target="#carouselExampleControls" type="button" 
-        = image_tag("secondtemplate/big-brush.png", class: "custom-brush")
-      .group-text  
-        p.thanks.text-center
-          | Atas kehadiran dan do’a restu dari Bapak/Ibu/Saudara/i sekalian, kami mengucapkan terima kasih.
-          br
-          | Wassalamu’alaikum Wr. Wb.
-        span.sub-title.text-center Salam hangat dari kami,
-        h2.title.text-center &
-        a.gift-btn href="#popup-message"
-          i.fa-solid.fa-gift.custom-icon
-          span.custom-text Kirim Hadiah
-    section#popup-message
-      .custom-box
-        a.close-btn href="#"
-          i.fa-solid.fa-xmark.custom-icon
-        .offline-gift.text-center
-          p.prolog
-            | Tanpa mengurangi rasa hormat, bagi keluarga, sahabat, dan rekan yang ingin memberikan tanda kasih untuk kami, dapat melalui :
-          h5.title Kirim Hadiah Fisik
-          .giftbox-icon.text-center
-            = image_tag("sixthtemplate/giftbox-icon.png", class: "custom-img")
-          span.sub-title Rumah Pengantin Wanita
-          p.address
-            | Jl. Pasang No. 22, Kel. Cihapit, Kec. Bandung Wetan, Kota Bandung 40114
-          button.copy-btn
-            i.fa-solid.fa-copy.custom-icon
-            span.custom-text Salin
-        .online-gift.text-center
-          h5.title Kirim Hadiah Online
-          .bank-icon.text-center
-            = image_tag("sixthtemplate/logo-bca.png", class: "custom-img")
-          span.sub-title Rekening BCA - 4493812222
-          p.address a.n. PT Kharisma Indotech Pratama
-          button.copy-btn
-            i.fa-solid.fa-copy.custom-icon
-            span.custom-text Salin
-    section.nav-float
-      .row.custom-row.gx-0
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/secondtemplate/index"
-            i.fa-solid.fa-house.fa-lg.custom-icon
-            span.label Home
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/secondtemplate/couple"
-            i.fa-solid.fa-heart.fa-lg.custom-icon
-            span.label Pasangan
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/secondtemplate/location"
-            i.fa-solid.fa-location-dot.fa-lg.custom-icon
-            span.label Lokasi
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/secondtemplate/wishes"
-            i.fa-solid.fa-hands-praying.fa-lg.custom-icon
-            span.label Doa
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item.active href="#"
-            i.fa-solid.fa-gift.fa-lg.custom-icon
-            span.label Hadiah
+.wrapper-custom
+  .container-full.h-100.position-relative.overflow-hidden
+    .row.m-0.h-100
+      section.ornament
+        .sharp-left
+          = image_tag("secondtemplate/sharp-leaves-shadow.png", class: "sharp-shadow-left")
+          = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-left-1")
+          = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-left-2")
+        .sharp-right  
+          = image_tag("secondtemplate/sharp-leaves-shadow.png", class: "sharp-shadow-right")
+          = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-right-1")
+          = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-right-2")
+      section.content
+        .group-image
+          .ornament-left
+            = image_tag("secondtemplate/wide-leaves.png", class: "big-left")
+            = image_tag("secondtemplate/wide-leaves.png", class: "small-left")
+          .ornament-right  
+            = image_tag("secondtemplate/wide-leaves.png", class: "big-right")
+            = image_tag("secondtemplate/wide-leaves.png", class: "small-right")
+          #carouselExampleControls.carousel.slide.w-100 data-bs-ride="carousel" data-bs-interval="false" 
+            .carousel-inner.custom-inner
+              .carousel-item.custom-item.active
+                = image_tag("secondtemplate/big-image.png", class: "custom-image")
+              .carousel-item.custom-item
+                = image_tag("secondtemplate/big-image.png", class: "custom-image")
+              button.carousel-control-prev.custom-prev data-bs-slide="prev" data-bs-target="#carouselExampleControls" type="button" 
+                span.carousel-control-prev-icon.custom-btn aria-hidden="true" 
+                  i.fa-solid.fa-chevron-left.custom-icon
+                span.visually-hidden Previous
+              button.carousel-control-next.custom-next data-bs-slide="next" data-bs-target="#carouselExampleControls" type="button" 
+                span.carousel-control-next-icon.custom-btn aria-hidden="true" 
+                  i.fa-solid.fa-chevron-right.custom-icon
+                span.visually-hidden Next
+            .carousel-indicators.custom-indicators
+              button.indicator-btn.active aria-current="true" aria-label=("Slide 1") data-bs-slide-to="0" data-bs-target="#carouselExampleControls" type="button" 
+              button.indicator-btn aria-label=("Slide 2") data-bs-slide-to="1" data-bs-target="#carouselExampleControls" type="button" 
+          = image_tag("secondtemplate/big-brush.png", class: "custom-brush")
+        .group-text  
+          p.thanks.text-center
+            | Atas kehadiran dan do’a restu dari Bapak/Ibu/Saudara/i sekalian, kami mengucapkan terima kasih.
+            br
+            | Wassalamu’alaikum Wr. Wb.
+          span.sub-title.text-center Salam hangat dari kami,
+          span.title
+            h2.man-name Ifan
+            h2.separator &
+            h2.woman-name Saskia
+          a.gift-btn href="#popup-message"
+            i.fa-solid.fa-gift.custom-icon
+            span.custom-text Kirim Hadiah
+      section#popup-message
+        .custom-box
+          a.close-btn href="#"
+            i.fa-solid.fa-xmark.custom-icon
+          .offline-gift.text-center
+            p.prolog
+              | Tanpa mengurangi rasa hormat, bagi keluarga, sahabat, dan rekan yang ingin memberikan tanda kasih untuk kami, dapat melalui :
+            h5.title Kirim Hadiah Fisik
+            .giftbox-icon.text-center
+              = image_tag("sixthtemplate/giftbox-icon.png", class: "custom-img")
+            span.sub-title Rumah Pengantin Wanita
+            p.address
+              | Jl. Pasang No. 22, Kel. Cihapit, Kec. Bandung Wetan, Kota Bandung 40114
+            button.copy-btn
+              i.fa-solid.fa-copy.custom-icon
+              span.custom-text Salin
+          .online-gift.text-center
+            h5.title Kirim Hadiah Online
+            .bank-icon.text-center
+              = image_tag("sixthtemplate/logo-bca.png", class: "custom-img")
+            span.sub-title Rekening BCA - 4493812222
+            p.address a.n. PT Kharisma Indotech Pratama
+            button.copy-btn
+              i.fa-solid.fa-copy.custom-icon
+              span.custom-text Salin
+      section.nav-float
+        .row.custom-row.gx-0
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/secondtemplate/index"
+              i.fa-solid.fa-house.fa-lg.custom-icon
+              span.label Home
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/secondtemplate/couple"
+              i.fa-solid.fa-heart.fa-lg.custom-icon
+              span.label Pasangan
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/secondtemplate/location"
+              i.fa-solid.fa-location-dot.fa-lg.custom-icon
+              span.label Lokasi
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/secondtemplate/wishes"
+              i.fa-solid.fa-hands-praying.fa-lg.custom-icon
+              span.label Doa
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item.active href="#"
+              i.fa-solid.fa-gift.fa-lg.custom-icon
+              span.label Hadiah
             

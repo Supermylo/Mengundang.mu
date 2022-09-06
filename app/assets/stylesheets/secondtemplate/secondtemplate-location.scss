@@ -4,10 +4,13 @@ $light-green : #81865F;
 $dark-brown : #9A7915;
 $custom-white : #F9FAFB;
 
-html{height: 100%;}
-body{
+html, body{height: 100%;}
+
+.wrapper-custom{
   background-color: $beige;
   height: 100%;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 h1{font-size: 40px;}
@@ -23,7 +26,7 @@ span, p{
 .ornament{
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
 
@@ -34,6 +37,7 @@ span, p{
     border: 1px solid $main-green;
     border-radius: 20px;
     top: 20px;
+    animation: fadeIn 2s ease-in-out 1;
   }
 
   .sharp-left{
@@ -41,7 +45,7 @@ span, p{
     width: 181px;
     height: 171px;
     left: 0;
-    bottom: 0;
+    bottom: -15px;
 
     .sharp-shadow-left, .sharp-left-1, .sharp-left-2{
       position: absolute;
@@ -50,20 +54,41 @@ span, p{
     }
 
     .sharp-shadow-left{
-      bottom: 64px;
+      bottom: 40px;
       left: -28px;
+      animation: bottomLeafLeftShadow 5s ease-in-out infinite;
     }
 
     .sharp-left-1{
       transform: rotate(45deg);
       bottom: -30px;
       left: 20px;
+      animation: bottomLeafLeftOne 5s ease-in-out infinite;
     }
 
     .sharp-left-2{
       transform: rotate(15deg);
       bottom: -8px;
       left: -16px;
+      animation: bottomLeafLeftTwo 5s ease-in-out infinite;
+    }
+
+    @keyframes bottomLeafLeftOne {
+      0% { transform: rotate(45deg) scale(0.9); }
+      50% { transform: rotate(30deg) scale(1);}
+      100% { transform: rotate(45deg) scale(0.9); }
+    }
+
+    @keyframes bottomLeafLeftTwo {
+      0% { transform: rotate(15deg) scale(0.9); }
+      50% { transform: rotate(0deg) scale(1);}
+      100% { transform: rotate(15deg) scale(0.9); }
+    }
+
+    @keyframes bottomLeafLeftShadow {
+      0% { transform: rotate(0deg) scale(0.9); }
+      50% { transform: rotate(-15deg) scale(1);}
+      100% { transform: rotate(0deg) scale(0.9); }
     }
   }
 
@@ -72,7 +97,7 @@ span, p{
     width: 181px;
     height: 171px;
     right: 0;
-    bottom: 0;
+    bottom: -15px;
 
     .sharp-shadow-right, .sharp-right-1, .sharp-right-2{
       position: absolute;
@@ -81,33 +106,54 @@ span, p{
     }
 
     .sharp-shadow-right{
-      bottom: 64px;
+      bottom: 40px;
       right: -28px;
+      animation: bottomLeafRightShadow 5s ease-in-out infinite;
     }
 
     .sharp-right-1{
       transform: rotate(-45deg) scaleX(-1);
       bottom: -30px;
       right: 20px;
+      animation: bottomLeafRightOne 5s ease-in-out infinite;
     }
 
     .sharp-right-2{
       transform: rotate(-15deg) scaleX(-1);
       bottom: -8px;
       right: -16px;
+      animation: bottomLeafRightTwo 5s ease-in-out infinite;
+    }
+
+    @keyframes bottomLeafRightOne {
+      0% { transform: rotate(-45deg) scale(0.9) scaleX(-1);}
+      50% { transform: rotate(-30deg) scale(1) scaleX(-1);}
+      100% { transform: rotate(-45deg) scale(0.9) scaleX(-1);}
+    }
+
+    @keyframes bottomLeafRightTwo {
+      0% { transform: rotate(-15deg) scale(0.9) scaleX(-1);}
+      50% { transform: rotate(0deg) scale(1) scaleX(-1);}
+      100% { transform: rotate(-15deg) scale(0.9) scaleX(-1);}
+    }
+
+    @keyframes bottomLeafRightShadow {
+      0% { transform: rotate(0) scale(0.9) scaleX(-1);}
+      50% { transform: rotate(15deg) scale(1) scaleX(-1);}
+      100% { transform: rotate(0deg) scale(0.9) scaleX(-1);}
     }
   }
 }
 
 .content{
   width: 100%;
-  height: calc(100vh - 86px);
+  height: calc(100% - 86px);
   padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: absolute;
 
   .custom-inner{
     overflow: visible;
@@ -152,12 +198,14 @@ span, p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: fadeIn 2s ease-in-out 1;
 
     .title{
       font-family: 'Dancing Script', serif;
       font-weight: 700;
       color: $main-green;
       margin-bottom: 8px;
+      z-index: 2;
     }
   
     .group-image{
@@ -174,84 +222,118 @@ span, p{
         height: 158px;
         object-fit: cover;
         position: absolute;
+        animation: scaleDown 10s ease-in-out 1;
       }
 
       &::before{
         content: "";
         background: url("secondtemplate/couple-brush.png");
-        background-size: 160px;
-        width: 160px;
-        height: 160px;
+        background-size: 200px;
+        width: 200px;
+        height: 200px;
         position: absolute;
         z-index: 1;
       }
 
       .flower-set{
         display: flex;
-        justify-content: center;
+        align-items: center;
         height: 76px;
         width: 190px;
         position: relative;
-        bottom: -64px;
-    
-        .main-flower, .big-wide-left, .small-wide-left, .sharp-leaves-left, .big-wide-right, .small-wide-right, .sharp-leaves-right{
+        transform: scale(1.1) translateY(55px);
+        z-index: 1;
+
+        .main-flower, .left-leaves, .right-leaves{
           position: absolute;
         }
-    
+
         .main-flower{
-          width: 64px;
+          width: 100%;
+          text-align: center;
           z-index: 4;
+
+          .flower{
+            width: 64px;
+            animation: mainFlower 5s ease-in-out infinite;
+          }
+
+          @keyframes mainFlower {
+            0% { transform: rotate(-8deg) scale(0.9); }
+            50% { transform: rotate(7deg) scale(1); }
+            100% { transform: rotate(-8deg) scale(0.9); }
+          }
         }
-    
-        .big-wide-left, .big-wide-right{
-          width: 32px;
-          z-index: 3;
+
+        .left-leaves, .right-leaves{
+          width: 92px;
+          height: 58px;
+          left: 0;
+
+          .big-rounded-leaf{
+            position: absolute;
+            transform: rotate(-70deg) scaleX(-1);
+            right: 25px;
+            top: -18px;
+            width: 32px;
+            z-index: 3;
+            animation: bigRoundedLeaf 5s ease-in-out infinite;
+          }
+
+          .small-rounded-leaf{
+            position: absolute;
+            transform: rotate(-105deg);
+            right: 16px;
+            top: 18px;
+            width: 20px;
+            z-index: 2;
+            animation: smallRoundedLeaf 5s ease-in-out infinite;
+          }
+
+          .sharp-leaves-leaf{
+            position: absolute;
+            transform: rotate(-96deg) scaleX(-1);
+            right: 24px;
+            top: -14px;
+            width: 46px;
+            z-index: 1;
+            animation: sharpLeaves 5s ease-in-out infinite;
+          }
+
+          @keyframes bigRoundedLeaf {
+            0% { transform: scale(0.9) rotate(-75deg) scaleX(-1); }
+            50% { transform: scale(1) rotate(-60deg) scaleX(-1); }
+            100% { transform: scale(0.9) rotate(-75deg) scaleX(-1); }
+          }
+
+          @keyframes smallRoundedLeaf {
+            0% { transform: scale(0.9) rotate(-110deg); }
+            50% { transform: scale(1) rotate(-95deg); }
+            100% { transform: scale(0.9) rotate(-110deg); }
+          }
+
+          @keyframes sharpLeaves {
+            0% { transform: scale(0.9) rotate(-101deg) scaleX(-1); }
+            50% { transform: scale(1) rotate(-86deg) scaleX(-1); }
+            100% { transform: scale(0.9) rotate(-101deg) scaleX(-1); }
+          }
         }
-    
-        .small-wide-left, .small-wide-right{
-          width: 20px;
-          z-index: 2;
+
+        .right-leaves{
+          left: unset;
+          right: 0;
+          transform: scaleX(-1);
         }
-    
-        .sharp-leaves-left, .sharp-leaves-right{
-          width: 46px;
-          z-index: 1;
+      }
+
+      @keyframes scaleDown {
+        0% {
+          width: 178px;
+          height: 178px;
         }
-    
-        .big-wide-left{
-          transform: rotate(-70deg) scaleX(-1);
-          left: 24px;
-          bottom: 8px;
-        }
-    
-        .small-wide-left{
-          transform: rotate(-105deg);
-          left: 48px;
-          bottom: 0;
-        }
-    
-        .sharp-leaves-left{
-          transform: rotate(-105deg) scaleX(-1);
-          left: 4px;
-          bottom: -18px;
-        }
-    
-        .big-wide-right{
-          transform: rotate(70deg);
-          right: 24px;
-          bottom: 8px;
-        }
-    
-        .small-wide-right{
-          transform: rotate(105deg);
-          right: 48px;
-          bottom: 0;
-        }
-    
-        .sharp-leaves-right{
-          transform: rotate(105deg);
-          right: 4px;
-          bottom: -18px;
+        100% {
+          width: 158px;
+          height: 158px;
         }
       }
     }
@@ -309,6 +391,7 @@ span, p{
     }
   
     .group-location{
+      padding: 0 16px;
   
       .name{
         font-family: 'Noto Serif', serif;
@@ -344,6 +427,17 @@ span, p{
       }
     }
   }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 }
 
 .nav-float{
@@ -351,7 +445,7 @@ span, p{
   left: 50%;
   transform: translateX(-50%);
   background-color: $main-green;
-  position: fixed;
+  position: absolute;
   z-index: 2;
   padding: 12px;
   border-radius: 50rem;

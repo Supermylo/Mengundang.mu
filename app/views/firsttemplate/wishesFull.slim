@@ -80,7 +80,7 @@ javascript:
   function countPlus(){
     var input = document.getElementById("totalAttendance");
 
-    if( parseInt(input.value) > 0 ){
+    if( parseInt(input.value) > 0 && parseInt(input.value) < 3 ){
       input.value = parseInt(input.value) + 1;
     };
   };

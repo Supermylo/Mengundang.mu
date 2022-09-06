@@ -1,117 +1,118 @@
 - content_for :additional_styles
   = stylesheet_link_tag "secondtemplate/secondtemplate-location"
 
-.container-full.h-100.position-relative.overflow-hidden
-  .row.m-0
-    section.ornament
-      .frame
-      .sharp-left
-        = image_tag("secondtemplate/sharp-leaves-shadow.png", class: "sharp-shadow-left")
-        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-left-1")
-        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-left-2")
-      .sharp-right  
-        = image_tag("secondtemplate/sharp-leaves-shadow.png", class: "sharp-shadow-right")
-        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-right-1")
-        = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-right-2")
-    section.content
-      #carouselExampleControls.carousel.slide data-bs-ride="carousel" data-bs-interval="false"
-        .carousel-inner.custom-inner
-          .carousel-item.custom-item.active
-            #wrapper-akad.text-center
-              h2.title Akad
-              .group-image
-                = image_tag("sixthtemplate/couple-image.png", class: "custom-image")
-                .flower-set
-                  /! Main Flower
-                  = image_tag("secondtemplate/main-flower.png", class: "main-flower")
-                  /! Left Leaves
-                  = image_tag("secondtemplate/wide-leaves.png", class: "big-wide-left")
-                  = image_tag("secondtemplate/wide-leaves.png", class: "small-wide-left")
-                  = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-leaves-left")
-                  /! Right Leaves
-                  = image_tag("secondtemplate/wide-leaves.png", class: "big-wide-right")
-                  = image_tag("secondtemplate/wide-leaves.png", class: "small-wide-right")
-                  = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-leaves-right")
-              .group-time
-                .row.m-0.align-items-center
-                  .col
-                    span.day Selasa
-                  .col.custom-col
-                    .custom-wrapper
-                      span.month Sept
-                      h2.date 06
-                      span.year 2022
-                  .col
-                    span.clock 09.00 WIB
-              .group-location
-                h5.name éL Hotel Royale Bandung
-                p.address
-                  | Jl. Merdeka No. 2, Braga, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40111
-                a.maps-btn href="#"
-                  i.fa-solid.fa-location-dot.custom-icon
-                  span.custom-text Lihat Maps
-          .carousel-item.custom-item
-            #wrapper-resepsi.text-center
-              h2.title Resepsi
-              .group-image
-                = image_tag("sixthtemplate/couple-image.png", class: "custom-image")
-                .flower-set
-                  /! Main Flower
-                  = image_tag("secondtemplate/main-flower.png", class: "main-flower")
-                  /! Left Leaves
-                  = image_tag("secondtemplate/wide-leaves.png", class: "big-wide-left")
-                  = image_tag("secondtemplate/wide-leaves.png", class: "small-wide-left")
-                  = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-leaves-left")
-                  /! Right Leaves
-                  = image_tag("secondtemplate/wide-leaves.png", class: "big-wide-right")
-                  = image_tag("secondtemplate/wide-leaves.png", class: "small-wide-right")
-                  = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-leaves-right")
-              .group-time
-                .row.m-0.align-items-center
-                  .col
-                    span.day Selasa
-                  .col.custom-col
-                    .custom-wrapper
-                      span.month Sept
-                      h2.date 06
-                      span.year 2022
-                  .col
-                    span.clock 13.00 WIB
-              .group-location
-                h5.name éL Hotel Royale Bandung
-                p.address
-                  | Jl. Merdeka No. 2, Braga, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40111
-                a.maps-btn href="#"
-                  i.fa-solid.fa-location-dot.custom-icon
-                  span.custom-text Lihat Maps
-          button.carousel-control-prev.custom-prev data-bs-slide="prev" data-bs-target="#carouselExampleControls" type="button" 
-            span.carousel-control-prev-icon.custom-btn aria-hidden="true" 
-              i.fa-solid.fa-chevron-left.custom-icon
-            span.visually-hidden Previous
-          button.carousel-control-next.custom-next data-bs-slide="next" data-bs-target="#carouselExampleControls" type="button" 
-            span.carousel-control-next-icon.custom-btn aria-hidden="true" 
-              i.fa-solid.fa-chevron-right.custom-icon
-            span.visually-hidden Next
-    section.nav-float
-      .row.custom-row.gx-0
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/secondtemplate/index"
-            i.fa-solid.fa-house.fa-lg.custom-icon
-            span.label Home
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/secondtemplate/couple"
-            i.fa-solid.fa-heart.fa-lg.custom-icon
-            span.label Pasangan
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item.active href="#"
-            i.fa-solid.fa-location-dot.fa-lg.custom-icon
-            span.label Lokasi
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/secondtemplate/wishes"
-            i.fa-solid.fa-hands-praying.fa-lg.custom-icon
-            span.label Doa
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/secondtemplate/gift"
-            i.fa-solid.fa-gift.fa-lg.custom-icon
-            span.label Hadiah
+.wrapper-custom
+  .container-full.h-100.position-relative.overflow-hidden
+    .row.m-0.h-100
+      section.ornament
+        .frame
+        .sharp-left
+          = image_tag("secondtemplate/sharp-leaves-shadow.png", class: "sharp-shadow-left")
+          = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-left-1")
+          = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-left-2")
+        .sharp-right  
+          = image_tag("secondtemplate/sharp-leaves-shadow.png", class: "sharp-shadow-right")
+          = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-right-1")
+          = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-right-2")
+      section.content
+        #carouselExampleControls.carousel.slide data-bs-ride="carousel" data-bs-interval="false"
+          .carousel-inner.custom-inner
+            .carousel-item.custom-item.active
+              #wrapper-akad.text-center
+                h2.title Akad
+                .group-image
+                  = image_tag("sixthtemplate/couple-image.png", class: "custom-image")
+                  .flower-set
+                    .main-flower
+                      = image_tag("secondtemplate/main-flower.png", class: "flower")
+                    .left-leaves
+                      = image_tag("secondtemplate/wide-leaves.png", class: "big-rounded-leaf")
+                      = image_tag("secondtemplate/wide-leaves.png", class: "small-rounded-leaf")
+                      = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-leaves-leaf")
+                    .right-leaves
+                      = image_tag("secondtemplate/wide-leaves.png", class: "big-rounded-leaf")
+                      = image_tag("secondtemplate/wide-leaves.png", class: "small-rounded-leaf")
+                      = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-leaves-leaf")
+                .group-time
+                  .row.m-0.align-items-center
+                    .col
+                      span.day Selasa
+                    .col.custom-col
+                      .custom-wrapper
+                        span.month Sept
+                        h2.date 06
+                        span.year 2022
+                    .col
+                      span.clock 09.00 WIB
+                .group-location
+                  h5.name éL Hotel Royale Bandung
+                  p.address
+                    | Jl. Merdeka No. 2, Braga, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40111
+                  a.maps-btn href="#"
+                    i.fa-solid.fa-location-dot.custom-icon
+                    span.custom-text Lihat Maps
+            .carousel-item.custom-item
+              #wrapper-resepsi.text-center
+                h2.title Resepsi
+                .group-image
+                  = image_tag("sixthtemplate/couple-image.png", class: "custom-image")
+                  .flower-set
+                    .main-flower
+                      = image_tag("secondtemplate/main-flower.png", class: "flower")
+                    .left-leaves
+                      = image_tag("secondtemplate/wide-leaves.png", class: "big-rounded-leaf")
+                      = image_tag("secondtemplate/wide-leaves.png", class: "small-rounded-leaf")
+                      = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-leaves-leaf")
+                    .right-leaves
+                      = image_tag("secondtemplate/wide-leaves.png", class: "big-rounded-leaf")
+                      = image_tag("secondtemplate/wide-leaves.png", class: "small-rounded-leaf")
+                      = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-leaves-leaf")
+                .group-time
+                  .row.m-0.align-items-center
+                    .col
+                      span.day Selasa
+                    .col.custom-col
+                      .custom-wrapper
+                        span.month Sept
+                        h2.date 06
+                        span.year 2022
+                    .col
+                      span.clock 13.00 WIB
+                .group-location
+                  h5.name éL Hotel Royale Bandung
+                  p.address
+                    | Jl. Merdeka No. 2, Braga, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40111
+                  a.maps-btn href="#"
+                    i.fa-solid.fa-location-dot.custom-icon
+                    span.custom-text Lihat Maps
+            button.carousel-control-prev.custom-prev data-bs-slide="prev" data-bs-target="#carouselExampleControls" type="button" 
+              span.carousel-control-prev-icon.custom-btn aria-hidden="true" 
+                i.fa-solid.fa-chevron-left.custom-icon
+              span.visually-hidden Previous
+            button.carousel-control-next.custom-next data-bs-slide="next" data-bs-target="#carouselExampleControls" type="button" 
+              span.carousel-control-next-icon.custom-btn aria-hidden="true" 
+                i.fa-solid.fa-chevron-right.custom-icon
+              span.visually-hidden Next
+      section.nav-float
+        .row.custom-row.gx-0
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/secondtemplate/index"
+              i.fa-solid.fa-house.fa-lg.custom-icon
+              span.label Home
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/secondtemplate/couple"
+              i.fa-solid.fa-heart.fa-lg.custom-icon
+              span.label Pasangan
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item.active href="#"
+              i.fa-solid.fa-location-dot.fa-lg.custom-icon
+              span.label Lokasi
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/secondtemplate/wishes"
+              i.fa-solid.fa-hands-praying.fa-lg.custom-icon
+              span.label Doa
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/secondtemplate/gift"
+              i.fa-solid.fa-gift.fa-lg.custom-icon
+              span.label Hadiah
             

@@ -68,6 +68,10 @@ span, p{
       animation: rightFlower 5s infinite;
     }
 
+    @media (max-height: 675px) {
+      transform: scale(0.8);
+    }
+
     @keyframes ornamentSet {
       0% {opacity: 0;}
       100% {opacity: 100%;}
@@ -111,6 +115,10 @@ span, p{
       height: 1px;
       background: $gradient-bronze;
       animation: slidePath 2s 1;
+    }
+
+    @media (max-height: 675px) {
+      margin-top: 8px;
     }
 
     @keyframes slidePath {
@@ -173,6 +181,10 @@ span, p{
       }
 
       &:active{background-color: $dark-blue;}
+    }
+
+    @media (max-height: 675px) {
+      margin-bottom: 16px;
     }
   }
 
@@ -306,7 +318,7 @@ span, p{
   left: 50%;
   transform: translateX(-50%);
   background-color: $custom-white;
-  position: fixed;
+  position: absolute;
   z-index: 2;
   padding: 12px;
   border-radius: 16px;
