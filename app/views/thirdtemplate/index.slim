@@ -1,43 +1,48 @@
 - content_for :additional_styles
   = stylesheet_link_tag "thirdtemplate/thirdtemplate"
 
-.container-full.h-100.position-relative.overflow-hidden
-  .row.m-0
-    section.ornament
-      .top
-        = image_tag("thirdtemplate/big-pine-set.png", class: "top-pine-set-1")
-        = image_tag("thirdtemplate/small-pine-set.png", class: "top-pine-set-2")
-        = image_tag("thirdtemplate/small-pine-set.png", class: "top-pine-set-3")
-      .bottom
-        = image_tag("thirdtemplate/big-pine-set.png", class: "bottom-pine-set-1")
-        = image_tag("thirdtemplate/small-pine-set.png", class: "bottom-pine-set-2")
-        = image_tag("thirdtemplate/small-pine-set.png", class: "bottom-pine-set-3")
-    section.content
-      .group-image
-        = image_tag("thirdtemplate/couple-image-boho.jpg", class: "custom-image")
-      .group-text
-        h4.sub-title.text-center The Wedding of
-        h3.title.text-center &
-        h5.dates.text-center 6 September 2022   
-    section.nav-float
-      .row.custom-row.gx-0
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item.active href="#"
-            i.fa-solid.fa-house.fa-lg.custom-icon
-            span.label Home
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/thirdtemplate/couple"
-            i.fa-solid.fa-heart.fa-lg.custom-icon
-            span.label Pasangan
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/thirdtemplate/location"
-            i.fa-solid.fa-location-dot.fa-lg.custom-icon
-            span.label Lokasi
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/thirdtemplate/wishes"
-            i.fa-solid.fa-hands-praying.fa-lg.custom-icon
-            span.label Doa
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/thirdtemplate/gift"
-            i.fa-solid.fa-gift.fa-lg.custom-icon
-            span.label Hadiah
+.wrapper-custom
+  .container-full.h-100.position-relative.overflow-hidden
+    .row.m-0.h-100
+      section.ornament
+        .top
+          = image_tag("thirdtemplate/big-pine-set.png", class: "top-pine-set-1")
+          = image_tag("thirdtemplate/small-pine-set.png", class: "top-pine-set-2")
+          = image_tag("thirdtemplate/small-pine-set.png", class: "top-pine-set-3")
+        .bottom
+          = image_tag("thirdtemplate/big-pine-set.png", class: "bottom-pine-set-1")
+          = image_tag("thirdtemplate/small-pine-set.png", class: "bottom-pine-set-2")
+          = image_tag("thirdtemplate/small-pine-set.png", class: "bottom-pine-set-3")
+      section.content
+        .group-image
+          = image_tag("thirdtemplate/couple-image-boho.jpg", class: "custom-image")
+        .group-text
+          .sub-title.text-center
+            h4 The Wedding of
+          .title.text-center
+            h1.man-name Ifan
+            h3 &
+            h1.woman-name Saskia
+          h5.dates.text-center 6 September 2022   
+      section.nav-float
+        .row.custom-row.gx-0
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item.active href="#"
+              i.fa-solid.fa-house.fa-lg.custom-icon
+              span.label Home
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/thirdtemplate/couple"
+              i.fa-solid.fa-heart.fa-lg.custom-icon
+              span.label Pasangan
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/thirdtemplate/location"
+              i.fa-solid.fa-location-dot.fa-lg.custom-icon
+              span.label Lokasi
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/thirdtemplate/wishes"
+              i.fa-solid.fa-hands-praying.fa-lg.custom-icon
+              span.label Doa
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/thirdtemplate/gift"
+              i.fa-solid.fa-gift.fa-lg.custom-icon
+              span.label Hadiah

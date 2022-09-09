@@ -37,70 +37,70 @@ span, p{
 .ornament{
   padding: 0;
 
-  .top{
+  .top-right{
     position: relative;
-    animation: slideOrnamentTop 1.5s ease-in-out 1;
+    animation: ornamentTopRight 1.5s ease-in-out 1;
 
-    .top-pine-set-1, .top-pine-set-2, .top-pine-set-3{
+    .right-pine-set-1, .right-pine-set-2, .right-pine-set-3{
       position: absolute;
     }
 
-    .top-pine-set-1{
+    .right-pine-set-1{
       width: 106px;
-      left: -8px;
-      top: -24px;
-      transform: scale(0.8) scaleX(-1);
+      right: -20px;
+      top: -32px;
+      transform: scale(0.55);
     }
 
-    .top-pine-set-2{
+    .right-pine-set-2{
       width: 106px;
-      left: 92px;
-      top: -50px;
-      transform: scale(0.8) scaleX(-1);
+      right: 44px;
+      top: -52px;
+      transform: scale(0.55);
     }
 
-    .top-pine-set-3{
+    .right-pine-set-3{
       width: 109px;
-      left: -58px;
-      top: 45px;
-      transform: scale(0.8) scaleX(-1) rotate(-12deg);
+      right: -56px;
+      top: 12px;
+      transform: scale(0.55) rotate(-12deg);
     }
   }
 
-  .bottom{
-    position: absolute;
-    width: 100%;
-    bottom: 10px;
-    animation: slideOrnamentBottom 1.5s ease-in-out 1;
+  .top-left{
+    position: relative;
+    animation: ornamentTopLeft 1.5s ease-in-out 1;
 
-    .bottom-pine-set-1, .bottom-pine-set-2, .bottom-pine-set-3{
+    .left-pine-set-1, .left-pine-set-2, .left-pine-set-3{
       position: absolute;
-      transform: scaleX(-1) rotate(180deg);
     }
 
-    .bottom-pine-set-1{
+    .left-pine-set-1{
       width: 106px;
-      bottom: -21px;
-      right: 3px;
+      left: -20px;
+      top: -32px;
+      transform: scale(0.55) scaleX(-1);
     }
 
-    .bottom-pine-set-2{
+    .left-pine-set-2{
       width: 106px;
-      bottom: 60px;
-      right: -58px;
+      left: 44px;
+      top: -52px;
+      transform: scale(0.55) scaleX(-1);
     }
 
-    .bottom-pine-set-3{
+    .left-pine-set-3{
       width: 109px;
-      bottom: -50px;
-      right: 115px;
+      left: -56px;
+      top: 12px;
+      transform: scale(0.55) scaleX(-1) rotate(-12deg);
     }
   }
 
-  @keyframes slideOrnamentTop {
+  @keyframes ornamentTopRight {
     0% {
       opacity: 0;
-      transform: translateX(-225px) translateY(-190px);
+      transform: translateX(105px) translateY(-130px);
     }
     100% {
       opacity: 1;
@@ -108,10 +108,10 @@ span, p{
     }
   }
 
-  @keyframes slideOrnamentBottom {
+  @keyframes ornamentTopLeft {
     0% {
       opacity: 0;
-      transform: translateX(225px) translateY(180px);
+      transform: translateX(-105px) translateY(-130px);
     }
     100% {
       opacity: 1;
@@ -125,7 +125,7 @@ span, p{
   height: calc(100% - 130px);
   position: absolute;
   margin: 28px 24px 12px 24px;
-  padding: 0 24px;
+  padding: 72px 24px 16px 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -136,12 +136,15 @@ span, p{
   border-top-right-radius: 50rem;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
+  color: $main-red;
 
   .group-ornament{
     display: flex;
     gap: 2px;
-    position: relative;
-    animation: fadeInScale 2s ease-in-out 1;
+    position: absolute;
+    top: 8px;
+    transform: scale(1.2);
+    animation: fadeInScaleOne 2s ease-in-out 1;
 
     .leaves-left{
       width: 62px;
@@ -203,7 +206,7 @@ span, p{
           position: absolute;
           top: 0;
           left: 0;
-          animation: bubbleSmall 5s ease-in-out infinite;
+          animation: bubbleSmall 5.5s ease-in-out infinite;
         }
 
         .bubble-medium{
@@ -211,7 +214,7 @@ span, p{
           position: absolute;
           right: 0;
           bottom: 50%;
-          animation: bubbleMedium 5.5s ease-in-out infinite;
+          animation: bubbleMedium 5.75s ease-in-out infinite;
         }
 
         .bubble-large{
@@ -275,138 +278,162 @@ span, p{
       }
     }
   }
-  
-  .group-text{
-    animation: fadeInScale 2s ease-in-out 1;
 
-    .prolog{
-      color: $main-red;
-      margin-top: 32px;
-      margin-bottom: 20px;
-    }
+  .title{
+    font-family: 'DM Serif Display', serif;
+    margin-bottom: 12px;
+    animation: fadeInScaleTwo 1.5s ease-in-out 1;
+  }
 
-    .groom-set, .bride-set{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
+  .custom-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+    animation: fadeInScaleTwo 1.5s ease-in-out 1;
 
-      .wrapper-image{
-        width: 64px;
-        height: 80px;
-        border-radius: 50rem;
-        border: 2px solid $solid-gold;
-        overflow: hidden;
-        background-color: $custom-white;
+    .group-input{
 
-        .custom-image{
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          border-radius: 50rem;
-          animation: scaleImage 8s ease-in-out infinite;
-        }
+      label, input, textarea, select{
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 12px;
+      }
 
-        @keyframes scaleImage {
-          0% {
-            opacity: 0;
-            transform: scale(1);
-          }
-          10% {
-            opacity: 1;
-          }
-          90% {
-            opacity: 1;
-          }
-          100% {
-            opacity: 0;
-            transform: scale(1.1);
-          }
+      label{
+        display: block;
+        font-weight: 600;
+      }
+
+      input, textarea, select{
+        width: 100%;
+        font-weight: 400;
+        background: none;
+        padding-bottom: 4px;
+        border: none;
+        border-bottom: 1px solid #ECE4D5;
+        color: $main-red;
+
+        &:focus{
+          font-weight: 600;
+          outline: none;
         }
       }
 
-      .wrapper-name{
+      textarea{height: 56px;}
 
-        .couples-name{
-          font-family: 'DM Serif Display', serif;
+      select{
+        font-weight: 400;
+      }
+
+      ::placeholder{
+        font-weight: 400;
+        color: $light-red;
+      }
+    }
+
+    .group-input-custom{
+      flex: 1 0 0;
+
+      .wrapper-attendance{
+        display: flex;
+        align-items: center;
+
+        .minus-icon, .plus-icon{
+          width: 16px;
           color: $main-red;
-          margin-bottom: 4px;
         }
 
-        .parents-name{
-          display: block;
-          color: $solid-gold;
-          font-family: 'Noto Serif', serif;
-          font-weight: 400;
+        #totalAttendance{
+          text-align: center;
+          margin: 0 8px;
         }
       }
     }
 
-    .groom-set{
-      animation: slideUp 1.5s ease-in-out 1;
-    }
-
-    .bride-set{
-      flex-direction: row-reverse;
-      margin-bottom: 24px;
-      animation: slideDown 1.5s ease-in-out 1;
-    }
-
-    .separator{
-      font-family: 'DM Serif Display', serif;
-      margin: 12px 0;
-      display: flex;
+    .custom-btn{
+      display: inline-flex;
       justify-content: center;
       align-items: center;
-      gap: 8px;
-      background: $gradient-gold;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      padding: 8px 16px;
+      background-color: $solid-gold;
+      text-decoration: none;
+      color: $custom-white;
+      font-weight: 600;
+      border-radius: 8px;
+      border: none;
 
-      &::before{
-        display: block;
-        content: "";
-        width: 80px;
-        height: 1px;
-        background-color: $solid-gold;
-        animation: linePath 1.5s ease-in-out 1;
+      .icon-custom{ width: 16px; }
+
+      .text{
+        margin-left: 8px;
       }
 
-      &::after{
-        display: block;
-        content: "";
-        width: 80px;
-        height: 1px;
-        background-color: $solid-gold;
-        animation: linePath 1.5s ease-in-out 1;
-      }
-
-      @keyframes linePath {
-        0% { width: 0; }
-        100% { width: 80px; }
-      }
-    }
-
-    @keyframes slideUp {
-      0% { transform: translateY(40px); }
-      100% { transform: translateY(0);}
-    }
-
-    @keyframes slideDown {
-      0% { transform: translateY(-40px); }
-      100% { transform: translateY(0);}
+      &:hover{background-color: $dark-gold;}
     }
   }
 
-  @keyframes fadeInScale {
+  .wishlist{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    animation: fadeInScaleTwo 1.5s ease-in-out 1;
+
+    .group-wish{
+
+      .sender-name{
+        font-weight: 600;
+        color: $main-red;
+        display: flex;
+        align-items: center;
+        margin-bottom: 4px;
+
+        &::after{
+          content: "Hadir";
+          height: 100%;
+          color: $custom-white;
+          font-size: 7px;
+          font-weight: 400;
+          line-height: normal;
+          background-color: $solid-gold;
+          padding: 2px 8px;
+          margin-left: 8px;
+          border-radius: 16px;
+        }
+      }
+
+      .message{
+        display: block;
+        color: $main-red;
+        margin-bottom: 8px;
+      }
+    }
+
+    .group-wish:not(:last-child){
+      border-bottom: 1px solid #DCDFC5;
+      margin-bottom: 12px;
+    }
+  }
+
+  @keyframes fadeInScaleOne {
     0% {
       opacity: 0;
-      transform: scale(0.8);
-    }
-    75% {
-      opacity: 1;
+      transform: scale(1);
     }
     100% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+
+  @keyframes fadeInScaleTwo {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
       transform: scale(1);
     }
   }

@@ -24,6 +24,10 @@ Rails.application.routes.draw do
   get 'thirdtemplate/location'
   get 'thirdtemplate/wishes'
   get 'thirdtemplate/gift'
+  get 'thirdtemplate/wishesFull'
+  get 'thirdtemplate/wishesOnly'
+  get 'thirdtemplate/wishesAttendanceOnly'
+  get 'thirdtemplate/wishesCommentOnly'
 
   get 'fourthtemplate/index'
   get 'fourthtemplate/couple'

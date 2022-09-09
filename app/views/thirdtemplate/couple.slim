@@ -1,80 +1,81 @@
 - content_for :additional_styles
   = stylesheet_link_tag "thirdtemplate/thirdtemplate-couple"
 
-.container-full.h-100.position-relative.overflow-hidden
-  .row.m-0
-    section.ornament
-      .top
-        = image_tag("thirdtemplate/big-pine-set.png", class: "top-pine-set-1")
-        = image_tag("thirdtemplate/small-pine-set.png", class: "top-pine-set-2")
-        = image_tag("thirdtemplate/small-pine-set.png", class: "top-pine-set-3")
-      .bottom
-        = image_tag("thirdtemplate/big-pine-set.png", class: "bottom-pine-set-1")
-        = image_tag("thirdtemplate/small-pine-set.png", class: "bottom-pine-set-2")
-        = image_tag("thirdtemplate/small-pine-set.png", class: "bottom-pine-set-3")
-    section.content
-      .group-ornament
-        .leaves-left
-          = image_tag("thirdtemplate/pine-leaves.png", class: "pine-leaves-left")
-          = image_tag("thirdtemplate/pine.png", class: "pine-left")
-        .leaves-right
-          = image_tag("thirdtemplate/pine-leaves.png", class: "pine-leaves-right")
-          = image_tag("thirdtemplate/pine.png", class: "pine-right")
-        .bubble
-          .group-bubble
-            =image_tag("thirdtemplate/bubble-small.png", class: "bubble-small")
-            =image_tag("thirdtemplate/bubble-medium.png", class: "bubble-medium")
-            =image_tag("thirdtemplate/bubble-large.png", class: "bubble-large")
-      .group-text
-        p.prolog.text-center
-          | Assalamu’alaikum Wr. Wb.
-          br
-          | Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan kami.
-        .groom-set
-          .wrapper-image
-            = image_tag("sixthtemplate/groom-image.png", class: "custom-image")
-          .wrapper-name
-            h3.couples-name.text-center Ifan Seventeen
-            span.parents-name.text-center Putra Bapak Fulan & Ibu Fulanah
-        h3.separator &
-        .bride-set
-          .wrapper-image
-            = image_tag("sixthtemplate/bride-image.png", class: "custom-image")
-          .wrapper-name
-            h3.couples-name.text-center Saskia Sixteen
-            span.parents-name.text-center Putri Bapak Fulan & Ibu Fulanah
-      .group-ornament
-        .leaves-left
-          = image_tag("thirdtemplate/pine-leaves.png", class: "pine-leaves-left")
-          = image_tag("thirdtemplate/pine.png", class: "pine-left")
-        .leaves-right
-          = image_tag("thirdtemplate/pine-leaves.png", class: "pine-leaves-right")
-          = image_tag("thirdtemplate/pine.png", class: "pine-right")
-        .bubble
-          .group-bubble
-            =image_tag("thirdtemplate/bubble-small.png", class: "bubble-small")
-            =image_tag("thirdtemplate/bubble-medium.png", class: "bubble-medium")
-            =image_tag("thirdtemplate/bubble-large.png", class: "bubble-large")
-    section.nav-float
-      .row.custom-row.gx-0
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/thirdtemplate/index"
-            i.fa-solid.fa-house.fa-lg.custom-icon
-            span.label Home
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item.active href="#"
-            i.fa-solid.fa-heart.fa-lg.custom-icon
-            span.label Pasangan
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/thirdtemplate/location"
-            i.fa-solid.fa-location-dot.fa-lg.custom-icon
-            span.label Lokasi
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/thirdtemplate/wishes"
-            i.fa-solid.fa-hands-praying.fa-lg.custom-icon
-            span.label Doa
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.nav-item href="/thirdtemplate/gift"
-            i.fa-solid.fa-gift.fa-lg.custom-icon
-            span.label Hadiah
+.wrapper-custom
+  .container-full.h-100.position-relative.overflow-hidden
+    .row.m-0
+      section.ornament
+        .top
+          = image_tag("thirdtemplate/big-pine-set.png", class: "top-pine-set-1")
+          = image_tag("thirdtemplate/small-pine-set.png", class: "top-pine-set-2")
+          = image_tag("thirdtemplate/small-pine-set.png", class: "top-pine-set-3")
+        .bottom
+          = image_tag("thirdtemplate/big-pine-set.png", class: "bottom-pine-set-1")
+          = image_tag("thirdtemplate/small-pine-set.png", class: "bottom-pine-set-2")
+          = image_tag("thirdtemplate/small-pine-set.png", class: "bottom-pine-set-3")
+      section.content
+        .group-ornament
+          .leaves-left
+            = image_tag("thirdtemplate/pine-leaves.png", class: "pine-leaves-left")
+            = image_tag("thirdtemplate/pine.png", class: "pine-left")
+          .leaves-right
+            = image_tag("thirdtemplate/pine-leaves.png", class: "pine-leaves-right")
+            = image_tag("thirdtemplate/pine.png", class: "pine-right")
+          .bubble
+            .group-bubble
+              =image_tag("thirdtemplate/bubble-small.png", class: "bubble-small")
+              =image_tag("thirdtemplate/bubble-medium.png", class: "bubble-medium")
+              =image_tag("thirdtemplate/bubble-large.png", class: "bubble-large")
+        .group-text
+          p.prolog.text-center
+            | Assalamu’alaikum Wr. Wb.
+            br
+            | Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan kami.
+          .groom-set
+            .wrapper-image
+              = image_tag("sixthtemplate/groom-image.png", class: "custom-image")
+            .wrapper-name
+              h3.couples-name.text-center Ifan Seventeen
+              span.parents-name.text-center Putra Bapak Fulan & Ibu Fulanah
+          h3.separator &
+          .bride-set
+            .wrapper-image
+              = image_tag("sixthtemplate/bride-image.png", class: "custom-image")
+            .wrapper-name
+              h3.couples-name.text-center Saskia Sixteen
+              span.parents-name.text-center Putri Bapak Fulan & Ibu Fulanah
+        .group-ornament
+          .leaves-left
+            = image_tag("thirdtemplate/pine-leaves.png", class: "pine-leaves-left")
+            = image_tag("thirdtemplate/pine.png", class: "pine-left")
+          .leaves-right
+            = image_tag("thirdtemplate/pine-leaves.png", class: "pine-leaves-right")
+            = image_tag("thirdtemplate/pine.png", class: "pine-right")
+          .bubble
+            .group-bubble
+              =image_tag("thirdtemplate/bubble-small.png", class: "bubble-small")
+              =image_tag("thirdtemplate/bubble-medium.png", class: "bubble-medium")
+              =image_tag("thirdtemplate/bubble-large.png", class: "bubble-large")
+      section.nav-float
+        .row.custom-row.gx-0
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/thirdtemplate/index"
+              i.fa-solid.fa-house.fa-lg.custom-icon
+              span.label Home
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item.active href="#"
+              i.fa-solid.fa-heart.fa-lg.custom-icon
+              span.label Pasangan
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/thirdtemplate/location"
+              i.fa-solid.fa-location-dot.fa-lg.custom-icon
+              span.label Lokasi
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/thirdtemplate/wishes"
+              i.fa-solid.fa-hands-praying.fa-lg.custom-icon
+              span.label Doa
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/thirdtemplate/gift"
+              i.fa-solid.fa-gift.fa-lg.custom-icon
+              span.label Hadiah
             

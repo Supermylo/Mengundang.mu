@@ -1,8 +1,3 @@
-@font-face {
-  font-family: Danviska;
-  src: url(../../fonts/Danviska.ttf);
-}
-
 $main-red : #7E0E26;
 $light-red : #B47583;
 $solid-gold : #C59B46;
@@ -11,11 +6,21 @@ $gradient-gold : linear-gradient(45deg,#C59B46,#F4DCAB);
 $custom-white : #F9FAFB;
 $light-gray : #9CA3AF;
 
-html{height: 100%;}
-body{
+html, body{height: 100%;}
+
+.wrapper-custom{
   background: url("thirdtemplate/marble-pattern.jpg");
-  background-size: cover;
+  background-size: 300%;
   height: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  animation: backgroundFade 8s ease-in-out infinite;
+}
+
+@keyframes backgroundFade {
+  0% { background-size: 310%; }
+  50% { background-size: 300%; }
+  100% { background-size: 310%; }
 }
 
 h1{font-size: 40px;}
@@ -34,6 +39,7 @@ span, p{
 
   .top{
     position: relative;
+    animation: slideOrnamentTop 1.5s ease-in-out 1;
 
     .top-pine-set-1, .top-pine-set-2, .top-pine-set-3{
       position: absolute;
@@ -62,7 +68,8 @@ span, p{
   .bottom{
     position: absolute;
     width: 100%;
-    bottom: 0;
+    bottom: 10px;
+    animation: slideOrnamentBottom 1.5s ease-in-out 1;
 
     .bottom-pine-set-1, .bottom-pine-set-2, .bottom-pine-set-3{
       position: absolute;
@@ -87,11 +94,34 @@ span, p{
       left: 115px;
     }
   }
+
+  @keyframes slideOrnamentTop {
+    0% {
+      opacity: 0;
+      transform: translateX(225px) translateY(-175px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0) translateY(0);
+    }
+  }
+
+  @keyframes slideOrnamentBottom {
+    0% {
+      opacity: 0;
+      transform: translateX(-225px) translateY(190px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0) translateY(0);
+    }
+  }
 }
 
 .content{
+  position: absolute;
   width: 100%;
-  height: calc(100vh - 120px);
+  height: calc(100% - 90px);
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -194,6 +224,7 @@ span, p{
       color: $custom-white;
       margin-top: 20px;
       margin-bottom: 16px;
+      animation: slideUp 2s ease-in-out 1;
     }
 
     .sub-title{
@@ -201,28 +232,21 @@ span, p{
       color: $custom-white;
       font-weight: 600;
       margin-bottom: 8px;
+      animation: fadeIn 2s ease-in-out 1;
     }
 
     .title{
-      font-family: 'Danviska', serif;
+      font-family: 'DM Serif Display', serif;
       color: $solid-gold;
       margin-bottom: 20px;
       display: flex;
       justify-content: center;
       align-items: center;
+      gap: 8px;
+      animation: slideDown 2s ease-in-out 1;
 
-      &::before{
-        content: "Ifan";
-        font-size: 36px;
+      .man-name, .woman-name{
         color: $custom-white;
-        margin-right: 4px;
-      }
-
-      &::after{
-        content: "Saskia";
-        font-size: 36px;
-        color: $custom-white;
-        margin-left: 4px;
       }
     }
 
@@ -235,6 +259,7 @@ span, p{
       color: $custom-white;
       font-weight: 600;
       border-radius: 8px;
+      animation: slideDownButton 2s ease-in-out 1;
 
       .custom-icon{
         width: 16px;
@@ -246,6 +271,44 @@ span, p{
 
       &:active{background-color: $dark-gold;}
     }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideDownButton {
+      0% {
+        opacity: 0;
+        transform: translateY(-40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   }
 }
 
@@ -254,7 +317,7 @@ span, p{
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: rgba(126, 14, 38, 0.75);
   padding: 0 24px;
   display: flex;
@@ -454,7 +517,7 @@ span, p{
   left: 50%;
   transform: translateX(-50%);
   background-color: $custom-white;
-  position: fixed;
+  position: absolute;
   z-index: 2;
   padding: 12px;
   border: 2px solid $solid-gold;

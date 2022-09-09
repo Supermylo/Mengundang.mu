@@ -1,40 +1,40 @@
 - content_for :additional_styles
-  = stylesheet_link_tag "secondtemplate/secondtemplate-wishesAttendanceOnly"
+  = stylesheet_link_tag "thirdtemplate/thirdtemplate-wishesCommentOnly"
 
 .wrapper-custom
   .container-full.h-100.position-relative.overflow-hidden
-    .row.gx-0
+    .row.m-0
       section.ornament
-        .frame
-        .flower-set
-          .main-flower
-            = image_tag("secondtemplate/main-flower.png", class: "flower")
-          .left-leaves
-            = image_tag("secondtemplate/wide-leaves.png", class: "big-rounded-leaf")
-            = image_tag("secondtemplate/wide-leaves.png", class: "small-rounded-leaf")
-            = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-leaves-leaf")
-          .right-leaves
-            = image_tag("secondtemplate/wide-leaves.png", class: "big-rounded-leaf")
-            = image_tag("secondtemplate/wide-leaves.png", class: "small-rounded-leaf")
-            = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-leaves-leaf")
-        .bottom-left
-          = image_tag("secondtemplate/sharp-leaves-shadow.png", class: "sharp-shadow-left")
-          = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-left-1")
-          = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-left-2")
-        .bottom-right  
-          = image_tag("secondtemplate/sharp-leaves-shadow.png", class: "sharp-shadow-right")
-          = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-right-1")
-          = image_tag("secondtemplate/sharp-leaves.png", class: "sharp-right-2")
+        .top-right
+          = image_tag("thirdtemplate/big-pine-set.png", class: "right-pine-set-1")
+          = image_tag("thirdtemplate/small-pine-set.png", class: "right-pine-set-2")
+          = image_tag("thirdtemplate/small-pine-set.png", class: "right-pine-set-3")
+        .top-left
+          = image_tag("thirdtemplate/big-pine-set.png", class: "left-pine-set-1")
+          = image_tag("thirdtemplate/small-pine-set.png", class: "left-pine-set-2")
+          = image_tag("thirdtemplate/small-pine-set.png", class: "left-pine-set-3")
       section.content
-        h2.title Konfirmasi Kehadiran
+        .group-ornament
+          .leaves-left
+            = image_tag("thirdtemplate/pine-leaves.png", class: "pine-leaves-left")
+            = image_tag("thirdtemplate/pine.png", class: "pine-left")
+          .leaves-right
+            = image_tag("thirdtemplate/pine-leaves.png", class: "pine-leaves-right")
+            = image_tag("thirdtemplate/pine.png", class: "pine-right")
+          .bubble
+            .group-bubble
+              =image_tag("thirdtemplate/bubble-small.png", class: "bubble-small")
+              =image_tag("thirdtemplate/bubble-medium.png", class: "bubble-medium")
+              =image_tag("thirdtemplate/bubble-large.png", class: "bubble-large")
+        h3.title Ruang Pesan
         form.custom-form
           .group-input
             label for="visitorname" Nama Anda
             input#visitorname name="visitorname" type="text" placeholder="Masukan nama anda disini"
-          .group-input.d-none
-            label for="wishes" Isi Do'a
-            textarea#wishes name="wishes" placeholder="Kirim doa terbaik anda disini"
-          .two-group-input.d-flex.gap-3.flex-column
+          .group-input  
+            label for="wishes" Isi Pesan
+            textarea#wishes name="wishes" placeholder="Kirim pesan anda disini"
+          .two-group-input.d-flex.gap-3.d-none
             .group-input.group-input-custom
               label for="attendance" Konfirmasi Kehadiran
               select#attendance name="attendance"
@@ -48,7 +48,7 @@
                 i.fa-solid.fa-plus.plus-icon onclick="countPlus()"
           button.custom-btn href="#"
             i.fa-solid.fa-paper-plane.text-center.icon-custom
-            span.text Submit
+            span.text Kirim
         .wishlist
           .group-wish
             span.sender-name Aji
@@ -66,29 +66,32 @@
             span.sender-name Auliya
             span.message
               | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu in convallis ultricies :)
+          .group-wish
+            span.sender-name Ahmad
+            span.message
+              | Ornare ultrices amet, commodo consequat, nulla at. Convallis in maecenas quam vel id at. Id scelerisque mattis pellentesque netus lacus suscipit. Purus, gravida tincidunt justo morbi accumsan, praesent.
       section.nav-float
         .row.custom-row.gx-0
           .col.text-center.d-flex.align-items-center.justify-content-center
-            a.nav-item href="/secondtemplate/index"
+            a.nav-item href="/thirdtemplate/index"
               i.fa-solid.fa-house.fa-lg.custom-icon
               span.label Home
           .col.text-center.d-flex.align-items-center.justify-content-center
-            a.nav-item href="/secondtemplate/couple"
+            a.nav-item href="/thirdtemplate/couple"
               i.fa-solid.fa-heart.fa-lg.custom-icon
               span.label Pasangan
           .col.text-center.d-flex.align-items-center.justify-content-center
-            a.nav-item href="/secondtemplate/location"
+            a.nav-item href="/thirdtemplate/location"
               i.fa-solid.fa-location-dot.fa-lg.custom-icon
               span.label Lokasi
           .col.text-center.d-flex.align-items-center.justify-content-center
             a.nav-item.active href="#"
-              i.fa-solid.fa-calendar-check.fa-lg.custom-icon
-              span.label Kehadiran
+              i.fa-solid.fa-hands-praying.fa-lg.custom-icon
+              span.label Doa
           .col.text-center.d-flex.align-items-center.justify-content-center
-            a.nav-item href="/secondtemplate/gift"
+            a.nav-item href="/thirdtemplate/gift"
               i.fa-solid.fa-gift.fa-lg.custom-icon
               span.label Hadiah
-
 javascript:
 
   function countPlus(){
@@ -105,4 +108,4 @@ javascript:
     if( parseInt(input.value) > 1 ){
       input.value = parseInt(input.value) - 1;
     };
-  }          
+  }
