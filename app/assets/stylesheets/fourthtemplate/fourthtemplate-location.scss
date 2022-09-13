@@ -4,10 +4,13 @@ $gradient-gold : linear-gradient(120deg, #C59B46 0%, #F4DCAB 50%);
 $custom-white : #F9FAFB;
 $light-gray : #D1D5DB;
 
-html{height: 100%;}
-body{
+html, body{height: 100%;}
+
+.wrapper-custom{
   background-color: $main-blue;
   height: 100%;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 h1{font-size: 36px;}
@@ -25,6 +28,7 @@ span,p {font-size: 12px;}
     transform: scaleX(-1);
     top: 0;
     right: 0;
+    animation: fadeIn 1.5s ease-in-out 1;
 
     .bg-ornament-custom{
       width: 167px;
@@ -36,14 +40,16 @@ span,p {font-size: 12px;}
     transform: scaleY(-1);
     bottom: 0;
     left: 0;
+    animation: fadeIn 2s ease-in-out 1;
   }
 }
 
 .content{
+  position: absolute;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: calc(100vh - 86px);
+  height: calc(100% - 86px);
   padding: 0 16px;
   color: $custom-white;
 
@@ -64,10 +70,10 @@ span,p {font-size: 12px;}
         align-items: center;
         background-image: none;
         padding: 8px;
-        background-color: transparent;
+        background-color: $main-blue;
         border: 2px solid $solid-gold;
         border-radius: 8px;
-        opacity: 0.2;
+        opacity: 0.5;
 
         &:hover, &:active{opacity: 1;}
 
@@ -83,6 +89,10 @@ span,p {font-size: 12px;}
   #akad, #resepsi{
     width: 100%;
     padding: 0 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeInScale 2s ease-in-out 1;
 
     .top-ornament{margin-bottom: 8px;}
 
@@ -96,10 +106,14 @@ span,p {font-size: 12px;}
       justify-content: center;
       align-items: center;
       margin-bottom: 12px;
+      width: 148px;
+      height: 148px;
+      overflow: hidden;
+      background-color: $custom-white;
 
       .couple-image{
-        position: absolute;
         width: 148px;
+        animation: zoomOut 6s ease-in-out infinite;
       }
 
       &::before{
@@ -109,12 +123,30 @@ span,p {font-size: 12px;}
         width: 150px;
         height: 150px;
         z-index: 1;
+        position: absolute;
       }
 
       .frame{
         position: absolute;
         width: 160px;
         z-index: 2;
+      }
+
+      @keyframes zoomOut {
+        0% {
+          opacity: 0;
+          transform: scale(1.1);
+        }
+        20% {
+          opacity: 1;
+        }
+        90% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          transform: scale(1);
+        }
       }
     }
 
@@ -160,6 +192,12 @@ span,p {font-size: 12px;}
           width: 1px;
           height: 80px;
           background: linear-gradient(to bottom, $main-blue 0%, $solid-gold 5%, #F4DCAB 95%, $main-blue 100%);
+          animation : slidePath 1.5s ease-in-out 1;
+        }
+
+        @keyframes slidePath {
+          0% { height: 0; }
+          100% { height: 80px; }
         }
       }
     }
@@ -202,7 +240,7 @@ span,p {font-size: 12px;}
   left: 50%;
   transform: translateX(-50%);
   background-color: $custom-white;
-  position: fixed;
+  position: absolute;
   z-index: 2;
   padding: 12px;
   border-radius: 50rem;
@@ -232,5 +270,21 @@ span,p {font-size: 12px;}
     }
 
     i{display: inline-block;}
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }

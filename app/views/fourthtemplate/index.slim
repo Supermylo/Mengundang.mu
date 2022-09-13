@@ -1,44 +1,45 @@
 - content_for :additional_styles
   = stylesheet_link_tag "fourthtemplate/fourthtemplate"
 
-.container-full.h-100.position-relative.overflow-hidden
-  .row.m-0
-    section.ornament
-      #top-left-ornament
-        = image_tag("fourthtemplate/bg-ornament.png")
-      #bottom-right-ornament
-        = image_tag("fourthtemplate/bg-ornament.png", class: "bg-ornament-custom")
-    section.content
-      .wrapper-image
-        = image_tag("fourthtemplate/couple-image.png", class: "couple-image")
-        = image_tag("fourthtemplate/custom-frame.png", class: "frame")
-      .wrapper-text.text-center
-        #top-ornament
-          = image_tag("fourthtemplate/top-ornament.png", class: "top-ornament-img")
-        h4.sub-title.text-center Walimatul 'Urs
-        h1.title.text-center Sya'ban & April
-        span.date.text-center 6 September 2022
-        #bottom-ornament
-          = image_tag("fourthtemplate/bottom-ornament.png", class: "bottom-ornament-img")
-    section.nav-float
-      .row.custom-row.gx-0
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label.active href="#"
-            i.fa-solid.fa-house.fa-lg.w-100.text-center
-            span.navitem-label Home
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label href="/fourthtemplate/couple"
-            i.fa-solid.fa-heart.fa-lg.w-100.text-center
-            span.navitem-label Pasangan
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label href="/fourthtemplate/location"
-            i.fa-solid.fa-location-dot.fa-lg.w-100.text-center
-            span.navitem-label Lokasi
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label href="/fourthtemplate/wishes"
-            i.fa-solid.fa-hands-praying.fa-lg.w-100.text-center
-            span.navitem-label Doa
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label href="/fourthtemplate/gift"
-            i.fa-solid.fa-gift.fa-lg.w-100.text-center
-            span.navitem-label Hadiah
+.wrapper-custom
+  .container-full.h-100.position-relative.overflow-hidden
+    .row.m-0
+      section.ornament
+        #top-left-ornament
+          = image_tag("fourthtemplate/bg-ornament.png")
+        #bottom-right-ornament
+          = image_tag("fourthtemplate/bg-ornament.png", class: "bg-ornament-custom")
+      section.content
+        .wrapper-image
+          = image_tag("fourthtemplate/couple-image.png", class: "couple-image")
+          = image_tag("fourthtemplate/custom-frame.png", class: "frame")
+        .wrapper-text.text-center
+          #top-ornament
+            = image_tag("fourthtemplate/top-ornament.png", class: "top-ornament-img")
+          h4.sub-title.text-center Walimatul 'Urs
+          h1.title.text-center Sya'ban & April
+          span.date.text-center 6 September 2022
+          #bottom-ornament
+            = image_tag("fourthtemplate/bottom-ornament.png", class: "bottom-ornament-img")
+      section.nav-float
+        .row.custom-row.gx-0
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.navitem-label.active href="#"
+              i.fa-solid.fa-house.fa-lg.w-100.text-center
+              span.navitem-label Home
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.navitem-label href="/fourthtemplate/couple"
+              i.fa-solid.fa-heart.fa-lg.w-100.text-center
+              span.navitem-label Pasangan
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.navitem-label href="/fourthtemplate/location"
+              i.fa-solid.fa-location-dot.fa-lg.w-100.text-center
+              span.navitem-label Lokasi
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.navitem-label href="/fourthtemplate/wishes"
+              i.fa-solid.fa-hands-praying.fa-lg.w-100.text-center
+              span.navitem-label Doa
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.navitem-label href="/fourthtemplate/gift"
+              i.fa-solid.fa-gift.fa-lg.w-100.text-center
+              span.navitem-label Hadiah

@@ -4,10 +4,13 @@ $gradient-gold : linear-gradient(120deg, #C59B46 0%, #F4DCAB 50%);
 $custom-white : #F9FAFB;
 $light-gray : #D1D5DB;
 
-html{height: 100%;}
-body{
+html, body{height: 100%;}
+
+.wrapper-custom{
   background-color: $main-blue;
   height: 100%;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 h1{font-size: 36px;}
@@ -25,6 +28,7 @@ span,p {font-size: 12px;}
     transform: scaleX(-1);
     top: 0;
     right: 0;
+    animation: fadeIn 1.5s ease-in-out 1;
 
     .bg-ornament-custom{
       width: 167px;
@@ -36,23 +40,29 @@ span,p {font-size: 12px;}
     transform: scaleY(-1);
     bottom: 0;
     left: 0;
+    animation: fadeIn 2s ease-in-out 1;
   }
 }
 
 .content{
+  position: absolute;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: calc(100vh - 86px);
+  height: calc(100% - 86px);
   padding: 0 48px;
   color: $custom-white;
 
-  #top-ornament{margin-bottom: 16px;}
+  #top-ornament{
+    margin-bottom: 16px;
+    animation: fadeInScale 2.5s ease-in-out 1;
+  }
   
   .prolog{
     font-family: 'Cabin', sans-serif;
     font-weight: 400;
     margin-bottom: 16px;
+    animation: fadeInScale 2s ease-in-out 1;
   }
 
   #wrapper-groom, #wrapper-bride{
@@ -64,13 +74,15 @@ span,p {font-size: 12px;}
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 112px;
-      height: 112px;
+      width: 100px;
+      height: 100px;
       margin-bottom: 8px;
+      overflow: hidden;
+      background-color: $custom-white;
 
       .groom-image, .bride-image{
-        position: absolute;
         width: 100px;
+        animation: zoomOut 6s ease-in-out infinite;
       }
 
       &::before{
@@ -79,14 +91,31 @@ span,p {font-size: 12px;}
         background-size: 102px;
         width: 102px;
         height: 102px;
-        position: absolute;
         z-index: 1;
+        position: absolute;
       }
 
       .frame{
         width: 112px;
         position: absolute;
         z-index: 2;
+      }
+
+      @keyframes zoomOut {
+        0% {
+          opacity: 0;
+          transform: scale(1.1);
+        }
+        20% {
+          opacity: 1;
+        }
+        90% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          transform: scale(1);
+        }
       }
     }
 
@@ -106,12 +135,21 @@ span,p {font-size: 12px;}
     }
   }
 
+  #wrapper-groom {
+    animation: slideUp 2s ease-in-out 1;
+  }
+
+  #wrapper-bride {
+    animation: slideDown 2s ease-in-out 1;
+  }
+
   #separator-line{
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 12px 0;
     gap: 12px;
+    animation: fadeInScale 1.5s ease-in-out 1;
 
     &::before, &::after{
       content: '';
@@ -119,10 +157,19 @@ span,p {font-size: 12px;}
       width: 80px;
       height: 1px;
       background: $gradient-gold;
+      animation: slidePath 1.5s ease-in-out 1;
+    }
+
+    @keyframes slidePath {
+      0% { width: 0; }
+      100% { width: 80px; }
     }
   }
 
-  #bottom-ornament{margin-top: 16px;}
+  #bottom-ornament{
+    margin-top: 16px;
+    animation: fadeInScale 2s ease-in-out 1;
+  }
 }
 
 .nav-float{
@@ -130,7 +177,7 @@ span,p {font-size: 12px;}
   left: 50%;
   transform: translateX(-50%);
   background-color: $custom-white;
-  position: fixed;
+  position: absolute;
   z-index: 2;
   padding: 12px;
   border-radius: 50rem;
@@ -160,5 +207,55 @@ span,p {font-size: 12px;}
     }
 
     i{display: inline-block;}
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  10% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  10% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  40% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }

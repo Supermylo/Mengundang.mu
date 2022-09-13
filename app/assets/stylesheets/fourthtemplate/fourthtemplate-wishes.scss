@@ -6,10 +6,13 @@ $light-gray : #D1D5DB;
 $gray : #9CA3AF;
 $dark-gray : #4B5563;
 
-html{height: 100%;}
-body{
+html, body{height: 100%;}
+
+.wrapper-custom{
   background-color: $main-blue;
   height: 100%;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 h1{font-size: 36px;}
@@ -26,6 +29,7 @@ span,p {font-size: 12px;}
     position: absolute;
     top: 0;
     left: 0;
+    animation: fadeIn 1.5s ease-in-out 1;
   }
 
   #right-ornament{
@@ -33,10 +37,16 @@ span,p {font-size: 12px;}
     transform: scaleX(-1);
     top: 0;
     right: 0;
+    animation: fadeIn 1.5s ease-in-out 1;
   }
 
   .bg-ornament-custom{
     width: 167px;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
   }
 }
 
@@ -44,16 +54,21 @@ span,p {font-size: 12px;}
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: calc(100vh - 86px);
+  height: calc(100% - 86px);
   padding: 40px 20px 20px 20px;
   color: $custom-white;
+  position: absolute;
 
   .title{
     font-family: 'DM Serif Display', serif;
     margin-bottom: 10px;
+    animation: slideUp 2s ease-in-out 1;
   }
 
-  .ornament{margin-bottom: 20px;}
+  .ornament{
+    margin-bottom: 20px;
+    animation: slideDown 2s ease-in-out 1;
+  }
 
   .custom-form{
     width: 100%;
@@ -61,10 +76,11 @@ span,p {font-size: 12px;}
     flex-direction: column;
     gap: 12px;
     background-color: $custom-white;
-    padding: 16px 20px;
+    padding: 16px;
     border-radius: 16px;
     margin-bottom: 16px;
     font-family: 'Cabin', sans-serif;
+    animation: fadeInScale 2.5s ease-in-out 1;
 
     .group-input{
 
@@ -109,6 +125,8 @@ span,p {font-size: 12px;}
       border-radius: 24px;
       border: none;
 
+      .icon-custom{ width: 16px; }
+
       .text{
         margin-left: 8px;
       }
@@ -123,9 +141,10 @@ span,p {font-size: 12px;}
     overflow-x: hidden;
     overflow-y: scroll;
     background-color: $custom-white;
-    padding: 16px 20px;
+    padding: 16px;
     border-radius: 16px;
     font-family: 'Cabin', sans-serif;
+    animation: fadeInScale 2.5s ease-in-out 1;
 
     .group-wish{
 
@@ -160,6 +179,39 @@ span,p {font-size: 12px;}
       margin-bottom: 12px;
     }
   }
+
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 }
 
 .nav-float{
@@ -167,7 +219,7 @@ span,p {font-size: 12px;}
   left: 50%;
   transform: translateX(-50%);
   background-color: $custom-white;
-  position: fixed;
+  position: absolute;
   z-index: 2;
   padding: 12px;
   border-radius: 50rem;

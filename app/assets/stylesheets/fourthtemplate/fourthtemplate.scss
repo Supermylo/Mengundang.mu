@@ -4,10 +4,13 @@ $gradient-gold : linear-gradient(120deg, #C59B46 0%, #F4DCAB 50%);
 $custom-white : #F9FAFB;
 $light-gray : #D1D5DB;
 
-html{height: 100%;}
-body{
+html, body{height: 100%;}
+
+.wrapper-custom{
   background-color: $main-blue;
   height: 100%;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 h1{font-size: 36px;}
@@ -24,6 +27,8 @@ span,p {font-size: 12px;}
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 2;
+    animation: topOrnament 1.5s ease-in-out 1;
   }
 
   #bottom-right-ornament{
@@ -31,28 +36,55 @@ span,p {font-size: 12px;}
     transform: scale(-1);
     bottom: 0;
     right: 0;
+    animation: bottomOrnament 1.5s ease-in-out 1;
+  }
+
+  @keyframes topOrnament {
+    0% {
+      opacity: 0;
+      transform: translateX(-232px) translateY(-180px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0) translateY(0);
+    }
+  }
+
+  @keyframes bottomOrnament {
+    0% {
+      opacity: 0;
+      transform: scale(-1) translateX(-232px) translateY(-180px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(-1) translateX(0) translateY(0);
+    }
   }
 }
 
 .content{
+  position: absolute;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: calc(100vh - 86px);
+  height: calc(100% - 86px);
   align-items: center;
 
   .wrapper-image{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 256px;
-    height: 256px;
+    width: 240px;
+    height: 240px;
+    background-color: $custom-white;
+    overflow: hidden;
+    margin-bottom: 4px;
+    animation: fadeIn 2s ease-in-out 1;
 
     .couple-image{
-      position: absolute;
-      width: 238px;
-      height: 238px;
-      object-fit: cover;
+      width: 330px;
+      transform: translateX(10px);
+      animation: zoomOut 8s ease-in-out infinite;
     }
     
     &::before{
@@ -70,28 +102,104 @@ span,p {font-size: 12px;}
       position: absolute;
       z-index: 2;
     }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes zoomOut {
+      0% {
+        opacity: 0;
+        transform: translateX(10px) scale(1.1);
+      }
+      20% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translateX(10px) scale(1);
+      }
+    }
   }
 
   .wrapper-text{
     color: $custom-white;
 
-    #top-ornament{margin-bottom: 12px;}
+    #top-ornament{
+      margin-bottom: 12px;
+      animation: slideUp 2.5s ease-in-out 1;
+    }
 
     .title, .sub-title{font-family: 'DM Serif Display', serif;}
 
-    .title{margin-bottom: 8px;}
+    .title{
+      margin-bottom: 8px;
+      animation: fadeInScale 2s ease-in-out 1;
+    }
 
-    .sub-title{margin-bottom: 12px;}
+    .sub-title{
+      margin-bottom: 12px;
+      animation: slideUp 2s ease-in-out 1;
+    }
 
     .date{
+      display: inline-block;
       font-family: 'Cabin', sans-serif;
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 1.25px;
       margin-bottom: 14px;
+      animation: slideDown 2s ease-in-out 1;
     }
 
-    #bottom-ornament{margin-top: 12px;}
+    #bottom-ornament{
+      animation: slideDown 2.5s ease-in-out 1;
+    }
+
+    @keyframes fadeInScale {
+      0% {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes slideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      40% {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      80% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-24px);
+      }
+      40% {
+        opacity: 0;
+        transform: translateY(-24px);
+      }
+      80% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   }
 }
 
@@ -100,7 +208,7 @@ span,p {font-size: 12px;}
   left: 50%;
   transform: translateX(-50%);
   background-color: $custom-white;
-  position: fixed;
+  position: absolute;
   z-index: 2;
   padding: 12px;
   border-radius: 50rem;

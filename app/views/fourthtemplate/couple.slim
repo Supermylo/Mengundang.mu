@@ -1,57 +1,58 @@
 - content_for :additional_styles
   = stylesheet_link_tag "fourthtemplate/fourthtemplate-couple"
 
-.container-full.h-100.position-relative.overflow-hidden
-  .row.m-0
-    section.ornament
-      #top-right-ornament
-        = image_tag("fourthtemplate/bg-ornament.png", class: "bg-ornament-custom")
-      #bottom-left-ornament
-        = image_tag("fourthtemplate/bg-ornament.png")
-    section.content.text-center
-      #top-ornament
-        = image_tag("fourthtemplate/bottom-ornament.png")
-      p.prolog
-        | Assalamu’alaikum Wr. Wb.
-        br
-        | Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan kami.
-      #wrapper-groom
-        .wrapper-image
-          = image_tag("fourthtemplate/custom-frame.png", class: "frame")
-          = image_tag("fourthtemplate/groom-image.png", class: "groom-image")
-        .wrapper-text
-          h4.title Sya'ban Ramadan
-          span.sub-title Putra Bapak Fulan & Ibu Fulanah
-      #separator-line
-        = image_tag("fourthtemplate/top-ornament.png")
-      #wrapper-bride
-        .wrapper-image
-          = image_tag("fourthtemplate/custom-frame.png", class: "frame")
-          = image_tag("fourthtemplate/bride-image.png", class: "bride-image")
-        .wrapper-text
-          h4.title April Nur May
-          span.sub-title Putri Bapak Fulan & Ibu Fulanah
-      #bottom-ornament
-        = image_tag("fourthtemplate/bottom-ornament.png")
-    section.nav-float
-      .row.custom-row.gx-0
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label href="/fourthtemplate/index"
-            i.fa-solid.fa-house.fa-lg.w-100.text-center
-            span.navitem-label Home
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label.active href="#"
-            i.fa-solid.fa-heart.fa-lg.w-100.text-center
-            span.navitem-label Pasangan
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label href="/fourthtemplate/location"
-            i.fa-solid.fa-location-dot.fa-lg.w-100.text-center
-            span.navitem-label Lokasi
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label href="/fourthtemplate/wishes"
-            i.fa-solid.fa-hands-praying.fa-lg.w-100.text-center
-            span.navitem-label Doa
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label href="/fourthtemplate/gift"
-            i.fa-solid.fa-gift.fa-lg.w-100.text-center
-            span.navitem-label Hadiah
+.wrapper-custom
+  .container-full.h-100.position-relative.overflow-hidden
+    .row.m-0
+      section.ornament
+        #top-right-ornament
+          = image_tag("fourthtemplate/bg-ornament.png", class: "bg-ornament-custom")
+        #bottom-left-ornament
+          = image_tag("fourthtemplate/bg-ornament.png")
+      section.content.text-center
+        #top-ornament
+          = image_tag("fourthtemplate/bottom-ornament.png")
+        p.prolog
+          | Assalamu’alaikum Wr. Wb.
+          br
+          | Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan kami.
+        #wrapper-groom
+          .wrapper-image
+            = image_tag("fourthtemplate/custom-frame.png", class: "frame")
+            = image_tag("fourthtemplate/groom-image.png", class: "groom-image")
+          .wrapper-text
+            h4.title Sya'ban Ramadan
+            span.sub-title Putra Bapak Fulan & Ibu Fulanah
+        #separator-line
+          = image_tag("fourthtemplate/top-ornament.png")
+        #wrapper-bride
+          .wrapper-image
+            = image_tag("fourthtemplate/custom-frame.png", class: "frame")
+            = image_tag("fourthtemplate/bride-image.png", class: "bride-image")
+          .wrapper-text
+            h4.title April Nur May
+            span.sub-title Putri Bapak Fulan & Ibu Fulanah
+        #bottom-ornament
+          = image_tag("fourthtemplate/bottom-ornament.png")
+      section.nav-float
+        .row.custom-row.gx-0
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.navitem-label href="/fourthtemplate/index"
+              i.fa-solid.fa-house.fa-lg.w-100.text-center
+              span.navitem-label Home
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.navitem-label.active href="#"
+              i.fa-solid.fa-heart.fa-lg.w-100.text-center
+              span.navitem-label Pasangan
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.navitem-label href="/fourthtemplate/location"
+              i.fa-solid.fa-location-dot.fa-lg.w-100.text-center
+              span.navitem-label Lokasi
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.navitem-label href="/fourthtemplate/wishes"
+              i.fa-solid.fa-hands-praying.fa-lg.w-100.text-center
+              span.navitem-label Doa
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.navitem-label href="/fourthtemplate/gift"
+              i.fa-solid.fa-gift.fa-lg.w-100.text-center
+              span.navitem-label Hadiah

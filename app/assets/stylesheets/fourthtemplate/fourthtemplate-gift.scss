@@ -6,10 +6,13 @@ $light-gray : #D1D5DB;
 $gray : #9CA3AF;
 $dark-gray : #4B5563;
 
-html{height: 100%;}
-body{
+html, body{height: 100%;}
+
+.wrapper-custom{
   background-color: $main-blue;
   height: 100%;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 h1{font-size: 36px;}
@@ -28,6 +31,7 @@ span,p {font-size: 12px;}
     transform: scaleY(-1);
     bottom: 0;
     left: 0;
+    animation: leftOrnament 1.5s ease-in-out 1;
   }
 
   #right-ornament{
@@ -36,18 +40,42 @@ span,p {font-size: 12px;}
     transform: scale(-1);
     bottom: 0;
     right: 0;
+    animation: rightOrnament 1.5s ease-in-out 1;
   }
 
   .bg-ornament-custom{
     width: 50%;
+  }
+
+  @keyframes leftOrnament {
+    0% {
+      opacity: 0;
+      transform: scaleY(-1) translateX(-200px) translateY(-160px);
+    }
+    100% {
+      opacity: 1;
+      transform: scaleY(-1) translateX(0) translateY(0);
+    }
+  }
+
+  @keyframes rightOrnament {
+    0% {
+      opacity: 0;
+      transform: scale(-1) translateX(-200px) translateY(-160px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(-1) translateX(0) translateY(0);
+    }
   }
 }
 
 .content{
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 86px);
+  height: calc(100% - 86px);
   padding: 0;
+  position: absolute;
 
   .group-image{
     width: 100%;
@@ -55,6 +83,7 @@ span,p {font-size: 12px;}
     position: relative;
     display: flex;
     justify-content: center;
+    animation: slideImage 1.5s ease-in-out 1;
 
     .custom-carousel{
       width: 100%;
@@ -136,6 +165,17 @@ span,p {font-size: 12px;}
       position: absolute;
       bottom: 0;
     }
+
+    @keyframes slideImage {
+      0% {
+        opacity: 0;
+        transform: translateY(-100px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   }
 
   .group-text{
@@ -146,6 +186,7 @@ span,p {font-size: 12px;}
     display: flex;
     flex-direction: column;
     justify-content: center;
+    animation: fadeInScale 2.5s ease-in-out 1;
 
     .thankyou{
       font-weight: 400;
@@ -175,6 +216,17 @@ span,p {font-size: 12px;}
 
       &:hover, &:active{background-color: #9e721b;}
     }
+
+    @keyframes fadeInScale {
+      0% {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
   }
 }
 
@@ -183,7 +235,7 @@ span,p {font-size: 12px;}
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: rgba(33, 84, 129,0.75);
   padding: 0 24px;
   display: flex;
@@ -291,7 +343,7 @@ span,p {font-size: 12px;}
   left: 50%;
   transform: translateX(-50%);
   background-color: $custom-white;
-  position: fixed;
+  position: absolute;
   z-index: 2;
   padding: 12px;
   border-radius: 50rem;

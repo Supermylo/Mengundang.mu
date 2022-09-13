@@ -10,7 +10,7 @@ module Mengundangmu
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
-    config.hosts << "screensaver-vessel-accessing-plus.trycloudflare.com"
+    config.hosts << "emphasis-favorite-oecd-treasure.trycloudflare.com"
 
     # Configuration for the application, engines, and railties goes here.
     #
