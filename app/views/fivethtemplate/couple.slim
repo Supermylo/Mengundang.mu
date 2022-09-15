@@ -1,41 +1,42 @@
 - content_for :additional_styles
   = stylesheet_link_tag "fivethtemplate/fivethtemplate-couple"
 
-.container-full.h-100
-  .row.custom-row
-    section.content
-      #top-ornament
-        = image_tag("fivethtemplate/top-ornament.png", class: "top-ornament")
-      p.prolog.text-center
-        | Assalamu’alaikum Wr. Wb.
-        br
-        | Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan kami. 
-      h3.title.text-center Wildan Ramadan
-      span.sub-title.text-center Putra Bapak Fulan & Ibu Fulanah
-      h4.separator.text-center &
-      h3.title.text-center Utaran Nur Anisa
-      span.sub-title.text-center Putri Bapak Fulan & Ibu Fulanah
-      #bottom-ornament
-        = image_tag("fivethtemplate/bottom-ornament.png", class: "bottom-ornament")
-    section.nav-float
-      .row.custom-nav-row.gx-0
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label href="/fivethtemplate/index"
-            i.fa-solid.fa-house.fa-lg.w-100.text-center
-            span.navitem-label Home
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label.active href="#"
-            i.fa-solid.fa-heart.fa-lg.w-100.text-center
-            span.navitem-label Pasangan
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label href="/fivethtemplate/location"
-            i.fa-solid.fa-location-dot.fa-lg.w-100.text-center
-            span.navitem-label Lokasi
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label href="/fivethtemplate/wishes"
-            i.fa-solid.fa-hands-praying.fa-lg.w-100.text-center
-            span.navitem-label Doa
-        .col.text-center.d-flex.align-items-center.justify-content-center
-          a.navitem-label href="/fivethtemplate/gift"
-            i.fa-solid.fa-gift.fa-lg.w-100.text-center
-            span.navitem-label Hadiah
+.wrapper-custom
+  .container-full.h-100
+    .row.custom-row
+      section.content
+        #top-ornament
+          = image_tag("fivethtemplate/top-ornament.png", class: "top-ornament")
+        .prolog.text-center
+          p Assalamu’alaikum Wr. Wb.<br> Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan kami.
+        .man-name-group.text-center
+          h2.title Wildan Ramadan
+          span.sub-title Putra Bapak Fulan & Ibu Fulanah
+        h4.separator.text-center &
+        .woman-name-group.text-center
+          h2.title Utaran Nur Anisa
+          span.sub-title Putri Bapak Fulan & Ibu Fulanah
+        #bottom-ornament
+          = image_tag("fivethtemplate/bottom-ornament.png", class: "bottom-ornament")
+      section.nav-float
+        .row.custom-nav-row.gx-0
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.navitem-label href="/fivethtemplate/index"
+              i.fa-solid.fa-house.fa-lg.w-100.text-center
+              span.navitem-label Home
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.navitem-label.active href="#"
+              i.fa-solid.fa-heart.fa-lg.w-100.text-center
+              span.navitem-label Pasangan
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.navitem-label href="/fivethtemplate/location"
+              i.fa-solid.fa-location-dot.fa-lg.w-100.text-center
+              span.navitem-label Lokasi
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.navitem-label href="/fivethtemplate/wishes"
+              i.fa-solid.fa-hands-praying.fa-lg.w-100.text-center
+              span.navitem-label Doa
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.navitem-label href="/fivethtemplate/gift"
+              i.fa-solid.fa-gift.fa-lg.w-100.text-center
+              span.navitem-label Hadiah

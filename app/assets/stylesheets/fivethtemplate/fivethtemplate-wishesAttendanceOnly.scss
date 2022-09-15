@@ -130,6 +130,25 @@ span{
           option{color: $dark-brown;}
         }
       }
+
+      .group-input-custom{
+        flex: 1 0 0;
+  
+        .wrapper-attendance{
+          display: flex;
+          align-items: center;
+  
+          .minus-icon, .plus-icon{
+            width: 16px;
+            color: $custom-white;
+          }
+  
+          #totalAttendance{
+            text-align: center;
+            margin: 0 8px;
+          }
+        }
+      }
   
       .custom-btn{
         display: inline-flex;

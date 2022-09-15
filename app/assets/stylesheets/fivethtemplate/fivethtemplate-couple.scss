@@ -1,18 +1,16 @@
-@font-face {
-  font-family: Magnolia Script;
-  src: url(../../fonts/MagnoliaScript.otf);
-}
-
 $dark-brown : #514338;
 $light-brown : #6D5D50;
 $brown : #C7B5A6;
 $solid-gold : #D49B49;
 $custom-white : #F9FAFB;
 
-html{height: 100%;}
-body{
+html, body{height: 100%;}
+
+.wrapper-custom{
   background-color: $dark-brown;
   height: 100%;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 h1{font-size: 56px;}
@@ -31,6 +29,7 @@ span, p{
   flex-direction: column;
   margin: 0;
   padding: 16px;
+  animation: fadeInScale 1.5s ease-in-out 1;
 
   .content{
     flex-grow: 1;
@@ -47,6 +46,7 @@ span, p{
       position: absolute;
       top: 8px;
       left: 8px;
+      animation: topCornerOrnament 2s ease-in-out;
     }
 
     &::after{
@@ -55,28 +55,41 @@ span, p{
       bottom: 8px;
       right: 8px;
       transform: scale(-1);
+      animation: bottomCornerOrnament 2s ease-in-out;
     }
 
     .prolog{
       font-weight: 400;
       color: $custom-white;
+      animation: fadeInScale 2s ease-in-out 1;
     }
 
-    .title{
-      font-family: 'Magnolia Script', serif;
-      color: $custom-white;
-      margin-bottom: 4px;
+    .man-name-group, .woman-name-group{
+      .title{
+        font-family: 'Niconne', serif;
+        color: $custom-white;
+        margin-bottom: 0;
+      }
+
+      .sub-title{
+        font-weight: 300;
+        color: $solid-gold;
+      }
     }
 
-    .sub-title{
-      font-weight: 300;
-      color: $solid-gold;
+    .man-name-group {
+      margin-bottom: 20px;
+      animation: slideUp 2s ease-in-out 1;
+    }
+
+    .woman-name-group {
+      animation: slideDown 2s ease-in-out 1;
     }
 
     .separator{
-      margin: 16px 0;
       color: $custom-white;
-      font-family: 'Magnolia Script', serif;
+      font-family: 'Niconne', serif;
+      margin-bottom: 16px;
 
       &::before{
         content: url("fivethtemplate/separator-ornament.png");
@@ -96,11 +109,62 @@ span, p{
       display: block;
       width: 100%;
       text-align: center;
+      animation: fadeInScale 2s ease-in-out 1;
     }
 
     #top-ornament{margin-bottom: 16px;}
 
-    #bottom-ornament{margin-top: 28px;}
+    #bottom-ornament{margin-top: 20px;}
+
+    @keyframes topCornerOrnament {
+      0% {
+        opacity: 0;
+        transform: translateX(-16px) translateY(-16px);
+      }
+      20% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+      }
+    }
+
+    @keyframes bottomCornerOrnament {
+      0% {
+        opacity: 0;
+        transform: scale(-1) translateX(-16px) translateY(-16px);
+      }
+      20% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+        transform: scale(-1) translateX(0) translateY(0);
+      }
+    }
+
+    @keyframes slideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-16px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   }
 
   .nav-float{
@@ -127,6 +191,17 @@ span, p{
   
         i{display: inline-block;}
       }
+    }
+  }
+
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
     }
   }
 }

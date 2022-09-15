@@ -44,6 +44,10 @@ Rails.application.routes.draw do
   get 'fivethtemplate/location'
   get 'fivethtemplate/wishes'
   get 'fivethtemplate/gift'
+  get 'fivethtemplate/wishesFull'
+  get 'fivethtemplate/wishesOnly'
+  get 'fivethtemplate/wishesAttendanceOnly'
+  get 'fivethtemplate/wishesCommentOnly'
 
   get 'sixthtemplate/index'
   get 'sixthtemplate/couple'

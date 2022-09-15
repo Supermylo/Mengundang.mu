@@ -1,18 +1,16 @@
-@font-face {
-  font-family: Magnolia Script;
-  src: url(../../fonts/MagnoliaScript.otf);
-}
-
 $dark-brown : #514338;
 $light-brown : #6D5D50;
 $brown : #C7B5A6;
 $solid-gold : #D49B49;
 $custom-white : #F9FAFB;
 
-html{height: 100%;}
-body{
+html, body{height: 100%;}
+
+.wrapper-custom{
   background-color: $dark-brown;
   height: 100%;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 h1{font-size: 56px;}
@@ -31,6 +29,7 @@ span{
   flex-direction: column;
   margin: 0;
   padding: 16px;
+  animation: fadeInScale 1.5s ease-in-out 1;
 
   .content{
     flex-grow: 1;
@@ -46,6 +45,7 @@ span{
       position: absolute;
       top: 8px;
       left: 8px;
+      animation: topCornerOrnament 2s ease-in-out;
     }
 
     &::after{
@@ -54,25 +54,27 @@ span{
       bottom: 8px;
       right: 8px;
       transform: scale(-1);
+      animation: bottomCornerOrnament 2s ease-in-out;
     }
 
     .title{
-      font-family: 'Magnolia Script', serif;
+      font-family: 'Niconne', serif;
       color: $custom-white;
       margin: 12px 0;
 
-      &::before{
-        content: "Wildan";
-        display: block;
-        font-size: 56px;
+      .man-name{
         margin-bottom: 4px;
+        animation: slideUp 2s ease-in-out 1;
       }
 
-      &::after{
-        content: "Utaran";
-        display: block;
-        font-size: 56px;
-        margin-top: 4px;
+      .woman-name{
+        margin-bottom: 0;
+        animation: slideDown 2s ease-in-out 1;
+      }
+
+      .separator-name{
+        margin-bottom: 4px;
+        animation: fadeInScale 2s ease-in-out 1;
       }
     }
 
@@ -84,15 +86,79 @@ span{
       letter-spacing: 1.25px;
     }
 
+    .sub-title{
+      animation: slideUp 2s ease-in-out 1;
+    }
+
+    .dates{
+      animation: slideDown 2s ease-in-out 1;
+    }
+
     #top-ornament, #bottom-ornament{
       display: block;
       width: 100%;
       text-align: center;
     }
 
-    #top-ornament{margin-bottom: 12px;}
+    #top-ornament{
+      margin-bottom: 12px;
+      animation: slideUp 2s ease-in-out 1;
+    }
 
-    #bottom-ornament{margin-top: 16px;}
+    #bottom-ornament{
+      margin-top: 16px;
+      animation: slideDown 2s ease-in-out 1;
+    }
+
+    @keyframes topCornerOrnament {
+      0% {
+        opacity: 0;
+        transform: translateX(-16px) translateY(-16px);
+      }
+      20% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+      }
+    }
+
+    @keyframes bottomCornerOrnament {
+      0% {
+        opacity: 0;
+        transform: scale(-1) translateX(-16px) translateY(-16px);
+      }
+      20% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+        transform: scale(-1) translateX(0) translateY(0);
+      }
+    }
+
+    @keyframes slideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-16px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   }
 
   .nav-float{
@@ -119,6 +185,17 @@ span{
   
         i{display: inline-block;}
       }
+    }
+  }
+
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
     }
   }
 }

@@ -1,18 +1,16 @@
-@font-face {
-  font-family: Magnolia Script;
-  src: url(../../fonts/MagnoliaScript.otf);
-}
-
 $dark-brown : #514338;
 $light-brown : #6D5D50;
 $brown : #C7B5A6;
 $solid-gold : #D49B49;
 $custom-white : #F9FAFB;
 
-html{height: 100%;}
-body{
+html, body{height: 100%;}
+
+.wrapper-custom{
   background-color: $dark-brown;
   height: 100%;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 h1{font-size: 56px;}
@@ -31,6 +29,7 @@ span, p{
   flex-direction: column;
   margin: 0;
   padding: 16px;
+  animation: fadeInScale 1.5s ease-in-out 1;
 
   .content{
     flex-grow: 1;
@@ -40,13 +39,14 @@ span, p{
     flex-direction: column;
     justify-content: center;
     position: relative;
-    padding: 0 24px;
+    padding: 0;
 
     &::before{
       content: url("fivethtemplate/corner-ornament.png");
       position: absolute;
       top: 8px;
       left: 8px;
+      animation: topCornerOrnament 2s ease-in-out;
     }
 
     &::after{
@@ -55,21 +55,25 @@ span, p{
       bottom: 8px;
       right: 8px;
       transform: scale(-1);
+      animation: bottomCornerOrnament 2s ease-in-out;
     }
 
     #wrapper-akad, #wrapper-resepsi{
 
       .title{
-        font-family: 'Magnolia Script', serif;
+        font-family: 'Niconne', serif;
         color: $custom-white;
         margin-bottom: 24px;
+        animation: slideUp 2s ease-in-out 1;
       }
       
       .group-time{
         color: $custom-white;
+        animation: fadeInScale 2s ease-in-out 1;
 
-        .month{
+        .month, .year{
           display: block;
+          font-family: 'Prompt', sans-serif;
           font-size: 12px;
           font-weight: 500;
           text-transform: uppercase;
@@ -84,12 +88,15 @@ span, p{
           padding: 0 24px;
           margin: 8px 0;
 
-          .day{
+          .day, .clock{
             flex: 1 0 0;
             font-weight: 500;
             text-transform: uppercase;
             display: flex;
             flex-direction: column;
+          }
+
+          .day{
 
             &::before{
               content: "";
@@ -97,6 +104,8 @@ span, p{
               height: 1px;
               background-color: $solid-gold;
               margin-bottom: 4px;
+              align-self: end;
+              animation: slidePath 2.25s ease-in-out 1;
             }
 
             &::after{
@@ -105,45 +114,38 @@ span, p{
               height: 1px;
               background-color: $solid-gold;
               margin-top: 4px;
+              align-self: end;
+              animation: slidePath 2.25s ease-in-out 1;
+            }
+          }
+
+          .clock{
+            
+            &::before{
+              content: "";
+              width: 100%;
+              height: 1px;
+              background-color: $solid-gold;
+              margin-bottom: 4px;
+              align-self: start;
+              animation: slidePath 2.5s ease-in-out 1;
+            }
+
+            &::after{
+              content: "";
+              width: 100%;
+              height: 1px;
+              background-color: $solid-gold;
+              margin-top: 4px;
+              align-self: start;
+              animation: slidePath 2.5s ease-in-out 1;
             }
           }
 
           .date{
-            font-family: 'Magnolia Script', serif;
+            font-family: 'Niconne', serif;
             margin: 0 12px;
           }
-
-          .clock{
-            flex: 1 0 0;
-            font-weight: 500;
-            text-transform: uppercase;
-            display: flex;
-            flex-direction: column;
-
-            &::before{
-              content: "";
-              width: 100%;
-              height: 1px;
-              background-color: $solid-gold;
-              margin-bottom: 4px;
-            }
-
-            &::after{
-              content: "";
-              width: 100%;
-              height: 1px;
-              background-color: $solid-gold;
-              margin-top: 4px;
-            }
-          }
-        }
-
-        .year{
-          display: block;
-          font-size: 14px;
-          font-weight: 500;
-          text-transform: uppercase;
-          letter-spacing: 1.25px;
         }
       }
 
@@ -151,8 +153,9 @@ span, p{
         display: block;
         margin-top: 20px;
         color: $custom-white;
+        animation: slideDown 2s ease-in-out 1;
 
-        .location-name{font-family: 'Magnolia Script', serif;}
+        .location-name{font-family: 'Niconne', serif;}
 
         .location-address{font-weight: 400;}
 
@@ -164,7 +167,9 @@ span, p{
           color: $custom-white;
           display: inline-flex;
           align-items: center;
-          gap: 4px;
+          gap: 8px;
+
+          .custom-icon{ width: 16px; }
 
           .btn-text{
             font-weight: 600;
@@ -180,15 +185,24 @@ span, p{
         text-align: center;
       }
 
-      #top-ornament{margin-bottom: 16px;}
+      #top-ornament{
+        margin-bottom: 16px;
+        animation: slideUp 2s ease-in-out 1;
+      }
 
-      #bottom-ornament{margin-top: 24px;}
+      #bottom-ornament{
+        margin-top: 20px;
+        animation: slideDown 2s ease-in-out 1;
+      }
     }
 
     .custom-inner{
-      overflow: visible;
+      overflow: hidden;
+      position: unset;
       display: flex;
       align-items: center;
+
+      .custom-item{ padding: 0 24px; }
 
       .custom-prev, .custom-next{
         top: auto;
@@ -212,9 +226,9 @@ span, p{
         }
       }
 
-      .custom-prev{left: calc(-24px + -14px);}
+      .custom-prev{ left: -14px; }
 
-      .custom-next{right: calc(-24px + -14px);}
+      .custom-next{ right: -14px; }
     }
   }
 
@@ -242,6 +256,78 @@ span, p{
   
         i{display: inline-block;}
       }
+    }
+  }
+
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes topCornerOrnament {
+    0% {
+      opacity: 0;
+      transform: translateX(-16px) translateY(-16px);
+    }
+    20% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0) translateY(0);
+    }
+  }
+
+  @keyframes bottomCornerOrnament {
+    0% {
+      opacity: 0;
+      transform: scale(-1) translateX(-16px) translateY(-16px);
+    }
+    20% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: scale(-1) translateX(0) translateY(0);
+    }
+  }
+
+  @keyframes slidePath {
+    0% {
+      opacity: 0;
+      width: 0;
+    }
+    100% {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-16px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 }
