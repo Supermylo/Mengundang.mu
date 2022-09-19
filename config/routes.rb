@@ -54,6 +54,10 @@ Rails.application.routes.draw do
   get 'sixthtemplate/location'
   get 'sixthtemplate/wishes'
   get 'sixthtemplate/gift'
+  get 'sixthtemplate/wishesFull'
+  get 'sixthtemplate/wishesOnly'
+  get 'sixthtemplate/wishesAttendanceOnly'
+  get 'sixthtemplate/wishesCommentOnly'
 
   get 'landingpage/index'
 

@@ -1,0 +1,102 @@
+- content_for :additional_styles
+  = stylesheet_link_tag "sixthtemplate/sixthtemplate-wishesAttendanceOnly"
+
+.wrapper-custom
+  .container-full.h-100.position-relative.overflow-hidden
+    .row.gx-0
+      section.ornament
+        .frame
+        .top
+          = image_tag("sixthtemplate/maple-leaf.png", class: "maple-leaf")
+          = image_tag("sixthtemplate/big-walnut.png", class: "big-walnut")
+          = image_tag("sixthtemplate/small-walnut.png", class: "small-walnut")
+          = image_tag("sixthtemplate/small-leaves-ribbon.png", class: "leaves-left")
+          = image_tag("sixthtemplate/small-leaves-ribbon.png", class: "leaves-right")
+        .bottom
+          = image_tag("sixthtemplate/bottom-leaf-1.png", class:"leaf-1")
+          = image_tag("sixthtemplate/bottom-leaf-2.png", class:"leaf-2")
+          = image_tag("sixthtemplate/bottom-leaf-3.png", class:"leaf-3")
+          = image_tag("sixthtemplate/bottom-leaf-4.png", class:"leaf-4")
+          = image_tag("sixthtemplate/bottom-leaf-5.png", class:"leaf-5")
+          = image_tag("sixthtemplate/bottom-leaf-6.png", class:"leaf-6")
+      section.content
+        h2.title Konfirmasi Kehadiran
+        form.custom-form
+          .group-input
+            label for="visitorname" Nama Anda
+            input#visitorname name="visitorname" type="text" placeholder="Masukan nama anda disini"
+          .group-input.d-none
+            label for="wishes" Isi Doa
+            textarea#wishes name="wishes" placeholder="Kirim doa terbaik anda disini"
+          .two-group-input.d-flex.gap-3.flex-column
+            .group-input.group-input-custom
+              label for="attendance" Konfirmasi Kehadiran
+              select#attendance name="attendance"
+                option value="Hadir" Hadir
+                option value="Tidak Hadir" Tidak Hadir
+            .group-input.group-input-custom.d-flex.flex-column.justify-content-between
+              label for="attendance" Jumlah Hadir
+              span.wrapper-attendance
+                i.fa-solid.fa-minus.minus-icon onclick="countMin()"
+                input#totalAttendance name="totalAttendance" type="text" value="1"
+                i.fa-solid.fa-plus.plus-icon onclick="countPlus()"
+          button.custom-btn href="#"
+            i.fa-solid.fa-paper-plane.text-center.icon-custom
+            span.text Kirim Doa
+        .wishlist.d-none
+          .group-wish
+            span.sender-name Aji
+            span.message
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu in convallis ultricies :)
+          .group-wish
+            span.sender-name Ahmad
+            span.message
+              | Ornare ultrices amet, commodo consequat, nulla at. Convallis in maecenas quam vel id at. Id scelerisque mattis pellentesque netus lacus suscipit. Purus, gravida tincidunt justo morbi accumsan, praesent.
+          .group-wish
+            span.sender-name Nasyar
+            span.message
+              | Ornare ultrices amet, commodo consequat, nulla at. Convallis in maecenas quam vel id at. Id scelerisque mattis pellentesque netus lacus suscipit. Purus, gravida tincidunt justo morbi accumsan, praesent.
+          .group-wish
+            span.sender-name Auliya
+            span.message
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu in convallis ultricies :)
+      section.nav-float
+        .row.custom-row.gx-0
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/sixthtemplate/index"
+              i.fa-solid.fa-house.fa-lg.custom-icon
+              span.label Home
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/sixthtemplate/couple"
+              i.fa-solid.fa-heart.fa-lg.custom-icon
+              span.label Pasangan
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/sixthtemplate/location"
+              i.fa-solid.fa-location-dot.fa-lg.custom-icon
+              span.label Lokasi
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item.active href="#"
+              i.fa-solid.fa-calendar-check.fa-lg.custom-icon
+              span.label Kehadiran
+          .col.text-center.d-flex.align-items-center.justify-content-center
+            a.nav-item href="/sixthtemplate/gift"
+              i.fa-solid.fa-gift.fa-lg.custom-icon
+              span.label Hadiah
+javascript:
+
+  function countPlus(){
+    var input = document.getElementById("totalAttendance");
+
+    if( parseInt(input.value) > 0 && parseInt(input.value) < 3 ){
+      input.value = parseInt(input.value) + 1;
+    };
+  };
+
+  function countMin(){
+    var input = document.getElementById("totalAttendance");
+
+    if( parseInt(input.value) > 1 ){
+      input.value = parseInt(input.value) - 1;
+    };
+  }
+            

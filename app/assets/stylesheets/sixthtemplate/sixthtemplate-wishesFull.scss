@@ -1,0 +1,435 @@
+$main-orange : #E6873A;
+$light-orange : #FFC290;
+$main-green : #545A29;
+$light-green : #81865F;
+$solid-gold : #C59B46;
+$gradient-gold : linear-gradient(45deg,#C59B46,#F4DCAB);
+
+html, body{height: 100%;}
+
+.wrapper-custom{
+  background: url("../sixthtemplate/Background Sixth Template.png");
+  background-size: cover;
+  height: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+h1{font-size: 36px;}
+h2{font-size: 24px;}
+h3{font-size: 20px;}
+span, p{
+  font-size: 12px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.ornament{
+  padding: 0;
+
+  .frame{
+    animation: fadeInScale 2s ease-in-out 1;
+    position: absolute;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    border: 1.5px solid $light-green;
+    border-radius: 20px;
+    margin: 20px;
+  }
+
+  .top{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    width: 184px;
+    position: relative;
+    top: -4px;
+    animation: fadeInScale 2s ease-in-out 1;
+
+    .maple-leaf{
+      position: absolute;
+      z-index: 1;
+      animation: rotateOrnament 5s ease-in-out infinite;
+    }
+
+    .big-walnut{
+      position: absolute;
+      z-index: 2;
+      top: 38%;
+      left: 68px;
+      animation: rotateOrnament 5s ease-in-out infinite;
+    }
+
+    .small-walnut{
+      position: absolute;
+      z-index: 3;
+      top: 40%;
+      right: 70px;
+      animation: rotateOrnament 5s ease-in-out infinite;
+    }
+
+    .leaves-left{
+      position: absolute;
+      z-index: 0;
+      left: 0;
+      animation: leftLeaves 5s ease-in-out infinite;
+    }
+
+    .leaves-right{
+      position: absolute;
+      z-index: 0;
+      right: 0;
+      transform: scaleX(-1);
+      animation: rightLeaves 5s ease-in-out infinite;
+    }
+
+    @keyframes rotateOrnament {
+      0% {
+        transform: rotate(5deg) scale(0.9);
+      }
+      50% {
+        transform: rotate(-5deg) scale(1);
+      }
+      100% {
+        transform: rotate(5deg) scale(0.9);
+      }
+    }
+
+    @keyframes leftLeaves {
+      0% {
+        left: 10px;
+        top: -10px;
+        transform: scale(0.9) rotate(15deg);
+      }
+      50% {
+        left: 0;
+        top: 0;
+        transform: scale(1) rotate(0deg);
+      }
+      100% {
+        left: 10px;
+        top: -10px;
+        transform: scale(0.9) rotate(15deg);
+      }
+    }
+
+    @keyframes rightLeaves {
+      0% {
+        right: 10px;
+        top: -10px;
+        transform: scaleX(-1) scale(0.9) rotate(15deg);
+      }
+      50% {
+        right: 0;
+        top: 0;
+        transform: scaleX(-1) scale(1) rotate(0deg);
+      }
+      100% {
+        right: 10px;
+        top: -10px;
+        transform: scaleX(-1) scale(0.9) rotate(15deg);
+      }
+    }
+  }
+
+  .bottom{
+    animation: fadeIn 1.5s ease-in-out 1;
+
+    &::before{
+      position: absolute;
+      content: "";
+      background: url("sixthtemplate/bottom-leaf-shadow.png");
+      background-repeat: no-repeat;
+      width: 110%;
+      height: 24%;
+      bottom: 0;
+      left: -8%;
+      animation: ShadowLeavesBottom 5s infinite;
+    }
+
+    .leaf-1{
+      position: absolute;
+      z-index: 2;
+      bottom: -75px;
+      left: -2%;
+      animation: LeafOne 5s infinite;
+    }
+
+    .leaf-2{
+      position: absolute;
+      z-index: 4;
+      bottom: -75px;
+      left: 45px;
+      animation: LeafTwo 5s infinite;
+    }
+
+    .leaf-3{
+      position: absolute;
+      z-index: 1;
+      bottom: -35px;
+      left: 100px;
+      animation: LeafThree 5s infinite;
+    }
+
+    .leaf-4{
+      position: absolute;
+      z-index: 6;
+      bottom: -35px;
+      right: 115px;
+      animation: LeafFour 5s infinite;
+    }
+
+    .leaf-5{
+      position: absolute;
+      z-index: 5;
+      bottom: -100px;
+      right: 40px;
+      animation: LeafFive 5s infinite;
+    }
+
+    .leaf-6{
+      position: absolute;
+      z-index: 3;
+      bottom: -100px;
+      right: -45px;
+      animation: LeafSix 5s infinite;
+    }
+
+    @keyframes LeafOne {
+      0% {transform: rotate(10deg) scale(1.2);}
+      50% {transform: rotate(-10deg) scale(1.3);}
+      100% {transform: rotate(10deg) scale(1.2);}
+    }
+
+    @keyframes LeafTwo {
+      0% {transform: rotate(10deg) scale(1.1);}
+      50% {transform: rotate(-10deg) scale(1.2);}
+      100% {transform: rotate(10deg) scale(1.1);}
+    }
+
+    @keyframes LeafThree {
+      0% {transform: rotate(10deg) scale(1.2);}
+      50% {transform: rotate(-10deg) scale(1.3);}
+      100% {transform: rotate(10deg) scale(1.2);}
+    }
+
+    @keyframes LeafFour {
+      0% {transform: rotate(10deg) scale(1.1);}
+      50% {transform: rotate(-10deg) scale(1.2);}
+      100% {transform: rotate(10deg) scale(1.1);}
+    }
+
+    @keyframes LeafFive {
+      0% {transform: rotate(10deg) scale(1.1);}
+      50% {transform: rotate(-10deg) scale(1.2);}
+      100% {transform: rotate(10deg) scale(1.1);}
+    }
+
+    @keyframes LeafSix {
+      0% {transform: rotate(10deg) scale(1.1);}
+      50% {transform: rotate(-10deg) scale(1.2);}
+      100% {transform: rotate(10deg) scale(1.1);}
+    }
+
+    @keyframes ShadowLeavesBottom {
+      0% {transform: rotate(5deg) scale(1.1);}
+      50% {transform: rotate(-5deg) scale(1.2);}
+      100% {transform: rotate(5deg) scale(1.1);}
+    }
+  }
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin-top: 80px;
+  width: 100%;
+  height: calc(100% - 240px);
+  padding: 0 40px;
+  position: absolute;
+  right: 0;
+  overflow-y: scroll;
+
+  .title{
+    font-family: 'DM Serif Display', serif;
+    color: $main-green;
+    margin-bottom: 12px;
+  }
+
+  .custom-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+
+    .group-input{
+
+      label, input, textarea, select{
+        font-family: 'Work Sans', sans-serif;
+        font-size: 12px;
+      }
+
+      label{
+        display: block;
+        font-weight: 600;
+        color: $main-green;
+      }
+
+      input, textarea, select{
+        width: 100%;
+        font-weight: 500;
+        background: none;
+        padding-bottom: 4px;
+        border: none;
+        border-bottom: 1px solid #DCDFC5;
+        color: $light-green;
+
+        &:focus{
+          font-weight: 400;
+          outline: none;
+        }
+      }
+
+      textarea{height: 56px;}
+
+      select{
+        color: $main-green;
+        font-weight: 500;
+      }
+
+      ::placeholder{
+        font-weight: 400;
+      }
+    }
+
+    .group-input-custom{
+      flex: 1 0 0;
+
+      .wrapper-attendance{
+        display: flex;
+        align-items: center;
+
+        .minus-icon, .plus-icon{
+          width: 16px;
+          color: $main-green;
+        }
+
+        #totalAttendance{
+          text-align: center;
+          margin: 0 8px;
+        }
+      }
+    }
+
+    .custom-btn{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 16px;
+      background-color: $main-orange;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      border-radius: 24px;
+      border: none;
+
+      .icon-custom{ width: 16px; }
+
+      .text{
+        margin-left: 8px;
+      }
+
+      &:hover{background-color: #d36f1d;}
+    }
+  }
+
+  .wishlist{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+
+    .group-wish{
+
+      .sender-name{
+        font-weight: 600;
+        color: $main-green;
+        display: flex;
+        align-items: center;
+        margin-bottom: 4px;
+
+        &::after{
+          content: "Hadir";
+          height: 100%;
+          color: white;
+          font-size: 7px;
+          font-weight: 400;
+          background-color: $solid-gold;
+          padding: 2px 8px;
+          margin-left: 8px;
+          border-radius: 16px;
+        }
+      }
+
+      .message{
+        display: block;
+        color: $light-green;
+        margin-bottom: 8px;
+      }
+    }
+
+    .group-wish:not(:last-child){
+      border-bottom: 1px solid #DCDFC5;
+      margin-bottom: 12px;
+    }
+
+    @media (max-height: 500px) {
+      overflow-y: unset;
+    }
+  }
+
+  @media (max-height: 500px) {
+    overflow-y: scroll;
+  }
+}
+
+.nav-float{
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $main-orange;
+  position: absolute;
+  z-index: 100;
+  padding: 12px;
+  border-radius: 50rem;
+  width: calc(100% - 40px);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+ -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+ -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+
+ .custom-row{
+   margin-left: 0;
+   margin-right: 0;
+   padding-left: 0;
+   padding-right: 0;
+
+    .nav-item{
+      color: $light-orange;
+      text-decoration: none;
+      font-weight: 400;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+
+      &.active{color: #fff;}
+
+      .custom-icon{
+        display: inline-block;
+        width: 24px;
+      }
+    }
+  }
+}
