@@ -325,7 +325,7 @@ span, p{
     .custom-prev, .custom-next{
       top: auto;
       bottom: auto;
-      opacity: 1;
+      opacity: 0.8;
       width: auto;
 
       .custom-btn{
@@ -344,6 +344,10 @@ span, p{
           height: 16px;
           color: #fff;
         }
+      }
+
+      &:hover, &:active {
+        opacity: 1;
       }
     }
 

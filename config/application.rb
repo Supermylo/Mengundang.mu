@@ -10,7 +10,7 @@ module Mengundangmu
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
-    config.hosts << "ex-mh-heroes-scout.trycloudflare.com"
+    config.hosts << "baker-difficulty-village-horizontal.trycloudflare.com"
 
     # Configuration for the application, engines, and railties goes here.
     #
